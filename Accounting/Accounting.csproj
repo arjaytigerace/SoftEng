@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BRWBorrow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BRWBorrow.Designer.cs">
+      <DependentUpon>BRWBorrow.cs</DependentUpon>
+    </Compile>
     <Compile Include="BorrowingChem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BRWReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BRWReturn.Designer.cs">
+      <DependentUpon>BRWReturn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Search.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +129,9 @@
     <Compile Include="Users.Designer.cs">
       <DependentUpon>Users.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BRWBorrow.resx">
+      <DependentUpon>BRWBorrow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BorrowingChem.resx">
       <DependentUpon>BorrowingChem.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +159,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BRWReturn.resx">
+      <DependentUpon>BRWReturn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Search.resx">
       <DependentUpon>Search.cs</DependentUpon>
     </EmbeddedResource>
