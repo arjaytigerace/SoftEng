@@ -17,7 +17,7 @@ namespace Accounting
 
         public Form main { get; set; }
         MySqlConnection conn;
-
+        decimal oldDmgLost { get; set; }
 
         private int selecteditemid;
 
@@ -54,27 +54,30 @@ namespace Accounting
             textBox3.Text = "";
             textBox1.Text = "";
             textBox2.Text = "";
+            equipStatus.SelectedIndex = 0;
+            appStatus.SelectedIndex = 0;
+            chemStatus.SelectedIndex = 0;
 
             aqty.Value = 0;
             ameasuretype.SelectedIndex = 0;
 
 
             updbutton.Enabled = false;
-            delbutton.Enabled = false;
+   
             addequipb.Enabled = true;
             deselectequipb.Enabled = false;
             updequipb.Enabled = false;
-            delequipb.Enabled = false;
+            
 
             addappb.Enabled = true;
             deselectappb.Enabled = false;
             updappb.Enabled = false;
-            delappb.Enabled = false;
+            
 
             button1.Enabled = true;
             button2.Enabled = false;
             button3.Enabled = false;
-            button4.Enabled = false;
+        
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -116,7 +119,7 @@ namespace Accounting
         private void loadall()
         {
 
-            string query = "SELECT itemID,itemName,itemType,quantity,measurementType,addedon,modon FROM chem_lab.item a, chem_lab.itemtype b WHERE b.itemTypeID = a.itemTypeID";
+            string query = "SELECT itemID,itemName,itemType,quantity,measurementType,addedon,modon,itemstatus FROM chem_lab.item a, chem_lab.itemtype b WHERE b.itemTypeID = a.itemTypeID";
 
             conn.Open();
             MySqlCommand comm = new MySqlCommand(query, conn);
@@ -135,10 +138,11 @@ namespace Accounting
             dataGridView1.Columns["itemType"].HeaderText = "Type";
             dataGridView1.Columns["addedon"].HeaderText = "Date Added";
             dataGridView1.Columns["modon"].HeaderText = "Last Modified";
+            dataGridView1.Columns["itemstatus"].HeaderText = "Status";
 
 
 
-            string queryequip = "SELECT a.itemID,itemName,quantity,measurementType,numdmg,numlost,brandAndModel,costPerUnit,dateOfPurchase,estimatedLife,addedon,modon " +
+            string queryequip = "SELECT a.itemID,itemName,quantity,measurementType,numdmg,numlost,brandAndModel,costPerUnit,dateOfPurchase,estimatedLife,addedon,modon,itemstatus " +
                 "FROM chem_lab.item a,chem_lab.itemequipment b WHERE b.itemID = a.itemID";
 
             conn.Open();
@@ -162,10 +166,10 @@ namespace Accounting
             dataGridView2.Columns["numlost"].HeaderText = "# Lost";
             dataGridView2.Columns["addedon"].HeaderText = "Date Added";
             dataGridView2.Columns["modon"].HeaderText = "Last Modified";
+            dataGridView2.Columns["itemstatus"].HeaderText = "Status";
 
 
-
-            string queryapp = "SELECT a.itemID,itemName,quantity,measurementType,description,numdmg,numlost,addedon,modon " +
+            string queryapp = "SELECT a.itemID,itemName,quantity,measurementType,description,numdmg,numlost,addedon,modon,itemstatus " +
                "FROM chem_lab.item a,chem_lab.itemapparatus b WHERE b.itemID = a.itemID";
 
             conn.Open();
@@ -186,9 +190,9 @@ namespace Accounting
             dataGridView3.Columns["numlost"].HeaderText = "# Lost";
             dataGridView3.Columns["addedon"].HeaderText = "Date Added";
             dataGridView3.Columns["modon"].HeaderText = "Last Modified";
+            dataGridView3.Columns["itemstatus"].HeaderText = "Status";
 
-
-            string querychem = "SELECT a.itemID,itemName,colorCode,classification,quantity,measurementType,addedon,modon " +
+            string querychem = "SELECT a.itemID,itemName,colorCode,classification,quantity,measurementType,addedon,modon,itemstatus " +
                "FROM chem_lab.item a,chem_lab.itemchemical b WHERE b.itemID = a.itemID";
 
             conn.Open();
@@ -208,7 +212,7 @@ namespace Accounting
             dataGridView4.Columns["measurementType"].HeaderText = "Unit of Measurement";
             dataGridView4.Columns["addedon"].HeaderText = "Date Added";
             dataGridView4.Columns["modon"].HeaderText = "Last Modified";
-
+            dataGridView4.Columns["itemstatus"].HeaderText = "Status";
 
 
             deselect();
@@ -227,9 +231,10 @@ namespace Accounting
 
                 qty.Value = (int)dataGridView1.Rows[e.RowIndex].Cells["quantity"].Value;
                 measuretype.Text = dataGridView1.Rows[e.RowIndex].Cells["measurementType"].Value.ToString();
+                status.Text = dataGridView1.Rows[e.RowIndex].Cells["itemstatus"].Value.ToString();
 
                 updbutton.Enabled = true;
-                delbutton.Enabled = true;
+               
 
             }
         }
@@ -266,8 +271,9 @@ namespace Accounting
                 itype = 3;
 
             }
+           
 
-            string query = "UPDATE item SET itemname='" + itemname.Text + "',itemtypeID='" + itype + "',quantity='" + qty.Value + "',measurementtype='" + measuretype.Text + "',modon='" + date + "' WHERE itemID =" + selecteditemid;
+            string query = "UPDATE item SET itemname='" + itemname.Text + "',itemtypeID='" + itype + "',quantity='" + qty.Value + "',measurementtype='" + measuretype.Text + "',modon='" + date + "', itemstatus='" + status.Text +"' WHERE itemID =" + selecteditemid;
 
             conn.Open();
             MySqlCommand comm1 = new MySqlCommand(query, conn);
@@ -278,16 +284,6 @@ namespace Accounting
             loadall();
         }
 
-        private void delbutton_Click(object sender, EventArgs e)
-        {
-            string query = "DELETE FROM item WHERE itemID =" + selecteditemid;
-            conn.Open();
-            MySqlCommand comm1 = new MySqlCommand(query, conn);
-            comm1.ExecuteNonQuery();
-            conn.Close();
-            MessageBox.Show("Successfully deleted the item", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            loadall();
-        }
 
         private void label7_Click(object sender, EventArgs e)
         {
@@ -313,7 +309,7 @@ namespace Accounting
                 comm1.CommandType = CommandType.StoredProcedure;
 
                 comm1.Parameters.Add("?eitemname", MySqlDbType.VarChar, 255).Value = eitemname.Text;
-                comm1.Parameters.Add("?eqty", MySqlDbType.Int32).Value = eqty.Value;
+                comm1.Parameters.Add("?eqty", MySqlDbType.Int32).Value = eqty.Value - (numdmg.Value + numlost.Value);
                 comm1.Parameters.Add("?emeasuretype", MySqlDbType.VarChar, 255).Value = emeasuretype.Text;
                 comm1.Parameters.Add("?edate", MySqlDbType.DateTime).Value = date;
                 comm1.Parameters.Add("?brandAndModel", MySqlDbType.VarChar, 255).Value = brand.Text;
@@ -322,6 +318,7 @@ namespace Accounting
                 comm1.Parameters.Add("?estimatedLife", MySqlDbType.VarChar, 255).Value = estlife.Text;
                 comm1.Parameters.Add("?numdmg", MySqlDbType.VarChar, 255).Value = numdmg.Value;
                 comm1.Parameters.Add("?numlost", MySqlDbType.VarChar, 255).Value = numlost.Value;
+                comm1.Parameters.Add("?equipStatus", MySqlDbType.VarChar, 255).Value = equipStatus.Text;
                 comm1.ExecuteNonQuery();
 
                 conn.Close();
@@ -352,10 +349,12 @@ namespace Accounting
                 estlife.Text = dataGridView2.Rows[e.RowIndex].Cells["estimatedLife"].Value.ToString();
                 numlost.Value = (int)dataGridView2.Rows[e.RowIndex].Cells["numlost"].Value;
                 numdmg.Value = (int)dataGridView2.Rows[e.RowIndex].Cells["numdmg"].Value;
+                equipStatus.Text= dataGridView2.Rows[e.RowIndex].Cells["itemstatus"].Value.ToString();
+                oldDmgLost = (numlost.Value + numdmg.Value);
                 addequipb.Enabled = false;
                 deselectequipb.Enabled = true;
                 updequipb.Enabled = true;
-                delequipb.Enabled = true;
+               
 
             }
 
@@ -387,8 +386,31 @@ namespace Accounting
                 MessageBox.Show("Please do not leave any of the fields as blank");
             }
 
+            decimal newDmgLost = (numdmg.Value + numlost.Value);
+            string query;
+            if((newDmgLost - oldDmgLost) < 0)
+            {
+                query = "UPDATE item SET itemName='" + eitemname.Text + "',quantity='" + (eqty.Value + (oldDmgLost - newDmgLost)) + 
+                    "',measurementtype='" + emeasuretype.Text + "',modon='" + date + "',itemstatus='" + equipStatus.Text + "' WHERE itemID =" +
+                    selecteditemid;
 
-            string query = "UPDATE item SET itemName='" + eitemname.Text + "',quantity='" + (eqty.Value - (numdmg.Value + numlost.Value)) + "',measurementtype='" + emeasuretype.Text + "',modon='" + date + "' WHERE itemID =" + selecteditemid;
+
+            }
+            else if((newDmgLost - oldDmgLost)>0)
+            {
+                query = "UPDATE item SET itemName='" + eitemname.Text + "',quantity='" + (eqty.Value - (newDmgLost - oldDmgLost)) +
+                    "',measurementtype='" + emeasuretype.Text + "',modon='" + date + "',itemstatus='" + equipStatus.Text + "' WHERE itemID =" +
+                    selecteditemid;
+
+            }
+            else
+            {
+                query = "UPDATE item SET itemName='" + eitemname.Text + "',quantity='" + eqty.Value +
+                    "',measurementtype='" + emeasuretype.Text + "',modon='" + date + "',itemstatus='" + equipStatus.Text + "' WHERE itemID =" +
+                    selecteditemid;
+            }
+
+            //string query = "UPDATE item SET itemName='" + eitemname.Text + "',quantity='" + (eqty.Value - (numdmg.Value + numlost.Value)) + "',measurementtype='" + emeasuretype.Text + "',modon='" + date + "',status='"+equipStatus.Text+"' WHERE itemID =" + selecteditemid;
 
             conn.Open();
             MySqlCommand comm1 = new MySqlCommand(query, conn);
@@ -418,14 +440,16 @@ namespace Accounting
                 aqty.Value = (int)dataGridView3.Rows[e.RowIndex].Cells["quantity"].Value;
                 ameasuretype.Text = dataGridView3.Rows[e.RowIndex].Cells["measurementType"].Value.ToString();
                 adesc.Text = dataGridView3.Rows[e.RowIndex].Cells["description"].Value.ToString();
-
+               
 
                 anumlost.Value = (int)dataGridView3.Rows[e.RowIndex].Cells["numlost"].Value;
                 anumdmg.Value = (int)dataGridView3.Rows[e.RowIndex].Cells["numdmg"].Value;
+                appStatus.Text = dataGridView3.Rows[e.RowIndex].Cells["itemstatus"].Value.ToString();
+                oldDmgLost = anumdmg.Value + anumlost.Value;
                 addappb.Enabled = false;
                 deselectappb.Enabled = true;
                 updappb.Enabled = true;
-                delappb.Enabled = true;
+               
             }
         }
 
@@ -452,12 +476,13 @@ namespace Accounting
                 comm1.CommandType = CommandType.StoredProcedure;
 
                 comm1.Parameters.Add("?aitemname", MySqlDbType.VarChar, 255).Value = aitemname.Text;
-                comm1.Parameters.Add("?aqty", MySqlDbType.Int32).Value = aqty.Value;
+                comm1.Parameters.Add("?aqty", MySqlDbType.Int32).Value = aqty.Value - (anumdmg.Value + anumlost.Value);
                 comm1.Parameters.Add("?ameasuretype", MySqlDbType.VarChar, 255).Value = ameasuretype.Text;
                 comm1.Parameters.Add("?adate", MySqlDbType.DateTime).Value = date;
                 comm1.Parameters.Add("?description", MySqlDbType.VarChar, 255).Value = adesc.Text;
                 comm1.Parameters.Add("?numdmg", MySqlDbType.VarChar, 255).Value = anumdmg.Value;
                 comm1.Parameters.Add("?numlost", MySqlDbType.VarChar, 255).Value = anumlost.Value;
+                comm1.Parameters.Add("?appStatus", MySqlDbType.VarChar, 255).Value = appStatus.Text;
                 comm1.ExecuteNonQuery();
 
                 conn.Close();
@@ -478,8 +503,23 @@ namespace Accounting
                 MessageBox.Show("Please do not leave any of the fields as blank");
             }
 
+            string query;
+            decimal newDmgLost = (anumdmg.Value + anumlost.Value);
+            if ((newDmgLost - oldDmgLost) < 0)
+            {
+                query = "UPDATE item SET itemName='" + aitemname.Text + "',quantity='" + (aqty.Value + (oldDmgLost - newDmgLost)) + "',measurementtype='" + ameasuretype.Text + "',modon='" + date + "',itemstatus='" + appStatus.Text + "' WHERE itemID =" + selecteditemid;
+            }
+            else if ((newDmgLost - oldDmgLost) > 0)
+            {
+                query = "UPDATE item SET itemName='" + aitemname.Text + "',quantity='" + (aqty.Value - (newDmgLost - oldDmgLost)) + "',measurementtype='" + ameasuretype.Text + "',modon='" + date + "',itemstatus='" + appStatus.Text + "' WHERE itemID =" + selecteditemid;
 
-            string query = "UPDATE item SET itemName='" + aitemname.Text + "',quantity='" + (aqty.Value - (anumdmg.Value + anumlost.Value)) + "',measurementtype='" + ameasuretype.Text + "',modon='" + date + "' WHERE itemID =" + selecteditemid;
+
+            }
+            else
+            {
+                query = "UPDATE item SET itemName='" + aitemname.Text + "',quantity='" + aqty.Value + "',measurementtype='" + ameasuretype.Text + "',modon='" + date + "',itemstatus='" + appStatus.Text + "' WHERE itemID =" + selecteditemid;
+
+            }
 
             conn.Open();
             MySqlCommand comm1 = new MySqlCommand(query, conn);
@@ -497,37 +537,7 @@ namespace Accounting
             loadall();
         }
 
-        private void delappb_Click(object sender, EventArgs e)
-        {
-            string query = "DELETE FROM item WHERE itemID =" + selecteditemid;
-            string query2 = "DELETE FROM itemapparatus WHERE itemID =" + selecteditemid;
 
-
-            conn.Open();
-            MySqlCommand comm1 = new MySqlCommand(query, conn);
-            comm1.ExecuteNonQuery();
-            MySqlCommand comm2 = new MySqlCommand(query2, conn);
-            comm2.ExecuteNonQuery();
-            conn.Close();
-            MessageBox.Show("Successfully deleted the item", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            loadall();
-        }
-
-        private void delequipb_Click(object sender, EventArgs e)
-        {
-            string query = "DELETE FROM item WHERE itemID =" + selecteditemid;
-            string query2 = "DELETE FROM itemequipment WHERE itemID =" + selecteditemid;
-
-
-            conn.Open();
-            MySqlCommand comm1 = new MySqlCommand(query, conn);
-            comm1.ExecuteNonQuery();
-            MySqlCommand comm2 = new MySqlCommand(query2, conn);
-            comm2.ExecuteNonQuery();
-            conn.Close();
-            MessageBox.Show("Successfully deleted the item", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            loadall();
-        }
 
         private void deselectappb_Click(object sender, EventArgs e)
         {
@@ -544,13 +554,11 @@ namespace Accounting
                 textBox2.Text = dataGridView4.Rows[e.RowIndex].Cells["classification"].Value.ToString();
                 numericUpDown1.Value = (int)dataGridView4.Rows[e.RowIndex].Cells["quantity"].Value;
                 cmeasuretype.Text = dataGridView4.Rows[e.RowIndex].Cells["measurementType"].Value.ToString();
-
-        
-
+                chemStatus.Text= dataGridView4.Rows[e.RowIndex].Cells["itemstatus"].Value.ToString();
                 button1.Enabled = false;
                 button2.Enabled = true;
                 button3.Enabled = true;
-                button4.Enabled = true;
+                
             }
         }
 
@@ -577,6 +585,7 @@ namespace Accounting
                 comm1.Parameters.Add("?citemname", MySqlDbType.VarChar, 255).Value = textBox3.Text;
                 comm1.Parameters.Add("?colorCode", MySqlDbType.VarChar, 255).Value = textBox1.Text;
                 comm1.Parameters.Add("?classification", MySqlDbType.VarChar, 255).Value = textBox2.Text;
+                comm1.Parameters.Add("?chemStatus", MySqlDbType.VarChar, 255).Value = chemStatus.Text;
                 comm1.ExecuteNonQuery();
 
                 conn.Close();
@@ -603,7 +612,7 @@ namespace Accounting
             }
 
 
-            string query = "UPDATE item SET itemName='" + textBox3.Text + "',quantity='" + numericUpDown1.Text + "',measurementtype='" + cmeasuretype.Text + "',modon='" + date + "' WHERE itemID =" + selecteditemid;
+            string query = "UPDATE item SET itemName='" + textBox3.Text + "',quantity='" + numericUpDown1.Text + "',measurementtype='" + cmeasuretype.Text + "',modon='" + date + "',itemstatus='"+ chemStatus.Text +"' WHERE itemID =" + selecteditemid;
 
             conn.Open();
             MySqlCommand comm1 = new MySqlCommand(query, conn);
@@ -621,21 +630,7 @@ namespace Accounting
             loadall();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            string query = "DELETE FROM item WHERE itemID =" + selecteditemid;
-            string query2 = "DELETE FROM itemchemical WHERE itemID =" + selecteditemid;
-
-
-            conn.Open();
-            MySqlCommand comm1 = new MySqlCommand(query, conn);
-            comm1.ExecuteNonQuery();
-            MySqlCommand comm2 = new MySqlCommand(query2, conn);
-            comm2.ExecuteNonQuery();
-            conn.Close();
-            MessageBox.Show("Successfully deleted the item", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            loadall();
-        }
+ 
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -697,6 +692,21 @@ namespace Accounting
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void status_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

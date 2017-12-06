@@ -160,7 +160,7 @@
             this.AcceptButton = this.buttonLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MistyRose;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(446, 611);
             this.Controls.Add(this.label4);

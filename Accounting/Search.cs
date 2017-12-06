@@ -41,7 +41,7 @@ namespace Accounting
 
             if (getTab == 1)
             {
-                string query = "SELECT itemID,itemName,itemType,quantity,measurementType,addedon,modon FROM chem_lab.item a, chem_lab.itemtype b WHERE b.itemTypeID = a.itemTypeID AND a.itemName LIKE '" + getItemName + "%'";
+                string query = "SELECT itemID,itemName,itemType,quantity,measurementType,addedon,modon,itemstatus FROM chem_lab.item a, chem_lab.itemtype b WHERE b.itemTypeID = a.itemTypeID AND a.itemName LIKE '" + getItemName + "%'";
 
                 conn.Open();
                 MySqlCommand comm = new MySqlCommand(query, conn);
@@ -60,11 +60,12 @@ namespace Accounting
                 dataGridView1.Columns["itemType"].HeaderText = "Type";
                 dataGridView1.Columns["addedon"].HeaderText = "Date Added";
                 dataGridView1.Columns["modon"].HeaderText = "Last Modified";
+                dataGridView1.Columns["itemstatus"].HeaderText = "Status";
             }
             if(getTab == 2)
             {
 
-                string queryequip = "SELECT a.itemID,itemName,quantity,measurementType,numdmg,numlost,brandAndModel,costPerUnit,dateOfPurchase,estimatedLife,addedon,modon " +
+                string queryequip = "SELECT a.itemID,itemName,quantity,measurementType,numdmg,numlost,brandAndModel,costPerUnit,dateOfPurchase,estimatedLife,addedon,modon,itemstatus " +
                 "FROM chem_lab.item a,chem_lab.itemequipment b WHERE b.itemID = a.itemID AND a.itemName LIKE '" + getItemName + "%'";
 
                 conn.Open();
@@ -88,6 +89,7 @@ namespace Accounting
                 dataGridView1.Columns["numlost"].HeaderText = "# Lost";
                 dataGridView1.Columns["addedon"].HeaderText = "Date Added";
                 dataGridView1.Columns["modon"].HeaderText = "Last Modified";
+                dataGridView1.Columns["itemstatus"].HeaderText = "Status";
 
             }
 
@@ -95,7 +97,7 @@ namespace Accounting
             {
 
 
-                string queryapp = "SELECT a.itemID,itemName,quantity,measurementType,description,numdmg,numlost,addedon,modon " +
+                string queryapp = "SELECT a.itemID,itemName,quantity,measurementType,description,numdmg,numlost,addedon,modon,itemstatus " +
                    "FROM chem_lab.item a,chem_lab.itemapparatus b WHERE b.itemID = a.itemID AND a.itemName LIKE '" + getItemName + "%'";
 
                 conn.Open();
@@ -116,7 +118,7 @@ namespace Accounting
                 dataGridView1.Columns["numlost"].HeaderText = "# Lost";
                 dataGridView1.Columns["addedon"].HeaderText = "Date Added";
                 dataGridView1.Columns["modon"].HeaderText = "Last Modified";
-
+                dataGridView1.Columns["itemstatus"].HeaderText = "Status";
 
             }
 
@@ -124,7 +126,7 @@ namespace Accounting
             {
 
 
-                string querychem = "SELECT a.itemID,itemName,colorCode,classification,quantity,measurementType,addedon,modon " +
+                string querychem = "SELECT a.itemID,itemName,colorCode,classification,quantity,measurementType,addedon,modon,itemstatus " +
                    "FROM chem_lab.item a,chem_lab.itemchemical b WHERE b.itemID = a.itemID AND a.itemName LIKE '" + getItemName + "%'";
 
                 conn.Open();
@@ -144,7 +146,7 @@ namespace Accounting
                 dataGridView1.Columns["measurementType"].HeaderText = "Unit of Measurement";
                 dataGridView1.Columns["addedon"].HeaderText = "Date Added";
                 dataGridView1.Columns["modon"].HeaderText = "Last Modified";
-
+                dataGridView1.Columns["itemstatus"].HeaderText = "Status";
 
             }
 

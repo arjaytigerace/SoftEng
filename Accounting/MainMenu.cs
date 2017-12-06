@@ -109,5 +109,21 @@ namespace Accounting
             exam.Show();
             this.Hide();
         }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            BorrowingChem B1 = new BorrowingChem();
+            B1.main = this;
+            B1.Show();
+            this.Hide();
+        }
+
+        private void pictureBox5_Click_1(object sender, EventArgs e)
+        {
+            ChemicalManagement C1 = new ChemicalManagement();
+            C1.main = this;
+            C1.Show();
+            this.Hide();
+        }
     }
 }

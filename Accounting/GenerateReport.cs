@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Accounting
 {
-    public partial class Inventory2 : Form
+    public partial class GenerateReport : Form
     {
         public Form main { get; set; }
 
-        public Inventory2()
+        public GenerateReport()
         {
             InitializeComponent();
         }

@@ -10,15 +10,15 @@ using System.Windows.Forms;
 
 namespace Accounting
 {
-    public partial class BRWReturn : Form
+    public partial class BRWupdate : Form
     {
         public Form main { get; set; }
-        public BRWReturn()
+        public BRWupdate()
         {
             InitializeComponent();
         }
 
-        private void BRWReturn_Load(object sender, EventArgs e)
+        private void BRWupdate_Load(object sender, EventArgs e)
         {
 
         }

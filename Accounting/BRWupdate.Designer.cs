@@ -1,6 +1,6 @@
 ﻿namespace Accounting
 {
-    partial class BRWReturn
+    partial class BRWupdate
     {
         /// <summary>
         /// Required designer variable.
@@ -41,62 +41,62 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(225, 132);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(319, 45);
-            this.textBox2.TabIndex = 24;
+            this.textBox2.TabIndex = 32;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 132);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 39);
-            this.label3.TabIndex = 23;
+            this.label3.Size = new System.Drawing.Size(115, 38);
+            this.label3.TabIndex = 31;
             this.label3.Text = "Temp";
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(226, 72);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(319, 45);
-            this.textBox1.TabIndex = 22;
+            this.textBox1.TabIndex = 30;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(13, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 39);
-            this.label2.TabIndex = 21;
+            this.label2.Size = new System.Drawing.Size(115, 38);
+            this.label2.TabIndex = 29;
             this.label2.Text = "Temp";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 39);
-            this.label1.TabIndex = 20;
+            this.label1.Size = new System.Drawing.Size(115, 38);
+            this.label1.TabIndex = 28;
             this.label1.Text = "Temp";
             // 
             // itemname
             // 
             this.itemname.BackColor = System.Drawing.SystemColors.Control;
-            this.itemname.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itemname.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.itemname.Location = new System.Drawing.Point(226, 12);
             this.itemname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.itemname.Name = "itemname";
             this.itemname.Size = new System.Drawing.Size(319, 45);
-            this.itemname.TabIndex = 19;
+            this.itemname.TabIndex = 27;
             // 
             // buttonCancel
             // 
@@ -109,7 +109,7 @@
             this.buttonCancel.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(147, 69);
-            this.buttonCancel.TabIndex = 18;
+            this.buttonCancel.TabIndex = 26;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = false;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
@@ -124,11 +124,11 @@
             this.buttonLogin.Margin = new System.Windows.Forms.Padding(4);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(147, 69);
-            this.buttonLogin.TabIndex = 17;
-            this.buttonLogin.Text = "Submit";
+            this.buttonLogin.TabIndex = 25;
+            this.buttonLogin.Text = "Update";
             this.buttonLogin.UseVisualStyleBackColor = false;
             // 
-            // BRWReturn
+            // BRWupdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -142,9 +142,9 @@
             this.Controls.Add(this.itemname);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonLogin);
-            this.Name = "BRWReturn";
-            this.Text = "Return";
-            this.Load += new System.EventHandler(this.BRWReturn_Load);
+            this.Name = "BRWupdate";
+            this.Text = "BRWupdate";
+            this.Load += new System.EventHandler(this.BRWupdate_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

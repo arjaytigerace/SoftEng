@@ -10,17 +10,12 @@ using System.Windows.Forms;
 
 namespace Accounting
 {
-    public partial class BRWReturn : Form
+    public partial class ChemMgtUpdate : Form
     {
         public Form main { get; set; }
-        public BRWReturn()
+        public ChemMgtUpdate()
         {
             InitializeComponent();
-        }
-
-        private void BRWReturn_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)

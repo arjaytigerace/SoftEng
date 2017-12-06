@@ -10,15 +10,15 @@ using System.Windows.Forms;
 
 namespace Accounting
 {
-    public partial class BRWReturn : Form
+    public partial class ChemMgtCreate : Form
     {
         public Form main { get; set; }
-        public BRWReturn()
+        public ChemMgtCreate()
         {
             InitializeComponent();
         }
 
-        private void BRWReturn_Load(object sender, EventArgs e)
+        private void ChemMgtCreate_Load(object sender, EventArgs e)
         {
 
         }
@@ -26,6 +26,11 @@ namespace Accounting
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

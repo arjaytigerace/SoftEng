@@ -12,6 +12,7 @@ namespace Accounting
 {
     public partial class BRWBorrow : Form
     {
+        public Form main { get; set; }
         public BRWBorrow()
         {
             InitializeComponent();
@@ -20,6 +21,16 @@ namespace Accounting
         private void buttonLogin_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BRWBorrow_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

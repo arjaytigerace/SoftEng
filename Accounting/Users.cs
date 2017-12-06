@@ -195,7 +195,7 @@ namespace Accounting
 
         private void button3_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Delete this user?", "Confirmation", MessageBoxButtons.YesNo);
+            /*DialogResult dialogResult = MessageBox.Show("Delete this user?", "Confirmation", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
 
@@ -209,8 +209,8 @@ namespace Accounting
                 deselect();
                 loadall();
 
-            }
- 
+            }*/
+
 
         }
 

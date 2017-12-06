@@ -34,18 +34,21 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label21 = new System.Windows.Forms.Label();
+            this.status = new System.Windows.Forms.ComboBox();
             this.button5 = new System.Windows.Forms.Button();
             this.search = new System.Windows.Forms.TextBox();
             this.itemtype = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.updbutton = new System.Windows.Forms.Button();
-            this.delbutton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.itemname = new System.Windows.Forms.TextBox();
             this.measuretype = new System.Windows.Forms.ComboBox();
             this.qty = new System.Windows.Forms.NumericUpDown();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label22 = new System.Windows.Forms.Label();
+            this.equipStatus = new System.Windows.Forms.ComboBox();
             this.searchequip = new System.Windows.Forms.Button();
             this.searche = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -65,12 +68,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.updequipb = new System.Windows.Forms.Button();
-            this.delequipb = new System.Windows.Forms.Button();
             this.eitemname = new System.Windows.Forms.TextBox();
             this.emeasuretype = new System.Windows.Forms.ComboBox();
             this.eqty = new System.Windows.Forms.NumericUpDown();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label23 = new System.Windows.Forms.Label();
+            this.appStatus = new System.Windows.Forms.ComboBox();
             this.searchapp = new System.Windows.Forms.Button();
             this.searcha = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -84,18 +88,18 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.updappb = new System.Windows.Forms.Button();
-            this.delappb = new System.Windows.Forms.Button();
             this.aitemname = new System.Windows.Forms.TextBox();
             this.ameasuretype = new System.Windows.Forms.ComboBox();
             this.aqty = new System.Windows.Forms.NumericUpDown();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label24 = new System.Windows.Forms.Label();
+            this.chemStatus = new System.Windows.Forms.ComboBox();
             this.searchchem = new System.Windows.Forms.Button();
             this.searchc = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.cmeasuretype = new System.Windows.Forms.ComboBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -137,7 +141,7 @@
             this.pictureBox4.Location = new System.Drawing.Point(16, 14);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(97, 75);
+            this.pictureBox4.Size = new System.Drawing.Size(91, 46);
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
@@ -175,17 +179,19 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(12, 95);
+            this.tabControl1.Location = new System.Drawing.Point(12, 66);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1436, 784);
+            this.tabControl1.Size = new System.Drawing.Size(1436, 813);
             this.tabControl1.TabIndex = 1;
             this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.MistyRose;
+            this.tabPage1.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPage1.Controls.Add(this.label21);
+            this.tabPage1.Controls.Add(this.status);
             this.tabPage1.Controls.Add(this.button5);
             this.tabPage1.Controls.Add(this.search);
             this.tabPage1.Controls.Add(this.dataGridView1);
@@ -193,7 +199,6 @@
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.updbutton);
-            this.tabPage1.Controls.Add(this.delbutton);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.itemname);
             this.tabPage1.Controls.Add(this.measuretype);
@@ -202,14 +207,38 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(1428, 755);
+            this.tabPage1.Size = new System.Drawing.Size(1428, 784);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "General View";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(6, 639);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(113, 39);
+            this.label21.TabIndex = 15;
+            this.label21.Text = "Status";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
+            // 
+            // status
+            // 
+            this.status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.status.FormattingEnabled = true;
+            this.status.Items.AddRange(new object[] {
+            "Active",
+            "Inactive"});
+            this.status.Location = new System.Drawing.Point(221, 654);
+            this.status.Name = "status";
+            this.status.Size = new System.Drawing.Size(384, 24);
+            this.status.TabIndex = 14;
+            this.status.SelectedIndexChanged += new System.EventHandler(this.status_SelectedIndexChanged);
+            // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.Azure;
+            this.button5.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(969, 586);
@@ -248,31 +277,31 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(5, 486);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 488);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 38);
+            this.label1.Size = new System.Drawing.Size(183, 39);
             this.label1.TabIndex = 11;
             this.label1.Text = "Item Name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(5, 597);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 594);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(166, 38);
+            this.label3.Size = new System.Drawing.Size(143, 39);
             this.label3.TabIndex = 13;
             this.label3.Text = "Quantity";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // updbutton
             // 
-            this.updbutton.BackColor = System.Drawing.Color.LightGreen;
+            this.updbutton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.updbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.updbutton.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updbutton.Location = new System.Drawing.Point(221, 639);
+            this.updbutton.Location = new System.Drawing.Point(221, 705);
             this.updbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.updbutton.Name = "updbutton";
             this.updbutton.Size = new System.Drawing.Size(184, 58);
@@ -281,28 +310,13 @@
             this.updbutton.UseVisualStyleBackColor = false;
             this.updbutton.Click += new System.EventHandler(this.updbutton_Click);
             // 
-            // delbutton
-            // 
-            this.delbutton.BackColor = System.Drawing.Color.IndianRed;
-            this.delbutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.delbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.delbutton.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delbutton.Location = new System.Drawing.Point(411, 639);
-            this.delbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.delbutton.Name = "delbutton";
-            this.delbutton.Size = new System.Drawing.Size(196, 58);
-            this.delbutton.TabIndex = 7;
-            this.delbutton.Text = "Delete";
-            this.delbutton.UseVisualStyleBackColor = false;
-            this.delbutton.Click += new System.EventHandler(this.delbutton_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(5, 544);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 541);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(189, 38);
+            this.label2.Size = new System.Drawing.Size(168, 39);
             this.label2.TabIndex = 12;
             this.label2.Text = "Item Type";
             // 
@@ -344,7 +358,9 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.MistyRose;
+            this.tabPage2.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPage2.Controls.Add(this.label22);
+            this.tabPage2.Controls.Add(this.equipStatus);
             this.tabPage2.Controls.Add(this.searchequip);
             this.tabPage2.Controls.Add(this.searche);
             this.tabPage2.Controls.Add(this.label11);
@@ -364,7 +380,6 @@
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.updequipb);
-            this.tabPage2.Controls.Add(this.delequipb);
             this.tabPage2.Controls.Add(this.eitemname);
             this.tabPage2.Controls.Add(this.emeasuretype);
             this.tabPage2.Controls.Add(this.eqty);
@@ -374,17 +389,38 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(1428, 755);
+            this.tabPage2.Size = new System.Drawing.Size(1428, 784);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Equipment";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(19, 658);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(54, 17);
+            this.label22.TabIndex = 47;
+            this.label22.Text = "Status";
+            // 
+            // equipStatus
+            // 
+            this.equipStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.equipStatus.FormattingEnabled = true;
+            this.equipStatus.Items.AddRange(new object[] {
+            "Active",
+            "Inactive"});
+            this.equipStatus.Location = new System.Drawing.Point(321, 655);
+            this.equipStatus.Name = "equipStatus";
+            this.equipStatus.Size = new System.Drawing.Size(260, 25);
+            this.equipStatus.TabIndex = 46;
+            // 
             // searchequip
             // 
-            this.searchequip.BackColor = System.Drawing.Color.DodgerBlue;
+            this.searchequip.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.searchequip.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchequip.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchequip.Location = new System.Drawing.Point(629, 438);
+            this.searchequip.Location = new System.Drawing.Point(618, 435);
             this.searchequip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchequip.Name = "searchequip";
             this.searchequip.Size = new System.Drawing.Size(128, 46);
@@ -396,7 +432,7 @@
             // searche
             // 
             this.searche.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searche.Location = new System.Drawing.Point(508, 398);
+            this.searche.Location = new System.Drawing.Point(498, 397);
             this.searche.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searche.Name = "searche";
             this.searche.Size = new System.Drawing.Size(372, 34);
@@ -448,7 +484,7 @@
             // 
             this.deselectequipb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deselectequipb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deselectequipb.Location = new System.Drawing.Point(553, 684);
+            this.deselectequipb.Location = new System.Drawing.Point(574, 710);
             this.deselectequipb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deselectequipb.Name = "deselectequipb";
             this.deselectequipb.Size = new System.Drawing.Size(161, 41);
@@ -459,10 +495,10 @@
             // 
             // addequipb
             // 
-            this.addequipb.BackColor = System.Drawing.Color.Chartreuse;
+            this.addequipb.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.addequipb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addequipb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addequipb.Location = new System.Drawing.Point(404, 684);
+            this.addequipb.Location = new System.Drawing.Point(425, 710);
             this.addequipb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addequipb.Name = "addequipb";
             this.addequipb.Size = new System.Drawing.Size(144, 41);
@@ -571,10 +607,10 @@
             // 
             // updequipb
             // 
-            this.updequipb.BackColor = System.Drawing.Color.Gold;
+            this.updequipb.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.updequipb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updequipb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updequipb.Location = new System.Drawing.Point(720, 682);
+            this.updequipb.Location = new System.Drawing.Point(742, 708);
             this.updequipb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.updequipb.Name = "updequipb";
             this.updequipb.Size = new System.Drawing.Size(161, 44);
@@ -582,20 +618,6 @@
             this.updequipb.Text = "Update";
             this.updequipb.UseVisualStyleBackColor = false;
             this.updequipb.Click += new System.EventHandler(this.updequipb_Click);
-            // 
-            // delequipb
-            // 
-            this.delequipb.BackColor = System.Drawing.Color.Red;
-            this.delequipb.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.delequipb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delequipb.Location = new System.Drawing.Point(887, 682);
-            this.delequipb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.delequipb.Name = "delequipb";
-            this.delequipb.Size = new System.Drawing.Size(171, 44);
-            this.delequipb.TabIndex = 24;
-            this.delequipb.Text = "Delete";
-            this.delequipb.UseVisualStyleBackColor = false;
-            this.delequipb.Click += new System.EventHandler(this.delequipb_Click);
             // 
             // eitemname
             // 
@@ -651,7 +673,9 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.MistyRose;
+            this.tabPage3.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPage3.Controls.Add(this.label23);
+            this.tabPage3.Controls.Add(this.appStatus);
             this.tabPage3.Controls.Add(this.searchapp);
             this.tabPage3.Controls.Add(this.searcha);
             this.tabPage3.Controls.Add(this.label12);
@@ -665,7 +689,6 @@
             this.tabPage3.Controls.Add(this.label18);
             this.tabPage3.Controls.Add(this.label19);
             this.tabPage3.Controls.Add(this.updappb);
-            this.tabPage3.Controls.Add(this.delappb);
             this.tabPage3.Controls.Add(this.aitemname);
             this.tabPage3.Controls.Add(this.ameasuretype);
             this.tabPage3.Controls.Add(this.aqty);
@@ -674,13 +697,35 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1428, 755);
+            this.tabPage3.Size = new System.Drawing.Size(1428, 784);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Apparatus";
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(174, 652);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(54, 17);
+            this.label23.TabIndex = 68;
+            this.label23.Text = "Status";
+            // 
+            // appStatus
+            // 
+            this.appStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.appStatus.FormattingEnabled = true;
+            this.appStatus.Items.AddRange(new object[] {
+            "Active",
+            "Inactive"});
+            this.appStatus.Location = new System.Drawing.Point(388, 644);
+            this.appStatus.Name = "appStatus";
+            this.appStatus.Size = new System.Drawing.Size(238, 25);
+            this.appStatus.TabIndex = 67;
             // 
             // searchapp
             // 
-            this.searchapp.BackColor = System.Drawing.Color.DodgerBlue;
+            this.searchapp.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.searchapp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchapp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchapp.Location = new System.Drawing.Point(639, 443);
@@ -747,7 +792,7 @@
             // 
             this.deselectappb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deselectappb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deselectappb.Location = new System.Drawing.Point(564, 672);
+            this.deselectappb.Location = new System.Drawing.Point(564, 706);
             this.deselectappb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deselectappb.Name = "deselectappb";
             this.deselectappb.Size = new System.Drawing.Size(156, 47);
@@ -758,10 +803,10 @@
             // 
             // addappb
             // 
-            this.addappb.BackColor = System.Drawing.Color.Chartreuse;
+            this.addappb.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.addappb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addappb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addappb.Location = new System.Drawing.Point(420, 672);
+            this.addappb.Location = new System.Drawing.Point(420, 706);
             this.addappb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addappb.Name = "addappb";
             this.addappb.Size = new System.Drawing.Size(139, 47);
@@ -811,10 +856,10 @@
             // 
             // updappb
             // 
-            this.updappb.BackColor = System.Drawing.Color.Gold;
+            this.updappb.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.updappb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updappb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updappb.Location = new System.Drawing.Point(725, 672);
+            this.updappb.Location = new System.Drawing.Point(725, 706);
             this.updappb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.updappb.Name = "updappb";
             this.updappb.Size = new System.Drawing.Size(141, 47);
@@ -822,20 +867,6 @@
             this.updappb.Text = "Update";
             this.updappb.UseVisualStyleBackColor = false;
             this.updappb.Click += new System.EventHandler(this.updappb_Click);
-            // 
-            // delappb
-            // 
-            this.delappb.BackColor = System.Drawing.Color.Red;
-            this.delappb.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.delappb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delappb.Location = new System.Drawing.Point(872, 672);
-            this.delappb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.delappb.Name = "delappb";
-            this.delappb.Size = new System.Drawing.Size(145, 47);
-            this.delappb.TabIndex = 36;
-            this.delappb.Text = "Delete";
-            this.delappb.UseVisualStyleBackColor = false;
-            this.delappb.Click += new System.EventHandler(this.delappb_Click);
             // 
             // aitemname
             // 
@@ -891,13 +922,14 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.BackColor = System.Drawing.Color.MistyRose;
+            this.tabPage4.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPage4.Controls.Add(this.label24);
+            this.tabPage4.Controls.Add(this.chemStatus);
             this.tabPage4.Controls.Add(this.searchchem);
             this.tabPage4.Controls.Add(this.searchc);
             this.tabPage4.Controls.Add(this.label15);
             this.tabPage4.Controls.Add(this.numericUpDown1);
             this.tabPage4.Controls.Add(this.cmeasuretype);
-            this.tabPage4.Controls.Add(this.button4);
             this.tabPage4.Controls.Add(this.button3);
             this.tabPage4.Controls.Add(this.button2);
             this.tabPage4.Controls.Add(this.button1);
@@ -911,14 +943,35 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1428, 755);
+            this.tabPage4.Size = new System.Drawing.Size(1428, 784);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Chemical";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(432, 651);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(48, 17);
+            this.label24.TabIndex = 61;
+            this.label24.Text = "Status";
+            // 
+            // chemStatus
+            // 
+            this.chemStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.chemStatus.FormattingEnabled = true;
+            this.chemStatus.Items.AddRange(new object[] {
+            "Active",
+            "Inactive"});
+            this.chemStatus.Location = new System.Drawing.Point(693, 644);
+            this.chemStatus.Name = "chemStatus";
+            this.chemStatus.Size = new System.Drawing.Size(236, 24);
+            this.chemStatus.TabIndex = 60;
+            // 
             // searchchem
             // 
-            this.searchchem.BackColor = System.Drawing.Color.DodgerBlue;
+            this.searchchem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.searchchem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchchem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchchem.Location = new System.Drawing.Point(636, 421);
@@ -943,7 +996,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(420, 622);
+            this.label15.Location = new System.Drawing.Point(425, 592);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(124, 31);
             this.label15.TabIndex = 59;
@@ -952,7 +1005,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(688, 620);
+            this.numericUpDown1.Location = new System.Drawing.Point(693, 590);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(76, 30);
@@ -970,33 +1023,19 @@
             "Piece(s)",
             "L",
             "Kg"});
-            this.cmeasuretype.Location = new System.Drawing.Point(769, 620);
+            this.cmeasuretype.Location = new System.Drawing.Point(774, 590);
             this.cmeasuretype.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmeasuretype.Name = "cmeasuretype";
             this.cmeasuretype.Size = new System.Drawing.Size(155, 33);
             this.cmeasuretype.TabIndex = 43;
             this.cmeasuretype.SelectedIndexChanged += new System.EventHandler(this.cmeasuretype_SelectedIndexChanged);
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.RosyBrown;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(867, 707);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(155, 46);
-            this.button4.TabIndex = 47;
-            this.button4.Text = "Delete";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.RosyBrown;
+            this.button3.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(704, 707);
+            this.button3.Location = new System.Drawing.Point(772, 707);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(157, 46);
@@ -1009,7 +1048,7 @@
             // 
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(537, 707);
+            this.button2.Location = new System.Drawing.Point(605, 707);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(161, 46);
@@ -1020,10 +1059,10 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.RosyBrown;
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(367, 707);
+            this.button1.Location = new System.Drawing.Point(435, 707);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(165, 46);
@@ -1036,7 +1075,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(420, 511);
+            this.label14.Location = new System.Drawing.Point(425, 481);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(219, 31);
             this.label14.TabIndex = 52;
@@ -1045,7 +1084,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(688, 510);
+            this.textBox3.Location = new System.Drawing.Point(693, 480);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(236, 30);
@@ -1055,7 +1094,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(420, 590);
+            this.label16.Location = new System.Drawing.Point(425, 560);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(190, 31);
             this.label16.TabIndex = 50;
@@ -1065,7 +1104,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(420, 553);
+            this.label20.Location = new System.Drawing.Point(425, 523);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(161, 31);
             this.label20.TabIndex = 49;
@@ -1074,7 +1113,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(688, 588);
+            this.textBox2.Location = new System.Drawing.Point(693, 558);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(236, 30);
@@ -1083,7 +1122,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(688, 551);
+            this.textBox1.Location = new System.Drawing.Point(693, 521);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(236, 30);
@@ -1120,8 +1159,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(1463, 892);
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(1434, 865);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.pictureBox3);
@@ -1176,12 +1215,10 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.ComboBox measuretype;
-        private System.Windows.Forms.Button delbutton;
         private System.Windows.Forms.Button updbutton;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button updequipb;
-        private System.Windows.Forms.Button delequipb;
         private System.Windows.Forms.TextBox eitemname;
         private System.Windows.Forms.ComboBox emeasuretype;
         private System.Windows.Forms.NumericUpDown eqty;
@@ -1211,7 +1248,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button updappb;
-        private System.Windows.Forms.Button delappb;
         private System.Windows.Forms.TextBox aitemname;
         private System.Windows.Forms.ComboBox ameasuretype;
         private System.Windows.Forms.NumericUpDown aqty;
@@ -1219,7 +1255,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.ComboBox cmeasuretype;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -1239,5 +1274,13 @@
         private System.Windows.Forms.Button searchchem;
         private System.Windows.Forms.TextBox searchc;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.ComboBox status;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.ComboBox equipStatus;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.ComboBox appStatus;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.ComboBox chemStatus;
     }
 }

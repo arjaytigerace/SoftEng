@@ -67,6 +67,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
             this.textBox1.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(249, 512);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -77,6 +78,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.BackColor = System.Drawing.SystemColors.Control;
             this.textBox3.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(249, 446);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
@@ -141,7 +143,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Khaki;
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(598, 788);
@@ -155,7 +157,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.LightGreen;
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(249, 788);
@@ -169,7 +171,7 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.LightCoral;
+            this.button3.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(769, 788);
@@ -177,7 +179,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(163, 53);
             this.button3.TabIndex = 9;
-            this.button3.Text = "Delete";
+            this.button3.Text = "Status";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -195,6 +197,7 @@
             // 
             // textBox4
             // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.Control;
             this.textBox4.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(249, 642);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4);
@@ -226,6 +229,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.Control;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
@@ -280,7 +284,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MistyRose;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(991, 854);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox2);

@@ -47,7 +47,7 @@
             // 
             // buttonupd
             // 
-            this.buttonupd.BackColor = System.Drawing.Color.Khaki;
+            this.buttonupd.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.buttonupd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonupd.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonupd.Location = new System.Drawing.Point(13, 199);
@@ -73,6 +73,7 @@
             // 
             // txtusr
             // 
+            this.txtusr.BackColor = System.Drawing.SystemColors.Control;
             this.txtusr.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtusr.Location = new System.Drawing.Point(13, 131);
             this.txtusr.Margin = new System.Windows.Forms.Padding(4);
@@ -107,6 +108,7 @@
             // 
             // txtpswdold
             // 
+            this.txtpswdold.BackColor = System.Drawing.SystemColors.Control;
             this.txtpswdold.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpswdold.Location = new System.Drawing.Point(13, 332);
             this.txtpswdold.Margin = new System.Windows.Forms.Padding(4);
@@ -118,6 +120,7 @@
             // 
             // txtpswdnew
             // 
+            this.txtpswdnew.BackColor = System.Drawing.SystemColors.Control;
             this.txtpswdnew.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpswdnew.Location = new System.Drawing.Point(13, 452);
             this.txtpswdnew.Margin = new System.Windows.Forms.Padding(4);
@@ -141,7 +144,7 @@
             // 
             // buttonupdpass
             // 
-            this.buttonupdpass.BackColor = System.Drawing.Color.Khaki;
+            this.buttonupdpass.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.buttonupdpass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonupdpass.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonupdpass.Location = new System.Drawing.Point(13, 640);
@@ -167,6 +170,7 @@
             // 
             // txtpswdnew2
             // 
+            this.txtpswdnew2.BackColor = System.Drawing.SystemColors.Control;
             this.txtpswdnew2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpswdnew2.Location = new System.Drawing.Point(13, 572);
             this.txtpswdnew2.Margin = new System.Windows.Forms.Padding(4);
@@ -190,7 +194,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MistyRose;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(346, 717);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.txtpswdnew2);
