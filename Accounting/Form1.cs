@@ -77,7 +77,7 @@ namespace Accounting
                 MessageBox.Show("Welcome " + firstname + " " + lastname);   
                 MainMenu Main = new MainMenu();
 
-
+                
                 Main.adminid = id;
                 Main.Getfname = firstname;
                 Main.Getlname = lastname;

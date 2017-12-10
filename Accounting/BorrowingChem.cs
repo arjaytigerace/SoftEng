@@ -49,5 +49,10 @@ namespace Accounting
             borrowupd.Show();
 
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
