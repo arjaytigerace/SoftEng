@@ -34,6 +34,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.itemCode = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.status = new System.Windows.Forms.ComboBox();
             this.button5 = new System.Windows.Forms.Button();
@@ -47,6 +49,8 @@
             this.measuretype = new System.Windows.Forms.ComboBox();
             this.qty = new System.Windows.Forms.NumericUpDown();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label26 = new System.Windows.Forms.Label();
+            this.eItemCode = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.equipStatus = new System.Windows.Forms.ComboBox();
             this.searchequip = new System.Windows.Forms.Button();
@@ -73,6 +77,8 @@
             this.eqty = new System.Windows.Forms.NumericUpDown();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.aItemCode = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.appStatus = new System.Windows.Forms.ComboBox();
             this.searchapp = new System.Windows.Forms.Button();
@@ -93,6 +99,8 @@
             this.aqty = new System.Windows.Forms.NumericUpDown();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label28 = new System.Windows.Forms.Label();
+            this.cItemCode = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.chemStatus = new System.Windows.Forms.ComboBox();
             this.searchchem = new System.Windows.Forms.Button();
@@ -111,14 +119,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.itemCode = new System.Windows.Forms.TextBox();
-            this.eItemCode = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.aItemCode = new System.Windows.Forms.TextBox();
-            this.cItemCode = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -218,10 +218,28 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(1428, 784);
+            this.tabPage1.Size = new System.Drawing.Size(1412, 784);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "General View";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // itemCode
+            // 
+            this.itemCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itemCode.Location = new System.Drawing.Point(221, 432);
+            this.itemCode.Name = "itemCode";
+            this.itemCode.Size = new System.Drawing.Size(384, 45);
+            this.itemCode.TabIndex = 17;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(7, 438);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(174, 39);
+            this.label25.TabIndex = 16;
+            this.label25.Text = "Item Code";
             // 
             // label21
             // 
@@ -237,13 +255,14 @@
             // status
             // 
             this.status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.status.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.status.FormattingEnabled = true;
             this.status.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.status.Location = new System.Drawing.Point(221, 654);
+            this.status.Location = new System.Drawing.Point(221, 639);
             this.status.Name = "status";
-            this.status.Size = new System.Drawing.Size(384, 24);
+            this.status.Size = new System.Drawing.Size(384, 46);
             this.status.TabIndex = 14;
             this.status.SelectedIndexChanged += new System.EventHandler(this.status_SelectedIndexChanged);
             // 
@@ -402,10 +421,26 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(1428, 784);
+            this.tabPage2.Size = new System.Drawing.Size(1412, 784);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Equipment";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(22, 470);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(80, 17);
+            this.label26.TabIndex = 49;
+            this.label26.Text = "Item Code";
+            // 
+            // eItemCode
+            // 
+            this.eItemCode.Location = new System.Drawing.Point(321, 470);
+            this.eItemCode.Name = "eItemCode";
+            this.eItemCode.Size = new System.Drawing.Size(260, 23);
+            this.eItemCode.TabIndex = 48;
             // 
             // label22
             // 
@@ -713,10 +748,26 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1428, 784);
+            this.tabPage3.Size = new System.Drawing.Size(1412, 784);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Apparatus";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // aItemCode
+            // 
+            this.aItemCode.Location = new System.Drawing.Point(388, 479);
+            this.aItemCode.Name = "aItemCode";
+            this.aItemCode.Size = new System.Drawing.Size(238, 23);
+            this.aItemCode.TabIndex = 70;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(177, 479);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(80, 17);
+            this.label27.TabIndex = 69;
+            this.label27.Text = "Item Code";
             // 
             // label23
             // 
@@ -966,6 +1017,22 @@
             this.tabPage4.Text = "Chemical";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(439, 475);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(71, 17);
+            this.label28.TabIndex = 63;
+            this.label28.Text = "Item Code";
+            // 
+            // cItemCode
+            // 
+            this.cItemCode.Location = new System.Drawing.Point(697, 475);
+            this.cItemCode.Name = "cItemCode";
+            this.cItemCode.Size = new System.Drawing.Size(236, 22);
+            this.cItemCode.TabIndex = 62;
+            // 
             // label24
             // 
             this.label24.AutoSize = true;
@@ -1173,70 +1240,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(151, 89);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(20, 449);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(71, 17);
-            this.label25.TabIndex = 16;
-            this.label25.Text = "Item Code";
-            // 
-            // itemCode
-            // 
-            this.itemCode.Location = new System.Drawing.Point(221, 449);
-            this.itemCode.Name = "itemCode";
-            this.itemCode.Size = new System.Drawing.Size(384, 22);
-            this.itemCode.TabIndex = 17;
-            // 
-            // eItemCode
-            // 
-            this.eItemCode.Location = new System.Drawing.Point(321, 470);
-            this.eItemCode.Name = "eItemCode";
-            this.eItemCode.Size = new System.Drawing.Size(260, 23);
-            this.eItemCode.TabIndex = 48;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(22, 470);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(80, 17);
-            this.label26.TabIndex = 49;
-            this.label26.Text = "Item Code";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(177, 479);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(80, 17);
-            this.label27.TabIndex = 69;
-            this.label27.Text = "Item Code";
-            // 
-            // aItemCode
-            // 
-            this.aItemCode.Location = new System.Drawing.Point(388, 479);
-            this.aItemCode.Name = "aItemCode";
-            this.aItemCode.Size = new System.Drawing.Size(238, 23);
-            this.aItemCode.TabIndex = 70;
-            // 
-            // cItemCode
-            // 
-            this.cItemCode.Location = new System.Drawing.Point(697, 475);
-            this.cItemCode.Name = "cItemCode";
-            this.cItemCode.Size = new System.Drawing.Size(236, 22);
-            this.cItemCode.TabIndex = 62;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(439, 475);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(71, 17);
-            this.label28.TabIndex = 63;
-            this.label28.Text = "Item Code";
             // 
             // Inventory
             // 

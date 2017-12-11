@@ -221,9 +221,9 @@
             this.user.AutoSize = true;
             this.user.Location = new System.Drawing.Point(225, 410);
             this.user.Name = "user";
-            this.user.Size = new System.Drawing.Size(46, 17);
+            this.user.Size = new System.Drawing.Size(91, 17);
             this.user.TabIndex = 39;
-            this.user.Text = "label8";
+            this.user.Text = "Name of Faci";
             // 
             // label9
             // 
