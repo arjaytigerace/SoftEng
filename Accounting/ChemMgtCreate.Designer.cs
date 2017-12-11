@@ -51,7 +51,11 @@
             this.sFName = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.cqty)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // chemname
@@ -121,7 +125,7 @@
             // 
             this.tFName.BackColor = System.Drawing.SystemColors.Control;
             this.tFName.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tFName.Location = new System.Drawing.Point(307, 89);
+            this.tFName.Location = new System.Drawing.Point(299, 14);
             this.tFName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tFName.Name = "tFName";
             this.tFName.Size = new System.Drawing.Size(237, 34);
@@ -132,7 +136,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(15, 100);
+            this.label4.Location = new System.Drawing.Point(4, 22);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(190, 20);
             this.label4.TabIndex = 25;
@@ -142,7 +146,7 @@
             // 
             this.subj.BackColor = System.Drawing.SystemColors.Control;
             this.subj.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subj.Location = new System.Drawing.Point(225, 184);
+            this.subj.Location = new System.Drawing.Point(225, 190);
             this.subj.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.subj.Name = "subj";
             this.subj.Size = new System.Drawing.Size(319, 34);
@@ -162,7 +166,7 @@
             // 
             this.sLName.BackColor = System.Drawing.SystemColors.Control;
             this.sLName.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sLName.Location = new System.Drawing.Point(307, 278);
+            this.sLName.Location = new System.Drawing.Point(299, 50);
             this.sLName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sLName.Name = "sLName";
             this.sLName.Size = new System.Drawing.Size(237, 34);
@@ -172,7 +176,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 192);
+            this.label5.Location = new System.Drawing.Point(12, 198);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 20);
             this.label5.TabIndex = 33;
@@ -182,7 +186,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 278);
+            this.label7.Location = new System.Drawing.Point(4, 44);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(127, 20);
             this.label7.TabIndex = 34;
@@ -224,15 +228,16 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(16, 349);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(8, 115);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(150, 17);
+            this.label9.Size = new System.Drawing.Size(171, 17);
             this.label9.TabIndex = 41;
             this.label9.Text = "Student\'s Year/Course";
             // 
             // yearcourse
             // 
-            this.yearcourse.Location = new System.Drawing.Point(228, 344);
+            this.yearcourse.Location = new System.Drawing.Point(220, 110);
             this.yearcourse.Name = "yearcourse";
             this.yearcourse.Size = new System.Drawing.Size(316, 22);
             this.yearcourse.TabIndex = 42;
@@ -241,7 +246,7 @@
             // 
             this.tLName.BackColor = System.Drawing.SystemColors.Control;
             this.tLName.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tLName.Location = new System.Drawing.Point(307, 138);
+            this.tLName.Location = new System.Drawing.Point(299, 57);
             this.tLName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tLName.Name = "tLName";
             this.tLName.Size = new System.Drawing.Size(237, 34);
@@ -250,7 +255,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(222, 149);
+            this.label3.Location = new System.Drawing.Point(214, 68);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 17);
             this.label3.TabIndex = 44;
@@ -259,7 +264,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(222, 100);
+            this.label8.Location = new System.Drawing.Point(214, 19);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(76, 17);
             this.label8.TabIndex = 45;
@@ -269,7 +274,7 @@
             // 
             this.sFName.BackColor = System.Drawing.SystemColors.Control;
             this.sFName.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sFName.Location = new System.Drawing.Point(307, 240);
+            this.sFName.Location = new System.Drawing.Point(299, 12);
             this.sFName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sFName.Name = "sFName";
             this.sFName.Size = new System.Drawing.Size(237, 34);
@@ -278,7 +283,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(225, 257);
+            this.label10.Location = new System.Drawing.Point(217, 23);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(76, 17);
             this.label10.TabIndex = 47;
@@ -287,36 +292,54 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(225, 295);
+            this.label11.Location = new System.Drawing.Point(217, 61);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(76, 17);
             this.label11.TabIndex = 48;
             this.label11.Text = "Last Name";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.sFName);
+            this.groupBox1.Controls.Add(this.yearcourse);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.sLName);
+            this.groupBox1.Location = new System.Drawing.Point(8, 234);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(565, 148);
+            this.groupBox1.TabIndex = 49;
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.tLName);
+            this.groupBox2.Controls.Add(this.tFName);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Location = new System.Drawing.Point(8, 79);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(564, 105);
+            this.groupBox2.TabIndex = 50;
+            this.groupBox2.TabStop = false;
             // 
             // ChemMgtCreate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(962, 540);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.sFName);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.tLName);
-            this.Controls.Add(this.yearcourse);
-            this.Controls.Add(this.label9);
+            this.ClientSize = new System.Drawing.Size(580, 540);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.user);
             this.Controls.Add(this.mtype);
             this.Controls.Add(this.cqty);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.sLName);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.subj);
-            this.Controls.Add(this.tFName);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.chemname);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -326,6 +349,10 @@
             this.Text = "Chemical Request";
             this.Load += new System.EventHandler(this.ChemMgtCreate_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cqty)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,5 +382,7 @@
         private System.Windows.Forms.TextBox sFName;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
