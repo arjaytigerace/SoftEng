@@ -128,6 +128,7 @@ namespace Accounting
                     conn.Close();
                     MessageBox.Show("Success", "Request Made", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                    //main.Show();
                     this.Close();
 
 
@@ -183,6 +184,10 @@ namespace Accounting
         private void cqty_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ChemMgtCreate_FormClosing(object sender, FormClosingEventArgs e)
+        {
         }
     }
 }

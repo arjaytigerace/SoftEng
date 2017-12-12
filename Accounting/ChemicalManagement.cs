@@ -26,10 +26,10 @@ namespace Accounting
 
         private void ChemicalManagement_Load(object sender, EventArgs e)
         {
-            loadall();
+            Loadall();
         }
 
-        public void loadall()
+        public void Loadall()
         {
 
             string query = "SELECT b.itemName,a.cqty,a.measurementType,studentFName,studentLName,a.dateRequested FROM chem_lab.chemrequest a, " +
@@ -73,6 +73,8 @@ namespace Accounting
             chemcreate.Adminid = this.Adminid;
             chemcreate.main = this;
             chemcreate.Show();
+            //this.Hide();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -80,6 +82,7 @@ namespace Accounting
             ChemMgtUpdate chemupd = new ChemMgtUpdate();
             chemupd.main = this;
             chemupd.Show();
+
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -89,6 +92,22 @@ namespace Accounting
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void ChemicalManagement_Leave(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void ChemicalManagement_Shown(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void ChemicalManagement_Activated(object sender, EventArgs e)
+        {
+            Loadall();
 
         }
     }

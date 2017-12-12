@@ -49,3 +49,29 @@ D:\raeni\Documents\SAD\Dec 3\Accounting\Accounting\obj\Debug\Accounting.csproj.G
 D:\raeni\Documents\SAD\Dec 3\Accounting\Accounting\obj\Debug\Accounting.csproj.CoreCompileInputs.cache
 D:\raeni\Documents\SAD\Dec 3\Accounting\Accounting\obj\Debug\Accounting.exe
 D:\raeni\Documents\SAD\Dec 3\Accounting\Accounting\obj\Debug\Accounting.pdb
+C:\Users\User\Source\Repos\SoftEng\Accounting\bin\Debug\Accounting.exe.config
+C:\Users\User\Source\Repos\SoftEng\Accounting\bin\Debug\Accounting.exe
+C:\Users\User\Source\Repos\SoftEng\Accounting\bin\Debug\Accounting.pdb
+C:\Users\User\Source\Repos\SoftEng\Accounting\bin\Debug\MySql.Data.dll
+C:\Users\User\Source\Repos\SoftEng\Accounting\bin\Debug\MySql.Data.xml
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.csprojResolveAssemblyReference.cache
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.BRWBorrow.resources
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.BorrowingChem.resources
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.BRWupdate.resources
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.ChemicalManagement.resources
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.ChemMgtCreate.resources
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.ChemMgtUpdate.resources
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Form1.resources
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.INDI.resources
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Inventory.resources
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.GenerateReport.resources
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.MainMenu.resources
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Properties.Resources.resources
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.BRWReturn.resources
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Search.resources
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.UserPass.resources
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Users.resources
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.csproj.GenerateResource.Cache
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.exe
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.pdb

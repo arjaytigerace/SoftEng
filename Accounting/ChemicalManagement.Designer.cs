@@ -129,8 +129,11 @@
             this.Name = "ChemicalManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChemicalManagement";
+            this.Activated += new System.EventHandler(this.ChemicalManagement_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ChemicalManagement_FormClosing);
             this.Load += new System.EventHandler(this.ChemicalManagement_Load);
+            this.Shown += new System.EventHandler(this.ChemicalManagement_Shown);
+            this.Leave += new System.EventHandler(this.ChemicalManagement_Leave);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

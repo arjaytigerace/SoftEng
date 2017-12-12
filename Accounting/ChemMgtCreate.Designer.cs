@@ -347,6 +347,7 @@
             this.Controls.Add(this.buttonSubmit);
             this.Name = "ChemMgtCreate";
             this.Text = "Chemical Request";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ChemMgtCreate_FormClosing);
             this.Load += new System.EventHandler(this.ChemMgtCreate_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cqty)).EndInit();
             this.groupBox1.ResumeLayout(false);
