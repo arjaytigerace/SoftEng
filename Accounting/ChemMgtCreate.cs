@@ -127,6 +127,15 @@ namespace Accounting
                         MySqlCommand commrequest = new MySqlCommand(queryrequest, conn);
                         commrequest.ExecuteNonQuery();
                         conn.Close();
+
+                        conn.Open();
+
+                        string updateqty = "UPDATE item SET quantity = quantity - " + cqty.Value + " WHERE itemID='" + itemid + "'";
+
+                        MySqlCommand commupdate = new MySqlCommand(updateqty, conn);
+                        commupdate.ExecuteNonQuery();
+                        conn.Close();
+
                         MessageBox.Show("Success", "Request Made", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         //main.Show();
