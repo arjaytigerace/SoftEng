@@ -58,7 +58,7 @@ namespace Accounting
             }
             else
             {
-                string query = "SELECT itemID from item where itemName ='"+chemname.Text+"' AND itemTypeID=3";
+                string query = "SELECT itemID, quantity from item where itemName ='"+chemname.Text+"' AND itemTypeID=3";
 
                 conn.Open();
                 MySqlCommand comm = new MySqlCommand(query, conn);
@@ -71,66 +71,71 @@ namespace Accounting
                 if (hasRows)
                 {
                     int itemid = Convert.ToInt32(dt.Rows[0]["itemID"].ToString());
-
-                   
-                    if (!checkTeacher())
+                
+                    if (cqty.Value<= Convert.ToInt32(dt.Rows[0]["quantity"].ToString()))
                     {
-                        string queryteacher = "INSERT INTO teacher(teacherFName,teacherLName) " + "VALUES('" + tFName.Text + "', '" + tLName.Text + "')";
+                        if (!checkTeacher())
+                        {
+                            string queryteacher = "INSERT INTO teacher(teacherFName,teacherLName) " + "VALUES('" + tFName.Text + "', '" + tLName.Text + "')";
 
+                            conn.Open();
+                            MySqlCommand commteacher = new MySqlCommand(queryteacher, conn);
+                            commteacher.ExecuteNonQuery();
+                            conn.Close();
+
+                        }
+
+                        string query2 = "SELECT teacherID from teacher WHERE teacherFName='" + tFName.Text + "' AND teacherLName='" + tLName.Text + "'";
                         conn.Open();
-                        MySqlCommand commteacher = new MySqlCommand(queryteacher, conn);
-                        commteacher.ExecuteNonQuery();
+                        MySqlCommand comm2 = new MySqlCommand(query2, conn);
+                        MySqlDataAdapter adp2 = new MySqlDataAdapter(comm2);
                         conn.Close();
+                        DataTable dt2 = new DataTable();
+                        adp2.Fill(dt2);
 
+                        int teacherid = Convert.ToInt32(dt2.Rows[0]["teacherID"].ToString());
+                        if (!checkStudent())
+                        {
+                            string querystudent = "INSERT INTO student(studentFName,studentLName,yearCourse) " + "VALUES('" + sFName.Text + "', '" + sLName.Text + "', '" + yearcourse.Text + "')";
+
+                            conn.Open();
+                            MySqlCommand commstudent = new MySqlCommand(querystudent, conn);
+                            commstudent.ExecuteNonQuery();
+                            conn.Close();
+
+
+                        }
+
+                        string query3 = "SELECT studentID from student WHERE studentFName='" + sFName.Text + "' AND studentLName='" + sLName.Text + "' AND yearCourse='" + yearcourse.Text + "'";
+                        conn.Open();
+                        MySqlCommand comm3 = new MySqlCommand(query3, conn);
+                        MySqlDataAdapter adp3 = new MySqlDataAdapter(comm3);
+                        conn.Close();
+                        DataTable dt3 = new DataTable();
+                        adp3.Fill(dt3);
+
+                        int studentid = Convert.ToInt32(dt3.Rows[0]["studentID"].ToString());
+
+                        //inserting
+                        DateTime dateValue = DateTime.Now;
+                        string date = dateValue.ToString("yyyy-MM-dd HH:mm:ss");
+                        conn.Open();
+
+                        string queryrequest = "INSERT INTO chemrequest(itemID,cqty,measurementType,teacherId,studentId,subject,dateRequested,userID) " + "VALUES('" + itemid + "', '" + cqty.Value + "', '" +
+                            mtype.Text + "', '" + teacherid + "', '" + studentid + "', '" + subj.Text + "', '" + date + "', '" + this.Adminid + "')";
+
+                        MySqlCommand commrequest = new MySqlCommand(queryrequest, conn);
+                        commrequest.ExecuteNonQuery();
+                        conn.Close();
+                        MessageBox.Show("Success", "Request Made", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        //main.Show();
+                        this.Close();
                     }
-
-                    string query2 = "SELECT teacherID from teacher WHERE teacherFName='" + tFName.Text + "' AND teacherLName='" + tLName.Text + "'";
-                    conn.Open();
-                    MySqlCommand comm2 = new MySqlCommand(query2, conn);
-                    MySqlDataAdapter adp2 = new MySqlDataAdapter(comm2);
-                    conn.Close();
-                    DataTable dt2 = new DataTable();
-                    adp2.Fill(dt2);
-
-                    int teacherid = Convert.ToInt32(dt2.Rows[0]["teacherID"].ToString());
-                    if (!checkStudent())
+                    else
                     {
-                        string querystudent = "INSERT INTO student(studentFName,studentLName,yearCourse) " + "VALUES('" + sFName.Text + "', '" + sLName.Text + "', '"+yearcourse.Text +"')";
-
-                        conn.Open();
-                        MySqlCommand commstudent = new MySqlCommand(querystudent, conn);
-                        commstudent.ExecuteNonQuery();
-                        conn.Close();
-
-
+                        MessageBox.Show("Quantity is not enough");
                     }
-
-                    string query3 = "SELECT studentID from student WHERE studentFName='" + sFName.Text + "' AND studentLName='" + sLName.Text + "' AND yearCourse='" + yearcourse.Text + "'";
-                    conn.Open();
-                    MySqlCommand comm3 = new MySqlCommand(query3, conn);
-                    MySqlDataAdapter adp3 = new MySqlDataAdapter(comm3);
-                    conn.Close();
-                    DataTable dt3 = new DataTable();
-                    adp3.Fill(dt3);
-
-                    int studentid = Convert.ToInt32(dt3.Rows[0]["studentID"].ToString());
-
-                    //inserting
-                    DateTime dateValue = DateTime.Now;
-                    string date = dateValue.ToString("yyyy-MM-dd HH:mm:ss");
-                    conn.Open();
-
-                    string queryrequest = "INSERT INTO chemrequest(itemID,cqty,measurementType,teacherId,studentId,subject,dateRequested,userID) " + "VALUES('" + itemid + "', '" + cqty.Value + "', '" +
-                        mtype.Text + "', '" + teacherid + "', '" + studentid + "', '" + subj.Text + "', '" + date + "', '" + this.Adminid + "')";
-
-                    MySqlCommand commrequest = new MySqlCommand(queryrequest, conn);
-                    commrequest.ExecuteNonQuery();
-                    conn.Close();
-                    MessageBox.Show("Success", "Request Made", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    //main.Show();
-                    this.Close();
-
 
                 }
                 else
