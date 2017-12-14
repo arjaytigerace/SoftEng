@@ -144,19 +144,22 @@ namespace Accounting
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            requestid = int.Parse(dataGridView1.Rows[e.RowIndex].Cells["chemRequestId"].Value.ToString());
-            chemname = dataGridView1.Rows[e.RowIndex].Cells["itemName"].Value.ToString();
-            qty = int.Parse(dataGridView1.Rows[e.RowIndex].Cells["cqty"].Value.ToString());
-            tfname= dataGridView1.Rows[e.RowIndex].Cells["teacherFName"].Value.ToString();
-            tlname = dataGridView1.Rows[e.RowIndex].Cells["teacherLName"].Value.ToString();
-            subj = dataGridView1.Rows[e.RowIndex].Cells["subject"].Value.ToString();
-            sfname= dataGridView1.Rows[e.RowIndex].Cells["studentFName"].Value.ToString();
-            slname = dataGridView1.Rows[e.RowIndex].Cells["studentLName"].Value.ToString();
-            yearcourse= dataGridView1.Rows[e.RowIndex].Cells["yearCourse"].Value.ToString();
-            measuretype= dataGridView1.Rows[e.RowIndex].Cells["measurementType"].Value.ToString();
-            //date = dataGridView1.Rows[e.RowIndex].Cells["dateRequested"].Value.ToString();
-            button3.Enabled = true;
 
+            if (e.RowIndex >= 0)
+            {
+                requestid = int.Parse(dataGridView1.Rows[e.RowIndex].Cells["chemRequestId"].Value.ToString());
+                chemname = dataGridView1.Rows[e.RowIndex].Cells["itemName"].Value.ToString();
+                qty = int.Parse(dataGridView1.Rows[e.RowIndex].Cells["cqty"].Value.ToString());
+                tfname = dataGridView1.Rows[e.RowIndex].Cells["teacherFName"].Value.ToString();
+                tlname = dataGridView1.Rows[e.RowIndex].Cells["teacherLName"].Value.ToString();
+                subj = dataGridView1.Rows[e.RowIndex].Cells["subject"].Value.ToString();
+                sfname = dataGridView1.Rows[e.RowIndex].Cells["studentFName"].Value.ToString();
+                slname = dataGridView1.Rows[e.RowIndex].Cells["studentLName"].Value.ToString();
+                yearcourse = dataGridView1.Rows[e.RowIndex].Cells["yearCourse"].Value.ToString();
+                measuretype = dataGridView1.Rows[e.RowIndex].Cells["measurementType"].Value.ToString();
+                
+                button3.Enabled = true;
+            }
         }
     }
 }

@@ -16,6 +16,7 @@ namespace Accounting
         public Form main { get; set; }
         public int Requestid {get;set;}
         public int uqty { get; set; }
+        public int oldqty { get; set; }
         public String utfname { get; set; }
         public String utlname { get; set; }
         public String uchemname { get; set; }
@@ -43,9 +44,11 @@ namespace Accounting
         private void ChemMgtUpdate_Load(object sender, EventArgs e)
         {
 
-
+            cqty.Minimum = 0;
+            cqty.Maximum = 9999;
             chemname.Text = this.uchemname;
             cqty.Value = this.uqty;
+            oldqty = this.uqty;
             tFName.Text = this.utfname;
             tLName.Text = this.utlname;
             subj.Text = this.usubj;
@@ -62,7 +65,7 @@ namespace Accounting
         }
 
         private void buttonSubmit_Click(object sender, EventArgs e)
-        {/*
+        {
             if (cqty.Value == 0 || chemname.Text == "" || tFName.Text == "" || tLName.Text == "" || subj.Text == "" || sLName.Text == "" || sFName.Text == "" || yearcourse.Text == "")
             {
                 MessageBox.Show("Please do not leave a field empty");
@@ -128,13 +131,14 @@ namespace Accounting
 
                         int studentid = Convert.ToInt32(dt3.Rows[0]["studentID"].ToString());
 
-                        //inserting
+                        //updating
                         DateTime dateValue = DateTime.Now;
                         string date = dateValue.ToString("yyyy-MM-dd HH:mm:ss");
                         conn.Open();
 
-                        string queryrequest = "INSERT INTO chemrequest(itemID,cqty,measurementType,teacherId,studentId,subject,dateRequested,userID) " + "VALUES('" + itemid + "', '" + cqty.Value + "', '" +
-                            mtype.Text + "', '" + teacherid + "', '" + studentid + "', '" + subj.Text + "', '" + date + "', '" + this.Adminid + "')";
+                        string queryrequest = "UPDATE chemrequest SET itemID = '" + itemid + "', cqty = '" + cqty.Value + "',teacherId = '" + teacherid + "',studentId = '" + studentid +
+                        "', subject='" + subj.Text + "' WHERE chemRequestId = '" + Requestid + "'";
+
 
                         MySqlCommand commrequest = new MySqlCommand(queryrequest, conn);
                         commrequest.ExecuteNonQuery();
@@ -142,13 +146,13 @@ namespace Accounting
 
                         conn.Open();
 
-                        string updateqty = "UPDATE item SET quantity = quantity - " + cqty.Value + " WHERE itemID='" + itemid + "'";
+                        string updateqty = "UPDATE item SET quantity = (quantity + " + oldqty +")-"+ cqty.Value + " WHERE itemID='" + itemid + "'";
 
                         MySqlCommand commupdate = new MySqlCommand(updateqty, conn);
                         commupdate.ExecuteNonQuery();
                         conn.Close();
 
-                        MessageBox.Show("Success", "Request Made", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Success", "Request Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         //main.Show();
                         this.Close();
@@ -165,7 +169,7 @@ namespace Accounting
                 }
 
             
-            }*/
+            }
         }
 
 
