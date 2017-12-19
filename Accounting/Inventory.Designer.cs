@@ -34,6 +34,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.itemCode = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.status = new System.Windows.Forms.ComboBox();
             this.button5 = new System.Windows.Forms.Button();
@@ -47,6 +49,8 @@
             this.measuretype = new System.Windows.Forms.ComboBox();
             this.qty = new System.Windows.Forms.NumericUpDown();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label26 = new System.Windows.Forms.Label();
+            this.eItemCode = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.equipStatus = new System.Windows.Forms.ComboBox();
             this.searchequip = new System.Windows.Forms.Button();
@@ -73,6 +77,8 @@
             this.eqty = new System.Windows.Forms.NumericUpDown();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.aItemCode = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.appStatus = new System.Windows.Forms.ComboBox();
             this.searchapp = new System.Windows.Forms.Button();
@@ -93,6 +99,8 @@
             this.aqty = new System.Windows.Forms.NumericUpDown();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label28 = new System.Windows.Forms.Label();
+            this.cItemCode = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.chemStatus = new System.Windows.Forms.ComboBox();
             this.searchchem = new System.Windows.Forms.Button();
@@ -150,7 +158,7 @@
             // 
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(1343, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(1278, 1);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(107, 89);
@@ -162,6 +170,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(7, 7);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
@@ -183,13 +192,15 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1436, 813);
+            this.tabControl1.Size = new System.Drawing.Size(1420, 813);
             this.tabControl1.TabIndex = 1;
             this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPage1.Controls.Add(this.itemCode);
+            this.tabPage1.Controls.Add(this.label25);
             this.tabPage1.Controls.Add(this.label21);
             this.tabPage1.Controls.Add(this.status);
             this.tabPage1.Controls.Add(this.button5);
@@ -207,10 +218,28 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(1428, 784);
+            this.tabPage1.Size = new System.Drawing.Size(1412, 784);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "General View";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // itemCode
+            // 
+            this.itemCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itemCode.Location = new System.Drawing.Point(221, 432);
+            this.itemCode.Name = "itemCode";
+            this.itemCode.Size = new System.Drawing.Size(384, 45);
+            this.itemCode.TabIndex = 17;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(7, 438);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(174, 39);
+            this.label25.TabIndex = 16;
+            this.label25.Text = "Item Code";
             // 
             // label21
             // 
@@ -218,7 +247,7 @@
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(6, 639);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(113, 39);
+            this.label21.Size = new System.Drawing.Size(110, 38);
             this.label21.TabIndex = 15;
             this.label21.Text = "Status";
             this.label21.Click += new System.EventHandler(this.label21_Click);
@@ -226,13 +255,14 @@
             // status
             // 
             this.status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.status.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.status.FormattingEnabled = true;
             this.status.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.status.Location = new System.Drawing.Point(221, 654);
+            this.status.Location = new System.Drawing.Point(221, 639);
             this.status.Name = "status";
-            this.status.Size = new System.Drawing.Size(384, 24);
+            this.status.Size = new System.Drawing.Size(384, 46);
             this.status.TabIndex = 14;
             this.status.SelectedIndexChanged += new System.EventHandler(this.status_SelectedIndexChanged);
             // 
@@ -280,7 +310,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 488);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 39);
+            this.label1.Size = new System.Drawing.Size(175, 38);
             this.label1.TabIndex = 11;
             this.label1.Text = "Item Name";
             // 
@@ -290,7 +320,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(6, 594);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 39);
+            this.label3.Size = new System.Drawing.Size(139, 38);
             this.label3.TabIndex = 13;
             this.label3.Text = "Quantity";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -316,7 +346,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(6, 541);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 39);
+            this.label2.Size = new System.Drawing.Size(161, 38);
             this.label2.TabIndex = 12;
             this.label2.Text = "Item Type";
             // 
@@ -359,6 +389,8 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPage2.Controls.Add(this.label26);
+            this.tabPage2.Controls.Add(this.eItemCode);
             this.tabPage2.Controls.Add(this.label22);
             this.tabPage2.Controls.Add(this.equipStatus);
             this.tabPage2.Controls.Add(this.searchequip);
@@ -389,10 +421,26 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(1428, 784);
+            this.tabPage2.Size = new System.Drawing.Size(1412, 784);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Equipment";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(22, 470);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(80, 17);
+            this.label26.TabIndex = 49;
+            this.label26.Text = "Item Code";
+            // 
+            // eItemCode
+            // 
+            this.eItemCode.Location = new System.Drawing.Point(321, 470);
+            this.eItemCode.Name = "eItemCode";
+            this.eItemCode.Size = new System.Drawing.Size(260, 23);
+            this.eItemCode.TabIndex = 48;
             // 
             // label22
             // 
@@ -659,7 +707,8 @@
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(4, 7);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
@@ -674,6 +723,8 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPage3.Controls.Add(this.aItemCode);
+            this.tabPage3.Controls.Add(this.label27);
             this.tabPage3.Controls.Add(this.label23);
             this.tabPage3.Controls.Add(this.appStatus);
             this.tabPage3.Controls.Add(this.searchapp);
@@ -697,10 +748,26 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1428, 784);
+            this.tabPage3.Size = new System.Drawing.Size(1412, 784);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Apparatus";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // aItemCode
+            // 
+            this.aItemCode.Location = new System.Drawing.Point(388, 479);
+            this.aItemCode.Name = "aItemCode";
+            this.aItemCode.Size = new System.Drawing.Size(238, 23);
+            this.aItemCode.TabIndex = 70;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(177, 479);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(80, 17);
+            this.label27.TabIndex = 69;
+            this.label27.Text = "Item Code";
             // 
             // label23
             // 
@@ -923,6 +990,8 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPage4.Controls.Add(this.label28);
+            this.tabPage4.Controls.Add(this.cItemCode);
             this.tabPage4.Controls.Add(this.label24);
             this.tabPage4.Controls.Add(this.chemStatus);
             this.tabPage4.Controls.Add(this.searchchem);
@@ -943,15 +1012,31 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1428, 784);
+            this.tabPage4.Size = new System.Drawing.Size(1412, 784);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Chemical";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(439, 475);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(71, 17);
+            this.label28.TabIndex = 63;
+            this.label28.Text = "Item Code";
+            // 
+            // cItemCode
+            // 
+            this.cItemCode.Location = new System.Drawing.Point(697, 475);
+            this.cItemCode.Name = "cItemCode";
+            this.cItemCode.Size = new System.Drawing.Size(236, 22);
+            this.cItemCode.TabIndex = 62;
+            // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(432, 651);
+            this.label24.Location = new System.Drawing.Point(436, 675);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(48, 17);
             this.label24.TabIndex = 61;
@@ -964,7 +1049,7 @@
             this.chemStatus.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.chemStatus.Location = new System.Drawing.Point(693, 644);
+            this.chemStatus.Location = new System.Drawing.Point(697, 668);
             this.chemStatus.Name = "chemStatus";
             this.chemStatus.Size = new System.Drawing.Size(236, 24);
             this.chemStatus.TabIndex = 60;
@@ -996,7 +1081,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(425, 592);
+            this.label15.Location = new System.Drawing.Point(429, 616);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(124, 31);
             this.label15.TabIndex = 59;
@@ -1005,7 +1090,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(693, 590);
+            this.numericUpDown1.Location = new System.Drawing.Point(697, 614);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(76, 30);
@@ -1023,7 +1108,7 @@
             "Piece(s)",
             "L",
             "Kg"});
-            this.cmeasuretype.Location = new System.Drawing.Point(774, 590);
+            this.cmeasuretype.Location = new System.Drawing.Point(778, 614);
             this.cmeasuretype.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmeasuretype.Name = "cmeasuretype";
             this.cmeasuretype.Size = new System.Drawing.Size(155, 33);
@@ -1075,7 +1160,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(425, 481);
+            this.label14.Location = new System.Drawing.Point(429, 505);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(219, 31);
             this.label14.TabIndex = 52;
@@ -1084,7 +1169,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(693, 480);
+            this.textBox3.Location = new System.Drawing.Point(697, 504);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(236, 30);
@@ -1094,7 +1179,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(425, 560);
+            this.label16.Location = new System.Drawing.Point(429, 584);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(190, 31);
             this.label16.TabIndex = 50;
@@ -1104,7 +1189,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(425, 523);
+            this.label20.Location = new System.Drawing.Point(429, 547);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(161, 31);
             this.label20.TabIndex = 49;
@@ -1113,7 +1198,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(693, 558);
+            this.textBox2.Location = new System.Drawing.Point(697, 582);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(236, 30);
@@ -1122,7 +1207,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(693, 521);
+            this.textBox1.Location = new System.Drawing.Point(697, 545);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(236, 30);
@@ -1134,6 +1219,7 @@
             this.dataGridView4.AllowUserToAddRows = false;
             this.dataGridView4.AllowUserToDeleteRows = false;
             this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Location = new System.Drawing.Point(4, 20);
             this.dataGridView4.Margin = new System.Windows.Forms.Padding(4);
@@ -1148,7 +1234,7 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(1184, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(1075, 1);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(151, 89);
@@ -1161,9 +1247,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1434, 865);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox4);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Inventory";
@@ -1282,5 +1368,13 @@
         private System.Windows.Forms.ComboBox appStatus;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ComboBox chemStatus;
+        private System.Windows.Forms.TextBox itemCode;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox eItemCode;
+        private System.Windows.Forms.TextBox aItemCode;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox cItemCode;
     }
 }

@@ -121,6 +121,9 @@ namespace Accounting
         private void pictureBox5_Click_1(object sender, EventArgs e)
         {
             ChemicalManagement C1 = new ChemicalManagement();
+            C1.Getfname = this.Getfname;
+            C1.Getlname = this.Getlname;
+            C1.Adminid = this.adminid;
             C1.main = this;
             C1.Show();
             this.Hide();
