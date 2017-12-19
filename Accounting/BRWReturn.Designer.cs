@@ -119,7 +119,7 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(224, 168);
+            this.numericUpDown1.Location = new System.Drawing.Point(223, 167);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(320, 22);
             this.numericUpDown1.TabIndex = 35;
