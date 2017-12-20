@@ -125,6 +125,18 @@ namespace Accounting
         private void loadall()
         {
 
+            string numquery = "SELECT COUNT(*) AS num FROM item";
+            conn.Open();
+            MySqlCommand commnum = new MySqlCommand(numquery, conn);
+            MySqlDataAdapter adpnum = new MySqlDataAdapter(commnum);
+            conn.Close();
+            DataTable dtnum = new DataTable();
+            adpnum.Fill(dtnum);
+
+
+            labelnum.Text= dtnum.Rows[0]["num"].ToString();
+
+
             string query = "SELECT itemID,itemCode,itemName,itemType,quantity,measurementType,addedon,modon,itemstatus FROM chem_lab.item a, chem_lab.itemtype b WHERE b.itemTypeID = a.itemTypeID";
 
             conn.Open();

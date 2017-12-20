@@ -44,21 +44,19 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Georgia", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(71, 307);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Location = new System.Drawing.Point(53, 249);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(300, 61);
+            this.textBox1.Size = new System.Drawing.Size(226, 50);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Georgia", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(71, 413);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox2.Location = new System.Drawing.Point(53, 336);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(300, 61);
+            this.textBox2.Size = new System.Drawing.Size(226, 50);
             this.textBox2.TabIndex = 2;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -66,10 +64,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(179, 267);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(134, 217);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 37);
+            this.label1.Size = new System.Drawing.Size(69, 31);
             this.label1.TabIndex = 2;
             this.label1.Text = "User";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -78,10 +75,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(142, 372);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(106, 302);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 37);
+            this.label2.Size = new System.Drawing.Size(127, 31);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -93,10 +89,9 @@
             this.buttonLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.Location = new System.Drawing.Point(71, 505);
-            this.buttonLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonLogin.Location = new System.Drawing.Point(53, 410);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(147, 69);
+            this.buttonLogin.Size = new System.Drawing.Size(110, 56);
             this.buttonLogin.TabIndex = 3;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = false;
@@ -109,10 +104,9 @@
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.Location = new System.Drawing.Point(226, 505);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCancel.Location = new System.Drawing.Point(170, 410);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(147, 69);
+            this.buttonCancel.Size = new System.Drawing.Size(110, 56);
             this.buttonCancel.TabIndex = 4;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = false;
@@ -122,10 +116,9 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(111, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(83, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(228, 128);
+            this.pictureBox1.Size = new System.Drawing.Size(171, 104);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -134,10 +127,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Georgia", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 147);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(21, 119);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(405, 49);
+            this.label3.Size = new System.Drawing.Size(328, 41);
             this.label3.TabIndex = 7;
             this.label3.Text = "Ateneo de Davao ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -147,22 +139,22 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(56, 196);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(42, 159);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(345, 32);
+            this.label4.Size = new System.Drawing.Size(272, 27);
             this.label4.TabIndex = 8;
             this.label4.Text = "Chemistry Department";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // Form1
             // 
             this.AcceptButton = this.buttonLogin;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(446, 611);
+            this.ClientSize = new System.Drawing.Size(334, 496);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
@@ -173,7 +165,6 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
