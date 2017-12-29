@@ -57,8 +57,8 @@ namespace Accounting
             aitemname.Text = "";
             adesc.Text = "";
             textBox3.Text = "";
-            textBox1.Text = "";
-            textBox2.Text = "";
+            colorCode.SelectedIndex = -1;
+            classification.Text = "--";
             equipStatus.SelectedIndex = 0;
             appStatus.SelectedIndex = 0;
             chemStatus.SelectedIndex = 0;
@@ -577,8 +577,8 @@ namespace Accounting
                 selecteditemid = int.Parse(dataGridView4.Rows[e.RowIndex].Cells["itemID"].Value.ToString());
                 cItemCode.Text= dataGridView4.Rows[e.RowIndex].Cells["itemCode"].Value.ToString();
                 textBox3.Text = dataGridView4.Rows[e.RowIndex].Cells["itemname"].Value.ToString();
-                textBox1.Text = dataGridView4.Rows[e.RowIndex].Cells["colorCode"].Value.ToString();
-                textBox2.Text = dataGridView4.Rows[e.RowIndex].Cells["classification"].Value.ToString();
+                colorCode.Text = dataGridView4.Rows[e.RowIndex].Cells["colorCode"].Value.ToString();
+                classification.Text = dataGridView4.Rows[e.RowIndex].Cells["classification"].Value.ToString();
                 numericUpDown1.Value = (int)dataGridView4.Rows[e.RowIndex].Cells["quantity"].Value;
                 cmeasuretype.Text = dataGridView4.Rows[e.RowIndex].Cells["measurementType"].Value.ToString();
                 chemStatus.Text= dataGridView4.Rows[e.RowIndex].Cells["itemstatus"].Value.ToString();
@@ -591,7 +591,7 @@ namespace Accounting
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox3.Text == "" || textBox1.Text == "" || textBox2.Text == "" || cItemCode.Text=="")
+            if (textBox3.Text == "" || cItemCode.Text=="")
             {
                 MessageBox.Show("Please do not leave a field empty");
             }
@@ -612,8 +612,8 @@ namespace Accounting
                 comm1.Parameters.Add("?cmeasuretype", MySqlDbType.VarChar, 255).Value = cmeasuretype.Text;
                 comm1.Parameters.Add("?cdate", MySqlDbType.DateTime).Value = date;
                 comm1.Parameters.Add("?citemname", MySqlDbType.VarChar, 255).Value = textBox3.Text;
-                comm1.Parameters.Add("?colorCode", MySqlDbType.VarChar, 255).Value = textBox1.Text;
-                comm1.Parameters.Add("?classification", MySqlDbType.VarChar, 255).Value = textBox2.Text;
+                comm1.Parameters.Add("?colorCode", MySqlDbType.VarChar, 255).Value = colorCode.Text;
+                comm1.Parameters.Add("?classification", MySqlDbType.VarChar, 255).Value = classification.Text;
                 comm1.Parameters.Add("?chemStatus", MySqlDbType.VarChar, 255).Value = chemStatus.Text;
                 comm1.ExecuteNonQuery();
 
@@ -635,7 +635,7 @@ namespace Accounting
             DateTime dateValue = DateTime.Now;
             string date = dateValue.ToString("yyyy-MM-dd HH:mm:ss");
 
-            if (textBox3.Text == "" || textBox1.Text == "" || textBox2.Text == "")
+            if (textBox3.Text == "" || cItemCode.Text=="")
             {
                 MessageBox.Show("Please do not leave any of the fields as blank");
             }
@@ -648,7 +648,7 @@ namespace Accounting
             comm1.ExecuteNonQuery();
 
 
-            string query1 = "UPDATE itemchemical SET colorCode='" + textBox1.Text + "',classification ='" + textBox2.Text + "' WHERE itemID =" + selecteditemid;
+            string query1 = "UPDATE itemchemical SET colorCode='" + colorCode.Text + "',classification ='" + classification.Text + "' WHERE itemID =" + selecteditemid;
 
             MySqlCommand comm2 = new MySqlCommand(query1, conn);
             comm2.ExecuteNonQuery();
@@ -737,6 +737,36 @@ namespace Accounting
 
         private void status_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void colorCode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (colorCode.SelectedIndex == 0)
+            {
+
+                classification.Text = "Health Hazard";
+            }
+            if (colorCode.SelectedIndex == 1)
+            {
+
+                classification.Text = "Flammable";
+            }
+            if (colorCode.SelectedIndex == 2)
+            {
+
+                classification.Text = "Moderate Hazard";
+            }
+            if (colorCode.SelectedIndex == 3)
+            {
+
+                classification.Text = "Corrosive";
+            }
+            if (colorCode.SelectedIndex == 4)
+            {
+
+                classification.Text = "Oxidizer";
+            }
 
         }
     }
