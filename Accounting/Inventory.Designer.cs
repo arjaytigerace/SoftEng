@@ -101,6 +101,8 @@
             this.aqty = new System.Windows.Forms.NumericUpDown();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.classification = new System.Windows.Forms.Label();
+            this.colorCode = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
             this.cItemCode = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
@@ -115,12 +117,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.colorCode = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.classification = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -149,7 +149,7 @@
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Location = new System.Drawing.Point(16, 14);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(91, 46);
             this.pictureBox4.TabIndex = 4;
@@ -161,7 +161,7 @@
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox3.Location = new System.Drawing.Point(1277, 1);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(107, 89);
             this.pictureBox3.TabIndex = 5;
@@ -175,7 +175,7 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(7, 7);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -311,10 +311,10 @@
             // search
             // 
             this.search.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search.Location = new System.Drawing.Point(767, 534);
+            this.search.Location = new System.Drawing.Point(766, 534);
             this.search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(399, 45);
+            this.search.Size = new System.Drawing.Size(400, 45);
             this.search.TabIndex = 8;
             // 
             // itemtype
@@ -544,7 +544,7 @@
             // 
             this.numlost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numlost.Location = new System.Drawing.Point(999, 613);
-            this.numlost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numlost.Margin = new System.Windows.Forms.Padding(4);
             this.numlost.Name = "numlost";
             this.numlost.Size = new System.Drawing.Size(112, 30);
             this.numlost.TabIndex = 20;
@@ -553,7 +553,7 @@
             // 
             this.numdmg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numdmg.Location = new System.Drawing.Point(999, 574);
-            this.numdmg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numdmg.Margin = new System.Windows.Forms.Padding(4);
             this.numdmg.Name = "numdmg";
             this.numdmg.Size = new System.Drawing.Size(112, 30);
             this.numdmg.TabIndex = 19;
@@ -741,7 +741,7 @@
             this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(4, 7);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -873,7 +873,7 @@
             // 
             this.anumlost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.anumlost.Location = new System.Drawing.Point(1145, 564);
-            this.anumlost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.anumlost.Margin = new System.Windows.Forms.Padding(4);
             this.anumlost.Name = "anumlost";
             this.anumlost.Size = new System.Drawing.Size(112, 30);
             this.anumlost.TabIndex = 32;
@@ -882,7 +882,7 @@
             // 
             this.anumdmg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.anumdmg.Location = new System.Drawing.Point(1145, 524);
-            this.anumdmg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.anumdmg.Margin = new System.Windows.Forms.Padding(4);
             this.anumdmg.Name = "anumdmg";
             this.anumdmg.Size = new System.Drawing.Size(112, 30);
             this.anumdmg.TabIndex = 31;
@@ -1010,7 +1010,7 @@
             this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(4, 26);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1048,6 +1048,31 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Chemical";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
+            // 
+            // classification
+            // 
+            this.classification.AutoSize = true;
+            this.classification.Location = new System.Drawing.Point(694, 595);
+            this.classification.Name = "classification";
+            this.classification.Size = new System.Drawing.Size(54, 17);
+            this.classification.TabIndex = 65;
+            this.classification.Text = "label30";
+            // 
+            // colorCode
+            // 
+            this.colorCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.colorCode.FormattingEnabled = true;
+            this.colorCode.Items.AddRange(new object[] {
+            "Blue",
+            "Red",
+            "Gray",
+            "White",
+            "Yellow"});
+            this.colorCode.Location = new System.Drawing.Point(697, 551);
+            this.colorCode.Name = "colorCode";
+            this.colorCode.Size = new System.Drawing.Size(236, 24);
+            this.colorCode.TabIndex = 64;
+            this.colorCode.SelectedIndexChanged += new System.EventHandler(this.colorCode_SelectedIndexChanged);
             // 
             // label28
             // 
@@ -1204,10 +1229,20 @@
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(697, 505);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(236, 30);
             this.textBox3.TabIndex = 39;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(429, 583);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(190, 31);
+            this.label16.TabIndex = 50;
+            this.label16.Text = "Classification";
             // 
             // label20
             // 
@@ -1227,7 +1262,7 @@
             this.dataGridView4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Location = new System.Drawing.Point(4, 20);
-            this.dataGridView4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView4.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.ReadOnly = true;
             this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1240,46 +1275,11 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(1075, 1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(151, 89);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
-            // 
-            // colorCode
-            // 
-            this.colorCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.colorCode.FormattingEnabled = true;
-            this.colorCode.Items.AddRange(new object[] {
-            "Blue",
-            "Red",
-            "Gray",
-            "White",
-            "Yellow"});
-            this.colorCode.Location = new System.Drawing.Point(697, 551);
-            this.colorCode.Name = "colorCode";
-            this.colorCode.Size = new System.Drawing.Size(236, 24);
-            this.colorCode.TabIndex = 64;
-            this.colorCode.SelectedIndexChanged += new System.EventHandler(this.colorCode_SelectedIndexChanged);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(429, 583);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(190, 31);
-            this.label16.TabIndex = 50;
-            this.label16.Text = "Classification";
-            // 
-            // classification
-            // 
-            this.classification.AutoSize = true;
-            this.classification.Location = new System.Drawing.Point(694, 595);
-            this.classification.Name = "classification";
-            this.classification.Size = new System.Drawing.Size(54, 17);
-            this.classification.TabIndex = 65;
-            this.classification.Text = "label30";
             // 
             // Inventory
             // 
@@ -1291,7 +1291,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.pictureBox4);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Inventory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventory";
