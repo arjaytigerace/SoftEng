@@ -127,3 +127,5 @@ D:\raeni\Documents\SAD\SoftEng\Accounting\obj\Debug\Accounting.exe
 D:\raeni\Documents\SAD\SoftEng\Accounting\obj\Debug\Accounting.pdb
 D:\raeni\Documents\SAD\SoftEng\Accounting\obj\Debug\Accounting.ChemMgtSearch.resources
 D:\raeni\Documents\SAD\SoftEng\Accounting\obj\Debug\Accounting.ChemMgtInfo.resources
+C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.ChemMgtInfo.resources
+C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.ChemMgtSearch.resources
