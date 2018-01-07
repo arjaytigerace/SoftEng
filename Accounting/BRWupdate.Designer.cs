@@ -42,19 +42,20 @@
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.Control;
             this.textBox2.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(225, 132);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox2.Location = new System.Drawing.Point(169, 107);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(319, 45);
+            this.textBox2.Size = new System.Drawing.Size(240, 37);
             this.textBox2.TabIndex = 32;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 132);
+            this.label3.Location = new System.Drawing.Point(9, 107);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 38);
+            this.label3.Size = new System.Drawing.Size(92, 31);
             this.label3.TabIndex = 31;
             this.label3.Text = "Temp";
             // 
@@ -62,19 +63,20 @@
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.Control;
             this.textBox1.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(226, 72);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Location = new System.Drawing.Point(170, 58);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(319, 45);
+            this.textBox1.Size = new System.Drawing.Size(240, 37);
             this.textBox1.TabIndex = 30;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 72);
+            this.label2.Location = new System.Drawing.Point(10, 58);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 38);
+            this.label2.Size = new System.Drawing.Size(92, 31);
             this.label2.TabIndex = 29;
             this.label2.Text = "Temp";
             // 
@@ -82,9 +84,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Location = new System.Drawing.Point(9, 12);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 38);
+            this.label1.Size = new System.Drawing.Size(92, 31);
             this.label1.TabIndex = 28;
             this.label1.Text = "Temp";
             // 
@@ -92,10 +95,10 @@
             // 
             this.itemname.BackColor = System.Drawing.SystemColors.Control;
             this.itemname.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemname.Location = new System.Drawing.Point(226, 12);
-            this.itemname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.itemname.Location = new System.Drawing.Point(170, 10);
+            this.itemname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.itemname.Name = "itemname";
-            this.itemname.Size = new System.Drawing.Size(319, 45);
+            this.itemname.Size = new System.Drawing.Size(240, 37);
             this.itemname.TabIndex = 27;
             // 
             // buttonCancel
@@ -105,10 +108,9 @@
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.Location = new System.Drawing.Point(397, 294);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCancel.Location = new System.Drawing.Point(298, 239);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(147, 69);
+            this.buttonCancel.Size = new System.Drawing.Size(110, 56);
             this.buttonCancel.TabIndex = 26;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = false;
@@ -120,20 +122,19 @@
             this.buttonLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.Location = new System.Drawing.Point(242, 294);
-            this.buttonLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonLogin.Location = new System.Drawing.Point(182, 239);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(147, 69);
+            this.buttonLogin.Size = new System.Drawing.Size(110, 56);
             this.buttonLogin.TabIndex = 25;
             this.buttonLogin.Text = "Update";
             this.buttonLogin.UseVisualStyleBackColor = false;
             // 
             // BRWupdate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(556, 375);
+            this.ClientSize = new System.Drawing.Size(417, 305);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
@@ -142,6 +143,8 @@
             this.Controls.Add(this.itemname);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonLogin);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "BRWupdate";
             this.Text = "BRWupdate";
             this.Load += new System.EventHandler(this.BRWupdate_Load);

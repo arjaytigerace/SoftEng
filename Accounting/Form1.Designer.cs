@@ -154,7 +154,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(334, 496);
+            this.ClientSize = new System.Drawing.Size(347, 496);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
