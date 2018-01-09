@@ -32,6 +32,38 @@ namespace Accounting
             cqty.Minimum = 0;
             cqty.Maximum = 9999;
             user.Text = this.Getfname + " " + this.Getlname;
+
+            chemname.AutoCompleteMode = AutoCompleteMode.Suggest;
+            chemname.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            AutoCompleteStringCollection DataCollection = new AutoCompleteStringCollection();
+            getData(DataCollection);
+            chemname.AutoCompleteCustomSource = DataCollection;
+        }
+
+        private void getData(AutoCompleteStringCollection dataCollection)
+        {
+     
+      
+            MySqlCommand command;
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            DataSet ds = new DataSet();
+           
+            string sql = "SELECT itemName FROM item where itemTypeID=3";
+
+ 
+                conn.Open();
+                command = new MySqlCommand(sql, conn);
+                adapter.SelectCommand = command;
+                adapter.Fill(ds);
+                adapter.Dispose();
+                command.Dispose();
+                conn.Close();
+                foreach (DataRow row in ds.Tables[0].Rows)
+                {
+                    dataCollection.Add(row[0].ToString());
+                }
+           
+
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)

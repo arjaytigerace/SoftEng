@@ -60,6 +60,9 @@ namespace Accounting
             mtype.Text = this.umeasuretype;
             user.Text = this.Getfname + " " + this.Getlname;
 
+
+
+
         }
 
         private void buttonCancel_Click_1(object sender, EventArgs e)
@@ -207,6 +210,21 @@ namespace Accounting
             bool hasRows2 = dt2.Rows.GetEnumerator().MoveNext();
 
             return hasRows2;
+
+        }
+
+        private void chemname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chemname_ControlRemoved(object sender, ControlEventArgs e)
+        {
+
+        }
+
+        private void chemname_Leave(object sender, EventArgs e)
+        {
 
         }
     }

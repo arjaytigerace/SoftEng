@@ -260,6 +260,9 @@
             this.chemname.Name = "chemname";
             this.chemname.Size = new System.Drawing.Size(319, 34);
             this.chemname.TabIndex = 55;
+            this.chemname.TextChanged += new System.EventHandler(this.chemname_TextChanged);
+            this.chemname.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.chemname_ControlRemoved);
+            this.chemname.Leave += new System.EventHandler(this.chemname_Leave);
             // 
             // label2
             // 
@@ -289,7 +292,7 @@
             this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancel.Location = new System.Drawing.Point(389, 450);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(147, 69);
             this.buttonCancel.TabIndex = 52;
@@ -304,7 +307,7 @@
             this.buttonSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSubmit.Location = new System.Drawing.Point(217, 450);
-            this.buttonSubmit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSubmit.Name = "buttonSubmit";
             this.buttonSubmit.Size = new System.Drawing.Size(164, 69);
             this.buttonSubmit.TabIndex = 51;

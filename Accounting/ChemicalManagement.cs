@@ -44,9 +44,12 @@ namespace Accounting
         public void Loadall()
         {
 
-            string query = "SELECT chemRequestId,b.itemName,a.cqty,a.measurementType,studentFName,studentLName,subject,c.yearCourse,teacherFName,teacherLName,a.dateRequested FROM chem_lab.chemrequest a, " +
-                "chem_lab.item b, chem_lab.student c,teacher d WHERE b.itemID = a.itemID " +
-                "AND c.studentID = a.studentId AND a.teacherId = d.teacherID";
+            string query = "SELECT chemRequestId,b.itemName,CONCAT(a.cqty,' ',a.measurementType) AS cqty,studentFName,studentLName,subject,c.yearCourse,teacherFName,teacherLName," +
+                "a.dateRequested,a.dateUpdated,CONCAT(e.firstname,' ',e.lastname) AS PreparedBy, CONCAT(f.firstname, ' ', f.lastname) AS LastUpdatedBy" +
+                " FROM chem_lab.chemrequest a INNER JOIN administrativeassociate e ON a.userID = e.admin_ID " +
+                "INNER JOIN administrativeassociate f ON a.lastUpdatedUser = f.admin_ID," +
+                "chem_lab.item b, chem_lab.student c, teacher d WHERE b.itemID = a.itemID" +
+                " AND c.studentID = a.studentId AND a.teacherId = d.teacherID";
 
             conn.Open();
             MySqlCommand comm = new MySqlCommand(query, conn);
@@ -61,17 +64,23 @@ namespace Accounting
             dataGridView1.Columns["chemRequestId"].Visible = false;
 
             dataGridView1.Columns["itemName"].HeaderText = "Item Name";
-            dataGridView1.Columns["cqty"].HeaderText = "Quantity Requested";
-            dataGridView1.Columns["measurementType"].HeaderText = "Unit of Measurement";
+            dataGridView1.Columns["itemName"].Width = 150;
+            dataGridView1.Columns["cqty"].HeaderText = "QTY Requested";
+            dataGridView1.Columns["cqty"].Width = 90;
             dataGridView1.Columns["studentFName"].HeaderText = "Student First Name";
             dataGridView1.Columns["studentLName"].HeaderText = "Student Last Name";
-            dataGridView1.Columns["teacherFName"].Visible = false;
-            dataGridView1.Columns["teacherLName"].Visible = false;
-            dataGridView1.Columns["subject"].Visible = false;
+            dataGridView1.Columns["yearCourse"].HeaderText = "Course";
+            dataGridView1.Columns["teacherFName"].HeaderText = "Teacher First Name";
+            dataGridView1.Columns["teacherLName"].HeaderText = "Teacher Last Name";
+            dataGridView1.Columns["subject"].HeaderText = "Subject";
             dataGridView1.Columns["chemRequestId"].Visible = false;
             dataGridView1.Columns["dateRequested"].HeaderText = "Date Requested";
+            dataGridView1.Columns["dateUpdated"].HeaderText = "Date Updated";
+            dataGridView1.Columns["PreparedBy"].HeaderText = "Prepared By";
+            dataGridView1.Columns["LastUpdatedBy"].HeaderText = "Last Updated By";
 
             dataGridView1.ClearSelection();
+            specificsearch.SelectedIndex = 0;
             button3.Enabled = false;
         }
 
@@ -150,19 +159,43 @@ namespace Accounting
 
             if (e.RowIndex >= 0)
             {
+
+
+
                 requestid = int.Parse(dataGridView1.Rows[e.RowIndex].Cells["chemRequestId"].Value.ToString());
+
+                string query = "select cqty, measurementType from chemrequest where chemRequestId=" + requestid;
+                conn.Open();
+                MySqlCommand comm = new MySqlCommand(query, conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                conn.Close();
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+
+
                 chemname = dataGridView1.Rows[e.RowIndex].Cells["itemName"].Value.ToString();
-                qty = int.Parse(dataGridView1.Rows[e.RowIndex].Cells["cqty"].Value.ToString());
+                qty = Convert.ToInt32(dt.Rows[0]["cqty"].ToString());
+                measuretype = dt.Rows[0]["measurementType"].ToString();
                 tfname = dataGridView1.Rows[e.RowIndex].Cells["teacherFName"].Value.ToString();
                 tlname = dataGridView1.Rows[e.RowIndex].Cells["teacherLName"].Value.ToString();
                 subj = dataGridView1.Rows[e.RowIndex].Cells["subject"].Value.ToString();
                 sfname = dataGridView1.Rows[e.RowIndex].Cells["studentFName"].Value.ToString();
                 slname = dataGridView1.Rows[e.RowIndex].Cells["studentLName"].Value.ToString();
                 yearcourse = dataGridView1.Rows[e.RowIndex].Cells["yearCourse"].Value.ToString();
-                measuretype = dataGridView1.Rows[e.RowIndex].Cells["measurementType"].Value.ToString();
+                
                 
                 button3.Enabled = true;
             }
+        }
+
+        private void searchchem_Click(object sender, EventArgs e)
+        {
+            ChemMgtSearch chemsearch = new ChemMgtSearch();
+
+            chemsearch.main = this;
+            chemsearch.index = specificsearch.SelectedIndex;
+            chemsearch.search = searchc.Text;
+            chemsearch.Show();
         }
     }
 }
