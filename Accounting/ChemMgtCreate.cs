@@ -121,8 +121,8 @@ namespace Accounting
                         string date = dateValue.ToString("yyyy-MM-dd HH:mm:ss");
                         conn.Open();
 
-                        string queryrequest = "INSERT INTO chemrequest(itemID,cqty,measurementType,teacherId,studentId,subject,dateRequested,userID) " + "VALUES('" + itemid + "', '" + cqty.Value + "', '" +
-                            mtype.Text + "', '" + teacherid + "', '" + studentid + "', '" + subj.Text + "', '" + date + "', '" + this.Adminid + "')";
+                        string queryrequest = "INSERT INTO chemrequest(itemID,cqty,measurementType,teacherId,studentId,subject,dateRequested,userID,dateUpdated,lastUpdatedUser) " + "VALUES('" + itemid + "', '" + cqty.Value + "', '" +
+                            mtype.Text + "', '" + teacherid + "', '" + studentid + "', '" + subj.Text + "', '" + date + "', '" + this.Adminid + "', '"+date+"', '"+this.Adminid+"')";
 
                         MySqlCommand commrequest = new MySqlCommand(queryrequest, conn);
                         commrequest.ExecuteNonQuery();
@@ -202,6 +202,11 @@ namespace Accounting
 
         private void ChemMgtCreate_FormClosing(object sender, FormClosingEventArgs e)
         {
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

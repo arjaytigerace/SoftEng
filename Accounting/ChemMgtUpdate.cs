@@ -26,7 +26,9 @@ namespace Accounting
         public String uslname { get; set; }
         public String uyearcourse { get; set; }
         public String umeasuretype { get; set; }
-
+        public string Getfname { get; set; }
+        public string Getlname { get; set; }
+        public int Adminid { get; set; }
 
         MySqlConnection conn;
         public ChemMgtUpdate()
@@ -56,6 +58,7 @@ namespace Accounting
             sLName.Text = this.uslname;
             yearcourse.Text = this.uyearcourse;
             mtype.Text = this.umeasuretype;
+            user.Text = this.Getfname + " " + this.Getlname;
 
         }
 
@@ -137,7 +140,7 @@ namespace Accounting
                         conn.Open();
 
                         string queryrequest = "UPDATE chemrequest SET itemID = '" + itemid + "', cqty = '" + cqty.Value + "',teacherId = '" + teacherid + "',studentId = '" + studentid +
-                        "', subject='" + subj.Text + "' WHERE chemRequestId = '" + Requestid + "'";
+                        "', subject='" + subj.Text + "', dateUpdated='"+date+"', lastUpdatedUser='"+this.Adminid+"' WHERE chemRequestId = '" + Requestid + "'";
 
 
                         MySqlCommand commrequest = new MySqlCommand(queryrequest, conn);

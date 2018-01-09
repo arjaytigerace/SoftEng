@@ -102,6 +102,7 @@ namespace Accounting
             ChemMgtUpdate chemupd = new ChemMgtUpdate();
             chemupd.main = this;
             chemupd.Requestid = requestid;
+            chemupd.Adminid = this.Adminid;
             chemupd.uchemname = chemname;
             chemupd.uqty = qty;
             chemupd.utfname = tfname;
@@ -112,6 +113,8 @@ namespace Accounting
             chemupd.uyearcourse = yearcourse;
             chemupd.umeasuretype = measuretype;
             //chemupd.date = date;
+            chemupd.Getfname = this.Getfname;
+            chemupd.Getlname = this.Getlname;
             chemupd.Show();
 
         }
