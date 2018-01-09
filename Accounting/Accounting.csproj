@@ -91,6 +91,12 @@
     <Compile Include="ChemMgtCreate.Designer.cs">
       <DependentUpon>ChemMgtCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChemMgtInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChemMgtInfo.Designer.cs">
+      <DependentUpon>ChemMgtInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChemMgtSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChemMgtCreate.resx">
       <DependentUpon>ChemMgtCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChemMgtInfo.resx">
+      <DependentUpon>ChemMgtInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChemMgtSearch.resx">
       <DependentUpon>ChemMgtSearch.cs</DependentUpon>
