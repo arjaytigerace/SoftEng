@@ -44,7 +44,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Georgia", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(53, 249);
+            this.textBox1.Location = new System.Drawing.Point(53, 234);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(226, 50);
             this.textBox1.TabIndex = 1;
@@ -53,7 +53,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Georgia", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(53, 336);
+            this.textBox2.Location = new System.Drawing.Point(53, 321);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(226, 50);
@@ -64,7 +64,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(134, 217);
+            this.label1.Location = new System.Drawing.Point(134, 202);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 31);
             this.label1.TabIndex = 2;
@@ -75,7 +75,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(106, 302);
+            this.label2.Location = new System.Drawing.Point(106, 287);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 31);
             this.label2.TabIndex = 3;
@@ -85,11 +85,11 @@
             // 
             // buttonLogin
             // 
-            this.buttonLogin.BackColor = System.Drawing.Color.PaleGreen;
+            this.buttonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.buttonLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.Location = new System.Drawing.Point(53, 410);
+            this.buttonLogin.Location = new System.Drawing.Point(53, 407);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(110, 56);
             this.buttonLogin.TabIndex = 3;
@@ -104,7 +104,7 @@
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.Location = new System.Drawing.Point(170, 410);
+            this.buttonCancel.Location = new System.Drawing.Point(170, 407);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(110, 56);
             this.buttonCancel.TabIndex = 4;
@@ -116,7 +116,7 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(83, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(79, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(171, 104);
             this.pictureBox1.TabIndex = 6;
@@ -127,7 +127,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Georgia", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(21, 119);
+            this.label3.Location = new System.Drawing.Point(12, 119);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(328, 41);
             this.label3.TabIndex = 7;
@@ -139,7 +139,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(42, 159);
+            this.label4.Location = new System.Drawing.Point(33, 159);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(272, 27);
             this.label4.TabIndex = 8;
@@ -154,7 +154,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(347, 496);
+            this.ClientSize = new System.Drawing.Size(335, 496);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
