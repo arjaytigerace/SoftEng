@@ -17,6 +17,7 @@ namespace Accounting
         public int Requestid {get;set;}
         public int uqty { get; set; }
         public int oldqty { get; set; }
+        public string oldchem { get; set; }
         public String utfname { get; set; }
         public String utlname { get; set; }
         public String uchemname { get; set; }
@@ -51,6 +52,7 @@ namespace Accounting
             chemname.Text = this.uchemname;
             cqty.Value = this.uqty;
             oldqty = this.uqty;
+            oldchem = this.uchemname;
             tFName.Text = this.utfname;
             tLName.Text = this.utlname;
             subj.Text = this.usubj;
@@ -59,7 +61,7 @@ namespace Accounting
             yearcourse.Text = this.uyearcourse;
             mtype.Text = this.umeasuretype;
             user.Text = this.Getfname + " " + this.Getlname;
-
+            label12.Text = oldchem;
 
 
 
@@ -79,8 +81,21 @@ namespace Accounting
             }
             else
             {
-                string query = "SELECT itemID, quantity from item where itemName ='" + chemname.Text + "' AND itemTypeID=3";
+                
+                /*
+                if(!oldchem.Equals(chemname.Text))
+                {
 
+                    string query1 = "UPDATE item SET quantity = (quantity+" + oldqty + ") WHERE itemName='" + oldchem + "' AND itemTypeID=3";
+
+                    conn.Open();
+                    MySqlCommand commqty = new MySqlCommand(query1, conn);
+                    commqty.ExecuteNonQuery();
+                    conn.Close();
+
+                }*/
+
+                string query = "SELECT itemID, quantity from item where itemName ='" + chemname.Text + "' AND itemTypeID=3";
                 conn.Open();
                 MySqlCommand comm = new MySqlCommand(query, conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
@@ -160,7 +175,7 @@ namespace Accounting
 
                         MessageBox.Show("Success", "Request Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        //main.Show();
+                       
                         this.Close();
                     }
                     else
