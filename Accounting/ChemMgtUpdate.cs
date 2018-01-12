@@ -82,18 +82,7 @@ namespace Accounting
             else
             {
                 
-                /*
-                if(!oldchem.Equals(chemname.Text))
-                {
-
-                    string query1 = "UPDATE item SET quantity = (quantity+" + oldqty + ") WHERE itemName='" + oldchem + "' AND itemTypeID=3";
-
-                    conn.Open();
-                    MySqlCommand commqty = new MySqlCommand(query1, conn);
-                    commqty.ExecuteNonQuery();
-                    conn.Close();
-
-                }*/
+               
 
                 string query = "SELECT itemID, quantity from item where itemName ='" + chemname.Text + "' AND itemTypeID=3";
                 conn.Open();
@@ -165,18 +154,43 @@ namespace Accounting
                         commrequest.ExecuteNonQuery();
                         conn.Close();
 
-                        conn.Open();
+                        if (!oldchem.Equals(chemname.Text))
+                        {
 
-                        string updateqty = "UPDATE item SET quantity = (quantity + " + oldqty +")-"+ cqty.Value + " WHERE itemID='" + itemid + "'";
+                            string query1 = "UPDATE item SET quantity = (quantity+" + oldqty + ") WHERE itemName='" + oldchem + "' AND itemTypeID=3";
 
-                        MySqlCommand commupdate = new MySqlCommand(updateqty, conn);
-                        commupdate.ExecuteNonQuery();
-                        conn.Close();
+                            conn.Open();
+                            MySqlCommand commqty = new MySqlCommand(query1, conn);
+                            commqty.ExecuteNonQuery();
 
-                        MessageBox.Show("Success", "Request Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                       
-                        this.Close();
+                            string updateqty1 = "UPDATE item SET quantity = quantity - " + cqty.Value + " WHERE itemID='" + itemid + "'";
+
+                            MySqlCommand commupdate1 = new MySqlCommand(updateqty1, conn);
+                            commupdate1.ExecuteNonQuery();
+                            conn.Close();
+                            MessageBox.Show("Success", "Request Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                            this.Close();
+
+                        }
+                        else
+                        {
+
+                            conn.Open();
+
+                            string updateqty = "UPDATE item SET quantity = (quantity + " + oldqty + ")-" + cqty.Value + " WHERE itemID='" + itemid + "'";
+
+                            MySqlCommand commupdate = new MySqlCommand(updateqty, conn);
+                            commupdate.ExecuteNonQuery();
+                            conn.Close();
+
+                            MessageBox.Show("Success", "Request Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                            this.Close();
+                        }
                     }
                     else
                     {
