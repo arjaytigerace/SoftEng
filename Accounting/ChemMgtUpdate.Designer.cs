@@ -53,7 +53,6 @@
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonSubmit = new System.Windows.Forms.Button();
             this.mtype = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cqty)).BeginInit();
@@ -67,9 +66,9 @@
             this.groupBox2.Controls.Add(this.tFName);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(0, 66);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(423, 85);
             this.groupBox2.TabIndex = 63;
             this.groupBox2.TabStop = false;
@@ -99,7 +98,7 @@
             this.tLName.BackColor = System.Drawing.SystemColors.Control;
             this.tLName.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tLName.Location = new System.Drawing.Point(224, 46);
-            this.tLName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tLName.Margin = new System.Windows.Forms.Padding(2);
             this.tLName.Name = "tLName";
             this.tLName.Size = new System.Drawing.Size(179, 28);
             this.tLName.TabIndex = 43;
@@ -109,7 +108,7 @@
             this.tFName.BackColor = System.Drawing.SystemColors.Control;
             this.tFName.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tFName.Location = new System.Drawing.Point(224, 11);
-            this.tFName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tFName.Margin = new System.Windows.Forms.Padding(2);
             this.tFName.Name = "tFName";
             this.tFName.Size = new System.Drawing.Size(179, 28);
             this.tFName.TabIndex = 26;
@@ -135,9 +134,9 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.sLName);
             this.groupBox1.Location = new System.Drawing.Point(0, 192);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(424, 120);
             this.groupBox1.TabIndex = 62;
             this.groupBox1.TabStop = false;
@@ -167,7 +166,7 @@
             this.sFName.BackColor = System.Drawing.SystemColors.Control;
             this.sFName.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sFName.Location = new System.Drawing.Point(224, 10);
-            this.sFName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sFName.Margin = new System.Windows.Forms.Padding(2);
             this.sFName.Name = "sFName";
             this.sFName.Size = new System.Drawing.Size(179, 28);
             this.sFName.TabIndex = 46;
@@ -175,7 +174,7 @@
             // yearcourse
             // 
             this.yearcourse.Location = new System.Drawing.Point(165, 89);
-            this.yearcourse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.yearcourse.Margin = new System.Windows.Forms.Padding(2);
             this.yearcourse.Name = "yearcourse";
             this.yearcourse.Size = new System.Drawing.Size(238, 20);
             this.yearcourse.TabIndex = 42;
@@ -207,7 +206,7 @@
             this.sLName.BackColor = System.Drawing.SystemColors.Control;
             this.sLName.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sLName.Location = new System.Drawing.Point(224, 41);
-            this.sLName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sLName.Margin = new System.Windows.Forms.Padding(2);
             this.sLName.Name = "sLName";
             this.sLName.Size = new System.Drawing.Size(179, 28);
             this.sLName.TabIndex = 32;
@@ -225,7 +224,7 @@
             // cqty
             // 
             this.cqty.Location = new System.Drawing.Point(163, 42);
-            this.cqty.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cqty.Margin = new System.Windows.Forms.Padding(2);
             this.cqty.Name = "cqty";
             this.cqty.Size = new System.Drawing.Size(123, 20);
             this.cqty.TabIndex = 59;
@@ -257,7 +256,7 @@
             this.subj.BackColor = System.Drawing.SystemColors.Control;
             this.subj.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subj.Location = new System.Drawing.Point(163, 156);
-            this.subj.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.subj.Margin = new System.Windows.Forms.Padding(2);
             this.subj.Name = "subj";
             this.subj.Size = new System.Drawing.Size(240, 28);
             this.subj.TabIndex = 56;
@@ -267,7 +266,7 @@
             this.chemname.BackColor = System.Drawing.SystemColors.Control;
             this.chemname.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chemname.Location = new System.Drawing.Point(163, 11);
-            this.chemname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chemname.Margin = new System.Windows.Forms.Padding(2);
             this.chemname.Name = "chemname";
             this.chemname.Size = new System.Drawing.Size(240, 28);
             this.chemname.TabIndex = 55;
@@ -336,22 +335,12 @@
             this.mtype.TabIndex = 64;
             this.mtype.Text = "label12";
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(25, 396);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(41, 13);
-            this.label12.TabIndex = 65;
-            this.label12.Text = "label12";
-            // 
             // ChemMgtUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(423, 433);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.mtype);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -366,7 +355,7 @@
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonSubmit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ChemMgtUpdate";
             this.Text = "ChemMgtUpdate";
             this.Load += new System.EventHandler(this.ChemMgtUpdate_Load);
@@ -407,6 +396,5 @@
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonSubmit;
         private System.Windows.Forms.Label mtype;
-        private System.Windows.Forms.Label label12;
     }
 }

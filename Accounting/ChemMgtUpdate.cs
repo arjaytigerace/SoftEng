@@ -61,7 +61,7 @@ namespace Accounting
             yearcourse.Text = this.uyearcourse;
             mtype.Text = this.umeasuretype;
             user.Text = this.Getfname + " " + this.Getlname;
-            label12.Text = oldchem;
+            
 
 
 
@@ -81,9 +81,6 @@ namespace Accounting
             }
             else
             {
-                
-               
-
                 string query = "SELECT itemID, quantity from item where itemName ='" + chemname.Text + "' AND itemTypeID=3";
                 conn.Open();
                 MySqlCommand comm = new MySqlCommand(query, conn);
@@ -244,6 +241,8 @@ namespace Accounting
 
         private void chemname_TextChanged(object sender, EventArgs e)
         {
+           
+
 
         }
 
@@ -255,6 +254,21 @@ namespace Accounting
         private void chemname_Leave(object sender, EventArgs e)
         {
 
+            string query3 = "SELECT measurementType from item WHERE itemName='" + chemname.Text + "'";
+            conn.Open();
+            MySqlCommand comm3 = new MySqlCommand(query3, conn);
+            MySqlDataAdapter adp3 = new MySqlDataAdapter(comm3);
+            conn.Close();
+            DataTable dt3 = new DataTable();
+            adp3.Fill(dt3);
+            if (dt3.Rows.Count > 0)
+            {
+                mtype.Text = dt3.Rows[0]["measurementType"].ToString();
+            }
+            else
+            {
+                MessageBox.Show("Item is not a chemical");
+            }
         }
     }
 
