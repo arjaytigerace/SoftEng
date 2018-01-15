@@ -36,6 +36,8 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.specificsearch = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.rnum = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -134,12 +136,34 @@
             this.specificsearch.Size = new System.Drawing.Size(140, 21);
             this.specificsearch.TabIndex = 61;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(967, 494);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(190, 20);
+            this.label1.TabIndex = 62;
+            this.label1.Text = "Total number of requests:";
+            // 
+            // rnum
+            // 
+            this.rnum.AutoSize = true;
+            this.rnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.rnum.Location = new System.Drawing.Point(1163, 494);
+            this.rnum.Name = "rnum";
+            this.rnum.Size = new System.Drawing.Size(51, 20);
+            this.rnum.TabIndex = 63;
+            this.rnum.Text = "label2";
+            // 
             // ChemicalManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1339, 703);
+            this.Controls.Add(this.rnum);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.specificsearch);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox4);
@@ -172,5 +196,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox specificsearch;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label rnum;
     }
 }

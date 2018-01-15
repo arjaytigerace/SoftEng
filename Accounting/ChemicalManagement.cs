@@ -82,6 +82,19 @@ namespace Accounting
             dataGridView1.ClearSelection();
             specificsearch.SelectedIndex = 0;
             button3.Enabled = false;
+
+            string query1 = "SELECT COUNT(*) from chemrequest";
+
+            conn.Open();
+            MySqlCommand comm1 = new MySqlCommand(query1, conn);
+            MySqlDataAdapter adp1 = new MySqlDataAdapter(comm1);
+            conn.Close();
+            DataTable dt1 = new DataTable();
+            adp1.Fill(dt1);
+
+            rnum.Text= dt1.Rows[0]["COUNT(*)"].ToString();
+
+
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
