@@ -47,7 +47,15 @@
             this.searchchem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.searchchem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchchem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< Updated upstream
             this.searchchem.Location = new System.Drawing.Point(724, 547);
+=======
+<<<<<<< HEAD
+            this.searchchem.Location = new System.Drawing.Point(810, 474);
+=======
+            this.searchchem.Location = new System.Drawing.Point(724, 547);
+>>>>>>> 89d773a6907e3e2cab44e3df3c38c9a2114bedbd
+>>>>>>> Stashed changes
             this.searchchem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.searchchem.Name = "searchchem";
             this.searchchem.Size = new System.Drawing.Size(91, 33);
@@ -60,18 +68,41 @@
             // 
             this.searchc.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.searchc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< Updated upstream
             this.searchc.Location = new System.Drawing.Point(610, 488);
             this.searchc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.searchc.Name = "searchc";
             this.searchc.Size = new System.Drawing.Size(323, 29);
+=======
+<<<<<<< HEAD
+            this.searchc.Location = new System.Drawing.Point(666, 441);
+            this.searchc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchc.Name = "searchc";
+            this.searchc.Size = new System.Drawing.Size(235, 29);
+=======
+            this.searchc.Location = new System.Drawing.Point(610, 488);
+            this.searchc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchc.Name = "searchc";
+            this.searchc.Size = new System.Drawing.Size(323, 29);
+>>>>>>> 89d773a6907e3e2cab44e3df3c38c9a2114bedbd
+>>>>>>> Stashed changes
             this.searchc.TabIndex = 56;
+            this.searchc.TextChanged += new System.EventHandler(this.searchc_TextChanged);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< Updated upstream
             this.button3.Location = new System.Drawing.Point(182, 488);
+=======
+<<<<<<< HEAD
+            this.button3.Location = new System.Drawing.Point(299, 454);
+=======
+            this.button3.Location = new System.Drawing.Point(182, 488);
+>>>>>>> 89d773a6907e3e2cab44e3df3c38c9a2114bedbd
+>>>>>>> Stashed changes
             this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(124, 37);
@@ -85,7 +116,15 @@
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< Updated upstream
             this.button1.Location = new System.Drawing.Point(26, 488);
+=======
+<<<<<<< HEAD
+            this.button1.Location = new System.Drawing.Point(143, 454);
+=======
+            this.button1.Location = new System.Drawing.Point(26, 488);
+>>>>>>> 89d773a6907e3e2cab44e3df3c38c9a2114bedbd
+>>>>>>> Stashed changes
             this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 37);
@@ -110,13 +149,29 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+<<<<<<< Updated upstream
             this.dataGridView1.Location = new System.Drawing.Point(12, 70);
+=======
+<<<<<<< HEAD
+            this.dataGridView1.Location = new System.Drawing.Point(12, 48);
+=======
+            this.dataGridView1.Location = new System.Drawing.Point(12, 70);
+>>>>>>> 89d773a6907e3e2cab44e3df3c38c9a2114bedbd
+>>>>>>> Stashed changes
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+<<<<<<< Updated upstream
             this.dataGridView1.Size = new System.Drawing.Size(1273, 379);
+=======
+<<<<<<< HEAD
+            this.dataGridView1.Size = new System.Drawing.Size(1040, 379);
+=======
+            this.dataGridView1.Size = new System.Drawing.Size(1273, 379);
+>>>>>>> 89d773a6907e3e2cab44e3df3c38c9a2114bedbd
+>>>>>>> Stashed changes
             this.dataGridView1.TabIndex = 60;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -124,17 +179,52 @@
             // specificsearch
             // 
             this.specificsearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.specificsearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.specificsearch.FormattingEnabled = true;
             this.specificsearch.Items.AddRange(new object[] {
             "Item Name",
             "Subject",
             "Student First Name",
             "Student Last Name"});
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+            this.specificsearch.Location = new System.Drawing.Point(666, 474);
+            this.specificsearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.specificsearch.Name = "specificsearch";
+            this.specificsearch.Size = new System.Drawing.Size(140, 33);
+=======
+>>>>>>> Stashed changes
             this.specificsearch.Location = new System.Drawing.Point(446, 496);
             this.specificsearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.specificsearch.Name = "specificsearch";
             this.specificsearch.Size = new System.Drawing.Size(140, 21);
+<<<<<<< Updated upstream
+=======
+>>>>>>> 89d773a6907e3e2cab44e3df3c38c9a2114bedbd
+>>>>>>> Stashed changes
             this.specificsearch.TabIndex = 61;
+            this.specificsearch.SelectedIndexChanged += new System.EventHandler(this.specificsearch_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(967, 494);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(190, 20);
+            this.label1.TabIndex = 62;
+            this.label1.Text = "Total number of requests:";
+            // 
+            // rnum
+            // 
+            this.rnum.AutoSize = true;
+            this.rnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.rnum.Location = new System.Drawing.Point(1163, 494);
+            this.rnum.Name = "rnum";
+            this.rnum.Size = new System.Drawing.Size(51, 20);
+            this.rnum.TabIndex = 63;
+            this.rnum.Text = "label2";
             // 
             // label1
             // 
@@ -161,16 +251,26 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
+<<<<<<< Updated upstream
             this.ClientSize = new System.Drawing.Size(1339, 703);
             this.Controls.Add(this.rnum);
             this.Controls.Add(this.label1);
+=======
+<<<<<<< HEAD
+            this.ClientSize = new System.Drawing.Size(1076, 517);
+=======
+            this.ClientSize = new System.Drawing.Size(1339, 703);
+            this.Controls.Add(this.rnum);
+            this.Controls.Add(this.label1);
+>>>>>>> 89d773a6907e3e2cab44e3df3c38c9a2114bedbd
+>>>>>>> Stashed changes
             this.Controls.Add(this.specificsearch);
+            this.Controls.Add(this.searchchem);
+            this.Controls.Add(this.searchc);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.searchc);
-            this.Controls.Add(this.searchchem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ChemicalManagement";
