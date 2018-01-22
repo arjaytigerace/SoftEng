@@ -54,5 +54,10 @@ namespace Accounting
         {
 
         }
+
+        private void BorrowingChem_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
