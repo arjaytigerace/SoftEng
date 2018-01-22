@@ -210,5 +210,15 @@ namespace Accounting
             chemsearch.search = searchc.Text;
             chemsearch.Show();
         }
+
+        private void searchc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void specificsearch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
