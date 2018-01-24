@@ -121,6 +121,8 @@
             this.label20 = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.logbutton = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -417,6 +419,8 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPage2.Controls.Add(this.button4);
+            this.tabPage2.Controls.Add(this.logbutton);
             this.tabPage2.Controls.Add(this.label26);
             this.tabPage2.Controls.Add(this.eItemCode);
             this.tabPage2.Controls.Add(this.label22);
@@ -564,7 +568,7 @@
             // 
             this.deselectequipb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deselectequipb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deselectequipb.Location = new System.Drawing.Point(667, 481);
+            this.deselectequipb.Location = new System.Drawing.Point(917, 521);
             this.deselectequipb.Margin = new System.Windows.Forms.Padding(2);
             this.deselectequipb.Name = "deselectequipb";
             this.deselectequipb.Size = new System.Drawing.Size(121, 33);
@@ -578,12 +582,12 @@
             this.addequipb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.addequipb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addequipb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addequipb.Location = new System.Drawing.Point(542, 481);
+            this.addequipb.Location = new System.Drawing.Point(502, 474);
             this.addequipb.Margin = new System.Windows.Forms.Padding(2);
             this.addequipb.Name = "addequipb";
-            this.addequipb.Size = new System.Drawing.Size(121, 33);
+            this.addequipb.Size = new System.Drawing.Size(161, 51);
             this.addequipb.TabIndex = 21;
-            this.addequipb.Text = "Add";
+            this.addequipb.Text = "Stock In Item";
             this.addequipb.UseVisualStyleBackColor = false;
             this.addequipb.Click += new System.EventHandler(this.addequipb_Click);
             // 
@@ -696,7 +700,7 @@
             this.updequipb.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.updequipb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updequipb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updequipb.Location = new System.Drawing.Point(792, 481);
+            this.updequipb.Location = new System.Drawing.Point(917, 438);
             this.updequipb.Margin = new System.Windows.Forms.Padding(2);
             this.updequipb.Name = "updequipb";
             this.updequipb.Size = new System.Drawing.Size(121, 36);
@@ -1293,6 +1297,32 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
+            // logbutton
+            // 
+            this.logbutton.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.logbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logbutton.Location = new System.Drawing.Point(917, 481);
+            this.logbutton.Margin = new System.Windows.Forms.Padding(2);
+            this.logbutton.Name = "logbutton";
+            this.logbutton.Size = new System.Drawing.Size(121, 36);
+            this.logbutton.TabIndex = 50;
+            this.logbutton.Text = "Item Log";
+            this.logbutton.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(700, 468);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(161, 62);
+            this.button4.TabIndex = 51;
+            this.button4.Text = "Stock Out Item";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1430,5 +1460,7 @@
         private System.Windows.Forms.Label classification;
         private System.Windows.Forms.ComboBox colorCode;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button logbutton;
+        private System.Windows.Forms.Button button4;
     }
 }
