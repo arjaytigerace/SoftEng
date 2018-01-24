@@ -77,7 +77,6 @@ C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.pdb
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\bin\Debug\Accounting.exe.config
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\bin\Debug\Accounting.exe
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\bin\Debug\Accounting.pdb
-C:\Users\jdko\Source\Repos\SoftEng\Accounting\bin\Debug\MySql.Data.xml
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.csprojResolveAssemblyReference.cache
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.BRWBorrow.resources
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.BorrowingChem.resources
@@ -155,3 +154,5 @@ C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.pdb
 C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.ChemMgtInfo.resources
 C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.ChemMgtSearch.resources
+C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.stockin.resources
+C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Stockout.resources

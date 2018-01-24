@@ -44,23 +44,18 @@
             this.search = new System.Windows.Forms.TextBox();
             this.itemtype = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.updbutton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.itemname = new System.Windows.Forms.TextBox();
-            this.measuretype = new System.Windows.Forms.ComboBox();
-            this.qty = new System.Windows.Forms.NumericUpDown();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
+            this.logbutton = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.eItemCode = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.equipStatus = new System.Windows.Forms.ComboBox();
             this.searchequip = new System.Windows.Forms.Button();
             this.searche = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.numlost = new System.Windows.Forms.NumericUpDown();
-            this.numdmg = new System.Windows.Forms.NumericUpDown();
             this.deselectequipb = new System.Windows.Forms.Button();
             this.addequipb = new System.Windows.Forms.Button();
             this.estlife = new System.Windows.Forms.TextBox();
@@ -72,11 +67,8 @@
             this.brand = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.updequipb = new System.Windows.Forms.Button();
             this.eitemname = new System.Windows.Forms.TextBox();
-            this.emeasuretype = new System.Windows.Forms.ComboBox();
-            this.eqty = new System.Windows.Forms.NumericUpDown();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.aItemCode = new System.Windows.Forms.TextBox();
@@ -121,18 +113,12 @@
             this.label20 = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.logbutton = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.num.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qty)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numlost)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numdmg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eqty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.anumlost)).BeginInit();
@@ -211,12 +197,9 @@
             this.num.Controls.Add(this.dataGridView1);
             this.num.Controls.Add(this.itemtype);
             this.num.Controls.Add(this.label1);
-            this.num.Controls.Add(this.label3);
             this.num.Controls.Add(this.updbutton);
             this.num.Controls.Add(this.label2);
             this.num.Controls.Add(this.itemname);
-            this.num.Controls.Add(this.measuretype);
-            this.num.Controls.Add(this.qty);
             this.num.Location = new System.Drawing.Point(4, 22);
             this.num.Margin = new System.Windows.Forms.Padding(2);
             this.num.Name = "num";
@@ -270,7 +253,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(4, 519);
+            this.label21.Location = new System.Drawing.Point(5, 493);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(92, 31);
@@ -286,7 +269,7 @@
             this.status.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.status.Location = new System.Drawing.Point(166, 519);
+            this.status.Location = new System.Drawing.Point(166, 493);
             this.status.Margin = new System.Windows.Forms.Padding(2);
             this.status.Name = "status";
             this.status.Size = new System.Drawing.Size(289, 38);
@@ -342,25 +325,13 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Item Name";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(4, 483);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 31);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Quantity";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
             // updbutton
             // 
             this.updbutton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.updbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.updbutton.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updbutton.Location = new System.Drawing.Point(166, 573);
+            this.updbutton.Location = new System.Drawing.Point(166, 547);
             this.updbutton.Margin = new System.Windows.Forms.Padding(2);
             this.updbutton.Name = "updbutton";
             this.updbutton.Size = new System.Drawing.Size(138, 47);
@@ -389,33 +360,6 @@
             this.itemname.Size = new System.Drawing.Size(289, 37);
             this.itemname.TabIndex = 2;
             // 
-            // measuretype
-            // 
-            this.measuretype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.measuretype.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.measuretype.FormattingEnabled = true;
-            this.measuretype.Items.AddRange(new object[] {
-            "Unit(s)",
-            "Piece(s)",
-            "ml",
-            "g",
-            "L",
-            "Kg"});
-            this.measuretype.Location = new System.Drawing.Point(279, 477);
-            this.measuretype.Margin = new System.Windows.Forms.Padding(2);
-            this.measuretype.Name = "measuretype";
-            this.measuretype.Size = new System.Drawing.Size(176, 38);
-            this.measuretype.TabIndex = 5;
-            // 
-            // qty
-            // 
-            this.qty.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty.Location = new System.Drawing.Point(166, 478);
-            this.qty.Margin = new System.Windows.Forms.Padding(2);
-            this.qty.Name = "qty";
-            this.qty.Size = new System.Drawing.Size(109, 37);
-            this.qty.TabIndex = 4;
-            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.Window;
@@ -427,10 +371,6 @@
             this.tabPage2.Controls.Add(this.equipStatus);
             this.tabPage2.Controls.Add(this.searchequip);
             this.tabPage2.Controls.Add(this.searche);
-            this.tabPage2.Controls.Add(this.label11);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.numlost);
-            this.tabPage2.Controls.Add(this.numdmg);
             this.tabPage2.Controls.Add(this.deselectequipb);
             this.tabPage2.Controls.Add(this.addequipb);
             this.tabPage2.Controls.Add(this.estlife);
@@ -442,11 +382,8 @@
             this.tabPage2.Controls.Add(this.brand);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.updequipb);
             this.tabPage2.Controls.Add(this.eitemname);
-            this.tabPage2.Controls.Add(this.emeasuretype);
-            this.tabPage2.Controls.Add(this.eqty);
             this.tabPage2.Controls.Add(this.dataGridView2);
             this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -457,6 +394,32 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Equipment";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(709, 450);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(161, 62);
+            this.button4.TabIndex = 51;
+            this.button4.Text = "Stock Out Item";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // logbutton
+            // 
+            this.logbutton.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.logbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logbutton.Location = new System.Drawing.Point(917, 494);
+            this.logbutton.Margin = new System.Windows.Forms.Padding(2);
+            this.logbutton.Name = "logbutton";
+            this.logbutton.Size = new System.Drawing.Size(121, 36);
+            this.logbutton.TabIndex = 50;
+            this.logbutton.Text = "Item Log";
+            this.logbutton.UseVisualStyleBackColor = false;
             // 
             // label26
             // 
@@ -482,7 +445,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(12, 479);
+            this.label22.Location = new System.Drawing.Point(12, 451);
             this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(79, 25);
@@ -497,7 +460,7 @@
             this.equipStatus.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.equipStatus.Location = new System.Drawing.Point(241, 478);
+            this.equipStatus.Location = new System.Drawing.Point(241, 450);
             this.equipStatus.Margin = new System.Windows.Forms.Padding(2);
             this.equipStatus.Name = "equipStatus";
             this.equipStatus.Size = new System.Drawing.Size(196, 28);
@@ -508,7 +471,7 @@
             this.searchequip.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.searchequip.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchequip.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchequip.Location = new System.Drawing.Point(457, 566);
+            this.searchequip.Location = new System.Drawing.Point(459, 579);
             this.searchequip.Margin = new System.Windows.Forms.Padding(2);
             this.searchequip.Name = "searchequip";
             this.searchequip.Size = new System.Drawing.Size(96, 37);
@@ -526,49 +489,11 @@
             this.searche.Size = new System.Drawing.Size(280, 29);
             this.searche.TabIndex = 10;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(509, 420);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(167, 25);
-            this.label11.TabIndex = 44;
-            this.label11.Text = "# of Items Lost";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(509, 391);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(221, 25);
-            this.label6.TabIndex = 43;
-            this.label6.Text = "# of Items Damaged";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // numlost
-            // 
-            this.numlost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numlost.Location = new System.Drawing.Point(736, 422);
-            this.numlost.Name = "numlost";
-            this.numlost.Size = new System.Drawing.Size(84, 26);
-            this.numlost.TabIndex = 20;
-            // 
-            // numdmg
-            // 
-            this.numdmg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numdmg.Location = new System.Drawing.Point(736, 390);
-            this.numdmg.Name = "numdmg";
-            this.numdmg.Size = new System.Drawing.Size(84, 26);
-            this.numdmg.TabIndex = 19;
-            // 
             // deselectequipb
             // 
             this.deselectequipb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deselectequipb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deselectequipb.Location = new System.Drawing.Point(917, 521);
+            this.deselectequipb.Location = new System.Drawing.Point(917, 534);
             this.deselectequipb.Margin = new System.Windows.Forms.Padding(2);
             this.deselectequipb.Name = "deselectequipb";
             this.deselectequipb.Size = new System.Drawing.Size(121, 33);
@@ -582,10 +507,10 @@
             this.addequipb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.addequipb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addequipb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addequipb.Location = new System.Drawing.Point(502, 474);
+            this.addequipb.Location = new System.Drawing.Point(514, 450);
             this.addequipb.Margin = new System.Windows.Forms.Padding(2);
             this.addequipb.Name = "addequipb";
-            this.addequipb.Size = new System.Drawing.Size(161, 51);
+            this.addequipb.Size = new System.Drawing.Size(161, 62);
             this.addequipb.TabIndex = 21;
             this.addequipb.Text = "Stock In Item";
             this.addequipb.UseVisualStyleBackColor = false;
@@ -636,7 +561,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(12, 449);
+            this.label8.Location = new System.Drawing.Point(12, 421);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(109, 25);
@@ -646,7 +571,7 @@
             // costunit
             // 
             this.costunit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.costunit.Location = new System.Drawing.Point(241, 448);
+            this.costunit.Location = new System.Drawing.Point(241, 420);
             this.costunit.Margin = new System.Windows.Forms.Padding(2);
             this.costunit.Name = "costunit";
             this.costunit.Size = new System.Drawing.Size(196, 26);
@@ -655,7 +580,7 @@
             // brand
             // 
             this.brand.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brand.Location = new System.Drawing.Point(241, 418);
+            this.brand.Location = new System.Drawing.Point(241, 390);
             this.brand.Margin = new System.Windows.Forms.Padding(2);
             this.brand.Name = "brand";
             this.brand.Size = new System.Drawing.Size(196, 26);
@@ -665,7 +590,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 419);
+            this.label7.Location = new System.Drawing.Point(12, 391);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(191, 25);
@@ -684,23 +609,12 @@
             this.label4.TabIndex = 23;
             this.label4.Text = "Item Name";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 390);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 25);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "Quantity";
-            // 
             // updequipb
             // 
             this.updequipb.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.updequipb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updequipb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updequipb.Location = new System.Drawing.Point(917, 438);
+            this.updequipb.Location = new System.Drawing.Point(917, 451);
             this.updequipb.Margin = new System.Windows.Forms.Padding(2);
             this.updequipb.Name = "updequipb";
             this.updequipb.Size = new System.Drawing.Size(121, 36);
@@ -717,33 +631,6 @@
             this.eitemname.Name = "eitemname";
             this.eitemname.Size = new System.Drawing.Size(196, 26);
             this.eitemname.TabIndex = 12;
-            // 
-            // emeasuretype
-            // 
-            this.emeasuretype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.emeasuretype.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emeasuretype.FormattingEnabled = true;
-            this.emeasuretype.Items.AddRange(new object[] {
-            "Unit(s)",
-            "Piece(s)",
-            "ml",
-            "g",
-            "L",
-            "Kg"});
-            this.emeasuretype.Location = new System.Drawing.Point(319, 387);
-            this.emeasuretype.Margin = new System.Windows.Forms.Padding(2);
-            this.emeasuretype.Name = "emeasuretype";
-            this.emeasuretype.Size = new System.Drawing.Size(118, 28);
-            this.emeasuretype.TabIndex = 14;
-            // 
-            // eqty
-            // 
-            this.eqty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eqty.Location = new System.Drawing.Point(241, 388);
-            this.eqty.Margin = new System.Windows.Forms.Padding(2);
-            this.eqty.Name = "eqty";
-            this.eqty.Size = new System.Drawing.Size(74, 26);
-            this.eqty.TabIndex = 13;
             // 
             // dataGridView2
             // 
@@ -1297,32 +1184,6 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // logbutton
-            // 
-            this.logbutton.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.logbutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logbutton.Location = new System.Drawing.Point(917, 481);
-            this.logbutton.Margin = new System.Windows.Forms.Padding(2);
-            this.logbutton.Name = "logbutton";
-            this.logbutton.Size = new System.Drawing.Size(121, 36);
-            this.logbutton.TabIndex = 50;
-            this.logbutton.Text = "Item Log";
-            this.logbutton.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(700, 468);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(161, 62);
-            this.button4.TabIndex = 51;
-            this.button4.Text = "Stock Out Item";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1345,12 +1206,8 @@
             this.tabControl1.ResumeLayout(false);
             this.num.ResumeLayout(false);
             this.num.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qty)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numlost)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numdmg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eqty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
@@ -1374,22 +1231,16 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage num;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.NumericUpDown qty;
         private System.Windows.Forms.ComboBox itemtype;
         private System.Windows.Forms.TextBox itemname;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.ComboBox measuretype;
         private System.Windows.Forms.Button updbutton;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button updequipb;
         private System.Windows.Forms.TextBox eitemname;
-        private System.Windows.Forms.ComboBox emeasuretype;
-        private System.Windows.Forms.NumericUpDown eqty;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox brand;
@@ -1401,10 +1252,6 @@
         private System.Windows.Forms.DateTimePicker purchasedate;
         private System.Windows.Forms.Button addequipb;
         private System.Windows.Forms.Button deselectequipb;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numlost;
-        private System.Windows.Forms.NumericUpDown numdmg;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.NumericUpDown anumlost;

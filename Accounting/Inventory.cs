@@ -43,14 +43,13 @@ namespace Accounting
             aItemCode.Text = "";
             itemname.Text = "";
             itemtype.SelectedIndex = 0;
-            qty.Value = 0;
-            measuretype.SelectedIndex = 0;
-            emeasuretype.SelectedIndex = 0;
+
+    
+
             cmeasuretype.SelectedIndex = 0;
-            numdmg.Value = 0;
-            numlost.Value = 0;
+
             eitemname.Text = "";
-            eqty.Value = 0;
+     
             brand.Text = "";
             costunit.Text = "";
             estlife.Text = "";
@@ -96,10 +95,7 @@ namespace Accounting
             main.Show();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -109,10 +105,6 @@ namespace Accounting
         private void Inventory_Load(object sender, EventArgs e)
         {
 
-            qty.Minimum = 0;
-            qty.Maximum = 9999;
-            eqty.Minimum = 0;
-            eqty.Maximum = 9999;
             aqty.Minimum = 0;
             aqty.Maximum = 9999;
             numericUpDown1.Minimum = 0;
@@ -161,7 +153,7 @@ namespace Accounting
 
 
 
-            string queryequip = "SELECT a.itemID,itemCode,itemName,quantity,measurementType,numdmg,numlost,brandAndModel,costPerUnit,dateOfPurchase,estimatedLife,addedon,modon,itemstatus " +
+            string queryequip = "SELECT a.itemID,itemCode,itemName,quantity,measurementType,brandAndModel,costPerUnit,dateOfPurchase,estimatedLife,addedon,modon,itemstatus " +
                 "FROM chem_lab.item a,chem_lab.itemequipment b WHERE b.itemID = a.itemID";
 
             conn.Open();
@@ -182,8 +174,7 @@ namespace Accounting
             dataGridView2.Columns["costPerUnit"].HeaderText = "Cost/Unit";
             dataGridView2.Columns["dateOfPurchase"].HeaderText = "Date of Purchase";
             dataGridView2.Columns["estimatedLife"].HeaderText = "Estimated Life";
-            dataGridView2.Columns["numdmg"].HeaderText = "# Damaged";
-            dataGridView2.Columns["numlost"].HeaderText = "# Lost";
+     
             dataGridView2.Columns["addedon"].HeaderText = "Date Added";
             dataGridView2.Columns["modon"].HeaderText = "Last Modified";
             dataGridView2.Columns["itemstatus"].HeaderText = "Status";
@@ -251,8 +242,7 @@ namespace Accounting
                 itemCode.Text = dataGridView1.Rows[e.RowIndex].Cells["itemCode"].Value.ToString();
                 itemname.Text = dataGridView1.Rows[e.RowIndex].Cells["itemname"].Value.ToString();
                 itemtype.Text = dataGridView1.Rows[e.RowIndex].Cells["itemtype"].Value.ToString();
-                qty.Value = (int)dataGridView1.Rows[e.RowIndex].Cells["quantity"].Value;
-                measuretype.Text = dataGridView1.Rows[e.RowIndex].Cells["measurementType"].Value.ToString();
+              
                 status.Text = dataGridView1.Rows[e.RowIndex].Cells["itemstatus"].Value.ToString();
 
                 updbutton.Enabled = true;
@@ -295,7 +285,7 @@ namespace Accounting
             }
            
 
-            string query = "UPDATE item SET itemCode='" + itemCode.Text +"',itemname='" + itemname.Text + "',itemtypeID='" + itype + "',quantity='" + qty.Value + "',measurementtype='" + measuretype.Text + "',modon='" + date + "', itemstatus='" + status.Text +"' WHERE itemID =" + selecteditemid;
+            string query = "UPDATE item SET itemCode='" + itemCode.Text +"',itemname='" + itemname.Text + "',itemtypeID='" + itype + "',modon='" + date + "', itemstatus='" + status.Text +"' WHERE itemID =" + selecteditemid;
 
             conn.Open();
             MySqlCommand comm1 = new MySqlCommand(query, conn);
@@ -332,15 +322,13 @@ namespace Accounting
 
                 comm1.Parameters.Add("?eitemcode", MySqlDbType.VarChar, 255).Value = eItemCode.Text;
                 comm1.Parameters.Add("?eitemname", MySqlDbType.VarChar, 255).Value = eitemname.Text;
-                comm1.Parameters.Add("?eqty", MySqlDbType.Int32).Value = eqty.Value - (numdmg.Value + numlost.Value);
-                comm1.Parameters.Add("?emeasuretype", MySqlDbType.VarChar, 255).Value = emeasuretype.Text;
+               
                 comm1.Parameters.Add("?edate", MySqlDbType.DateTime).Value = date;
                 comm1.Parameters.Add("?brandAndModel", MySqlDbType.VarChar, 255).Value = brand.Text;
                 comm1.Parameters.Add("?costPerUnit", MySqlDbType.VarChar, 255).Value = costunit.Text;
                 comm1.Parameters.Add("?dateOfPurchase", MySqlDbType.Date).Value = purchasedate.Value;
                 comm1.Parameters.Add("?estimatedLife", MySqlDbType.VarChar, 255).Value = estlife.Text;
-                comm1.Parameters.Add("?numdmg", MySqlDbType.VarChar, 255).Value = numdmg.Value;
-                comm1.Parameters.Add("?numlost", MySqlDbType.VarChar, 255).Value = numlost.Value;
+
                 comm1.Parameters.Add("?equipStatus", MySqlDbType.VarChar, 255).Value = equipStatus.Text;
                 comm1.ExecuteNonQuery();
 
@@ -365,16 +353,13 @@ namespace Accounting
                 selecteditemid = int.Parse(dataGridView2.Rows[e.RowIndex].Cells["itemID"].Value.ToString());
                 eItemCode.Text=dataGridView2.Rows[e.RowIndex].Cells["itemCode"].Value.ToString();
                 eitemname.Text = dataGridView2.Rows[e.RowIndex].Cells["itemname"].Value.ToString();
-                eqty.Value = (int)dataGridView2.Rows[e.RowIndex].Cells["quantity"].Value;
-                emeasuretype.Text = dataGridView2.Rows[e.RowIndex].Cells["measurementType"].Value.ToString();
+               
                 brand.Text = dataGridView2.Rows[e.RowIndex].Cells["brandAndModel"].Value.ToString();
                 costunit.Text = dataGridView2.Rows[e.RowIndex].Cells["costPerUnit"].Value.ToString();
                 purchasedate.Value = (DateTime)dataGridView2.Rows[e.RowIndex].Cells["dateOfPurchase"].Value;
                 estlife.Text = dataGridView2.Rows[e.RowIndex].Cells["estimatedLife"].Value.ToString();
-                numlost.Value = (int)dataGridView2.Rows[e.RowIndex].Cells["numlost"].Value;
-                numdmg.Value = (int)dataGridView2.Rows[e.RowIndex].Cells["numdmg"].Value;
+            
                 equipStatus.Text= dataGridView2.Rows[e.RowIndex].Cells["itemstatus"].Value.ToString();
-                oldDmgLost = (numlost.Value + numdmg.Value);
                 addequipb.Enabled = false;
                 deselectequipb.Enabled = true;
                 updequipb.Enabled = true;
@@ -409,7 +394,7 @@ namespace Accounting
             {
                 MessageBox.Show("Please do not leave any of the fields as blank");
             }
-
+            /*
             decimal newDmgLost = (numdmg.Value + numlost.Value);
             string query;
             if((newDmgLost - oldDmgLost) < 0)
@@ -432,7 +417,10 @@ namespace Accounting
                 query = "UPDATE item SET itemCode ='" + eItemCode.Text + "',itemName='" + eitemname.Text + "',quantity='" + eqty.Value +
                     "',measurementtype='" + emeasuretype.Text + "',modon='" + date + "',itemstatus='" + equipStatus.Text + "' WHERE itemID =" +
                     selecteditemid;
-            }
+            }*/
+            string query= "UPDATE item SET itemCode ='" + eItemCode.Text + "',itemName='" + eitemname.Text +
+            "',modon='" + date + "',itemstatus='" + equipStatus.Text + "' WHERE itemID =" +
+                    selecteditemid;
 
             //string query = "UPDATE item SET itemName='" + eitemname.Text + "',quantity='" + (eqty.Value - (numdmg.Value + numlost.Value)) + "',measurementtype='" + emeasuretype.Text + "',modon='" + date + "',status='"+equipStatus.Text+"' WHERE itemID =" + selecteditemid;
 
@@ -441,7 +429,7 @@ namespace Accounting
             comm1.ExecuteNonQuery();
 
 
-            string query1 = "UPDATE itemequipment SET brandandmodel='" + brand.Text + "',costPerunit ='" + costunit.Text + "',dateOfPurchase='" + purchasedate.Value.ToString("yyyy-MM-dd") + "',estimatedLife='" + estlife.Text + "',numdmg=" + numdmg.Value + ",numlost=" + numlost.Value + " WHERE itemID =" + selecteditemid;
+            string query1 = "UPDATE itemequipment SET brandandmodel='" + brand.Text + "',costPerunit ='" + costunit.Text + "',dateOfPurchase='" + purchasedate.Value.ToString("yyyy-MM-dd") + "',estimatedLife='" + estlife.Text + " WHERE itemID =" + selecteditemid;
 
             MySqlCommand comm2 = new MySqlCommand(query1, conn);
             comm2.ExecuteNonQuery();
