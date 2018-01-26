@@ -41,6 +41,7 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -51,6 +52,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -197,12 +199,24 @@
             this.pictureBox9.TabIndex = 11;
             this.pictureBox9.TabStop = false;
             // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox10.BackgroundImage")));
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox10.Location = new System.Drawing.Point(332, 219);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(155, 149);
+            this.pictureBox10.TabIndex = 12;
+            this.pictureBox10.TabStop = false;
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(591, 374);
+            this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.pictureBox8);
@@ -230,6 +244,7 @@
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -248,5 +263,6 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Panel TopPanel;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox10;
     }
 }
