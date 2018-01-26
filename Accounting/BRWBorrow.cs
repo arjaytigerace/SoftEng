@@ -20,7 +20,10 @@ namespace Accounting
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-
+            BRWReturn bwreturn = new BRWReturn();
+            bwreturn.main = this;
+            bwreturn.Show();
+            this.Hide();
         }
 
         private void BRWBorrow_Load(object sender, EventArgs e)

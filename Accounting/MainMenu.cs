@@ -82,10 +82,6 @@ namespace Accounting
             Inv.Show();
             this.Hide();
 
-            /*Inventory2 Inv2 = new Inventory2();
-            Inv2.main = this;
-            Inv2.Show();
-            this.Hide();*/
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -101,8 +97,6 @@ namespace Accounting
            
 
         }
-
-     
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
