@@ -147,6 +147,18 @@
     <Compile Include="Search.Designer.cs">
       <DependentUpon>Search.cs</DependentUpon>
     </Compile>
+    <Compile Include="stockin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stockin.Designer.cs">
+      <DependentUpon>stockin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stockout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stockout.Designer.cs">
+      <DependentUpon>Stockout.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserPass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +221,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Search.resx">
       <DependentUpon>Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stockin.resx">
+      <DependentUpon>stockin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stockout.resx">
+      <DependentUpon>Stockout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserPass.resx">
       <DependentUpon>UserPass.cs</DependentUpon>

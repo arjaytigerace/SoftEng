@@ -59,14 +59,11 @@ namespace Accounting
             }
             else
             {
-                /*
-                pictureBox1.Enabled = false;
-                pictureBox1.Cursor = DefaultCursor;*/
+
                 MessageBox.Show("Please contact the admin", "You have no admin rights", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
 
             }
-
 
         }
 
@@ -87,14 +84,11 @@ namespace Accounting
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
-
                UserPass UP = new UserPass();
                UP.Adminid = this.adminid;
                UP.main = this;
                UP.Show();
                this.Hide();
-
-           
 
         }
 
