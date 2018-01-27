@@ -127,6 +127,12 @@
     <Compile Include="GenerateReport.Designer.cs">
       <DependentUpon>GenerateReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="ItemLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemLog.Designer.cs">
+      <DependentUpon>ItemLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GenerateReport.resx">
       <DependentUpon>GenerateReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemLog.resx">
+      <DependentUpon>ItemLog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>

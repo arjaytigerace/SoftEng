@@ -18,7 +18,7 @@ namespace Accounting
         public Form main { get; set; }
         MySqlConnection conn;
         decimal oldDmgLost { get; set; }
-        
+        public int Adminid { get; set; }
 
         private int selecteditemid;
 
@@ -304,7 +304,7 @@ namespace Accounting
 
         private void addequipb_Click(object sender, EventArgs e)
         {
-
+            /*
             if (eitemname.Text == "" || itemtype.Text == "" || brand.Text == "" || costunit.Text == "" || estlife.Text == "" || eItemCode.Text == "")
             {
                 MessageBox.Show("Please do not leave a field empty");
@@ -336,7 +336,11 @@ namespace Accounting
                 MessageBox.Show("Success", "Item Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 loadall();
 
-            }
+            }*/
+            stockin stockIn = new stockin();
+            stockIn.main = this;
+            stockIn.Adminid = this.Adminid;
+            stockIn.Show();
         }
 
         private void deselectequipb_Click(object sender, EventArgs e)
@@ -360,7 +364,6 @@ namespace Accounting
                 estlife.Text = dataGridView2.Rows[e.RowIndex].Cells["estimatedLife"].Value.ToString();
             
                 equipStatus.Text= dataGridView2.Rows[e.RowIndex].Cells["itemstatus"].Value.ToString();
-                addequipb.Enabled = false;
                 deselectequipb.Enabled = true;
                 updequipb.Enabled = true;
                
@@ -429,7 +432,7 @@ namespace Accounting
             comm1.ExecuteNonQuery();
 
 
-            string query1 = "UPDATE itemequipment SET brandandmodel='" + brand.Text + "',costPerunit ='" + costunit.Text + "',dateOfPurchase='" + purchasedate.Value.ToString("yyyy-MM-dd") + "',estimatedLife='" + estlife.Text + " WHERE itemID =" + selecteditemid;
+            string query1 = "UPDATE itemequipment SET brandandmodel='" + brand.Text + "',costPerunit ='" + costunit.Text + "',dateOfPurchase='" + purchasedate.Value.ToString("yyyy-MM-dd") + "',estimatedLife='" + estlife.Text + "' WHERE itemID =" + selecteditemid;
 
             MySqlCommand comm2 = new MySqlCommand(query1, conn);
             comm2.ExecuteNonQuery();
@@ -756,6 +759,19 @@ namespace Accounting
                 classification.Text = "Oxidizer";
             }
 
+        }
+
+        private void logbutton_Click(object sender, EventArgs e)
+        {
+            ItemLog itemlog = new ItemLog();
+            itemlog.main = this;
+
+            itemlog.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            loadall();
         }
     }
 }

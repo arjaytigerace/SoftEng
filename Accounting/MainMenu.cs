@@ -76,6 +76,7 @@ namespace Accounting
         {
             Inventory Inv = new Inventory();
             Inv.main = this;
+            Inv.Adminid = this.adminid;
             Inv.Show();
             this.Hide();
 

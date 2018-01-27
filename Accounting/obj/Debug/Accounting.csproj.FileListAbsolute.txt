@@ -156,3 +156,6 @@ C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.ChemMgtInfo.r
 C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.ChemMgtSearch.resources
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.stockin.resources
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Stockout.resources
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.stockin.resources
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Stockout.resources
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.ItemLog.resources
