@@ -304,39 +304,7 @@ namespace Accounting
 
         private void addequipb_Click(object sender, EventArgs e)
         {
-            /*
-            if (eitemname.Text == "" || itemtype.Text == "" || brand.Text == "" || costunit.Text == "" || estlife.Text == "" || eItemCode.Text == "")
-            {
-                MessageBox.Show("Please do not leave a field empty");
-            }
-            else
-            {
-
-                DateTime dateValue = DateTime.Now;
-                string date = dateValue.ToString("yyyy-MM-dd HH:mm:ss");
-                purchasedate.CustomFormat = ("yyyy-MM-dd");
-
-                conn.Open();
-                MySqlCommand comm1 = new MySqlCommand("InsertEquip", conn);
-                comm1.CommandType = CommandType.StoredProcedure;
-
-                comm1.Parameters.Add("?eitemcode", MySqlDbType.VarChar, 255).Value = eItemCode.Text;
-                comm1.Parameters.Add("?eitemname", MySqlDbType.VarChar, 255).Value = eitemname.Text;
-               
-                comm1.Parameters.Add("?edate", MySqlDbType.DateTime).Value = date;
-                comm1.Parameters.Add("?brandAndModel", MySqlDbType.VarChar, 255).Value = brand.Text;
-                comm1.Parameters.Add("?costPerUnit", MySqlDbType.VarChar, 255).Value = costunit.Text;
-                comm1.Parameters.Add("?dateOfPurchase", MySqlDbType.Date).Value = purchasedate.Value;
-                comm1.Parameters.Add("?estimatedLife", MySqlDbType.VarChar, 255).Value = estlife.Text;
-
-                comm1.Parameters.Add("?equipStatus", MySqlDbType.VarChar, 255).Value = equipStatus.Text;
-                comm1.ExecuteNonQuery();
-
-                conn.Close();
-                MessageBox.Show("Success", "Item Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                loadall();
-
-            }*/
+        
             stockin stockIn = new stockin();
             stockIn.main = this;
             stockIn.Adminid = this.Adminid;
@@ -772,6 +740,14 @@ namespace Accounting
         private void button6_Click(object sender, EventArgs e)
         {
             loadall();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Stockout stockout = new Stockout();
+            stockout.main = this;
+            stockout.Adminid = this.Adminid;
+            stockout.Show();
         }
     }
 }

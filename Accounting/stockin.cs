@@ -41,7 +41,7 @@ namespace Accounting
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             DataSet ds = new DataSet();
 
-            string sql = "SELECT itemName FROM item where itemTypeID!=3";
+            string sql = "SELECT itemName FROM item";
 
 
             conn.Open();

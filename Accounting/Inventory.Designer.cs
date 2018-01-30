@@ -423,6 +423,7 @@
             this.button4.TabIndex = 51;
             this.button4.Text = "Stock Out";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // logbutton
             // 

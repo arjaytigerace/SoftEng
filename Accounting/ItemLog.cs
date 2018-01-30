@@ -28,7 +28,7 @@ namespace Accounting
         private void ItemLog_Load(object sender, EventArgs e)
         {
             string query = "SELECT itemName,item_log.quantity,item_log.date,stockStatus,item_log.status,CONCAT(firstname,' ',lastname) AS User,remarks from item,item_log LEFT OUTER JOIN administrativeassociate ON admin_ID = item_log.userID" +
-                " WHERE itemName = (SELECT itemName from item WHERE item_log.itemID = item.itemID)";
+                " WHERE itemName = (SELECT itemName from item WHERE item_log.itemID = item.itemID) AND stockStatus='Stocked IN' ORDER BY date DESC";
 
             conn.Open();
             MySqlCommand comm = new MySqlCommand(query, conn);
@@ -48,6 +48,51 @@ namespace Accounting
             dataGridView1.Columns["status"].HeaderText = "Reason";
             dataGridView1.Columns["User"].HeaderText = "User";
             dataGridView1.Columns["remarks"].HeaderText = "Remarks";
+
+            string query1 = "SELECT itemName,item_log.quantity,item_log.date,stockStatus,item_log.status,CONCAT(firstname,' ',lastname) AS User,remarks from item,item_log LEFT OUTER JOIN administrativeassociate ON admin_ID = item_log.userID" +
+    " WHERE itemName = (SELECT itemName from item WHERE item_log.itemID = item.itemID) AND stockStatus='Stocked OUT' ORDER BY date DESC";
+
+            conn.Open();
+            MySqlCommand comm1 = new MySqlCommand(query1, conn);
+            MySqlDataAdapter adp1 = new MySqlDataAdapter(comm1);
+            conn.Close();
+            DataTable dt1 = new DataTable();
+            adp1.Fill(dt1);
+
+            dataGridView2.RowHeadersVisible = false;
+            dataGridView2.DataSource = dt1;
+
+            dataGridView2.Columns["itemName"].HeaderText = "Item Name";
+            dataGridView2.Columns["quantity"].HeaderText = "QTY";
+            dataGridView2.Columns["quantity"].Width = 90;
+            dataGridView2.Columns["date"].HeaderText = "Date";
+            dataGridView2.Columns["stockStatus"].HeaderText = "Action";
+            dataGridView2.Columns["status"].HeaderText = "Reason";
+            dataGridView2.Columns["User"].HeaderText = "User";
+            dataGridView2.Columns["remarks"].HeaderText = "Remarks";
+
+
+            string query3 = "SELECT itemName,item_log.quantity,item_log.date,stockStatus,item_log.status,CONCAT(firstname,' ',lastname) AS User,remarks from item,item_log LEFT OUTER JOIN administrativeassociate ON admin_ID = item_log.userID" +
+" WHERE itemName = (SELECT itemName from item WHERE item_log.itemID = item.itemID) ORDER BY date DESC";
+
+            conn.Open();
+            MySqlCommand comm2 = new MySqlCommand(query3, conn);
+            MySqlDataAdapter adp2 = new MySqlDataAdapter(comm2);
+            conn.Close();
+            DataTable dt2 = new DataTable();
+            adp2.Fill(dt2);
+
+            dataGridView3.RowHeadersVisible = false;
+            dataGridView3.DataSource = dt2;
+
+            dataGridView3.Columns["itemName"].HeaderText = "Item Name";
+            dataGridView3.Columns["quantity"].HeaderText = "QTY";
+            dataGridView3.Columns["quantity"].Width = 90;
+            dataGridView3.Columns["date"].HeaderText = "Date";
+            dataGridView3.Columns["stockStatus"].HeaderText = "Action";
+            dataGridView3.Columns["status"].HeaderText = "Reason";
+            dataGridView3.Columns["User"].HeaderText = "User";
+            dataGridView3.Columns["remarks"].HeaderText = "Remarks";
 
         }
     }
