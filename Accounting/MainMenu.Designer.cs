@@ -209,6 +209,7 @@
             this.pictureBox10.Size = new System.Drawing.Size(155, 149);
             this.pictureBox10.TabIndex = 12;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
             // MainMenu
             // 

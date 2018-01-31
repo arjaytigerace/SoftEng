@@ -165,6 +165,12 @@
     <Compile Include="Stockout.Designer.cs">
       <DependentUpon>Stockout.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentsFaculty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentsFaculty.Designer.cs">
+      <DependentUpon>StudentsFaculty.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserPass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Stockout.resx">
       <DependentUpon>Stockout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentsFaculty.resx">
+      <DependentUpon>StudentsFaculty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserPass.resx">
       <DependentUpon>UserPass.cs</DependentUpon>

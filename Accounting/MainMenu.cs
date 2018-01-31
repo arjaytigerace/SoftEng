@@ -111,5 +111,13 @@ namespace Accounting
             C1.Show();
             this.Hide();
         }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            StudentsFaculty SF = new StudentsFaculty();
+            SF.main = this;
+            SF.Show();
+            this.Hide();
+        }
     }
 }
