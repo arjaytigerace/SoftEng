@@ -16,6 +16,8 @@ namespace Accounting
         public Form main { get; set; }
         MySqlConnection conn;
         public int Adminid { get; set; }
+        public int Tabindex { get; set; }
+        public String Itemname { get; set; }
         public stockin()
         {
             InitializeComponent();
@@ -31,6 +33,8 @@ namespace Accounting
             getData(DataCollection);
             sItemName.AutoCompleteCustomSource = DataCollection;
             equipStatus.SelectedIndex = 0;
+            tabControl1.SelectedIndex = Tabindex;
+            sItemName.Text = Itemname;
         }
 
         private void getData(AutoCompleteStringCollection dataCollection)
@@ -125,6 +129,11 @@ namespace Accounting
                 conn.Close();
                 MessageBox.Show("Success", "Item Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

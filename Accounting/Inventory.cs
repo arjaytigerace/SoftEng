@@ -62,8 +62,7 @@ namespace Accounting
             appStatus.SelectedIndex = 0;
             chemStatus.SelectedIndex = 0;
 
-            aqty.Value = 0;
-            ameasuretype.SelectedIndex = 0;
+   
 
 
             updbutton.Enabled = false;
@@ -73,7 +72,6 @@ namespace Accounting
             updequipb.Enabled = false;
             
 
-            addappb.Enabled = true;
             deselectappb.Enabled = false;
             updappb.Enabled = false;
             
@@ -105,8 +103,7 @@ namespace Accounting
         private void Inventory_Load(object sender, EventArgs e)
         {
 
-            aqty.Minimum = 0;
-            aqty.Maximum = 9999;
+
             numericUpDown1.Minimum = 0;
             numericUpDown1.Maximum = 9999;
 
@@ -308,6 +305,15 @@ namespace Accounting
             stockin stockIn = new stockin();
             stockIn.main = this;
             stockIn.Adminid = this.Adminid;
+            if (eitemname.Text == "" || brand.Text == "" || costunit.Text == "" || estlife.Text == "" || eItemCode.Text == "")
+            {
+                stockIn.Tabindex = 1;
+            }
+            else
+            {
+                stockIn.Tabindex = 0;
+                stockIn.Itemname=eitemname.Text;
+            }
             stockIn.Show();
         }
 
@@ -421,16 +427,14 @@ namespace Accounting
                 selecteditemid = int.Parse(dataGridView3.Rows[e.RowIndex].Cells["itemID"].Value.ToString());
                 aItemCode.Text= dataGridView3.Rows[e.RowIndex].Cells["itemCode"].Value.ToString();
                 aitemname.Text = dataGridView3.Rows[e.RowIndex].Cells["itemname"].Value.ToString();
-                aqty.Value = (int)dataGridView3.Rows[e.RowIndex].Cells["quantity"].Value;
-                ameasuretype.Text = dataGridView3.Rows[e.RowIndex].Cells["measurementType"].Value.ToString();
+                
                 adesc.Text = dataGridView3.Rows[e.RowIndex].Cells["description"].Value.ToString();
                
 
-                anumlost.Value = (int)dataGridView3.Rows[e.RowIndex].Cells["numlost"].Value;
-                anumdmg.Value = (int)dataGridView3.Rows[e.RowIndex].Cells["numdmg"].Value;
+           
                 appStatus.Text = dataGridView3.Rows[e.RowIndex].Cells["itemstatus"].Value.ToString();
-                oldDmgLost = anumdmg.Value + anumlost.Value;
-                addappb.Enabled = false;
+      
+              
                 deselectappb.Enabled = true;
                 updappb.Enabled = true;
                
@@ -461,12 +465,11 @@ namespace Accounting
 
                 comm1.Parameters.Add("?aitemcode", MySqlDbType.VarChar, 255).Value = aItemCode.Text;
                 comm1.Parameters.Add("?aitemname", MySqlDbType.VarChar, 255).Value = aitemname.Text;
-                comm1.Parameters.Add("?aqty", MySqlDbType.Int32).Value = aqty.Value - (anumdmg.Value + anumlost.Value);
-                comm1.Parameters.Add("?ameasuretype", MySqlDbType.VarChar, 255).Value = ameasuretype.Text;
+               
+               
                 comm1.Parameters.Add("?adate", MySqlDbType.DateTime).Value = date;
                 comm1.Parameters.Add("?description", MySqlDbType.VarChar, 255).Value = adesc.Text;
-                comm1.Parameters.Add("?numdmg", MySqlDbType.VarChar, 255).Value = anumdmg.Value;
-                comm1.Parameters.Add("?numlost", MySqlDbType.VarChar, 255).Value = anumlost.Value;
+          
                 comm1.Parameters.Add("?appStatus", MySqlDbType.VarChar, 255).Value = appStatus.Text;
                 comm1.ExecuteNonQuery();
 
@@ -489,7 +492,7 @@ namespace Accounting
             }
 
             string query;
-            decimal newDmgLost = (anumdmg.Value + anumlost.Value);
+  /*
             if ((newDmgLost - oldDmgLost) < 0)
             {
                 query = "UPDATE item SET itemCode='"+aItemCode.Text+"',itemName='" + aitemname.Text + "',quantity='" + (aqty.Value + (oldDmgLost - newDmgLost)) + "',measurementtype='" + ameasuretype.Text + "',modon='" + date + "',itemstatus='" + appStatus.Text + "' WHERE itemID =" + selecteditemid;
@@ -499,19 +502,19 @@ namespace Accounting
                 query = "UPDATE item SET itemCode='" + aItemCode.Text + "',itemName='" + aitemname.Text + "',quantity='" + (aqty.Value - (newDmgLost - oldDmgLost)) + "',measurementtype='" + ameasuretype.Text + "',modon='" + date + "',itemstatus='" + appStatus.Text + "' WHERE itemID =" + selecteditemid;
 
 
-            }
-            else
-            {
-                query = "UPDATE item SET itemCode='" + aItemCode.Text + "',itemName='" + aitemname.Text + "',quantity='" + aqty.Value + "',measurementtype='" + ameasuretype.Text + "',modon='" + date + "',itemstatus='" + appStatus.Text + "' WHERE itemID =" + selecteditemid;
+            }*/
+     
+            
+            query = "UPDATE item SET itemCode='" + aItemCode.Text + "',itemName='" + aitemname.Text + "',modon='" + date + "',itemstatus='" + appStatus.Text + "' WHERE itemID =" + selecteditemid;
 
-            }
+            
 
             conn.Open();
             MySqlCommand comm1 = new MySqlCommand(query, conn);
             comm1.ExecuteNonQuery();
 
 
-            string query1 = "UPDATE itemapparatus SET description='" + adesc.Text + "',numdmg=" + anumdmg.Value + ",numlost=" + anumlost.Value + " WHERE itemID =" + selecteditemid;
+            string query1 = "UPDATE itemapparatus SET description='" + adesc.Text +  " WHERE itemID =" + selecteditemid;
 
             MySqlCommand comm2 = new MySqlCommand(query1, conn);
             comm2.ExecuteNonQuery();
@@ -747,6 +750,15 @@ namespace Accounting
             Stockout stockout = new Stockout();
             stockout.main = this;
             stockout.Adminid = this.Adminid;
+            if (eitemname.Text == "" || brand.Text == "" || costunit.Text == "" || estlife.Text == "" || eItemCode.Text == "")
+            {
+                stockout.Itemname = "";
+            }
+            else
+            {
+              
+                stockout.Itemname = eitemname.Text;
+            }
             stockout.Show();
         }
     }

@@ -195,3 +195,6 @@ C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.e
 C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.pdb
 C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Faculty.resources
 C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Student.resources
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Faculty.resources
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Student.resources
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.StudentsFaculty.resources

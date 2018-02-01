@@ -15,6 +15,7 @@ namespace Accounting
         public Form main { get; set; }
         MySqlConnection conn;
         public int Adminid { get; set; }
+        public String Itemname { get; set; }
         public Stockout()
         {
             InitializeComponent();
@@ -28,7 +29,8 @@ namespace Accounting
             AutoCompleteStringCollection DataCollection = new AutoCompleteStringCollection();
             getData(DataCollection);
             sItemName.AutoCompleteCustomSource = DataCollection;
-            
+            sItemName.Text = Itemname;
+
         }
         private void getData(AutoCompleteStringCollection dataCollection)
         {
