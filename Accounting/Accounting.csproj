@@ -109,6 +109,12 @@
     <Compile Include="ChemMgtUpdate.Designer.cs">
       <DependentUpon>ChemMgtUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Faculty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Faculty.Designer.cs">
+      <DependentUpon>Faculty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,12 @@
     <Compile Include="Stockout.Designer.cs">
       <DependentUpon>Stockout.cs</DependentUpon>
     </Compile>
+    <Compile Include="Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student.Designer.cs">
+      <DependentUpon>Student.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentsFaculty.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +219,9 @@
     <EmbeddedResource Include="ChemMgtUpdate.resx">
       <DependentUpon>ChemMgtUpdate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Faculty.resx">
+      <DependentUpon>Faculty.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,6 +257,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Stockout.resx">
       <DependentUpon>Stockout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student.resx">
+      <DependentUpon>Student.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentsFaculty.resx">
       <DependentUpon>StudentsFaculty.cs</DependentUpon>

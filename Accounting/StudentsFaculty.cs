@@ -46,5 +46,19 @@ namespace Accounting
         {
             main.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Student stud = new Student();
+            stud.main = this;
+            stud.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Faculty fac = new Faculty();
+            fac.main = this;
+            fac.Show();
+        }
     }
 }

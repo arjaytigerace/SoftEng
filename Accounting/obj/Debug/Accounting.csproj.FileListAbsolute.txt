@@ -162,3 +162,36 @@ C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.stockin.resources
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.Stockout.resources
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.StudentsFaculty.resources
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\bin\Debug\Accounting.exe.config
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\bin\Debug\Accounting.exe
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\bin\Debug\Accounting.pdb
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\bin\Debug\MySql.Data.dll
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\bin\Debug\MySql.Data.xml
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.csprojResolveAssemblyReference.cache
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.BRWBorrow.resources
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.BorrowingChem.resources
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.BRWupdate.resources
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.ChemicalManagement.resources
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.ChemMgtCreate.resources
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.ChemMgtInfo.resources
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.ChemMgtSearch.resources
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.ChemMgtUpdate.resources
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Form1.resources
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Inventory.resources
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.GenerateReport.resources
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.ItemLog.resources
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.MainMenu.resources
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Properties.Resources.resources
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.BRWReturn.resources
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Search.resources
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.stockin.resources
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Stockout.resources
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.StudentsFaculty.resources
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.UserPass.resources
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Users.resources
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.csproj.GenerateResource.Cache
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.csproj.CoreCompileInputs.cache
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.exe
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.pdb
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Faculty.resources
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Student.resources
