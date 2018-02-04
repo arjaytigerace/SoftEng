@@ -177,7 +177,7 @@ namespace Accounting
             dataGridView2.Columns["itemstatus"].HeaderText = "Status";
 
 
-            string queryapp = "SELECT a.itemID,itemCode,itemName,quantity,measurementType,description,numdmg,numlost,addedon,modon,itemstatus " +
+            string queryapp = "SELECT a.itemID,itemCode,itemName,quantity,measurementType,description,addedon,modon,itemstatus " +
                "FROM chem_lab.item a,chem_lab.itemapparatus b WHERE b.itemID = a.itemID";
 
             conn.Open();
@@ -195,9 +195,7 @@ namespace Accounting
             dataGridView3.Columns["quantity"].HeaderText = "Quantity";
             dataGridView3.Columns["measurementType"].HeaderText = "Unit of Measurement";
             dataGridView3.Columns["description"].HeaderText = "Description";
-            dataGridView3.Columns["numdmg"].HeaderText = "# Damaged";
-            dataGridView3.Columns["numlost"].HeaderText = "# Lost";
-            dataGridView3.Columns["addedon"].HeaderText = "Date Added";
+      
             dataGridView3.Columns["modon"].HeaderText = "Last Modified";
             dataGridView3.Columns["itemstatus"].HeaderText = "Status";
 
@@ -448,6 +446,7 @@ namespace Accounting
 
         private void addappb_Click(object sender, EventArgs e)
         {
+            /*
             if (aitemname.Text == "" || adesc.Text == "" || aItemCode.Text=="")
             {
                 MessageBox.Show("Please do not leave a field empty");
@@ -478,6 +477,7 @@ namespace Accounting
                 loadall();
 
             }
+            */
         }
 
         private void updappb_Click(object sender, EventArgs e)
@@ -553,6 +553,7 @@ namespace Accounting
 
         private void button1_Click(object sender, EventArgs e)
         {
+            /*
             if (textBox3.Text == "" || cItemCode.Text=="")
             {
                 MessageBox.Show("Please do not leave a field empty");
@@ -584,7 +585,7 @@ namespace Accounting
                 MessageBox.Show("Success", "Item Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 loadall();
 
-            }
+            }*/
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -760,6 +761,53 @@ namespace Accounting
                 stockout.Itemname = eitemname.Text;
             }
             stockout.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            loadall();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            stockin stockIn = new stockin();
+            stockIn.main = this;
+            stockIn.Adminid = this.Adminid;
+            if (aitemname.Text == "" || adesc.Text == "" || aItemCode.Text == "")
+            {
+                stockIn.Tabindex = 2;
+            }
+            else
+            {
+                stockIn.Tabindex = 0;
+                stockIn.Itemname = aitemname.Text;
+            }
+            stockIn.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Stockout stockout = new Stockout();
+            stockout.main = this;
+            stockout.Adminid = this.Adminid;
+            if (aitemname.Text == "" || adesc.Text == "" || aItemCode.Text == "")
+            {
+                stockout.Itemname = "";
+            }
+            else
+            {
+
+                stockout.Itemname = aitemname.Text;
+            }
+            stockout.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            ItemLog itemlog = new ItemLog();
+            itemlog.main = this;
+
+            itemlog.Show();
         }
     }
 }

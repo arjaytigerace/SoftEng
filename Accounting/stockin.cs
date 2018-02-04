@@ -35,6 +35,17 @@ namespace Accounting
             equipStatus.SelectedIndex = 0;
             tabControl1.SelectedIndex = Tabindex;
             sItemName.Text = Itemname;
+            string query3 = "SELECT measurementType from item WHERE itemName='" + sItemName.Text + "'";
+            conn.Open();
+            MySqlCommand comm3 = new MySqlCommand(query3, conn);
+            MySqlDataAdapter adp3 = new MySqlDataAdapter(comm3);
+            conn.Close();
+            DataTable dt3 = new DataTable();
+            adp3.Fill(dt3);
+            if (dt3.Rows.Count > 0)
+            {
+                label16.Text = dt3.Rows[0]["measurementType"].ToString();
+            }
         }
 
         private void getData(AutoCompleteStringCollection dataCollection)
@@ -81,7 +92,7 @@ namespace Accounting
                 comm1.ExecuteNonQuery();
                 conn.Close();
 
-                string query2 = "INSERT INTO item_log(itemID,quantity,date,stockStatus,status,userID,remarks) values((SELECT itemID from item where " +
+                string query2 = "INSERT INTO item_log(itemID,quantity,mtype,date,stockStatus,status,userID,remarks) values((SELECT itemID from item where " +
                     "itemName='" + sItemName.Text + "')," + sqty.Value + ",'" + date + "','Stocked IN','" + comboBox1.Text + "'," + Adminid + ",'" + textBox9.Text + "')";
 
                 conn.Open();
@@ -134,6 +145,61 @@ namespace Accounting
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void stockInApp_Click(object sender, EventArgs e)
+        {
+            if (aitemname.Text == "" || adesc.Text == "" || aItemCode.Text == "" || comboBox3.Text=="")
+            {
+                MessageBox.Show("Please do not leave a field empty");
+            }
+            else
+            {
+
+                DateTime dateValue = DateTime.Now;
+                string date = dateValue.ToString("yyyy-MM-dd HH:mm:ss");
+
+
+                conn.Open();
+                MySqlCommand comm1 = new MySqlCommand("InsertApp", conn);
+                comm1.CommandType = CommandType.StoredProcedure;
+
+                comm1.Parameters.Add("?aitemcode", MySqlDbType.VarChar, 255).Value = aItemCode.Text;
+                comm1.Parameters.Add("?aitemname", MySqlDbType.VarChar, 255).Value = aitemname.Text;
+                comm1.Parameters.Add("?adate", MySqlDbType.DateTime).Value = date;
+                comm1.Parameters.Add("?aqty", MySqlDbType.Int32).Value = aqty.Value;
+                comm1.Parameters.Add("?ameasuretype", MySqlDbType.VarChar, 255).Value = amtype.Text;
+                comm1.Parameters.Add("?description", MySqlDbType.VarChar, 255).Value = adesc.Text;
+                comm1.Parameters.Add("?appStatus", MySqlDbType.VarChar, 255).Value = appStatus.Text;
+                comm1.Parameters.Add("?reason", MySqlDbType.VarChar, 255).Value = comboBox3.Text;
+                comm1.Parameters.Add("?userID", MySqlDbType.Int32).Value = Adminid;
+                comm1.Parameters.Add("?remarks", MySqlDbType.VarChar, 255).Value = textBox2.Text;
+                comm1.ExecuteNonQuery();
+
+                conn.Close();
+                MessageBox.Show("Success", "Item Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+
+        }
+
+        private void sItemName_Leave(object sender, EventArgs e)
+        {
+            string query3 = "SELECT measurementType from item WHERE itemName='" + sItemName.Text + "'";
+            conn.Open();
+            MySqlCommand comm3 = new MySqlCommand(query3, conn);
+            MySqlDataAdapter adp3 = new MySqlDataAdapter(comm3);
+            conn.Close();
+            DataTable dt3 = new DataTable();
+            adp3.Fill(dt3);
+            if (dt3.Rows.Count > 0)
+            {
+                label16.Text = dt3.Rows[0]["measurementType"].ToString();
+            }
+            else
+            {
+                MessageBox.Show("Item does not exist");
+            }
         }
     }
 }

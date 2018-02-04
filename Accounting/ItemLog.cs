@@ -27,7 +27,7 @@ namespace Accounting
 
         private void ItemLog_Load(object sender, EventArgs e)
         {
-            string query = "SELECT itemName,item_log.quantity,item_log.date,stockStatus,item_log.status,CONCAT(firstname,' ',lastname) AS User,remarks from item,item_log LEFT OUTER JOIN administrativeassociate ON admin_ID = item_log.userID" +
+            string query = "SELECT itemName,item_log.quantity,item_log.mtype,item_log.date,stockStatus,item_log.status,CONCAT(firstname,' ',lastname) AS User,remarks from item,item_log LEFT OUTER JOIN administrativeassociate ON admin_ID = item_log.userID" +
                 " WHERE itemName = (SELECT itemName from item WHERE item_log.itemID = item.itemID) AND stockStatus='Stocked IN' ORDER BY date DESC";
 
             conn.Open();
@@ -42,6 +42,7 @@ namespace Accounting
 
             dataGridView1.Columns["itemName"].HeaderText = "Item Name";
             dataGridView1.Columns["quantity"].HeaderText = "QTY";
+            dataGridView1.Columns["mtype"].HeaderText = "Unit";
             dataGridView1.Columns["quantity"].Width = 90;
             dataGridView1.Columns["date"].HeaderText = "Date";
             dataGridView1.Columns["stockStatus"].HeaderText = "Action";
@@ -64,6 +65,7 @@ namespace Accounting
 
             dataGridView2.Columns["itemName"].HeaderText = "Item Name";
             dataGridView2.Columns["quantity"].HeaderText = "QTY";
+            dataGridView2.Columns["mtype"].HeaderText = "Unit";
             dataGridView2.Columns["quantity"].Width = 90;
             dataGridView2.Columns["date"].HeaderText = "Date";
             dataGridView2.Columns["stockStatus"].HeaderText = "Action";
@@ -87,6 +89,7 @@ namespace Accounting
 
             dataGridView3.Columns["itemName"].HeaderText = "Item Name";
             dataGridView3.Columns["quantity"].HeaderText = "QTY";
+            dataGridView3.Columns["mtype"].HeaderText = "Unit";
             dataGridView3.Columns["quantity"].Width = 90;
             dataGridView3.Columns["date"].HeaderText = "Date";
             dataGridView3.Columns["stockStatus"].HeaderText = "Action";
