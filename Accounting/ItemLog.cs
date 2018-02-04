@@ -50,7 +50,7 @@ namespace Accounting
             dataGridView1.Columns["User"].HeaderText = "User";
             dataGridView1.Columns["remarks"].HeaderText = "Remarks";
 
-            string query1 = "SELECT itemName,item_log.quantity,item_log.date,stockStatus,item_log.status,CONCAT(firstname,' ',lastname) AS User,remarks from item,item_log LEFT OUTER JOIN administrativeassociate ON admin_ID = item_log.userID" +
+            string query1 = "SELECT itemName,item_log.quantity,item_log.mtype,item_log.date,stockStatus,item_log.status,CONCAT(firstname,' ',lastname) AS User,remarks from item,item_log LEFT OUTER JOIN administrativeassociate ON admin_ID = item_log.userID" +
     " WHERE itemName = (SELECT itemName from item WHERE item_log.itemID = item.itemID) AND stockStatus='Stocked OUT' ORDER BY date DESC";
 
             conn.Open();
@@ -74,7 +74,7 @@ namespace Accounting
             dataGridView2.Columns["remarks"].HeaderText = "Remarks";
 
 
-            string query3 = "SELECT itemName,item_log.quantity,item_log.date,stockStatus,item_log.status,CONCAT(firstname,' ',lastname) AS User,remarks from item,item_log LEFT OUTER JOIN administrativeassociate ON admin_ID = item_log.userID" +
+            string query3 = "SELECT itemName,item_log.quantity,item_log.mtype,item_log.date,stockStatus,item_log.status,CONCAT(firstname,' ',lastname) AS User,remarks from item,item_log LEFT OUTER JOIN administrativeassociate ON admin_ID = item_log.userID" +
 " WHERE itemName = (SELECT itemName from item WHERE item_log.itemID = item.itemID) ORDER BY date DESC";
 
             conn.Open();

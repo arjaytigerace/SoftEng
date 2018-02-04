@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label16 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -63,7 +64,14 @@
             this.emeasuretype = new System.Windows.Forms.ComboBox();
             this.eqty = new System.Windows.Forms.NumericUpDown();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label15 = new System.Windows.Forms.Label();
+            this.amtype = new System.Windows.Forms.ComboBox();
+            this.aqty = new System.Windows.Forms.NumericUpDown();
+            this.label13 = new System.Windows.Forms.Label();
+            this.stockInApp = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.aItemCode = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -72,15 +80,25 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.aitemname = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.stockInApp = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.amtype = new System.Windows.Forms.ComboBox();
-            this.aqty = new System.Windows.Forms.NumericUpDown();
-            this.label16 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.classification = new System.Windows.Forms.Label();
+            this.colorCode = new System.Windows.Forms.ComboBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.cItemCode = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.chemStatus = new System.Windows.Forms.ComboBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.cmtype = new System.Windows.Forms.ComboBox();
+            this.cqty = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sqty)).BeginInit();
@@ -88,6 +106,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.eqty)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.aqty)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cqty)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -124,6 +144,15 @@
             this.tabPage1.Text = "Existing Item";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(464, 163);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(54, 17);
+            this.label16.TabIndex = 68;
+            this.label16.Text = "label16";
             // 
             // label11
             // 
@@ -515,14 +544,100 @@
             this.tabPage3.Text = "New Apparatus";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // tabPage4
+            // label15
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(881, 609);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "New Chemical";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(119, 143);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(124, 31);
+            this.label15.TabIndex = 86;
+            this.label15.Text = "Quantity";
+            // 
+            // amtype
+            // 
+            this.amtype.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.amtype.FormattingEnabled = true;
+            this.amtype.Items.AddRange(new object[] {
+            "Unit(s)",
+            "Piece(s)",
+            "ml",
+            "g",
+            "L",
+            "Kg"});
+            this.amtype.Location = new System.Drawing.Point(431, 145);
+            this.amtype.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.amtype.Name = "amtype";
+            this.amtype.Size = new System.Drawing.Size(156, 33);
+            this.amtype.TabIndex = 85;
+            // 
+            // aqty
+            // 
+            this.aqty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aqty.Location = new System.Drawing.Point(326, 146);
+            this.aqty.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.aqty.Name = "aqty";
+            this.aqty.Size = new System.Drawing.Size(99, 30);
+            this.aqty.TabIndex = 84;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(113, 374);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(130, 31);
+            this.label13.TabIndex = 83;
+            this.label13.Text = "Remarks";
+            // 
+            // stockInApp
+            // 
+            this.stockInApp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.stockInApp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.stockInApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stockInApp.Location = new System.Drawing.Point(328, 487);
+            this.stockInApp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.stockInApp.Name = "stockInApp";
+            this.stockInApp.Size = new System.Drawing.Size(164, 63);
+            this.stockInApp.TabIndex = 79;
+            this.stockInApp.Text = "Stock In";
+            this.stockInApp.UseVisualStyleBackColor = false;
+            this.stockInApp.Click += new System.EventHandler(this.stockInApp_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(328, 352);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(260, 121);
+            this.textBox2.TabIndex = 82;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(113, 303);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(114, 31);
+            this.label14.TabIndex = 81;
+            this.label14.Text = "Reason";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "New Arrival",
+            "Repaired",
+            "Found"});
+            this.comboBox3.Location = new System.Drawing.Point(327, 301);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(260, 33);
+            this.comboBox3.TabIndex = 80;
             // 
             // aItemCode
             // 
@@ -601,109 +716,231 @@
             this.aitemname.Size = new System.Drawing.Size(237, 30);
             this.aitemname.TabIndex = 71;
             // 
-            // label13
+            // tabPage4
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(113, 374);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(130, 31);
-            this.label13.TabIndex = 83;
-            this.label13.Text = "Remarks";
+            this.tabPage4.Controls.Add(this.label30);
+            this.tabPage4.Controls.Add(this.cmtype);
+            this.tabPage4.Controls.Add(this.cqty);
+            this.tabPage4.Controls.Add(this.label25);
+            this.tabPage4.Controls.Add(this.button1);
+            this.tabPage4.Controls.Add(this.textBox4);
+            this.tabPage4.Controls.Add(this.label29);
+            this.tabPage4.Controls.Add(this.comboBox4);
+            this.tabPage4.Controls.Add(this.classification);
+            this.tabPage4.Controls.Add(this.colorCode);
+            this.tabPage4.Controls.Add(this.label28);
+            this.tabPage4.Controls.Add(this.cItemCode);
+            this.tabPage4.Controls.Add(this.label24);
+            this.tabPage4.Controls.Add(this.chemStatus);
+            this.tabPage4.Controls.Add(this.label19);
+            this.tabPage4.Controls.Add(this.textBox3);
+            this.tabPage4.Controls.Add(this.label20);
+            this.tabPage4.Controls.Add(this.label21);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(881, 609);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "New Chemical";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // stockInApp
+            // classification
             // 
-            this.stockInApp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.stockInApp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.stockInApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stockInApp.Location = new System.Drawing.Point(328, 487);
-            this.stockInApp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.stockInApp.Name = "stockInApp";
-            this.stockInApp.Size = new System.Drawing.Size(164, 63);
-            this.stockInApp.TabIndex = 79;
-            this.stockInApp.Text = "Stock In";
-            this.stockInApp.UseVisualStyleBackColor = false;
-            this.stockInApp.Click += new System.EventHandler(this.stockInApp_Click);
+            this.classification.AutoSize = true;
+            this.classification.Location = new System.Drawing.Point(425, 240);
+            this.classification.Name = "classification";
+            this.classification.Size = new System.Drawing.Size(54, 17);
+            this.classification.TabIndex = 75;
+            this.classification.Text = "label30";
             // 
-            // textBox2
+            // colorCode
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(328, 352);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(260, 121);
-            this.textBox2.TabIndex = 82;
+            this.colorCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.colorCode.FormattingEnabled = true;
+            this.colorCode.Items.AddRange(new object[] {
+            "Blue",
+            "Red",
+            "Gray",
+            "White",
+            "Yellow"});
+            this.colorCode.Location = new System.Drawing.Point(429, 197);
+            this.colorCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.colorCode.Name = "colorCode";
+            this.colorCode.Size = new System.Drawing.Size(236, 24);
+            this.colorCode.TabIndex = 74;
+            this.colorCode.SelectedIndexChanged += new System.EventHandler(this.colorCode_SelectedIndexChanged);
             // 
-            // label14
+            // label28
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(113, 303);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(114, 31);
-            this.label14.TabIndex = 81;
-            this.label14.Text = "Reason";
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(171, 41);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(71, 17);
+            this.label28.TabIndex = 73;
+            this.label28.Text = "Item Code";
             // 
-            // comboBox3
+            // cItemCode
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.cItemCode.Location = new System.Drawing.Point(429, 41);
+            this.cItemCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cItemCode.Name = "cItemCode";
+            this.cItemCode.Size = new System.Drawing.Size(236, 22);
+            this.cItemCode.TabIndex = 72;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(171, 275);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(48, 17);
+            this.label24.TabIndex = 71;
+            this.label24.Text = "Status";
+            // 
+            // chemStatus
+            // 
+            this.chemStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.chemStatus.FormattingEnabled = true;
+            this.chemStatus.Items.AddRange(new object[] {
+            "Active",
+            "Inactive"});
+            this.chemStatus.Location = new System.Drawing.Point(432, 269);
+            this.chemStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chemStatus.Name = "chemStatus";
+            this.chemStatus.Size = new System.Drawing.Size(236, 24);
+            this.chemStatus.TabIndex = 70;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(161, 71);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(219, 31);
+            this.label19.TabIndex = 69;
+            this.label19.Text = "Chemical Name";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(429, 71);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(236, 30);
+            this.textBox3.TabIndex = 66;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(161, 229);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(190, 31);
+            this.label20.TabIndex = 68;
+            this.label20.Text = "Classification";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(161, 192);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(161, 31);
+            this.label21.TabIndex = 67;
+            this.label21.Text = "Color Code";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(165, 389);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(130, 31);
+            this.label25.TabIndex = 88;
+            this.label25.Text = "Remarks";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(380, 502);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(164, 63);
+            this.button1.TabIndex = 84;
+            this.button1.Text = "Stock In";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(380, 367);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(260, 121);
+            this.textBox4.TabIndex = 87;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(165, 318);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(114, 31);
+            this.label29.TabIndex = 86;
+            this.label29.Text = "Reason";
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
             "New Arrival",
             "Repaired",
             "Found"});
-            this.comboBox3.Location = new System.Drawing.Point(327, 301);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(260, 33);
-            this.comboBox3.TabIndex = 80;
+            this.comboBox4.Location = new System.Drawing.Point(379, 316);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(260, 33);
+            this.comboBox4.TabIndex = 85;
             // 
-            // label15
+            // label30
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(119, 143);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(124, 31);
-            this.label15.TabIndex = 86;
-            this.label15.Text = "Quantity";
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(171, 132);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(124, 31);
+            this.label30.TabIndex = 91;
+            this.label30.Text = "Quantity";
             // 
-            // amtype
+            // cmtype
             // 
-            this.amtype.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.amtype.FormattingEnabled = true;
-            this.amtype.Items.AddRange(new object[] {
+            this.cmtype.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmtype.FormattingEnabled = true;
+            this.cmtype.Items.AddRange(new object[] {
             "Unit(s)",
             "Piece(s)",
             "ml",
             "g",
             "L",
             "Kg"});
-            this.amtype.Location = new System.Drawing.Point(431, 145);
-            this.amtype.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.amtype.Name = "amtype";
-            this.amtype.Size = new System.Drawing.Size(156, 33);
-            this.amtype.TabIndex = 85;
+            this.cmtype.Location = new System.Drawing.Point(532, 132);
+            this.cmtype.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmtype.Name = "cmtype";
+            this.cmtype.Size = new System.Drawing.Size(156, 33);
+            this.cmtype.TabIndex = 90;
             // 
-            // aqty
+            // cqty
             // 
-            this.aqty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aqty.Location = new System.Drawing.Point(326, 146);
-            this.aqty.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.aqty.Name = "aqty";
-            this.aqty.Size = new System.Drawing.Size(99, 30);
-            this.aqty.TabIndex = 84;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(464, 163);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(54, 17);
-            this.label16.TabIndex = 68;
-            this.label16.Text = "label16";
+            this.cqty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cqty.Location = new System.Drawing.Point(427, 133);
+            this.cqty.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cqty.Name = "cqty";
+            this.cqty.Size = new System.Drawing.Size(99, 30);
+            this.cqty.TabIndex = 89;
             // 
             // stockin
             // 
@@ -725,6 +962,9 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.aqty)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cqty)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -784,5 +1024,23 @@
         private System.Windows.Forms.ComboBox amtype;
         private System.Windows.Forms.NumericUpDown aqty;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Label classification;
+        private System.Windows.Forms.ComboBox colorCode;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox cItemCode;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.ComboBox chemStatus;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.ComboBox cmtype;
+        private System.Windows.Forms.NumericUpDown cqty;
     }
 }

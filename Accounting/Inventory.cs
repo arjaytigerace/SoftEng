@@ -46,7 +46,7 @@ namespace Accounting
 
     
 
-            cmeasuretype.SelectedIndex = 0;
+            
 
             eitemname.Text = "";
      
@@ -76,7 +76,7 @@ namespace Accounting
             updappb.Enabled = false;
             
 
-            button1.Enabled = true;
+   
             button2.Enabled = false;
             button3.Enabled = false;
         
@@ -102,10 +102,6 @@ namespace Accounting
 
         private void Inventory_Load(object sender, EventArgs e)
         {
-
-
-            numericUpDown1.Minimum = 0;
-            numericUpDown1.Maximum = 9999;
 
             loadall();
         }
@@ -492,19 +488,7 @@ namespace Accounting
             }
 
             string query;
-  /*
-            if ((newDmgLost - oldDmgLost) < 0)
-            {
-                query = "UPDATE item SET itemCode='"+aItemCode.Text+"',itemName='" + aitemname.Text + "',quantity='" + (aqty.Value + (oldDmgLost - newDmgLost)) + "',measurementtype='" + ameasuretype.Text + "',modon='" + date + "',itemstatus='" + appStatus.Text + "' WHERE itemID =" + selecteditemid;
-            }
-            else if ((newDmgLost - oldDmgLost) > 0)
-            {
-                query = "UPDATE item SET itemCode='" + aItemCode.Text + "',itemName='" + aitemname.Text + "',quantity='" + (aqty.Value - (newDmgLost - oldDmgLost)) + "',measurementtype='" + ameasuretype.Text + "',modon='" + date + "',itemstatus='" + appStatus.Text + "' WHERE itemID =" + selecteditemid;
-
-
-            }*/
-     
-            
+                
             query = "UPDATE item SET itemCode='" + aItemCode.Text + "',itemName='" + aitemname.Text + "',modon='" + date + "',itemstatus='" + appStatus.Text + "' WHERE itemID =" + selecteditemid;
 
             
@@ -541,10 +525,9 @@ namespace Accounting
                 textBox3.Text = dataGridView4.Rows[e.RowIndex].Cells["itemname"].Value.ToString();
                 colorCode.Text = dataGridView4.Rows[e.RowIndex].Cells["colorCode"].Value.ToString();
                 classification.Text = dataGridView4.Rows[e.RowIndex].Cells["classification"].Value.ToString();
-                numericUpDown1.Value = (int)dataGridView4.Rows[e.RowIndex].Cells["quantity"].Value;
-                cmeasuretype.Text = dataGridView4.Rows[e.RowIndex].Cells["measurementType"].Value.ToString();
+               
                 chemStatus.Text= dataGridView4.Rows[e.RowIndex].Cells["itemstatus"].Value.ToString();
-                button1.Enabled = false;
+                
                 button2.Enabled = true;
                 button3.Enabled = true;
                 
@@ -604,7 +587,7 @@ namespace Accounting
             }
 
 
-            string query = "UPDATE item SET itemCode='"+cItemCode.Text+"',itemName='" + textBox3.Text + "',quantity='" + numericUpDown1.Text + "',measurementtype='" + cmeasuretype.Text + "',modon='" + date + "',itemstatus='"+ chemStatus.Text +"' WHERE itemID =" + selecteditemid;
+            string query = "UPDATE item SET itemCode='"+cItemCode.Text+"',itemName='" + textBox3.Text + "',modon='" + date + "',itemstatus='"+ chemStatus.Text +"' WHERE itemID =" + selecteditemid;
 
             conn.Open();
             MySqlCommand comm1 = new MySqlCommand(query, conn);
@@ -808,6 +791,37 @@ namespace Accounting
             itemlog.main = this;
 
             itemlog.Show();
+        }
+
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            ItemLog itemlog = new ItemLog();
+            itemlog.main = this;
+
+            itemlog.Show();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            loadall();
+        }
+
+        private void chemstock_Click(object sender, EventArgs e)
+        {
+            stockin stockIn = new stockin();
+            stockIn.main = this;
+            stockIn.Adminid = this.Adminid;
+            if (textBox3.Text == "" || classification.Text == "--" || cItemCode.Text == "")
+            {
+                stockIn.Tabindex = 3;
+            }
+            else
+            {
+                stockIn.Tabindex = 0;
+                stockIn.Itemname = textBox3.Text;
+            }
+            stockIn.Show();
         }
     }
 }

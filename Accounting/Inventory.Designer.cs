@@ -72,6 +72,8 @@
             this.eitemname = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.aItemCode = new System.Windows.Forms.TextBox();
@@ -88,6 +90,8 @@
             this.aitemname = new System.Windows.Forms.TextBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.classification = new System.Windows.Forms.Label();
             this.colorCode = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
@@ -96,22 +100,15 @@
             this.chemStatus = new System.Windows.Forms.ComboBox();
             this.searchchem = new System.Windows.Forms.Button();
             this.searchc = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.cmeasuretype = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.chemstock = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -122,7 +119,6 @@
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -684,6 +680,34 @@
             this.tabPage3.Text = "Apparatus";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Location = new System.Drawing.Point(951, 549);
+            this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(215, 76);
+            this.button9.TabIndex = 74;
+            this.button9.Text = "Stock Out";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.Location = new System.Drawing.Point(691, 549);
+            this.button10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(215, 76);
+            this.button10.TabIndex = 73;
+            this.button10.Text = "Stock In";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // button8
             // 
             this.button8.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -857,6 +881,7 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPage4.Controls.Add(this.chemstock);
             this.tabPage4.Controls.Add(this.button11);
             this.tabPage4.Controls.Add(this.button12);
             this.tabPage4.Controls.Add(this.classification);
@@ -867,12 +892,8 @@
             this.tabPage4.Controls.Add(this.chemStatus);
             this.tabPage4.Controls.Add(this.searchchem);
             this.tabPage4.Controls.Add(this.searchc);
-            this.tabPage4.Controls.Add(this.label15);
-            this.tabPage4.Controls.Add(this.numericUpDown1);
-            this.tabPage4.Controls.Add(this.cmeasuretype);
             this.tabPage4.Controls.Add(this.button3);
             this.tabPage4.Controls.Add(this.button2);
-            this.tabPage4.Controls.Add(this.button1);
             this.tabPage4.Controls.Add(this.label14);
             this.tabPage4.Controls.Add(this.textBox3);
             this.tabPage4.Controls.Add(this.label16);
@@ -885,6 +906,33 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Chemical";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.Location = new System.Drawing.Point(1218, 650);
+            this.button11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(156, 44);
+            this.button11.TabIndex = 74;
+            this.button11.Text = "Item Log";
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button12
+            // 
+            this.button12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.Location = new System.Drawing.Point(1218, 605);
+            this.button12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(156, 41);
+            this.button12.TabIndex = 73;
+            this.button12.Text = "Refresh";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // classification
             // 
@@ -932,7 +980,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(436, 674);
+            this.label24.Location = new System.Drawing.Point(439, 629);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(48, 17);
             this.label24.TabIndex = 61;
@@ -945,7 +993,7 @@
             this.chemStatus.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.chemStatus.Location = new System.Drawing.Point(697, 668);
+            this.chemStatus.Location = new System.Drawing.Point(700, 623);
             this.chemStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chemStatus.Name = "chemStatus";
             this.chemStatus.Size = new System.Drawing.Size(236, 24);
@@ -974,44 +1022,6 @@
             this.searchc.Size = new System.Drawing.Size(429, 34);
             this.searchc.TabIndex = 37;
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(429, 615);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(124, 31);
-            this.label15.TabIndex = 59;
-            this.label15.Text = "Quantity";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(697, 618);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(76, 30);
-            this.numericUpDown1.TabIndex = 42;
-            // 
-            // cmeasuretype
-            // 
-            this.cmeasuretype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmeasuretype.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmeasuretype.FormattingEnabled = true;
-            this.cmeasuretype.Items.AddRange(new object[] {
-            "ml",
-            "g",
-            "Unit(s)",
-            "Piece(s)",
-            "L",
-            "Kg"});
-            this.cmeasuretype.Location = new System.Drawing.Point(779, 618);
-            this.cmeasuretype.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmeasuretype.Name = "cmeasuretype";
-            this.cmeasuretype.Size = new System.Drawing.Size(155, 33);
-            this.cmeasuretype.TabIndex = 43;
-            this.cmeasuretype.SelectedIndexChanged += new System.EventHandler(this.cmeasuretype_SelectedIndexChanged);
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -1038,20 +1048,6 @@
             this.button2.Text = "Deselect";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1004, 534);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(165, 46);
-            this.button1.TabIndex = 44;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label14
             // 
@@ -1119,58 +1115,19 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // button9
+            // chemstock
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(951, 549);
-            this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(215, 76);
-            this.button9.TabIndex = 74;
-            this.button9.Text = "Stock Out";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(691, 549);
-            this.button10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(215, 76);
-            this.button10.TabIndex = 73;
-            this.button10.Text = "Stock In";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(1218, 650);
-            this.button11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(156, 44);
-            this.button11.TabIndex = 74;
-            this.button11.Text = "Item Log";
-            this.button11.UseVisualStyleBackColor = false;
-            // 
-            // button12
-            // 
-            this.button12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(1218, 605);
-            this.button12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(156, 41);
-            this.button12.TabIndex = 73;
-            this.button12.Text = "Refresh";
-            this.button12.UseVisualStyleBackColor = true;
+            this.chemstock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.chemstock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chemstock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chemstock.Location = new System.Drawing.Point(442, 674);
+            this.chemstock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chemstock.Name = "chemstock";
+            this.chemstock.Size = new System.Drawing.Size(215, 76);
+            this.chemstock.TabIndex = 75;
+            this.chemstock.Text = "Stock In";
+            this.chemstock.UseVisualStyleBackColor = false;
+            this.chemstock.Click += new System.EventHandler(this.chemstock_Click);
             // 
             // Inventory
             // 
@@ -1203,7 +1160,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -1245,12 +1201,8 @@
         private System.Windows.Forms.Button updappb;
         private System.Windows.Forms.TextBox aitemname;
         private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.ComboBox cmeasuretype;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label20;
@@ -1294,5 +1246,6 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button chemstock;
     }
 }
