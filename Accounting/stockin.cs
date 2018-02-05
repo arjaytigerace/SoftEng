@@ -16,5 +16,15 @@ namespace Accounting
         {
             InitializeComponent();
         }
+
+        private void stockinbutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
