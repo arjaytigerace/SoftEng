@@ -198,3 +198,7 @@ C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.S
 C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Faculty.resources
 C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Student.resources
 C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.StudentsFaculty.resources
+C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Faculty.resources
+C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.ItemLog.resources
+C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Student.resources
+C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.StudentsFaculty.resources
