@@ -35,8 +35,12 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.Label();
+            this.sID = new System.Windows.Forms.TextBox();
+            this.sdeselect = new System.Windows.Forms.Button();
+            this.screate = new System.Windows.Forms.Button();
+            this.supdate = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.scourse = new System.Windows.Forms.TextBox();
@@ -44,23 +48,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.sfname = new System.Windows.Forms.TextBox();
             this.slname = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.sdeselect = new System.Windows.Forms.Button();
-            this.screate = new System.Windows.Forms.Button();
-            this.supdate = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.facID = new System.Windows.Forms.TextBox();
+            this.fdeselect = new System.Windows.Forms.Button();
+            this.fcreate = new System.Windows.Forms.Button();
+            this.fupdate = new System.Windows.Forms.Button();
+            this.facstatus = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.facfname = new System.Windows.Forms.TextBox();
             this.faclname = new System.Windows.Forms.TextBox();
-            this.facstatus = new System.Windows.Forms.ComboBox();
-            this.fdeselect = new System.Windows.Forms.Button();
-            this.fcreate = new System.Windows.Forms.Button();
-            this.fupdate = new System.Windows.Forms.Button();
-            this.sID = new System.Windows.Forms.TextBox();
-            this.ID = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.facID = new System.Windows.Forms.TextBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -153,40 +153,76 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // tabPage2
+            // ID
             // 
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.facID);
-            this.tabPage2.Controls.Add(this.fdeselect);
-            this.tabPage2.Controls.Add(this.fcreate);
-            this.tabPage2.Controls.Add(this.fupdate);
-            this.tabPage2.Controls.Add(this.facstatus);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Controls.Add(this.facfname);
-            this.tabPage2.Controls.Add(this.faclname);
-            this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1049, 658);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Faculty";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.ID.AutoSize = true;
+            this.ID.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID.Location = new System.Drawing.Point(29, 367);
+            this.ID.Name = "ID";
+            this.ID.Size = new System.Drawing.Size(44, 29);
+            this.ID.TabIndex = 47;
+            this.ID.Text = "ID";
+            this.ID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridView2
+            // sID
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(22, 19);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(1002, 283);
-            this.dataGridView2.TabIndex = 35;
+            this.sID.BackColor = System.Drawing.SystemColors.Control;
+            this.sID.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sID.Location = new System.Drawing.Point(190, 364);
+            this.sID.Name = "sID";
+            this.sID.Size = new System.Drawing.Size(297, 35);
+            this.sID.TabIndex = 46;
+            // 
+            // sdeselect
+            // 
+            this.sdeselect.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdeselect.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.sdeselect.Location = new System.Drawing.Point(763, 406);
+            this.sdeselect.Margin = new System.Windows.Forms.Padding(2);
+            this.sdeselect.Name = "sdeselect";
+            this.sdeselect.Size = new System.Drawing.Size(134, 43);
+            this.sdeselect.TabIndex = 44;
+            this.sdeselect.Text = "Deselect";
+            this.sdeselect.UseVisualStyleBackColor = true;
+            this.sdeselect.Click += new System.EventHandler(this.sdeselect_Click);
+            // 
+            // screate
+            // 
+            this.screate.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.screate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.screate.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.screate.Location = new System.Drawing.Point(641, 406);
+            this.screate.Name = "screate";
+            this.screate.Size = new System.Drawing.Size(117, 43);
+            this.screate.TabIndex = 43;
+            this.screate.Text = "Create";
+            this.screate.UseVisualStyleBackColor = false;
+            this.screate.Click += new System.EventHandler(this.screate_Click);
+            // 
+            // supdate
+            // 
+            this.supdate.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.supdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.supdate.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supdate.Location = new System.Drawing.Point(902, 406);
+            this.supdate.Name = "supdate";
+            this.supdate.Size = new System.Drawing.Size(122, 43);
+            this.supdate.TabIndex = 45;
+            this.supdate.Text = "Update";
+            this.supdate.UseVisualStyleBackColor = false;
+            this.supdate.Click += new System.EventHandler(this.supdate_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Undergraduate",
+            "Graduate"});
+            this.comboBox1.Location = new System.Drawing.Point(190, 588);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(297, 21);
+            this.comboBox1.TabIndex = 42;
             // 
             // label4
             // 
@@ -259,56 +295,99 @@
             this.slname.Size = new System.Drawing.Size(297, 35);
             this.slname.TabIndex = 36;
             // 
-            // comboBox1
+            // tabPage2
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Undergraduate",
-            "Graduate"});
-            this.comboBox1.Location = new System.Drawing.Point(190, 588);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(297, 21);
-            this.comboBox1.TabIndex = 42;
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Controls.Add(this.facID);
+            this.tabPage2.Controls.Add(this.fdeselect);
+            this.tabPage2.Controls.Add(this.fcreate);
+            this.tabPage2.Controls.Add(this.fupdate);
+            this.tabPage2.Controls.Add(this.facstatus);
+            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.label9);
+            this.tabPage2.Controls.Add(this.facfname);
+            this.tabPage2.Controls.Add(this.faclname);
+            this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1049, 658);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Faculty";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // sdeselect
+            // label6
             // 
-            this.sdeselect.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdeselect.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.sdeselect.Location = new System.Drawing.Point(763, 406);
-            this.sdeselect.Margin = new System.Windows.Forms.Padding(2);
-            this.sdeselect.Name = "sdeselect";
-            this.sdeselect.Size = new System.Drawing.Size(134, 43);
-            this.sdeselect.TabIndex = 44;
-            this.sdeselect.Text = "Deselect";
-            this.sdeselect.UseVisualStyleBackColor = true;
-            this.sdeselect.Click += new System.EventHandler(this.sdeselect_Click);
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(47, 330);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 29);
+            this.label6.TabIndex = 50;
+            this.label6.Text = "ID";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // screate
+            // facID
             // 
-            this.screate.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.screate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.screate.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.screate.Location = new System.Drawing.Point(641, 406);
-            this.screate.Name = "screate";
-            this.screate.Size = new System.Drawing.Size(117, 43);
-            this.screate.TabIndex = 43;
-            this.screate.Text = "Create";
-            this.screate.UseVisualStyleBackColor = false;
-            this.screate.Click += new System.EventHandler(this.screate_Click);
+            this.facID.BackColor = System.Drawing.SystemColors.Control;
+            this.facID.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.facID.Location = new System.Drawing.Point(208, 327);
+            this.facID.Name = "facID";
+            this.facID.Size = new System.Drawing.Size(297, 35);
+            this.facID.TabIndex = 49;
             // 
-            // supdate
+            // fdeselect
             // 
-            this.supdate.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.supdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.supdate.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.supdate.Location = new System.Drawing.Point(902, 406);
-            this.supdate.Name = "supdate";
-            this.supdate.Size = new System.Drawing.Size(122, 43);
-            this.supdate.TabIndex = 45;
-            this.supdate.Text = "Update";
-            this.supdate.UseVisualStyleBackColor = false;
-            this.supdate.Click += new System.EventHandler(this.supdate_Click);
+            this.fdeselect.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fdeselect.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.fdeselect.Location = new System.Drawing.Point(763, 330);
+            this.fdeselect.Margin = new System.Windows.Forms.Padding(2);
+            this.fdeselect.Name = "fdeselect";
+            this.fdeselect.Size = new System.Drawing.Size(134, 43);
+            this.fdeselect.TabIndex = 47;
+            this.fdeselect.Text = "Deselect";
+            this.fdeselect.UseVisualStyleBackColor = true;
+            this.fdeselect.Click += new System.EventHandler(this.fdeselect_Click);
+            // 
+            // fcreate
+            // 
+            this.fcreate.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.fcreate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.fcreate.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fcreate.Location = new System.Drawing.Point(641, 330);
+            this.fcreate.Name = "fcreate";
+            this.fcreate.Size = new System.Drawing.Size(117, 43);
+            this.fcreate.TabIndex = 46;
+            this.fcreate.Text = "Create";
+            this.fcreate.UseVisualStyleBackColor = false;
+            this.fcreate.Click += new System.EventHandler(this.fcreate_Click);
+            // 
+            // fupdate
+            // 
+            this.fupdate.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.fupdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.fupdate.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fupdate.Location = new System.Drawing.Point(902, 330);
+            this.fupdate.Name = "fupdate";
+            this.fupdate.Size = new System.Drawing.Size(122, 43);
+            this.fupdate.TabIndex = 48;
+            this.fupdate.Text = "Update";
+            this.fupdate.UseVisualStyleBackColor = false;
+            this.fupdate.Click += new System.EventHandler(this.fupdate_Click);
+            // 
+            // facstatus
+            // 
+            this.facstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.facstatus.FormattingEnabled = true;
+            this.facstatus.Items.AddRange(new object[] {
+            "Full Time",
+            "Part Time",
+            "Inactive"});
+            this.facstatus.Location = new System.Drawing.Point(208, 494);
+            this.facstatus.Name = "facstatus";
+            this.facstatus.Size = new System.Drawing.Size(297, 21);
+            this.facstatus.TabIndex = 43;
             // 
             // label5
             // 
@@ -361,95 +440,19 @@
             this.faclname.Size = new System.Drawing.Size(297, 35);
             this.faclname.TabIndex = 37;
             // 
-            // facstatus
+            // dataGridView2
             // 
-            this.facstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.facstatus.FormattingEnabled = true;
-            this.facstatus.Items.AddRange(new object[] {
-            "Full Time",
-            "Part Time",
-            "Inactive"});
-            this.facstatus.Location = new System.Drawing.Point(208, 494);
-            this.facstatus.Name = "facstatus";
-            this.facstatus.Size = new System.Drawing.Size(297, 21);
-            this.facstatus.TabIndex = 43;
-            // 
-            // fdeselect
-            // 
-            this.fdeselect.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fdeselect.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.fdeselect.Location = new System.Drawing.Point(763, 330);
-            this.fdeselect.Margin = new System.Windows.Forms.Padding(2);
-            this.fdeselect.Name = "fdeselect";
-            this.fdeselect.Size = new System.Drawing.Size(134, 43);
-            this.fdeselect.TabIndex = 47;
-            this.fdeselect.Text = "Deselect";
-            this.fdeselect.UseVisualStyleBackColor = true;
-            // 
-            // fcreate
-            // 
-            this.fcreate.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.fcreate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.fcreate.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fcreate.Location = new System.Drawing.Point(641, 330);
-            this.fcreate.Name = "fcreate";
-            this.fcreate.Size = new System.Drawing.Size(117, 43);
-            this.fcreate.TabIndex = 46;
-            this.fcreate.Text = "Create";
-            this.fcreate.UseVisualStyleBackColor = false;
-            // 
-            // fupdate
-            // 
-            this.fupdate.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.fupdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.fupdate.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fupdate.Location = new System.Drawing.Point(902, 330);
-            this.fupdate.Name = "fupdate";
-            this.fupdate.Size = new System.Drawing.Size(122, 43);
-            this.fupdate.TabIndex = 48;
-            this.fupdate.Text = "Update";
-            this.fupdate.UseVisualStyleBackColor = false;
-            this.fupdate.Click += new System.EventHandler(this.fupdate_Click);
-            // 
-            // sID
-            // 
-            this.sID.BackColor = System.Drawing.SystemColors.Control;
-            this.sID.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sID.Location = new System.Drawing.Point(190, 364);
-            this.sID.Name = "sID";
-            this.sID.Size = new System.Drawing.Size(297, 35);
-            this.sID.TabIndex = 46;
-            // 
-            // ID
-            // 
-            this.ID.AutoSize = true;
-            this.ID.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID.Location = new System.Drawing.Point(29, 367);
-            this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(44, 29);
-            this.ID.TabIndex = 47;
-            this.ID.Text = "ID";
-            this.ID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(47, 330);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 29);
-            this.label6.TabIndex = 50;
-            this.label6.Text = "ID";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // facID
-            // 
-            this.facID.BackColor = System.Drawing.SystemColors.Control;
-            this.facID.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.facID.Location = new System.Drawing.Point(208, 327);
-            this.facID.Name = "facID";
-            this.facID.Size = new System.Drawing.Size(297, 35);
-            this.facID.TabIndex = 49;
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(22, 19);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(1002, 283);
+            this.dataGridView2.TabIndex = 35;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
             // StudentsFaculty
             // 
