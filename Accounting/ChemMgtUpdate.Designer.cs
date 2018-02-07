@@ -53,6 +53,12 @@
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonSubmit = new System.Windows.Forms.Button();
             this.mtype = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.rstatus = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.facID = new System.Windows.Forms.TextBox();
+            this.sID = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cqty)).BeginInit();
@@ -60,6 +66,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.facID);
+            this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.tLName);
@@ -69,14 +77,14 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(423, 85);
+            this.groupBox2.Size = new System.Drawing.Size(476, 150);
             this.groupBox2.TabIndex = 63;
             this.groupBox2.TabStop = false;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(160, 15);
+            this.label8.Location = new System.Drawing.Point(176, 59);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(57, 13);
@@ -86,7 +94,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(160, 55);
+            this.label3.Location = new System.Drawing.Point(175, 99);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 13);
@@ -97,7 +105,7 @@
             // 
             this.tLName.BackColor = System.Drawing.SystemColors.Control;
             this.tLName.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tLName.Location = new System.Drawing.Point(224, 46);
+            this.tLName.Location = new System.Drawing.Point(259, 90);
             this.tLName.Margin = new System.Windows.Forms.Padding(2);
             this.tLName.Name = "tLName";
             this.tLName.Size = new System.Drawing.Size(179, 28);
@@ -107,7 +115,7 @@
             // 
             this.tFName.BackColor = System.Drawing.SystemColors.Control;
             this.tFName.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tFName.Location = new System.Drawing.Point(224, 11);
+            this.tFName.Location = new System.Drawing.Point(259, 56);
             this.tFName.Margin = new System.Windows.Forms.Padding(2);
             this.tFName.Name = "tFName";
             this.tFName.Size = new System.Drawing.Size(179, 28);
@@ -126,6 +134,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.sID);
+            this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.sFName);
@@ -133,18 +143,18 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.sLName);
-            this.groupBox1.Location = new System.Drawing.Point(0, 192);
+            this.groupBox1.Location = new System.Drawing.Point(0, 304);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(424, 120);
+            this.groupBox1.Size = new System.Drawing.Size(476, 214);
             this.groupBox1.TabIndex = 62;
             this.groupBox1.TabStop = false;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(163, 50);
+            this.label11.Location = new System.Drawing.Point(163, 106);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(58, 13);
@@ -154,7 +164,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(163, 19);
+            this.label10.Location = new System.Drawing.Point(163, 75);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(57, 13);
@@ -165,7 +175,7 @@
             // 
             this.sFName.BackColor = System.Drawing.SystemColors.Control;
             this.sFName.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sFName.Location = new System.Drawing.Point(224, 10);
+            this.sFName.Location = new System.Drawing.Point(224, 66);
             this.sFName.Margin = new System.Windows.Forms.Padding(2);
             this.sFName.Name = "sFName";
             this.sFName.Size = new System.Drawing.Size(179, 28);
@@ -173,7 +183,7 @@
             // 
             // yearcourse
             // 
-            this.yearcourse.Location = new System.Drawing.Point(165, 89);
+            this.yearcourse.Location = new System.Drawing.Point(165, 145);
             this.yearcourse.Margin = new System.Windows.Forms.Padding(2);
             this.yearcourse.Name = "yearcourse";
             this.yearcourse.Size = new System.Drawing.Size(238, 20);
@@ -183,7 +193,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(6, 93);
+            this.label9.Location = new System.Drawing.Point(4, 148);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(135, 13);
@@ -205,7 +215,7 @@
             // 
             this.sLName.BackColor = System.Drawing.SystemColors.Control;
             this.sLName.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sLName.Location = new System.Drawing.Point(224, 41);
+            this.sLName.Location = new System.Drawing.Point(224, 97);
             this.sLName.Margin = new System.Windows.Forms.Padding(2);
             this.sLName.Name = "sLName";
             this.sLName.Size = new System.Drawing.Size(179, 28);
@@ -214,7 +224,7 @@
             // user
             // 
             this.user.AutoSize = true;
-            this.user.Location = new System.Drawing.Point(163, 335);
+            this.user.Location = new System.Drawing.Point(163, 579);
             this.user.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.user.Name = "user";
             this.user.Size = new System.Drawing.Size(70, 13);
@@ -233,7 +243,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 162);
+            this.label5.Location = new System.Drawing.Point(2, 245);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 17);
@@ -244,7 +254,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(5, 332);
+            this.label6.Location = new System.Drawing.Point(5, 576);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(92, 17);
@@ -255,7 +265,7 @@
             // 
             this.subj.BackColor = System.Drawing.SystemColors.Control;
             this.subj.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subj.Location = new System.Drawing.Point(163, 156);
+            this.subj.Location = new System.Drawing.Point(162, 239);
             this.subj.Margin = new System.Windows.Forms.Padding(2);
             this.subj.Name = "subj";
             this.subj.Size = new System.Drawing.Size(240, 28);
@@ -303,7 +313,7 @@
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.Location = new System.Drawing.Point(292, 366);
+            this.buttonCancel.Location = new System.Drawing.Point(293, 642);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(110, 56);
             this.buttonCancel.TabIndex = 52;
@@ -317,7 +327,7 @@
             this.buttonSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSubmit.Location = new System.Drawing.Point(163, 366);
+            this.buttonSubmit.Location = new System.Drawing.Point(164, 642);
             this.buttonSubmit.Name = "buttonSubmit";
             this.buttonSubmit.Size = new System.Drawing.Size(123, 56);
             this.buttonSubmit.TabIndex = 51;
@@ -335,12 +345,77 @@
             this.mtype.TabIndex = 64;
             this.mtype.Text = "label12";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(11, 523);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(54, 17);
+            this.label12.TabIndex = 65;
+            this.label12.Text = "Status";
+            // 
+            // rstatus
+            // 
+            this.rstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.rstatus.FormattingEnabled = true;
+            this.rstatus.Items.AddRange(new object[] {
+            "Unreleased",
+            "Released"});
+            this.rstatus.Location = new System.Drawing.Point(163, 523);
+            this.rstatus.Name = "rstatus";
+            this.rstatus.Size = new System.Drawing.Size(240, 21);
+            this.rstatus.TabIndex = 66;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(176, 22);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(61, 13);
+            this.label13.TabIndex = 46;
+            this.label13.Text = "Teacher ID";
+            // 
+            // facID
+            // 
+            this.facID.BackColor = System.Drawing.SystemColors.Control;
+            this.facID.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.facID.Location = new System.Drawing.Point(259, 18);
+            this.facID.Margin = new System.Windows.Forms.Padding(2);
+            this.facID.Name = "facID";
+            this.facID.Size = new System.Drawing.Size(179, 28);
+            this.facID.TabIndex = 47;
+            // 
+            // sID
+            // 
+            this.sID.BackColor = System.Drawing.SystemColors.Control;
+            this.sID.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sID.Location = new System.Drawing.Point(224, 36);
+            this.sID.Margin = new System.Windows.Forms.Padding(2);
+            this.sID.Name = "sID";
+            this.sID.Size = new System.Drawing.Size(179, 28);
+            this.sID.TabIndex = 50;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(159, 40);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(58, 13);
+            this.label14.TabIndex = 49;
+            this.label14.Text = "Student ID";
+            // 
             // ChemMgtUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(423, 433);
+            this.ClientSize = new System.Drawing.Size(487, 731);
+            this.Controls.Add(this.rstatus);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.mtype);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -396,5 +471,11 @@
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonSubmit;
         private System.Windows.Forms.Label mtype;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox rstatus;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox facID;
+        private System.Windows.Forms.TextBox sID;
+        private System.Windows.Forms.Label label14;
     }
 }

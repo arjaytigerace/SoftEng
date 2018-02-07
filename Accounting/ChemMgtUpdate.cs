@@ -14,7 +14,7 @@ namespace Accounting
     public partial class ChemMgtUpdate : Form
     {
         public Form main { get; set; }
-        public int Requestid {get;set;}
+        public int Requestid { get; set; }
         public int uqty { get; set; }
         public int oldqty { get; set; }
         public string oldchem { get; set; }
@@ -30,6 +30,7 @@ namespace Accounting
         public string Getfname { get; set; }
         public string Getlname { get; set; }
         public int Adminid { get; set; }
+        public String status {get;set;}
 
         MySqlConnection conn;
         public ChemMgtUpdate()
@@ -74,7 +75,7 @@ namespace Accounting
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
-            if (cqty.Value == 0 || chemname.Text == "" || tFName.Text == "" || tLName.Text == "" || subj.Text == "" || sLName.Text == "" || sFName.Text == "" || yearcourse.Text == "")
+            if (cqty.Value == 0 || chemname.Text == "" || tFName.Text == "" || tLName.Text == "" || subj.Text == "" || sLName.Text == "" || sFName.Text == "" || yearcourse.Text == "" || rstatus.Text=="")
             {
                 MessageBox.Show("Please do not leave a field empty");
 
@@ -98,95 +99,89 @@ namespace Accounting
                     {
                         if (!checkTeacher())
                         {
-                            string queryteacher = "INSERT INTO teacher(teacherFName,teacherLName) " + "VALUES('" + tFName.Text + "', '" + tLName.Text + "')";
-
-                            conn.Open();
-                            MySqlCommand commteacher = new MySqlCommand(queryteacher, conn);
-                            commteacher.ExecuteNonQuery();
-                            conn.Close();
+                            MessageBox.Show("Teacher does not exist");
 
                         }
-
-                        string query2 = "SELECT teacherID from teacher WHERE teacherFName='" + tFName.Text + "' AND teacherLName='" + tLName.Text + "'";
-                        conn.Open();
-                        MySqlCommand comm2 = new MySqlCommand(query2, conn);
-                        MySqlDataAdapter adp2 = new MySqlDataAdapter(comm2);
-                        conn.Close();
-                        DataTable dt2 = new DataTable();
-                        adp2.Fill(dt2);
-
-                        int teacherid = Convert.ToInt32(dt2.Rows[0]["teacherID"].ToString());
-                        if (!checkStudent())
-                        {
-                            string querystudent = "INSERT INTO student(studentFName,studentLName,yearCourse) " + "VALUES('" + sFName.Text + "', '" + sLName.Text + "', '" + yearcourse.Text + "')";
-
-                            conn.Open();
-                            MySqlCommand commstudent = new MySqlCommand(querystudent, conn);
-                            commstudent.ExecuteNonQuery();
-                            conn.Close();
-
-
-                        }
-
-                        string query3 = "SELECT studentID from student WHERE studentFName='" + sFName.Text + "' AND studentLName='" + sLName.Text + "' AND yearCourse='" + yearcourse.Text + "'";
-                        conn.Open();
-                        MySqlCommand comm3 = new MySqlCommand(query3, conn);
-                        MySqlDataAdapter adp3 = new MySqlDataAdapter(comm3);
-                        conn.Close();
-                        DataTable dt3 = new DataTable();
-                        adp3.Fill(dt3);
-
-                        int studentid = Convert.ToInt32(dt3.Rows[0]["studentID"].ToString());
-
-                        //updating
-                        DateTime dateValue = DateTime.Now;
-                        string date = dateValue.ToString("yyyy-MM-dd HH:mm:ss");
-                        conn.Open();
-
-                        string queryrequest = "UPDATE chemrequest SET itemID = '" + itemid + "', cqty = '" + cqty.Value + "',teacherId = '" + teacherid + "',studentId = '" + studentid +
-                        "', subject='" + subj.Text + "', dateUpdated='"+date+"', lastUpdatedUser='"+this.Adminid+"' WHERE chemRequestId = '" + Requestid + "'";
-
-
-                        MySqlCommand commrequest = new MySqlCommand(queryrequest, conn);
-                        commrequest.ExecuteNonQuery();
-                        conn.Close();
-
-                        if (!oldchem.Equals(chemname.Text))
+                        else if (!checkStudent())
                         {
 
-                            string query1 = "UPDATE item SET quantity = (quantity+" + oldqty + ") WHERE itemName='" + oldchem + "' AND itemTypeID=3";
-
-                            conn.Open();
-                            MySqlCommand commqty = new MySqlCommand(query1, conn);
-                            commqty.ExecuteNonQuery();
-
-
-                            string updateqty1 = "UPDATE item SET quantity = quantity - " + cqty.Value + " WHERE itemID='" + itemid + "'";
-
-                            MySqlCommand commupdate1 = new MySqlCommand(updateqty1, conn);
-                            commupdate1.ExecuteNonQuery();
-                            conn.Close();
-                            MessageBox.Show("Success", "Request Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-                            this.Close();
+                            MessageBox.Show("Student does not exist");
 
                         }
                         else
                         {
 
+                            string query2 = "SELECT teacherID,teacherFName,teacherLName from teacher WHERE schoolID=" + facID.Text;
+                            conn.Open();
+                            MySqlCommand comm2 = new MySqlCommand(query2, conn);
+                            MySqlDataAdapter adp2 = new MySqlDataAdapter(comm2);
+                            conn.Close();
+                            DataTable dt2 = new DataTable();
+                            adp2.Fill(dt2);
+
+                            int teacherid = Convert.ToInt32(dt2.Rows[0]["teacherID"].ToString());
+                            
+
+                            string query3 = "SELECT studentID from student WHERE schoolID=" + sID.Text;
+                            conn.Open();
+                            MySqlCommand comm3 = new MySqlCommand(query3, conn);
+                            MySqlDataAdapter adp3 = new MySqlDataAdapter(comm3);
+                            conn.Close();
+                            DataTable dt3 = new DataTable();
+                            adp3.Fill(dt3);
+
+                            int studentid = Convert.ToInt32(dt3.Rows[0]["studentID"].ToString());
+
+                            //updating
+                            DateTime dateValue = DateTime.Now;
+                            string date = dateValue.ToString("yyyy-MM-dd HH:mm:ss");
                             conn.Open();
 
-                            string updateqty = "UPDATE item SET quantity = (quantity + " + oldqty + ")-" + cqty.Value + " WHERE itemID='" + itemid + "'";
+                            string queryrequest = "UPDATE chemrequest SET itemID = '" + itemid + "', cqty = '" + cqty.Value + "',teacherId = '" + teacherid + "',studentId = '" + studentid +
+                            "', subject='" + subj.Text + "', dateUpdated='" + date + "', lastUpdatedUser='" + this.Adminid + "',status='" + rstatus.Text + "' WHERE chemRequestId = '" + Requestid + "'";
 
-                            MySqlCommand commupdate = new MySqlCommand(updateqty, conn);
-                            commupdate.ExecuteNonQuery();
+
+                            MySqlCommand commrequest = new MySqlCommand(queryrequest, conn);
+                            commrequest.ExecuteNonQuery();
                             conn.Close();
+                            /*
+                            if (!oldchem.Equals(chemname.Text))
+                            {
 
-                            MessageBox.Show("Success", "Request Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                string query1 = "UPDATE item SET quantity = (quantity+" + oldqty + ") WHERE itemName='" + oldchem + "' AND itemTypeID=3";
+
+                                conn.Open();
+                                MySqlCommand commqty = new MySqlCommand(query1, conn);
+                                commqty.ExecuteNonQuery();
 
 
-                            this.Close();
+                                string updateqty1 = "UPDATE item SET quantity = quantity - " + cqty.Value + " WHERE itemID='" + itemid + "'";
+
+                                MySqlCommand commupdate1 = new MySqlCommand(updateqty1, conn);
+                                commupdate1.ExecuteNonQuery();
+                                conn.Close();
+                                MessageBox.Show("Success", "Request Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                                this.Close();
+
+                            }
+                            else
+                            {*/
+                            if (rstatus.SelectedIndex == 1) { 
+                                conn.Open();
+
+                                string updateqty = "UPDATE item SET quantity = (quantity + " + oldqty + ")-" + cqty.Value + " WHERE itemID='" + itemid + "'";
+
+                                MySqlCommand commupdate = new MySqlCommand(updateqty, conn);
+                                commupdate.ExecuteNonQuery();
+                                conn.Close();
+
+                                MessageBox.Show("Success", "Request Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                                this.Close();
+                            }
                         }
                     }
                     else
@@ -199,16 +194,16 @@ namespace Accounting
                 {
                     MessageBox.Show("The item you entered isn't a chemical");
                 }
-
+                
             
             }
         }
 
-
+        
         private Boolean checkTeacher()
         {
 
-            string query2 = "SELECT teacherID from teacher WHERE teacherFName='" + tFName.Text + "' AND teacherLName='" + tLName.Text + "'";
+            string query2 = "SELECT teacherID from teacher WHERE schoolID=" + facID.Text;
             conn.Open();
             MySqlCommand comm2 = new MySqlCommand(query2, conn);
             MySqlDataAdapter adp2 = new MySqlDataAdapter(comm2);
@@ -225,7 +220,7 @@ namespace Accounting
         private Boolean checkStudent()
         {
 
-            string query2 = "SELECT studentID from student WHERE studentFName='" + sFName.Text + "' AND studentLName='" + sLName.Text + "' AND yearCourse='" + yearcourse.Text + "'";
+            string query2 = "SELECT studentID from student WHERE schoolID=" + sID.Text;
             conn.Open();
             MySqlCommand comm2 = new MySqlCommand(query2, conn);
             MySqlDataAdapter adp2 = new MySqlDataAdapter(comm2);
@@ -238,7 +233,7 @@ namespace Accounting
             return hasRows2;
 
         }
-
+        
         private void chemname_TextChanged(object sender, EventArgs e)
         {
            

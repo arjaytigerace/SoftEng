@@ -24,6 +24,7 @@ namespace Accounting
         public String slname;
         public String yearcourse;
         public String measuretype;
+        public string status;
         public Form main { get; set; }
         public string Getfname { get; set; }
         public string Getlname { get; set; }
@@ -45,7 +46,7 @@ namespace Accounting
         {
 
             string query = "SELECT chemRequestId,b.itemName,CONCAT(a.cqty,' ',a.measurementType) AS cqty,studentFName,studentLName,subject,c.yearCourse,teacherFName,teacherLName," +
-                "a.dateRequested,a.dateUpdated,CONCAT(e.firstname,' ',e.lastname) AS PreparedBy, CONCAT(f.firstname, ' ', f.lastname) AS LastUpdatedBy" +
+                "a.dateRequested,a.dateUpdated,CONCAT(e.firstname,' ',e.lastname) AS PreparedBy, CONCAT(f.firstname, ' ', f.lastname) AS LastUpdatedBy, a.status" +
                 " FROM chem_lab.chemrequest a INNER JOIN administrativeassociate e ON a.userID = e.admin_ID " +
                 "INNER JOIN administrativeassociate f ON a.lastUpdatedUser = f.admin_ID," +
                 "chem_lab.item b, chem_lab.student c, teacher d WHERE b.itemID = a.itemID" +
@@ -78,6 +79,7 @@ namespace Accounting
             dataGridView1.Columns["dateUpdated"].HeaderText = "Date Updated";
             dataGridView1.Columns["PreparedBy"].HeaderText = "Prepared By";
             dataGridView1.Columns["LastUpdatedBy"].HeaderText = "Last Updated By";
+            dataGridView1.Columns["status"].HeaderText = "Status";
 
             dataGridView1.ClearSelection();
             specificsearch.SelectedIndex = 0;
@@ -134,7 +136,7 @@ namespace Accounting
             chemupd.uslname = slname;
             chemupd.uyearcourse = yearcourse;
             chemupd.umeasuretype = measuretype;
-            //chemupd.date = date;
+            chemupd.status = status;
             chemupd.Getfname = this.Getfname;
             chemupd.Getlname = this.Getlname;
             chemupd.Show();
@@ -173,8 +175,6 @@ namespace Accounting
             if (e.RowIndex >= 0)
             {
 
-
-
                 requestid = int.Parse(dataGridView1.Rows[e.RowIndex].Cells["chemRequestId"].Value.ToString());
 
                 string query = "select cqty, measurementType from chemrequest where chemRequestId=" + requestid;
@@ -195,8 +195,13 @@ namespace Accounting
                 sfname = dataGridView1.Rows[e.RowIndex].Cells["studentFName"].Value.ToString();
                 slname = dataGridView1.Rows[e.RowIndex].Cells["studentLName"].Value.ToString();
                 yearcourse = dataGridView1.Rows[e.RowIndex].Cells["yearCourse"].Value.ToString();
-                
-                
+                status= dataGridView1.Rows[e.RowIndex].Cells["status"].Value.ToString();
+
+
+                if (status == "Released")
+                {
+                    button3.Enabled = false;
+                }
                 button3.Enabled = true;
             }
         }
