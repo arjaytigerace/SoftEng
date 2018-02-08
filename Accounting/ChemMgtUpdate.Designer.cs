@@ -29,12 +29,16 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.facID = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tLName = new System.Windows.Forms.TextBox();
             this.tFName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.sID = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.sFName = new System.Windows.Forms.TextBox();
@@ -55,10 +59,6 @@
             this.mtype = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.rstatus = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.facID = new System.Windows.Forms.TextBox();
-            this.sID = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cqty)).BeginInit();
@@ -80,6 +80,26 @@
             this.groupBox2.Size = new System.Drawing.Size(476, 150);
             this.groupBox2.TabIndex = 63;
             this.groupBox2.TabStop = false;
+            // 
+            // facID
+            // 
+            this.facID.BackColor = System.Drawing.SystemColors.Control;
+            this.facID.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.facID.Location = new System.Drawing.Point(259, 18);
+            this.facID.Margin = new System.Windows.Forms.Padding(2);
+            this.facID.Name = "facID";
+            this.facID.Size = new System.Drawing.Size(179, 28);
+            this.facID.TabIndex = 47;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(176, 22);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(61, 13);
+            this.label13.TabIndex = 46;
+            this.label13.Text = "Teacher ID";
             // 
             // label8
             // 
@@ -150,6 +170,26 @@
             this.groupBox1.Size = new System.Drawing.Size(476, 214);
             this.groupBox1.TabIndex = 62;
             this.groupBox1.TabStop = false;
+            // 
+            // sID
+            // 
+            this.sID.BackColor = System.Drawing.SystemColors.Control;
+            this.sID.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sID.Location = new System.Drawing.Point(224, 36);
+            this.sID.Margin = new System.Windows.Forms.Padding(2);
+            this.sID.Name = "sID";
+            this.sID.Size = new System.Drawing.Size(179, 28);
+            this.sID.TabIndex = 50;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(159, 40);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(58, 13);
+            this.label14.TabIndex = 49;
+            this.label14.Text = "Student ID";
             // 
             // label11
             // 
@@ -368,51 +408,11 @@
             this.rstatus.Size = new System.Drawing.Size(240, 21);
             this.rstatus.TabIndex = 66;
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(176, 22);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(61, 13);
-            this.label13.TabIndex = 46;
-            this.label13.Text = "Teacher ID";
-            // 
-            // facID
-            // 
-            this.facID.BackColor = System.Drawing.SystemColors.Control;
-            this.facID.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.facID.Location = new System.Drawing.Point(259, 18);
-            this.facID.Margin = new System.Windows.Forms.Padding(2);
-            this.facID.Name = "facID";
-            this.facID.Size = new System.Drawing.Size(179, 28);
-            this.facID.TabIndex = 47;
-            // 
-            // sID
-            // 
-            this.sID.BackColor = System.Drawing.SystemColors.Control;
-            this.sID.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sID.Location = new System.Drawing.Point(224, 36);
-            this.sID.Margin = new System.Windows.Forms.Padding(2);
-            this.sID.Name = "sID";
-            this.sID.Size = new System.Drawing.Size(179, 28);
-            this.sID.TabIndex = 50;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(159, 40);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(58, 13);
-            this.label14.TabIndex = 49;
-            this.label14.Text = "Student ID";
-            // 
             // ChemMgtUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
+            this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(487, 731);
             this.Controls.Add(this.rstatus);
             this.Controls.Add(this.label12);
