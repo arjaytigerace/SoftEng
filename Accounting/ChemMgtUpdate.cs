@@ -63,9 +63,6 @@ namespace Accounting
             mtype.Text = this.umeasuretype;
             user.Text = this.Getfname + " " + this.Getlname;
             
-
-
-
         }
 
         private void buttonCancel_Click_1(object sender, EventArgs e)

@@ -32,12 +32,31 @@ namespace Accounting
             cqty.Minimum = 0;
             cqty.Maximum = 9999;
             user.Text = this.Getfname + " " + this.Getlname;
+            label12.Text = "";
 
             chemname.AutoCompleteMode = AutoCompleteMode.Suggest;
             chemname.AutoCompleteSource = AutoCompleteSource.CustomSource;
             AutoCompleteStringCollection DataCollection = new AutoCompleteStringCollection();
             getData(DataCollection);
             chemname.AutoCompleteCustomSource = DataCollection;
+
+            facID.AutoCompleteMode = AutoCompleteMode.Suggest;
+            facID.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            AutoCompleteStringCollection DataCollection1 = new AutoCompleteStringCollection();
+            getTeacherData(DataCollection1);
+            facID.AutoCompleteCustomSource = DataCollection1;
+
+            sID.AutoCompleteMode = AutoCompleteMode.Suggest;
+            sID.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            AutoCompleteStringCollection DataCollection2 = new AutoCompleteStringCollection();
+            getStudentData(DataCollection2);
+            sID.AutoCompleteCustomSource = DataCollection2;
+
+            tFName.ReadOnly = true;
+            tLName.ReadOnly = true;
+            sFName.ReadOnly = true;
+            sLName.ReadOnly = true;
+            yearcourse.ReadOnly = true;
         }
 
         private void getData(AutoCompleteStringCollection dataCollection)
@@ -66,6 +85,57 @@ namespace Accounting
 
         }
 
+        private void getStudentData(AutoCompleteStringCollection dataCollection)
+        {
+
+
+            MySqlCommand command;
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            DataSet ds = new DataSet();
+
+            string sql = "SELECT schoolID FROM student";
+
+
+            conn.Open();
+            command = new MySqlCommand(sql, conn);
+            adapter.SelectCommand = command;
+            adapter.Fill(ds);
+            adapter.Dispose();
+            command.Dispose();
+            conn.Close();
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+                dataCollection.Add(row[0].ToString());
+            }
+
+
+        }
+        private void getTeacherData(AutoCompleteStringCollection dataCollection)
+        {
+
+
+            MySqlCommand command;
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            DataSet ds = new DataSet();
+
+            string sql = "SELECT schoolID FROM teacher";
+
+
+            conn.Open();
+            command = new MySqlCommand(sql, conn);
+            adapter.SelectCommand = command;
+            adapter.Fill(ds);
+            adapter.Dispose();
+            command.Dispose();
+            conn.Close();
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+                dataCollection.Add(row[0].ToString());
+            }
+
+
+        }
+
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -83,7 +153,7 @@ namespace Accounting
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
-            if(cqty.Value==0 || chemname.Text=="" || tFName.Text == "" || tLName.Text==""|| subj.Text=="" || sLName.Text=="" || sFName.Text==""||yearcourse.Text=="")
+            if(facID.Text=="" || sID.Text=="" || cqty.Value==0 || chemname.Text=="" || tFName.Text == "" || tLName.Text==""|| subj.Text=="" || sLName.Text=="" || sFName.Text==""||yearcourse.Text=="")
             {
                 MessageBox.Show("Please do not leave a field empty");
 
@@ -106,76 +176,65 @@ namespace Accounting
                 
                     if (cqty.Value<= Convert.ToInt32(dt.Rows[0]["quantity"].ToString()))
                     {
-                        if (!checkTeacher())
+                        if (!checkTeacher() || !checkStudent())
                         {
-                            string queryteacher = "INSERT INTO teacher(teacherFName,teacherLName) " + "VALUES('" + tFName.Text + "', '" + tLName.Text + "')";
-
-                            conn.Open();
-                            MySqlCommand commteacher = new MySqlCommand(queryteacher, conn);
-                            commteacher.ExecuteNonQuery();
-                            conn.Close();
+                            MessageBox.Show("Teacher or Student Doesn't Exist!");
 
                         }
 
-                        string query2 = "SELECT teacherID from teacher WHERE teacherFName='" + tFName.Text + "' AND teacherLName='" + tLName.Text + "'";
-                        conn.Open();
-                        MySqlCommand comm2 = new MySqlCommand(query2, conn);
-                        MySqlDataAdapter adp2 = new MySqlDataAdapter(comm2);
-                        conn.Close();
-                        DataTable dt2 = new DataTable();
-                        adp2.Fill(dt2);
-
-                        int teacherid = Convert.ToInt32(dt2.Rows[0]["teacherID"].ToString());
-                        if (!checkStudent())
+                        else
                         {
-                            string querystudent = "INSERT INTO student(studentFName,studentLName,yearCourse) " + "VALUES('" + sFName.Text + "', '" + sLName.Text + "', '" + yearcourse.Text + "')";
-
+                            //get teacher id
+                            string query2 = "SELECT teacherID from teacher WHERE schoolID="+facID.Text;
                             conn.Open();
-                            MySqlCommand commstudent = new MySqlCommand(querystudent, conn);
-                            commstudent.ExecuteNonQuery();
+                            MySqlCommand comm2 = new MySqlCommand(query2, conn);
+                            MySqlDataAdapter adp2 = new MySqlDataAdapter(comm2);
                             conn.Close();
+                            DataTable dt2 = new DataTable();
+                            adp2.Fill(dt2);
 
+                            int teacherid = Convert.ToInt32(dt2.Rows[0]["teacherID"].ToString());
 
+                            //get student id
+                            string query3 = "SELECT studentID from student WHERE schoolID = " + sID.Text;
+                            conn.Open();
+                            MySqlCommand comm3 = new MySqlCommand(query3, conn);
+                            MySqlDataAdapter adp3 = new MySqlDataAdapter(comm3);
+                            conn.Close();
+                            DataTable dt3 = new DataTable();
+                            adp3.Fill(dt3);
+
+                            int studentid = Convert.ToInt32(dt3.Rows[0]["studentID"].ToString());
+
+                            //inserting
+                            DateTime dateValue = DateTime.Now;
+                            string date = dateValue.ToString("yyyy-MM-dd HH:mm:ss");
+                            conn.Open();
+
+                            string queryrequest = "INSERT INTO chemrequest(itemID,cqty,measurementType,teacherId,studentId,subject,dateRequested,userID,dateUpdated,lastUpdatedUser,status) " + "VALUES('" + itemid + "', '" + cqty.Value + "', '" +
+                                label12.Text + "', '" + teacherid + "', '" + studentid + "', '" + subj.Text + "', '" + date + "', '" + this.Adminid + "', '" + date + "', '" + this.Adminid + "', 'Unreleased')";
+
+                            MySqlCommand commrequest = new MySqlCommand(queryrequest, conn);
+                            commrequest.ExecuteNonQuery();
+                            conn.Close();
+                            /*
+                            conn.Open();
+
+                            string updateqty = "UPDATE item SET quantity = quantity - " + cqty.Value + " WHERE itemID='" + itemid + "'";
+
+                            MySqlCommand commupdate = new MySqlCommand(updateqty, conn);
+                            commupdate.ExecuteNonQuery();
+                            conn.Close();*/
+
+                            MessageBox.Show("Success", "Request Made", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            //main.Show();
+                            this.Close();
                         }
-
-                        string query3 = "SELECT studentID from student WHERE studentFName='" + sFName.Text + "' AND studentLName='" + sLName.Text + "' AND yearCourse='" + yearcourse.Text + "'";
-                        conn.Open();
-                        MySqlCommand comm3 = new MySqlCommand(query3, conn);
-                        MySqlDataAdapter adp3 = new MySqlDataAdapter(comm3);
-                        conn.Close();
-                        DataTable dt3 = new DataTable();
-                        adp3.Fill(dt3);
-
-                        int studentid = Convert.ToInt32(dt3.Rows[0]["studentID"].ToString());
-
-                        //inserting
-                        DateTime dateValue = DateTime.Now;
-                        string date = dateValue.ToString("yyyy-MM-dd HH:mm:ss");
-                        conn.Open();
-
-                        string queryrequest = "INSERT INTO chemrequest(itemID,cqty,measurementType,teacherId,studentId,subject,dateRequested,userID,dateUpdated,lastUpdatedUser) " + "VALUES('" + itemid + "', '" + cqty.Value + "', '" +
-                            mtype.Text + "', '" + teacherid + "', '" + studentid + "', '" + subj.Text + "', '" + date + "', '" + this.Adminid + "', '"+date+"', '"+this.Adminid+"')";
-
-                        MySqlCommand commrequest = new MySqlCommand(queryrequest, conn);
-                        commrequest.ExecuteNonQuery();
-                        conn.Close();
-
-                        conn.Open();
-
-                        string updateqty = "UPDATE item SET quantity = quantity - " + cqty.Value + " WHERE itemID='" + itemid + "'";
-
-                        MySqlCommand commupdate = new MySqlCommand(updateqty, conn);
-                        commupdate.ExecuteNonQuery();
-                        conn.Close();
-
-                        MessageBox.Show("Success", "Request Made", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        //main.Show();
-                        this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("Quantity is not enough");
+                        MessageBox.Show("Chemical does not have enough Quantity");
                     }
 
                 }
@@ -191,7 +250,7 @@ namespace Accounting
         private Boolean checkTeacher()
         {
 
-            string query2 = "SELECT teacherID from teacher WHERE teacherFName='" + tFName.Text + "' AND teacherLName='" + tLName.Text + "'";
+            string query2 = "SELECT teacherID from teacher WHERE schoolID=" + facID.Text;
             conn.Open();
             MySqlCommand comm2 = new MySqlCommand(query2, conn);
             MySqlDataAdapter adp2 = new MySqlDataAdapter(comm2);
@@ -208,7 +267,7 @@ namespace Accounting
         private Boolean checkStudent()
         {
 
-            string query2 = "SELECT studentID from student WHERE studentFName='" + sFName.Text + "' AND studentLName='" + sLName.Text + "' AND yearCourse='"+yearcourse.Text+"'";
+            string query2 = "SELECT studentID from student WHERE schoolID=" + sID.Text;
             conn.Open();
             MySqlCommand comm2 = new MySqlCommand(query2, conn);
             MySqlDataAdapter adp2 = new MySqlDataAdapter(comm2);
@@ -239,6 +298,69 @@ namespace Accounting
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void chemname_Leave(object sender, EventArgs e)
+        {
+            string query3 = "SELECT measurementType from item WHERE itemName='" + chemname.Text + "'";
+            conn.Open();
+            MySqlCommand comm3 = new MySqlCommand(query3, conn);
+            MySqlDataAdapter adp3 = new MySqlDataAdapter(comm3);
+            conn.Close();
+            DataTable dt3 = new DataTable();
+            adp3.Fill(dt3);
+            if (dt3.Rows.Count > 0)
+            {
+                label12.Text = dt3.Rows[0]["measurementType"].ToString();
+            }
+            else
+            {
+                MessageBox.Show("Item is not a chemical");
+            }
+        }
+
+        private void sID_Leave(object sender, EventArgs e)
+        {
+            string query3 = "SELECT studentFName, studentLName, yearCourse from student WHERE schoolID='" + sID.Text + "'";
+            conn.Open();
+            MySqlCommand comm3 = new MySqlCommand(query3, conn);
+            MySqlDataAdapter adp3 = new MySqlDataAdapter(comm3);
+            conn.Close();
+            DataTable dt3 = new DataTable();
+            adp3.Fill(dt3);
+            if (dt3.Rows.Count > 0)
+            {
+                sFName.Text = dt3.Rows[0]["studentFName"].ToString();
+                sLName.Text = dt3.Rows[0]["studentLName"].ToString();
+                yearcourse.Text = dt3.Rows[0]["yearCourse"].ToString();
+            }
+            else
+            {
+                MessageBox.Show("Student does not exist");
+            }
+
+
+        }
+
+        private void facID_Leave(object sender, EventArgs e)
+        {
+            string query3 = "SELECT teacherFName, teacherLName from teacher WHERE schoolID='" + facID.Text + "'";
+            conn.Open();
+            MySqlCommand comm3 = new MySqlCommand(query3, conn);
+            MySqlDataAdapter adp3 = new MySqlDataAdapter(comm3);
+            conn.Close();
+            DataTable dt3 = new DataTable();
+            adp3.Fill(dt3);
+            if (dt3.Rows.Count > 0)
+            {
+                tFName.Text = dt3.Rows[0]["teacherFName"].ToString();
+                tLName.Text = dt3.Rows[0]["teacherLName"].ToString();
+               
+            }
+            else
+            {
+                MessageBox.Show("Teacher does not exist");
+            }
         }
     }
 }
