@@ -334,10 +334,7 @@ namespace Accounting
                 sLName.Text = dt3.Rows[0]["studentLName"].ToString();
                 yearcourse.Text = dt3.Rows[0]["yearCourse"].ToString();
             }
-            else
-            {
-                MessageBox.Show("Student does not exist");
-            }
+
 
 
         }
@@ -357,10 +354,7 @@ namespace Accounting
                 tLName.Text = dt3.Rows[0]["teacherLName"].ToString();
                
             }
-            else
-            {
-                MessageBox.Show("Teacher does not exist");
-            }
+
         }
     }
 }

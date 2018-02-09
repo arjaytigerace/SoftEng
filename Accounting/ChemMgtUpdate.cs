@@ -257,10 +257,7 @@ namespace Accounting
             {
                 mtype.Text = dt3.Rows[0]["measurementType"].ToString();
             }
-            else
-            {
-                MessageBox.Show("Item is not a chemical");
-            }
+
         }
     }
 
