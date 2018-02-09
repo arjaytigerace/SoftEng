@@ -25,6 +25,8 @@ namespace Accounting
         public String yearcourse;
         public String measuretype;
         public string status;
+        public int studentPK;
+        public int teacherPK;
         public Form main { get; set; }
         public string Getfname { get; set; }
         public string Getlname { get; set; }
@@ -45,7 +47,7 @@ namespace Accounting
         public void Loadall()
         {
 
-            string query = "SELECT chemRequestId,b.itemName,CONCAT(a.cqty,' ',a.measurementType) AS cqty,studentFName,studentLName,subject,c.yearCourse,teacherFName,teacherLName," +
+            string query = "SELECT chemRequestId,b.itemName,CONCAT(a.cqty,' ',a.measurementType) AS cqty,studentFName,studentLName,c.studentId,d.teacherId,subject,c.yearCourse,teacherFName,teacherLName," +
                 "a.dateRequested,a.dateUpdated,CONCAT(e.firstname,' ',e.lastname) AS PreparedBy, CONCAT(f.firstname, ' ', f.lastname) AS LastUpdatedBy, a.status" +
                 " FROM chem_lab.chemrequest a INNER JOIN administrativeassociate e ON a.userID = e.admin_ID " +
                 "INNER JOIN administrativeassociate f ON a.lastUpdatedUser = f.admin_ID," +
@@ -63,7 +65,8 @@ namespace Accounting
             dataGridView1.DataSource = dt;
 
             dataGridView1.Columns["chemRequestId"].Visible = false;
-
+            dataGridView1.Columns["studentId"].Visible = false;
+            dataGridView1.Columns["teacherId"].Visible = false;
             dataGridView1.Columns["itemName"].HeaderText = "Item Name";
             dataGridView1.Columns["itemName"].Width = 150;
             dataGridView1.Columns["cqty"].HeaderText = "QTY Requested";
@@ -139,6 +142,8 @@ namespace Accounting
             chemupd.status = status;
             chemupd.Getfname = this.Getfname;
             chemupd.Getlname = this.Getlname;
+            chemupd.FacultyID = this.teacherPK;
+            chemupd.studID = this.studentPK;
             chemupd.Show();
 
         }
@@ -185,7 +190,8 @@ namespace Accounting
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
 
-
+                teacherPK = int.Parse(dataGridView1.Rows[e.RowIndex].Cells["teacherId"].Value.ToString());
+                studentPK = int.Parse(dataGridView1.Rows[e.RowIndex].Cells["studentId"].Value.ToString());
                 chemname = dataGridView1.Rows[e.RowIndex].Cells["itemName"].Value.ToString();
                 qty = Convert.ToInt32(dt.Rows[0]["cqty"].ToString());
                 measuretype = dt.Rows[0]["measurementType"].ToString();
@@ -202,7 +208,10 @@ namespace Accounting
                 {
                     button3.Enabled = false;
                 }
-                button3.Enabled = true;
+                else
+                {
+                    button3.Enabled = true;
+                }
             }
         }
 

@@ -31,6 +31,8 @@ namespace Accounting
         public string Getlname { get; set; }
         public int Adminid { get; set; }
         public String status {get;set;}
+        public int FacultyID { get; set; }
+        public int studID { get; set; }
 
         MySqlConnection conn;
         public ChemMgtUpdate()
@@ -62,8 +64,146 @@ namespace Accounting
             yearcourse.Text = this.uyearcourse;
             mtype.Text = this.umeasuretype;
             user.Text = this.Getfname + " " + this.Getlname;
-            
+            sID.Text = getStudentID();
+            facID.Text = getFacID();
+            rstatus.SelectedIndex = 0;
+            autocomplete();
+
+            tFName.ReadOnly = true;
+            tLName.ReadOnly = true;
+            sFName.ReadOnly = true;
+            sLName.ReadOnly = true;
+            yearcourse.ReadOnly = true;
+
         }
+
+        private String getStudentID()
+        {
+            string query2 = "SELECT schoolID from student WHERE studentId=" + studID;
+            conn.Open();
+            MySqlCommand comm2 = new MySqlCommand(query2, conn);
+            MySqlDataAdapter adp2 = new MySqlDataAdapter(comm2);
+            conn.Close();
+            DataTable dt2 = new DataTable();
+            adp2.Fill(dt2);
+
+            return dt2.Rows[0]["schoolID"].ToString();
+
+
+        }
+        private String getFacID()
+        {
+            string query2 = "SELECT schoolID from teacher WHERE teacherId=" + FacultyID;
+            conn.Open();
+            MySqlCommand comm2 = new MySqlCommand(query2, conn);
+            MySqlDataAdapter adp2 = new MySqlDataAdapter(comm2);
+            conn.Close();
+            DataTable dt2 = new DataTable();
+            adp2.Fill(dt2);
+
+            return dt2.Rows[0]["schoolID"].ToString();
+
+
+        }
+        private void getData(AutoCompleteStringCollection dataCollection)
+        {
+
+
+            MySqlCommand command;
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            DataSet ds = new DataSet();
+
+            string sql = "SELECT itemName FROM item where itemTypeID=3";
+
+
+            conn.Open();
+            command = new MySqlCommand(sql, conn);
+            adapter.SelectCommand = command;
+            adapter.Fill(ds);
+            adapter.Dispose();
+            command.Dispose();
+            conn.Close();
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+                dataCollection.Add(row[0].ToString());
+            }
+
+
+        }
+
+        private void getStudentData(AutoCompleteStringCollection dataCollection)
+        {
+
+
+            MySqlCommand command;
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            DataSet ds = new DataSet();
+
+            string sql = "SELECT schoolID FROM student";
+
+
+            conn.Open();
+            command = new MySqlCommand(sql, conn);
+            adapter.SelectCommand = command;
+            adapter.Fill(ds);
+            adapter.Dispose();
+            command.Dispose();
+            conn.Close();
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+                dataCollection.Add(row[0].ToString());
+            }
+
+
+        }
+        private void getTeacherData(AutoCompleteStringCollection dataCollection)
+        {
+
+
+            MySqlCommand command;
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            DataSet ds = new DataSet();
+
+            string sql = "SELECT schoolID FROM teacher";
+
+
+            conn.Open();
+            command = new MySqlCommand(sql, conn);
+            adapter.SelectCommand = command;
+            adapter.Fill(ds);
+            adapter.Dispose();
+            command.Dispose();
+            conn.Close();
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+                dataCollection.Add(row[0].ToString());
+            }
+
+
+        }
+        private void autocomplete()
+        {
+            chemname.AutoCompleteMode = AutoCompleteMode.Suggest;
+            chemname.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            AutoCompleteStringCollection DataCollection = new AutoCompleteStringCollection();
+            getData(DataCollection);
+            chemname.AutoCompleteCustomSource = DataCollection;
+
+            facID.AutoCompleteMode = AutoCompleteMode.Suggest;
+            facID.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            AutoCompleteStringCollection DataCollection1 = new AutoCompleteStringCollection();
+            getTeacherData(DataCollection1);
+            facID.AutoCompleteCustomSource = DataCollection1;
+
+            sID.AutoCompleteMode = AutoCompleteMode.Suggest;
+            sID.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            AutoCompleteStringCollection DataCollection2 = new AutoCompleteStringCollection();
+            getStudentData(DataCollection2);
+            sID.AutoCompleteCustomSource = DataCollection2;
+
+        }
+
+
 
         private void buttonCancel_Click_1(object sender, EventArgs e)
         {
@@ -94,15 +234,9 @@ namespace Accounting
 
                     if (cqty.Value <= Convert.ToInt32(dt.Rows[0]["quantity"].ToString()))
                     {
-                        if (!checkTeacher())
+                        if (!checkTeacher() || !checkStudent())
                         {
-                            MessageBox.Show("Teacher does not exist");
-
-                        }
-                        else if (!checkStudent())
-                        {
-
-                            MessageBox.Show("Student does not exist");
+                            MessageBox.Show("Teacher or Student Doesn't Exist!");
 
                         }
                         else
@@ -134,41 +268,18 @@ namespace Accounting
                             string date = dateValue.ToString("yyyy-MM-dd HH:mm:ss");
                             conn.Open();
 
-                            string queryrequest = "UPDATE chemrequest SET itemID = '" + itemid + "', cqty = '" + cqty.Value + "',teacherId = '" + teacherid + "',studentId = '" + studentid +
+                            string queryrequest = "UPDATE chemrequest SET itemID = '" + itemid + "', cqty = '" + cqty.Value + "', measurementType='"+ mtype.Text+"', teacherId = '" + teacherid + "',studentId = '" + studentid +
                             "', subject='" + subj.Text + "', dateUpdated='" + date + "', lastUpdatedUser='" + this.Adminid + "',status='" + rstatus.Text + "' WHERE chemRequestId = '" + Requestid + "'";
 
 
                             MySqlCommand commrequest = new MySqlCommand(queryrequest, conn);
                             commrequest.ExecuteNonQuery();
                             conn.Close();
-                            /*
-                            if (!oldchem.Equals(chemname.Text))
-                            {
 
-                                string query1 = "UPDATE item SET quantity = (quantity+" + oldqty + ") WHERE itemName='" + oldchem + "' AND itemTypeID=3";
-
-                                conn.Open();
-                                MySqlCommand commqty = new MySqlCommand(query1, conn);
-                                commqty.ExecuteNonQuery();
-
-
-                                string updateqty1 = "UPDATE item SET quantity = quantity - " + cqty.Value + " WHERE itemID='" + itemid + "'";
-
-                                MySqlCommand commupdate1 = new MySqlCommand(updateqty1, conn);
-                                commupdate1.ExecuteNonQuery();
-                                conn.Close();
-                                MessageBox.Show("Success", "Request Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-                                this.Close();
-
-                            }
-                            else
-                            {*/
                             if (rstatus.SelectedIndex == 1) { 
                                 conn.Open();
 
-                                string updateqty = "UPDATE item SET quantity = (quantity + " + oldqty + ")-" + cqty.Value + " WHERE itemID='" + itemid + "'";
+                                string updateqty = "UPDATE item SET quantity = quantity -" + cqty.Value + " WHERE itemID='" + itemid + "'";
 
                                 MySqlCommand commupdate = new MySqlCommand(updateqty, conn);
                                 commupdate.ExecuteNonQuery();
@@ -178,6 +289,12 @@ namespace Accounting
 
 
                                 this.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Success", "Request Updated.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+
                             }
                         }
                     }
@@ -256,6 +373,45 @@ namespace Accounting
             if (dt3.Rows.Count > 0)
             {
                 mtype.Text = dt3.Rows[0]["measurementType"].ToString();
+            }
+            else
+            {
+                MessageBox.Show("Item is not a chemical");
+            }
+
+        }
+
+        private void facID_Leave(object sender, EventArgs e)
+        {
+            string query3 = "SELECT teacherFName, teacherLName from teacher WHERE schoolID='" + facID.Text + "'";
+            conn.Open();
+            MySqlCommand comm3 = new MySqlCommand(query3, conn);
+            MySqlDataAdapter adp3 = new MySqlDataAdapter(comm3);
+            conn.Close();
+            DataTable dt3 = new DataTable();
+            adp3.Fill(dt3);
+            if (dt3.Rows.Count > 0)
+            {
+                tFName.Text = dt3.Rows[0]["teacherFName"].ToString();
+                tLName.Text = dt3.Rows[0]["teacherLName"].ToString();
+
+            }
+        }
+
+        private void sID_Leave(object sender, EventArgs e)
+        {
+            string query3 = "SELECT studentFName, studentLName, yearCourse from student WHERE schoolID='" + sID.Text + "'";
+            conn.Open();
+            MySqlCommand comm3 = new MySqlCommand(query3, conn);
+            MySqlDataAdapter adp3 = new MySqlDataAdapter(comm3);
+            conn.Close();
+            DataTable dt3 = new DataTable();
+            adp3.Fill(dt3);
+            if (dt3.Rows.Count > 0)
+            {
+                sFName.Text = dt3.Rows[0]["studentFName"].ToString();
+                sLName.Text = dt3.Rows[0]["studentLName"].ToString();
+                yearcourse.Text = dt3.Rows[0]["yearCourse"].ToString();
             }
 
         }

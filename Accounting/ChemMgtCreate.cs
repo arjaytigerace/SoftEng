@@ -33,7 +33,16 @@ namespace Accounting
             cqty.Maximum = 9999;
             user.Text = this.Getfname + " " + this.Getlname;
             label12.Text = "";
+            autocomplete();
 
+            tFName.ReadOnly = true;
+            tLName.ReadOnly = true;
+            sFName.ReadOnly = true;
+            sLName.ReadOnly = true;
+            yearcourse.ReadOnly = true;
+        }
+        private void autocomplete()
+        {
             chemname.AutoCompleteMode = AutoCompleteMode.Suggest;
             chemname.AutoCompleteSource = AutoCompleteSource.CustomSource;
             AutoCompleteStringCollection DataCollection = new AutoCompleteStringCollection();
@@ -52,13 +61,7 @@ namespace Accounting
             getStudentData(DataCollection2);
             sID.AutoCompleteCustomSource = DataCollection2;
 
-            tFName.ReadOnly = true;
-            tLName.ReadOnly = true;
-            sFName.ReadOnly = true;
-            sLName.ReadOnly = true;
-            yearcourse.ReadOnly = true;
         }
-
         private void getData(AutoCompleteStringCollection dataCollection)
         {
      
@@ -280,6 +283,8 @@ namespace Accounting
             return hasRows2;
 
         }
+
+        
 
         private void tFName_TextChanged(object sender, EventArgs e)
         {
