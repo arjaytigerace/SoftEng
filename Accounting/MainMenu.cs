@@ -14,23 +14,30 @@ namespace Accounting
     public partial class MainMenu : Form
     {
         MySqlConnection conn;
-        public MainMenu()
-        {
-            InitializeComponent();
-            conn = new MySqlConnection("Server=localhost;Database=chem_lab;uid=root; Pwd = root;");
-        }
         public string Getfname { get; set; }
         public string Getlname { get; set; }
 
         public int adminid { get; set; }
 
         public string type { get; set; }
+        public string notif { get; set; }
 
         public Form Form1 { get; set; }
+        public MainMenu()
+        {
+            InitializeComponent();
+            conn = new MySqlConnection("Server=localhost;Database=chem_lab;uid=root; Pwd = root;");
+
+
+        }
+
+ 
 
         private void MainMenu_Load(object sender, EventArgs e)
         {
             label1.Text = this.Getfname + " " + this.Getlname;
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -118,6 +125,47 @@ namespace Accounting
             SF.main = this;
             SF.Show();
             this.Hide();
+
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            Notification N = new Notification();
+            N.main = this;
+            N.Show();
+            
+        }
+
+        private void MainMenu_Shown(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainMenu_Enter(object sender, EventArgs e)
+        {
+  
+        }
+
+        private void MainMenu_Activated(object sender, EventArgs e)
+        {
+            string query2 = "SELECT itemName from item WHERE quantity=0";
+            conn.Open();
+            MySqlCommand comm2 = new MySqlCommand(query2, conn);
+            MySqlDataAdapter adp2 = new MySqlDataAdapter(comm2);
+            conn.Close();
+            DataTable dt2 = new DataTable();
+            adp2.Fill(dt2);
+
+            bool hasRows = dt2.Rows.GetEnumerator().MoveNext();
+            if (hasRows)
+            {
+                notif = "You have items \n out of stock";
+            }
+            else
+            {
+                notif = "No items are \n out of stock";
+            }
+            label3.Text = notif;
         }
     }
 }

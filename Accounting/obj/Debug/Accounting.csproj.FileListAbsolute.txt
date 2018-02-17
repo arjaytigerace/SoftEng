@@ -202,3 +202,4 @@ C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Faculty.resou
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.ItemLog.resources
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Student.resources
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.StudentsFaculty.resources
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Notification.resources

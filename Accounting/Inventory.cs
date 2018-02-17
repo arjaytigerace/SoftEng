@@ -91,6 +91,7 @@ namespace Accounting
         private void Inventory_FormClosing(object sender, FormClosingEventArgs e)
         {
             main.Show();
+
         }
 
 
