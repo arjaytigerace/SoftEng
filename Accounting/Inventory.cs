@@ -499,7 +499,7 @@ namespace Accounting
             comm1.ExecuteNonQuery();
 
 
-            string query1 = "UPDATE itemapparatus SET description='" + adesc.Text +  " WHERE itemID =" + selecteditemid;
+            string query1 = "UPDATE itemapparatus SET description='" + adesc.Text +  "' WHERE itemID =" + selecteditemid;
 
             MySqlCommand comm2 = new MySqlCommand(query1, conn);
             comm2.ExecuteNonQuery();

@@ -54,8 +54,9 @@
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(973, 404);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Search";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Search";
             this.Load += new System.EventHandler(this.Search_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

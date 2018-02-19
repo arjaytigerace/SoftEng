@@ -59,5 +59,12 @@ namespace Accounting
         {
 
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            BRWupdate update = new BRWupdate();
+            update.main = this;
+            update.Show();
+        }
     }
 }

@@ -293,6 +293,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ChemMgtInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChemMgtInfo";
             this.Load += new System.EventHandler(this.ChemMgtInfo_Load);
             this.ResumeLayout(false);

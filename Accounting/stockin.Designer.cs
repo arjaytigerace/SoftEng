@@ -136,7 +136,7 @@
             this.tabPage1.Controls.Add(this.sItemName);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(659, 492);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Existing Item";
@@ -169,7 +169,7 @@
             this.textBox9.BackColor = System.Drawing.SystemColors.Control;
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox9.Location = new System.Drawing.Point(244, 236);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(196, 137);
@@ -195,7 +195,7 @@
             "Repaired",
             "Found"});
             this.comboBox1.Location = new System.Drawing.Point(244, 184);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(196, 28);
             this.comboBox1.TabIndex = 55;
@@ -215,7 +215,7 @@
             // 
             this.sqty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sqty.Location = new System.Drawing.Point(244, 125);
-            this.sqty.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sqty.Margin = new System.Windows.Forms.Padding(2);
             this.sqty.Name = "sqty";
             this.sqty.Size = new System.Drawing.Size(74, 26);
             this.sqty.TabIndex = 53;
@@ -226,7 +226,7 @@
             this.stockinbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.stockinbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stockinbutton.Location = new System.Drawing.Point(244, 387);
-            this.stockinbutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.stockinbutton.Margin = new System.Windows.Forms.Padding(2);
             this.stockinbutton.Name = "stockinbutton";
             this.stockinbutton.Size = new System.Drawing.Size(123, 51);
             this.stockinbutton.TabIndex = 52;
@@ -249,7 +249,7 @@
             // 
             this.sItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sItemName.Location = new System.Drawing.Point(244, 62);
-            this.sItemName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sItemName.Margin = new System.Windows.Forms.Padding(2);
             this.sItemName.Name = "sItemName";
             this.sItemName.Size = new System.Drawing.Size(196, 26);
             this.sItemName.TabIndex = 50;
@@ -281,7 +281,7 @@
             this.tabPage2.Controls.Add(this.eqty);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(659, 492);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "New Equipment";
@@ -304,7 +304,7 @@
             this.stocknew.Cursor = System.Windows.Forms.Cursors.Hand;
             this.stocknew.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stocknew.Location = new System.Drawing.Point(310, 422);
-            this.stocknew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.stocknew.Margin = new System.Windows.Forms.Padding(2);
             this.stocknew.Name = "stocknew";
             this.stocknew.Size = new System.Drawing.Size(123, 51);
             this.stocknew.TabIndex = 67;
@@ -317,7 +317,7 @@
             this.textBox1.BackColor = System.Drawing.SystemColors.Control;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(310, 306);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(196, 99);
@@ -343,7 +343,7 @@
             "Repaired",
             "Found"});
             this.comboBox2.Location = new System.Drawing.Point(310, 265);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(196, 28);
             this.comboBox2.TabIndex = 68;
@@ -352,7 +352,7 @@
             // 
             this.estlife.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.estlife.Location = new System.Drawing.Point(310, 235);
-            this.estlife.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.estlife.Margin = new System.Windows.Forms.Padding(2);
             this.estlife.Name = "estlife";
             this.estlife.Size = new System.Drawing.Size(303, 26);
             this.estlife.TabIndex = 64;
@@ -372,7 +372,7 @@
             // 
             this.purchasedate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.purchasedate.Location = new System.Drawing.Point(310, 203);
-            this.purchasedate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.purchasedate.Margin = new System.Windows.Forms.Padding(2);
             this.purchasedate.Name = "purchasedate";
             this.purchasedate.Size = new System.Drawing.Size(304, 26);
             this.purchasedate.TabIndex = 63;
@@ -404,7 +404,7 @@
             // 
             this.eItemCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eItemCode.Location = new System.Drawing.Point(309, 15);
-            this.eItemCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.eItemCode.Margin = new System.Windows.Forms.Padding(2);
             this.eItemCode.Name = "eItemCode";
             this.eItemCode.Size = new System.Drawing.Size(196, 26);
             this.eItemCode.TabIndex = 61;
@@ -429,7 +429,7 @@
             "Active",
             "Inactive"});
             this.equipStatus.Location = new System.Drawing.Point(310, 166);
-            this.equipStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.equipStatus.Margin = new System.Windows.Forms.Padding(2);
             this.equipStatus.Name = "equipStatus";
             this.equipStatus.Size = new System.Drawing.Size(196, 28);
             this.equipStatus.TabIndex = 59;
@@ -449,7 +449,7 @@
             // 
             this.costunit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.costunit.Location = new System.Drawing.Point(310, 131);
-            this.costunit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.costunit.Margin = new System.Windows.Forms.Padding(2);
             this.costunit.Name = "costunit";
             this.costunit.Size = new System.Drawing.Size(196, 26);
             this.costunit.TabIndex = 54;
@@ -458,7 +458,7 @@
             // 
             this.brand.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brand.Location = new System.Drawing.Point(310, 102);
-            this.brand.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.brand.Margin = new System.Windows.Forms.Padding(2);
             this.brand.Name = "brand";
             this.brand.Size = new System.Drawing.Size(196, 26);
             this.brand.TabIndex = 53;
@@ -500,7 +500,7 @@
             // 
             this.eitemname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eitemname.Location = new System.Drawing.Point(310, 42);
-            this.eitemname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.eitemname.Margin = new System.Windows.Forms.Padding(2);
             this.eitemname.Name = "eitemname";
             this.eitemname.Size = new System.Drawing.Size(196, 26);
             this.eitemname.TabIndex = 50;
@@ -517,7 +517,7 @@
             "L",
             "Kg"});
             this.emeasuretype.Location = new System.Drawing.Point(388, 72);
-            this.emeasuretype.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.emeasuretype.Margin = new System.Windows.Forms.Padding(2);
             this.emeasuretype.Name = "emeasuretype";
             this.emeasuretype.Size = new System.Drawing.Size(118, 28);
             this.emeasuretype.TabIndex = 52;
@@ -526,7 +526,7 @@
             // 
             this.eqty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eqty.Location = new System.Drawing.Point(309, 73);
-            this.eqty.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.eqty.Margin = new System.Windows.Forms.Padding(2);
             this.eqty.Name = "eqty";
             this.eqty.Size = new System.Drawing.Size(74, 26);
             this.eqty.TabIndex = 51;
@@ -550,7 +550,7 @@
             this.tabPage3.Controls.Add(this.label18);
             this.tabPage3.Controls.Add(this.aitemname);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(659, 492);
             this.tabPage3.TabIndex = 2;
@@ -580,7 +580,7 @@
             "L",
             "Kg"});
             this.amtype.Location = new System.Drawing.Point(323, 118);
-            this.amtype.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.amtype.Margin = new System.Windows.Forms.Padding(2);
             this.amtype.Name = "amtype";
             this.amtype.Size = new System.Drawing.Size(118, 28);
             this.amtype.TabIndex = 85;
@@ -589,7 +589,7 @@
             // 
             this.aqty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aqty.Location = new System.Drawing.Point(244, 119);
-            this.aqty.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.aqty.Margin = new System.Windows.Forms.Padding(2);
             this.aqty.Name = "aqty";
             this.aqty.Size = new System.Drawing.Size(74, 26);
             this.aqty.TabIndex = 84;
@@ -611,7 +611,7 @@
             this.stockInApp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.stockInApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stockInApp.Location = new System.Drawing.Point(246, 396);
-            this.stockInApp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.stockInApp.Margin = new System.Windows.Forms.Padding(2);
             this.stockInApp.Name = "stockInApp";
             this.stockInApp.Size = new System.Drawing.Size(123, 51);
             this.stockInApp.TabIndex = 79;
@@ -624,7 +624,7 @@
             this.textBox2.BackColor = System.Drawing.SystemColors.Control;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(246, 286);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(196, 99);
@@ -650,7 +650,7 @@
             "Repaired",
             "Found"});
             this.comboBox3.Location = new System.Drawing.Point(245, 245);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(196, 28);
             this.comboBox3.TabIndex = 80;
@@ -658,7 +658,7 @@
             // aItemCode
             // 
             this.aItemCode.Location = new System.Drawing.Point(245, 44);
-            this.aItemCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.aItemCode.Margin = new System.Windows.Forms.Padding(2);
             this.aItemCode.Name = "aItemCode";
             this.aItemCode.Size = new System.Drawing.Size(180, 20);
             this.aItemCode.TabIndex = 78;
@@ -691,7 +691,7 @@
             "Active",
             "Inactive"});
             this.appStatus.Location = new System.Drawing.Point(245, 202);
-            this.appStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.appStatus.Margin = new System.Windows.Forms.Padding(2);
             this.appStatus.Name = "appStatus";
             this.appStatus.Size = new System.Drawing.Size(180, 21);
             this.appStatus.TabIndex = 75;
@@ -700,7 +700,7 @@
             // 
             this.adesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adesc.Location = new System.Drawing.Point(246, 164);
-            this.adesc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.adesc.Margin = new System.Windows.Forms.Padding(2);
             this.adesc.Name = "adesc";
             this.adesc.Size = new System.Drawing.Size(179, 26);
             this.adesc.TabIndex = 72;
@@ -731,7 +731,7 @@
             // 
             this.aitemname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aitemname.Location = new System.Drawing.Point(246, 80);
-            this.aitemname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.aitemname.Margin = new System.Windows.Forms.Padding(2);
             this.aitemname.Name = "aitemname";
             this.aitemname.Size = new System.Drawing.Size(179, 26);
             this.aitemname.TabIndex = 71;
@@ -757,7 +757,7 @@
             this.tabPage4.Controls.Add(this.label20);
             this.tabPage4.Controls.Add(this.label21);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(659, 492);
             this.tabPage4.TabIndex = 3;
@@ -787,7 +787,7 @@
             "L",
             "Kg"});
             this.cmtype.Location = new System.Drawing.Point(399, 107);
-            this.cmtype.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmtype.Margin = new System.Windows.Forms.Padding(2);
             this.cmtype.Name = "cmtype";
             this.cmtype.Size = new System.Drawing.Size(118, 28);
             this.cmtype.TabIndex = 90;
@@ -796,7 +796,7 @@
             // 
             this.cqty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cqty.Location = new System.Drawing.Point(320, 108);
-            this.cqty.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cqty.Margin = new System.Windows.Forms.Padding(2);
             this.cqty.Name = "cqty";
             this.cqty.Size = new System.Drawing.Size(74, 26);
             this.cqty.TabIndex = 89;
@@ -818,7 +818,7 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(285, 408);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(123, 51);
             this.button1.TabIndex = 84;
@@ -831,7 +831,7 @@
             this.textBox4.BackColor = System.Drawing.SystemColors.Control;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(285, 298);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(196, 99);
@@ -857,7 +857,7 @@
             "Repaired",
             "Found"});
             this.comboBox4.Location = new System.Drawing.Point(284, 257);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(196, 28);
             this.comboBox4.TabIndex = 85;
@@ -883,7 +883,7 @@
             "White",
             "Yellow"});
             this.colorCode.Location = new System.Drawing.Point(322, 160);
-            this.colorCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.colorCode.Margin = new System.Windows.Forms.Padding(2);
             this.colorCode.Name = "colorCode";
             this.colorCode.Size = new System.Drawing.Size(178, 21);
             this.colorCode.TabIndex = 74;
@@ -902,7 +902,7 @@
             // cItemCode
             // 
             this.cItemCode.Location = new System.Drawing.Point(322, 33);
-            this.cItemCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cItemCode.Margin = new System.Windows.Forms.Padding(2);
             this.cItemCode.Name = "cItemCode";
             this.cItemCode.Size = new System.Drawing.Size(178, 20);
             this.cItemCode.TabIndex = 72;
@@ -925,7 +925,7 @@
             "Active",
             "Inactive"});
             this.chemStatus.Location = new System.Drawing.Point(324, 219);
-            this.chemStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chemStatus.Margin = new System.Windows.Forms.Padding(2);
             this.chemStatus.Name = "chemStatus";
             this.chemStatus.Size = new System.Drawing.Size(178, 21);
             this.chemStatus.TabIndex = 70;
@@ -979,6 +979,7 @@
             this.ClientSize = new System.Drawing.Size(669, 532);
             this.Controls.Add(this.tabControl1);
             this.Name = "stockin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "stockin";
             this.Load += new System.EventHandler(this.stockin_Load);
             this.tabControl1.ResumeLayout(false);

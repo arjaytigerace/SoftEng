@@ -161,7 +161,7 @@
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.Control;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(167, 73);
+            this.textBox2.Location = new System.Drawing.Point(168, 74);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(240, 28);
@@ -245,6 +245,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "BRWupdate";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BRWupdate";
             this.Load += new System.EventHandler(this.BRWupdate_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();

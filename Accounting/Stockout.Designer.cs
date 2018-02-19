@@ -59,7 +59,7 @@
             "Damaged",
             "Lost"});
             this.comboBox1.Location = new System.Drawing.Point(284, 174);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(196, 28);
             this.comboBox1.TabIndex = 62;
@@ -79,7 +79,7 @@
             // 
             this.sqty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sqty.Location = new System.Drawing.Point(284, 115);
-            this.sqty.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sqty.Margin = new System.Windows.Forms.Padding(2);
             this.sqty.Name = "sqty";
             this.sqty.Size = new System.Drawing.Size(74, 26);
             this.sqty.TabIndex = 60;
@@ -90,7 +90,7 @@
             this.stockobutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.stockobutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stockobutton.Location = new System.Drawing.Point(284, 399);
-            this.stockobutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.stockobutton.Margin = new System.Windows.Forms.Padding(2);
             this.stockobutton.Name = "stockobutton";
             this.stockobutton.Size = new System.Drawing.Size(123, 51);
             this.stockobutton.TabIndex = 59;
@@ -113,7 +113,7 @@
             // 
             this.sItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sItemName.Location = new System.Drawing.Point(284, 52);
-            this.sItemName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sItemName.Margin = new System.Windows.Forms.Padding(2);
             this.sItemName.Name = "sItemName";
             this.sItemName.Size = new System.Drawing.Size(196, 26);
             this.sItemName.TabIndex = 57;
@@ -123,7 +123,7 @@
             this.textBox9.BackColor = System.Drawing.SystemColors.Control;
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox9.Location = new System.Drawing.Point(284, 221);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(196, 137);
@@ -156,6 +156,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.sItemName);
             this.Name = "Stockout";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stockout";
             this.Load += new System.EventHandler(this.Stockout_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sqty)).EndInit();
