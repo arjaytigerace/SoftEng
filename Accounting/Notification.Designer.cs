@@ -37,10 +37,10 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(23, 67);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(535, 359);
+            this.dataGridView1.Size = new System.Drawing.Size(534, 359);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
@@ -49,9 +49,9 @@
             this.label1.Location = new System.Drawing.Point(21, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 13);
+            this.label1.Size = new System.Drawing.Size(204, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "The following items are out of stock:";
+            this.label1.Text = "The following items need to be restocked:";
             // 
             // Notification
             // 
@@ -60,7 +60,7 @@
             this.ClientSize = new System.Drawing.Size(583, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Notification";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Notification";

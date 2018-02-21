@@ -162,11 +162,11 @@ namespace Accounting
             bool hasRows = dt2.Rows.GetEnumerator().MoveNext();
             if (hasRows)
             {
-                notif = "You have items \n out of stock";
+                notif = "You have items \n that needs to be \n restocked";
             }
             else
             {
-                notif = "No items are \n out of stock";
+                notif = "No items are \n need to be \n restocked";
             }
             label3.Text = notif;
         }
