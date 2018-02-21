@@ -43,11 +43,7 @@ namespace Accounting
             aItemCode.Text = "";
             itemname.Text = "";
             itemtype.SelectedIndex = 0;
-
-    
-
             
-
             eitemname.Text = "";
      
             brand.Text = "";
@@ -62,9 +58,6 @@ namespace Accounting
             appStatus.SelectedIndex = 0;
             chemStatus.SelectedIndex = 0;
 
-   
-
-
             updbutton.Enabled = false;
    
             addequipb.Enabled = true;
@@ -74,9 +67,7 @@ namespace Accounting
 
             deselectappb.Enabled = false;
             updappb.Enabled = false;
-            
 
-   
             button2.Enabled = false;
             button3.Enabled = false;
         
@@ -366,30 +357,7 @@ namespace Accounting
             {
                 MessageBox.Show("Please do not leave any of the fields as blank");
             }
-            /*
-            decimal newDmgLost = (numdmg.Value + numlost.Value);
-            string query;
-            if((newDmgLost - oldDmgLost) < 0)
-            {
-                query = "UPDATE item SET itemCode ='"+eItemCode.Text + "',itemName='" + eitemname.Text + "',quantity='" + (eqty.Value + (oldDmgLost - newDmgLost)) + 
-                    "',measurementtype='" + emeasuretype.Text + "',modon='" + date + "',itemstatus='" + equipStatus.Text + "' WHERE itemID =" +
-                    selecteditemid;
 
-
-            }
-            else if((newDmgLost - oldDmgLost)>0)
-            {
-                query = "UPDATE item SET itemCode ='" + eItemCode.Text + "',itemName='" + eitemname.Text + "',quantity='" + (eqty.Value - (newDmgLost - oldDmgLost)) +
-                    "',measurementtype='" + emeasuretype.Text + "',modon='" + date + "',itemstatus='" + equipStatus.Text + "' WHERE itemID =" +
-                    selecteditemid;
-
-            }
-            else
-            {
-                query = "UPDATE item SET itemCode ='" + eItemCode.Text + "',itemName='" + eitemname.Text + "',quantity='" + eqty.Value +
-                    "',measurementtype='" + emeasuretype.Text + "',modon='" + date + "',itemstatus='" + equipStatus.Text + "' WHERE itemID =" +
-                    selecteditemid;
-            }*/
             string query= "UPDATE item SET itemCode ='" + eItemCode.Text + "',itemName='" + eitemname.Text +
             "',modon='" + date + "',itemstatus='" + equipStatus.Text + "' WHERE itemID =" +
                     selecteditemid;
@@ -443,38 +411,7 @@ namespace Accounting
 
         private void addappb_Click(object sender, EventArgs e)
         {
-            /*
-            if (aitemname.Text == "" || adesc.Text == "" || aItemCode.Text=="")
-            {
-                MessageBox.Show("Please do not leave a field empty");
-            }
-            else
-            {
 
-                DateTime dateValue = DateTime.Now;
-                string date = dateValue.ToString("yyyy-MM-dd HH:mm:ss");
-
-
-                conn.Open();
-                MySqlCommand comm1 = new MySqlCommand("InsertApp", conn);
-                comm1.CommandType = CommandType.StoredProcedure;
-
-                comm1.Parameters.Add("?aitemcode", MySqlDbType.VarChar, 255).Value = aItemCode.Text;
-                comm1.Parameters.Add("?aitemname", MySqlDbType.VarChar, 255).Value = aitemname.Text;
-               
-               
-                comm1.Parameters.Add("?adate", MySqlDbType.DateTime).Value = date;
-                comm1.Parameters.Add("?description", MySqlDbType.VarChar, 255).Value = adesc.Text;
-          
-                comm1.Parameters.Add("?appStatus", MySqlDbType.VarChar, 255).Value = appStatus.Text;
-                comm1.ExecuteNonQuery();
-
-                conn.Close();
-                MessageBox.Show("Success", "Item Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                loadall();
-
-            }
-            */
         }
 
         private void updappb_Click(object sender, EventArgs e)
@@ -537,39 +474,7 @@ namespace Accounting
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*
-            if (textBox3.Text == "" || cItemCode.Text=="")
-            {
-                MessageBox.Show("Please do not leave a field empty");
-            }
 
-            else
-            {
-
-                DateTime dateValue = DateTime.Now;
-                string date = dateValue.ToString("yyyy-MM-dd HH:mm:ss");
-                purchasedate.CustomFormat = ("yyyy-MM-dd");
-
-                conn.Open();
-                MySqlCommand comm1 = new MySqlCommand("InsertChem", conn);
-                comm1.CommandType = CommandType.StoredProcedure;
-
-                comm1.Parameters.Add("?citemcode", MySqlDbType.VarChar, 255).Value = cItemCode.Text;
-                comm1.Parameters.Add("?cqty", MySqlDbType.Int32).Value = numericUpDown1.Value;
-                comm1.Parameters.Add("?cmeasuretype", MySqlDbType.VarChar, 255).Value = cmeasuretype.Text;
-                comm1.Parameters.Add("?cdate", MySqlDbType.DateTime).Value = date;
-                comm1.Parameters.Add("?citemname", MySqlDbType.VarChar, 255).Value = textBox3.Text;
-                comm1.Parameters.Add("?colorCode", MySqlDbType.VarChar, 255).Value = colorCode.Text;
-                comm1.Parameters.Add("?classification", MySqlDbType.VarChar, 255).Value = classification.Text;
-                comm1.Parameters.Add("?chemStatus", MySqlDbType.VarChar, 255).Value = chemStatus.Text;
-                comm1.ExecuteNonQuery();
-
-                conn.Close();
-
-                MessageBox.Show("Success", "Item Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                loadall();
-
-            }*/
         }
 
         private void button2_Click(object sender, EventArgs e)

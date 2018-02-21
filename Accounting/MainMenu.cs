@@ -104,6 +104,9 @@ namespace Accounting
         {
             BorrowingChem B1 = new BorrowingChem();
             B1.main = this;
+            B1.Adminid = this.adminid;
+            B1.Getfname = this.Getfname;
+            B1.Getlname = this.Getlname;
             B1.Show();
             this.Hide();
         }
@@ -166,6 +169,11 @@ namespace Accounting
                 notif = "No items are \n out of stock";
             }
             label3.Text = notif;
+        }
+
+        private void TopPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
