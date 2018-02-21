@@ -235,3 +235,4 @@ C:\Users\rjacornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.csproj
 C:\Users\rjacornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.csproj.CoreCompileInputs.cache
 C:\Users\rjacornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.exe
 C:\Users\rjacornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.pdb
+C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Notification.resources
