@@ -275,24 +275,41 @@ namespace Accounting
                             MySqlCommand commrequest = new MySqlCommand(queryrequest, conn);
                             commrequest.ExecuteNonQuery();
                             conn.Close();
+    
+                            
+                            if (rstatus.SelectedIndex == 2) {
+                                conn.Open();
+                                string updateqty3 = "UPDATE item SET quantity = quantity +" + oldqty + " WHERE itemName='" + oldchem + "'";
 
-                            if (rstatus.SelectedIndex == 1) { 
+                                MySqlCommand commupdate3 = new MySqlCommand(updateqty3, conn);
+                                commupdate3.ExecuteNonQuery();
+                                conn.Close();
+
+                                MessageBox.Show("Success", "Request Updated.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+
+                            }
+                            else
+                            {
                                 conn.Open();
 
-                                string updateqty = "UPDATE item SET quantity = quantity -" + cqty.Value + " WHERE itemID='" + itemid + "'";
+                                string updateqty = "UPDATE item SET quantity = quantity +" + oldqty + " WHERE itemName='" + oldchem + "'";
 
                                 MySqlCommand commupdate = new MySqlCommand(updateqty, conn);
                                 commupdate.ExecuteNonQuery();
                                 conn.Close();
 
+                                conn.Open();
+
+                                string updateqty1 = "UPDATE item SET quantity = quantity -" + cqty.Value + " WHERE itemID='" + itemid + "'";
+
+                                MySqlCommand commupdate1 = new MySqlCommand(updateqty1, conn);
+                                commupdate1.ExecuteNonQuery();
+                                conn.Close();
+
                                 MessageBox.Show("Success", "Request Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-                                this.Close();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Success", "Request Updated.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
 
                             }

@@ -204,7 +204,7 @@ namespace Accounting
                 status= dataGridView1.Rows[e.RowIndex].Cells["status"].Value.ToString();
 
 
-                if (status == "Released")
+                if (status == "Released" || status == "Cancelled")
                 {
                     button3.Enabled = false;
                 }
