@@ -82,8 +82,14 @@ namespace Accounting
                             commrequest.ExecuteNonQuery();
                             conn.Close();
 
-                            MessageBox.Show("Success", "Borrow Request Made", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            string update = "UPDATE item SET quantity=quantity-" + qty.Value + " WHERE itemID=" + itemid;
+                            conn.Open();
+                            MySqlCommand commrequest1 = new MySqlCommand(update, conn);
+                            commrequest1.ExecuteNonQuery();
+                            conn.Close();
 
+                            MessageBox.Show("Success", "Borrow Request Made", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
                         }
                     }
                     else
