@@ -46,7 +46,7 @@ namespace Accounting
 
         private void button4_Click(object sender, EventArgs e)
         {
-            BRWReturn returnform = new BRWReturn();
+            returnbutton returnform = new returnbutton();
             returnform.main = this;
             returnform.Show();
         }

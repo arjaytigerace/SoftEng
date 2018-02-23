@@ -89,7 +89,6 @@ C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Inventory.res
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.GenerateReport.resources
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.MainMenu.resources
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Properties.Resources.resources
-C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.BRWReturn.resources
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Search.resources
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.UserPass.resources
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Users.resources
@@ -236,3 +235,4 @@ C:\Users\rjacornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.csproj
 C:\Users\rjacornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.exe
 C:\Users\rjacornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.pdb
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Notification.resources
+C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.returnbutton.resources
