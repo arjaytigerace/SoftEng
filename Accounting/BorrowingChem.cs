@@ -18,12 +18,62 @@ namespace Accounting
         public int Adminid { get; set; }
         public string Getfname { get; set; }
         public string Getlname { get; set; }
+        public int brequestid;
+        public int studentid;
+        public String itemname;
+        public int qty;
+        public String measuretype;
+        public String sfname;
+        public String slname;
+        public String yearcourse;
+        public String status;
+        public String borrowdate;
+
         public BorrowingChem()
         {
             InitializeComponent();
             conn = new MySqlConnection("Server=localhost;Database=chem_lab;uid=root; Pwd = root;");
         }
 
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+
+                brequestid = int.Parse(dataGridView1.Rows[e.RowIndex].Cells["borrowRequestId"].Value.ToString());
+
+                string query = "select qty, measureType, studentFName, studentLName from borrowing,student where borrowRequestId=" + brequestid+" AND student.studentID=borrowing.studentId";
+                conn.Open();
+                MySqlCommand comm = new MySqlCommand(query, conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                conn.Close();
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+
+                 
+                studentid = int.Parse(dataGridView1.Rows[e.RowIndex].Cells["schoolId"].Value.ToString());
+                itemname = dataGridView1.Rows[e.RowIndex].Cells["itemName"].Value.ToString();
+                qty = Convert.ToInt32(dt.Rows[0]["qty"].ToString());
+                measuretype = dt.Rows[0]["measureType"].ToString();
+
+                
+                sfname = dt.Rows[0]["studentFName"].ToString();
+                slname = dt.Rows[0]["studentLName"].ToString();
+                yearcourse = dataGridView1.Rows[e.RowIndex].Cells["yearCourse"].Value.ToString();
+                status = dataGridView1.Rows[e.RowIndex].Cells["requestStatus"].Value.ToString();
+                borrowdate= dataGridView1.Rows[e.RowIndex].Cells["borrowedDate"].Value.ToString();
+    
+
+                if (status == "Released" || status == "Cancelled")
+                {
+                    button3.Enabled = false;
+                }
+                else
+                {
+                    button3.Enabled = true;
+                }
+            }
+        }
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -75,8 +125,8 @@ namespace Accounting
         public void Loadall()
         {
 
-            string query = "SELECT borrowRequestId,b.itemName,CONCAT(a.qty,' ',a.measureType) AS qty,CONCAT(studentFName,' ',studentLName) AS student,c.studentId,c.yearCourse," +
-                "a.borrowedDate,a.returnDate,CONCAT(e.firstname,' ',e.lastname) AS releasedBy, a.requestStatus" +
+            string query = "SELECT borrowRequestId,b.itemName,CONCAT(a.qty,' ',a.measureType) AS qty,CONCAT(studentFName,' ',studentLName) AS student,c.schoolId,c.yearCourse," +
+                "a.borrowedDate,a.returnDate,CONCAT(e.firstname,' ',e.lastname) AS releasedBy,c.studentId, a.requestStatus" +
                 " FROM chem_lab.borrowing a INNER JOIN administrativeassociate e ON a.releasedBy = e.admin_ID, " +         
                 "chem_lab.item b, chem_lab.student c WHERE b.itemID = a.itemID" +
                 " AND c.studentID = a.studentId";
@@ -92,8 +142,8 @@ namespace Accounting
             dataGridView1.DataSource = dt;
 
             dataGridView1.Columns["borrowRequestId"].Visible = false;
+            dataGridView1.Columns["schoolId"].Visible = false;
             dataGridView1.Columns["studentId"].Visible = false;
-    
             dataGridView1.Columns["itemName"].HeaderText = "Item Name";
             dataGridView1.Columns["itemName"].Width = 150;
             dataGridView1.Columns["qty"].HeaderText = "QTY Requested";
@@ -120,7 +170,7 @@ namespace Accounting
             adp1.Fill(dt1);
             label2.Text = dt1.Rows[0]["COUNT(*)"].ToString();
 
-
+            button3.Enabled = false;
 
         }
 
@@ -128,6 +178,20 @@ namespace Accounting
         {
             BRWupdate update = new BRWupdate();
             update.main = this;
+            update.Adminid = this.Adminid;
+            update.Getfname = this.Getfname;
+            update.Getlname = this.Getlname;
+            update.brequestid = this.brequestid;
+            update.studentid = this.studentid;
+            update.itemname = this.itemname;
+            update.quantity = this.qty;
+            update.measuretype = this.measuretype;
+            update.sfname = this.sfname;
+            update.slname = this.slname;
+            update.yearcourse = this.yearcourse;
+            update.status = this.status;
+            update.borrowdate = this.borrowdate;
+
             update.Show();
         }
 
@@ -136,10 +200,7 @@ namespace Accounting
 
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
 
         private void refresh_Click(object sender, EventArgs e)
         {
