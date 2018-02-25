@@ -8,27 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+
 namespace Accounting
 {
-    public partial class GenerateChemicalReport : Form
+    public partial class GenerateApparatusReport : Form
     {
+
         public Form main { get; set; }
         MySqlConnection conn;
         public int Adminid { get; set; }
-        public GenerateChemicalReport()
+        public GenerateApparatusReport()
         {
             InitializeComponent();
         }
 
-        private void crystalReportViewer1_Load(object sender, EventArgs e)
+        private void GenerateApparatusReport_Load(object sender, EventArgs e)
         {
-            CrystalReportChem rpt = new CrystalReportChem();
+            CrystalReportAppa rpt = new CrystalReportAppa();
             crystalReportViewer1.ReportSource = rpt;
-        }
-
-        private void GenerateChemicalReport_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
