@@ -737,5 +737,13 @@ namespace Accounting
             genchemrep.Adminid = this.Adminid;
             genchemrep.Show();
         }
+
+        private void genappa_Click(object sender, EventArgs e)
+        {
+            GenerateApparatusReport genapparep = new GenerateApparatusReport();
+            genapparep.main = this;
+            genapparep.Adminid = this.Adminid;
+            genapparep.Show();
+        }
     }
 }

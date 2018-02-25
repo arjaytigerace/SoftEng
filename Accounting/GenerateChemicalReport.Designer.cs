@@ -52,6 +52,7 @@
             this.Name = "GenerateChemicalReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "GenerateChemicalReport";
+            this.Load += new System.EventHandler(this.GenerateChemicalReport_Load);
             this.ResumeLayout(false);
 
         }

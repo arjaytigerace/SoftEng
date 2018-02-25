@@ -256,3 +256,4 @@ C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\bin\Debug\CrystalDecis
 C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\bin\Debug\ShockwaveFlashObjects.dll
 C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\bin\Debug\stdole.dll
+C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.GenerateApparatusReport.resources

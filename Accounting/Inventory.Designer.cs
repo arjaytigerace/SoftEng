@@ -90,6 +90,7 @@
             this.aitemname = new System.Windows.Forms.TextBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.chemreport = new System.Windows.Forms.Button();
             this.chemstock = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
@@ -109,7 +110,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.chemreport = new System.Windows.Forms.Button();
+            this.genappa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -660,6 +661,7 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPage3.Controls.Add(this.genappa);
             this.tabPage3.Controls.Add(this.button9);
             this.tabPage3.Controls.Add(this.button10);
             this.tabPage3.Controls.Add(this.button8);
@@ -917,6 +919,20 @@
             this.tabPage4.Text = "Chemical";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
+            // chemreport
+            // 
+            this.chemreport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.chemreport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chemreport.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chemreport.Location = new System.Drawing.Point(68, 407);
+            this.chemreport.Margin = new System.Windows.Forms.Padding(2);
+            this.chemreport.Name = "chemreport";
+            this.chemreport.Size = new System.Drawing.Size(161, 62);
+            this.chemreport.TabIndex = 76;
+            this.chemreport.Text = "Generate Report";
+            this.chemreport.UseVisualStyleBackColor = false;
+            this.chemreport.Click += new System.EventHandler(this.chemreport_Click);
+            // 
             // chemstock
             // 
             this.chemstock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
@@ -1142,19 +1158,19 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // chemreport
+            // genappa
             // 
-            this.chemreport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.chemreport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chemreport.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chemreport.Location = new System.Drawing.Point(68, 407);
-            this.chemreport.Margin = new System.Windows.Forms.Padding(2);
-            this.chemreport.Name = "chemreport";
-            this.chemreport.Size = new System.Drawing.Size(161, 62);
-            this.chemreport.TabIndex = 76;
-            this.chemreport.Text = "Generate Report";
-            this.chemreport.UseVisualStyleBackColor = false;
-            this.chemreport.Click += new System.EventHandler(this.chemreport_Click);
+            this.genappa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.genappa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.genappa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genappa.Location = new System.Drawing.Point(613, 529);
+            this.genappa.Margin = new System.Windows.Forms.Padding(2);
+            this.genappa.Name = "genappa";
+            this.genappa.Size = new System.Drawing.Size(161, 62);
+            this.genappa.TabIndex = 75;
+            this.genappa.Text = "Generate Report";
+            this.genappa.UseVisualStyleBackColor = false;
+            this.genappa.Click += new System.EventHandler(this.genappa_Click);
             // 
             // Inventory
             // 
@@ -1274,5 +1290,6 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button chemstock;
         private System.Windows.Forms.Button chemreport;
+        private System.Windows.Forms.Button genappa;
     }
 }
