@@ -729,5 +729,13 @@ namespace Accounting
             }
             stockIn.Show();
         }
+
+        private void chemreport_Click(object sender, EventArgs e)
+        {
+            GenerateChemicalReport genchemrep = new GenerateChemicalReport();
+            genchemrep.main = this;
+            genchemrep.Adminid = this.Adminid;
+            genchemrep.Show();
+        }
     }
 }
