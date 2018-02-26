@@ -124,6 +124,8 @@ namespace Accounting
 
         private void BRWBorrow_Load(object sender, EventArgs e)
         {
+            qty.Maximum = 9999;
+            qty.Minimum = 0;
             label1.Text = DateTime.Now.ToString();
             
 
