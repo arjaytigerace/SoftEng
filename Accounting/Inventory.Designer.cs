@@ -171,6 +171,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(9, 54);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
@@ -998,7 +999,7 @@
             this.classification.Location = new System.Drawing.Point(238, 521);
             this.classification.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.classification.Name = "classification";
-            this.classification.Size = new System.Drawing.Size(41, 13);
+            this.classification.Size = new System.Drawing.Size(48, 13);
             this.classification.TabIndex = 65;
             this.classification.Text = "label30";
             // 
@@ -1025,7 +1026,7 @@
             this.label28.Location = new System.Drawing.Point(47, 424);
             this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(55, 13);
+            this.label28.Size = new System.Drawing.Size(64, 13);
             this.label28.TabIndex = 63;
             this.label28.Text = "Item Code";
             // 
@@ -1043,7 +1044,7 @@
             this.label24.Location = new System.Drawing.Point(47, 549);
             this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(37, 13);
+            this.label24.Size = new System.Drawing.Size(43, 13);
             this.label24.TabIndex = 61;
             this.label24.Text = "Status";
             // 
