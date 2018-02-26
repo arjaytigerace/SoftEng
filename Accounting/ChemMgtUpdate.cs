@@ -232,7 +232,7 @@ namespace Accounting
                 {
                     int itemid = Convert.ToInt32(dt.Rows[0]["itemID"].ToString());
 
-                    if (cqty.Value <= Convert.ToInt32(dt.Rows[0]["quantity"].ToString()))
+                    if (cqty.Value <= Convert.ToInt32(dt.Rows[0]["quantity"].ToString()) + oldqty)
                     {
                         if (!checkTeacher() || !checkStudent())
                         {
