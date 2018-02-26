@@ -72,6 +72,7 @@
             this.eitemname = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.genappa = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -110,7 +111,8 @@
             this.label20 = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.genappa = new System.Windows.Forms.Button();
+            this.genequiprep = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -180,6 +182,7 @@
             // num
             // 
             this.num.BackColor = System.Drawing.SystemColors.Window;
+            this.num.Controls.Add(this.button1);
             this.num.Controls.Add(this.labelnum);
             this.num.Controls.Add(this.label29);
             this.num.Controls.Add(this.itemCode);
@@ -357,6 +360,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPage2.Controls.Add(this.genequiprep);
             this.tabPage2.Controls.Add(this.button6);
             this.tabPage2.Controls.Add(this.button4);
             this.tabPage2.Controls.Add(this.logbutton);
@@ -481,7 +485,7 @@
             this.searchequip.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.searchequip.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchequip.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchequip.Location = new System.Drawing.Point(459, 579);
+            this.searchequip.Location = new System.Drawing.Point(194, 566);
             this.searchequip.Margin = new System.Windows.Forms.Padding(2);
             this.searchequip.Name = "searchequip";
             this.searchequip.Size = new System.Drawing.Size(96, 37);
@@ -493,7 +497,7 @@
             // searche
             // 
             this.searche.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searche.Location = new System.Drawing.Point(367, 536);
+            this.searche.Location = new System.Drawing.Point(111, 525);
             this.searche.Margin = new System.Windows.Forms.Padding(2);
             this.searche.Name = "searche";
             this.searche.Size = new System.Drawing.Size(280, 29);
@@ -688,12 +692,26 @@
             this.tabPage3.Text = "Apparatus";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
+            // genappa
+            // 
+            this.genappa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.genappa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.genappa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genappa.Location = new System.Drawing.Point(576, 498);
+            this.genappa.Margin = new System.Windows.Forms.Padding(2);
+            this.genappa.Name = "genappa";
+            this.genappa.Size = new System.Drawing.Size(161, 62);
+            this.genappa.TabIndex = 75;
+            this.genappa.Text = "Generate Report";
+            this.genappa.UseVisualStyleBackColor = false;
+            this.genappa.Click += new System.EventHandler(this.genappa_Click);
+            // 
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(713, 446);
+            this.button9.Location = new System.Drawing.Point(677, 388);
             this.button9.Margin = new System.Windows.Forms.Padding(2);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(161, 62);
@@ -707,7 +725,7 @@
             this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(518, 446);
+            this.button10.Location = new System.Drawing.Point(486, 388);
             this.button10.Margin = new System.Windows.Forms.Padding(2);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(161, 62);
@@ -745,7 +763,7 @@
             // 
             // aItemCode
             // 
-            this.aItemCode.Location = new System.Drawing.Point(291, 389);
+            this.aItemCode.Location = new System.Drawing.Point(202, 352);
             this.aItemCode.Margin = new System.Windows.Forms.Padding(2);
             this.aItemCode.Name = "aItemCode";
             this.aItemCode.Size = new System.Drawing.Size(180, 20);
@@ -754,7 +772,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(133, 389);
+            this.label27.Location = new System.Drawing.Point(44, 352);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(64, 13);
@@ -764,7 +782,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(130, 517);
+            this.label23.Location = new System.Drawing.Point(41, 480);
             this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(43, 13);
@@ -778,7 +796,7 @@
             this.appStatus.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.appStatus.Location = new System.Drawing.Point(291, 510);
+            this.appStatus.Location = new System.Drawing.Point(202, 473);
             this.appStatus.Margin = new System.Windows.Forms.Padding(2);
             this.appStatus.Name = "appStatus";
             this.appStatus.Size = new System.Drawing.Size(180, 21);
@@ -789,7 +807,7 @@
             this.searchapp.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.searchapp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchapp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchapp.Location = new System.Drawing.Point(479, 360);
+            this.searchapp.Location = new System.Drawing.Point(170, 566);
             this.searchapp.Margin = new System.Windows.Forms.Padding(2);
             this.searchapp.Name = "searchapp";
             this.searchapp.Size = new System.Drawing.Size(89, 35);
@@ -801,7 +819,7 @@
             // searcha
             // 
             this.searcha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searcha.Location = new System.Drawing.Point(401, 327);
+            this.searcha.Location = new System.Drawing.Point(92, 533);
             this.searcha.Margin = new System.Windows.Forms.Padding(2);
             this.searcha.Name = "searcha";
             this.searcha.Size = new System.Drawing.Size(249, 29);
@@ -823,7 +841,7 @@
             // adesc
             // 
             this.adesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adesc.Location = new System.Drawing.Point(292, 473);
+            this.adesc.Location = new System.Drawing.Point(203, 436);
             this.adesc.Margin = new System.Windows.Forms.Padding(2);
             this.adesc.Name = "adesc";
             this.adesc.Size = new System.Drawing.Size(179, 26);
@@ -833,7 +851,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(128, 476);
+            this.label17.Location = new System.Drawing.Point(39, 439);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(131, 25);
@@ -844,7 +862,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(128, 425);
+            this.label18.Location = new System.Drawing.Point(39, 388);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(123, 25);
@@ -868,7 +886,7 @@
             // aitemname
             // 
             this.aitemname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aitemname.Location = new System.Drawing.Point(292, 425);
+            this.aitemname.Location = new System.Drawing.Point(203, 388);
             this.aitemname.Margin = new System.Windows.Forms.Padding(2);
             this.aitemname.Name = "aitemname";
             this.aitemname.Size = new System.Drawing.Size(179, 26);
@@ -924,7 +942,7 @@
             this.chemreport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.chemreport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chemreport.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chemreport.Location = new System.Drawing.Point(68, 407);
+            this.chemreport.Location = new System.Drawing.Point(572, 482);
             this.chemreport.Margin = new System.Windows.Forms.Padding(2);
             this.chemreport.Name = "chemreport";
             this.chemreport.Size = new System.Drawing.Size(161, 62);
@@ -938,7 +956,7 @@
             this.chemstock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.chemstock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chemstock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chemstock.Location = new System.Drawing.Point(442, 546);
+            this.chemstock.Location = new System.Drawing.Point(572, 351);
             this.chemstock.Margin = new System.Windows.Forms.Padding(2);
             this.chemstock.Name = "chemstock";
             this.chemstock.Size = new System.Drawing.Size(161, 62);
@@ -977,7 +995,7 @@
             // classification
             // 
             this.classification.AutoSize = true;
-            this.classification.Location = new System.Drawing.Point(520, 483);
+            this.classification.Location = new System.Drawing.Point(238, 521);
             this.classification.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.classification.Name = "classification";
             this.classification.Size = new System.Drawing.Size(41, 13);
@@ -994,7 +1012,7 @@
             "Gray",
             "White",
             "Yellow"});
-            this.colorCode.Location = new System.Drawing.Point(523, 448);
+            this.colorCode.Location = new System.Drawing.Point(241, 486);
             this.colorCode.Margin = new System.Windows.Forms.Padding(2);
             this.colorCode.Name = "colorCode";
             this.colorCode.Size = new System.Drawing.Size(178, 21);
@@ -1004,7 +1022,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(329, 386);
+            this.label28.Location = new System.Drawing.Point(47, 424);
             this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(55, 13);
@@ -1013,7 +1031,7 @@
             // 
             // cItemCode
             // 
-            this.cItemCode.Location = new System.Drawing.Point(523, 386);
+            this.cItemCode.Location = new System.Drawing.Point(241, 424);
             this.cItemCode.Margin = new System.Windows.Forms.Padding(2);
             this.cItemCode.Name = "cItemCode";
             this.cItemCode.Size = new System.Drawing.Size(178, 20);
@@ -1022,7 +1040,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(329, 511);
+            this.label24.Location = new System.Drawing.Point(47, 549);
             this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(37, 13);
@@ -1036,7 +1054,7 @@
             this.chemStatus.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.chemStatus.Location = new System.Drawing.Point(525, 506);
+            this.chemStatus.Location = new System.Drawing.Point(243, 544);
             this.chemStatus.Margin = new System.Windows.Forms.Padding(2);
             this.chemStatus.Name = "chemStatus";
             this.chemStatus.Size = new System.Drawing.Size(178, 21);
@@ -1047,7 +1065,7 @@
             this.searchchem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.searchchem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchchem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchchem.Location = new System.Drawing.Point(477, 342);
+            this.searchchem.Location = new System.Drawing.Point(195, 380);
             this.searchchem.Margin = new System.Windows.Forms.Padding(2);
             this.searchchem.Name = "searchchem";
             this.searchchem.Size = new System.Drawing.Size(91, 33);
@@ -1059,7 +1077,7 @@
             // searchc
             // 
             this.searchc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchc.Location = new System.Drawing.Point(359, 309);
+            this.searchc.Location = new System.Drawing.Point(77, 347);
             this.searchc.Margin = new System.Windows.Forms.Padding(2);
             this.searchc.Name = "searchc";
             this.searchc.Size = new System.Drawing.Size(323, 29);
@@ -1096,7 +1114,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(322, 410);
+            this.label14.Location = new System.Drawing.Point(40, 448);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(176, 25);
@@ -1106,7 +1124,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(523, 410);
+            this.textBox3.Location = new System.Drawing.Point(241, 448);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(178, 26);
             this.textBox3.TabIndex = 39;
@@ -1115,7 +1133,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(322, 474);
+            this.label16.Location = new System.Drawing.Point(40, 512);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(154, 25);
@@ -1126,7 +1144,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(322, 444);
+            this.label20.Location = new System.Drawing.Point(40, 482);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(130, 25);
@@ -1158,19 +1176,33 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // genappa
+            // genequiprep
             // 
-            this.genappa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.genappa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.genappa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genappa.Location = new System.Drawing.Point(613, 529);
-            this.genappa.Margin = new System.Windows.Forms.Padding(2);
-            this.genappa.Name = "genappa";
-            this.genappa.Size = new System.Drawing.Size(161, 62);
-            this.genappa.TabIndex = 75;
-            this.genappa.Text = "Generate Report";
-            this.genappa.UseVisualStyleBackColor = false;
-            this.genappa.Click += new System.EventHandler(this.genappa_Click);
+            this.genequiprep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.genequiprep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.genequiprep.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genequiprep.Location = new System.Drawing.Point(613, 534);
+            this.genequiprep.Margin = new System.Windows.Forms.Padding(2);
+            this.genequiprep.Name = "genequiprep";
+            this.genequiprep.Size = new System.Drawing.Size(161, 62);
+            this.genequiprep.TabIndex = 53;
+            this.genequiprep.Text = "Generate Report";
+            this.genequiprep.UseVisualStyleBackColor = false;
+            this.genequiprep.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(645, 532);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(161, 62);
+            this.button1.TabIndex = 54;
+            this.button1.Text = "Generate Report All";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // Inventory
             // 
@@ -1291,5 +1323,7 @@
         private System.Windows.Forms.Button chemstock;
         private System.Windows.Forms.Button chemreport;
         private System.Windows.Forms.Button genappa;
+        private System.Windows.Forms.Button genequiprep;
+        private System.Windows.Forms.Button button1;
     }
 }

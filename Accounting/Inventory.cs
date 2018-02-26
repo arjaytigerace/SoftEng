@@ -745,5 +745,21 @@ namespace Accounting
             genapparep.Adminid = this.Adminid;
             genapparep.Show();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            GenerateEquipmentReport genequiprep = new GenerateEquipmentReport();
+            genequiprep.main = this;
+            genequiprep.Adminid = this.Adminid;
+            genequiprep.Show();
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            GenerateAllReport genallrep = new GenerateAllReport();
+            genallrep.main = this;
+            genallrep.Adminid = this.Adminid;
+            genallrep.Show();
+        }
     }
 }
