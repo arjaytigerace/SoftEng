@@ -44,6 +44,8 @@ namespace Accounting
 
         private void BRWupdate_Load(object sender, EventArgs e)
         {
+            qty.Maximum = 9999;
+            qty.Minimum = 0;
             itemName.Text = itemname;
             qty.Value = quantity;
             label6.Text = measuretype;
@@ -54,9 +56,19 @@ namespace Accounting
             yc.Text = yearcourse;
             dateTimePicker1.Text = expectedreturndate;
             dateTimePicker2.Text = expectedreturntime;
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+            dateTimePicker2.Format = DateTimePickerFormat.Custom;
+            dateTimePicker2.CustomFormat = "HH:mm:ss";
+            dateTimePicker2.ShowUpDown = true;
+
+
+
             rstatus.SelectedIndex = 0;
             oldqty = qty.Value;
             olditem = itemName.Text;
+
+            autocomplete();
 
         }
 
@@ -65,6 +77,74 @@ namespace Accounting
             this.Close();
         }
 
+        private void autocomplete()
+        {
+            itemName.AutoCompleteMode = AutoCompleteMode.Suggest;
+            itemName.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            AutoCompleteStringCollection DataCollection = new AutoCompleteStringCollection();
+            getData(DataCollection);
+            itemName.AutoCompleteCustomSource = DataCollection;
+
+
+            sID.AutoCompleteMode = AutoCompleteMode.Suggest;
+            sID.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            AutoCompleteStringCollection DataCollection2 = new AutoCompleteStringCollection();
+            getStudentData(DataCollection2);
+            sID.AutoCompleteCustomSource = DataCollection2;
+
+        }
+
+        private void getData(AutoCompleteStringCollection dataCollection)
+        {
+
+
+            MySqlCommand command;
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            DataSet ds = new DataSet();
+
+            string sql = "SELECT itemName FROM item where itemTypeID=1 OR itemTypeID=2";
+
+
+            conn.Open();
+            command = new MySqlCommand(sql, conn);
+            adapter.SelectCommand = command;
+            adapter.Fill(ds);
+            adapter.Dispose();
+            command.Dispose();
+            conn.Close();
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+                dataCollection.Add(row[0].ToString());
+            }
+
+
+        }
+
+        private void getStudentData(AutoCompleteStringCollection dataCollection)
+        {
+
+
+            MySqlCommand command;
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            DataSet ds = new DataSet();
+
+            string sql = "SELECT schoolID FROM student";
+
+
+            conn.Open();
+            command = new MySqlCommand(sql, conn);
+            adapter.SelectCommand = command;
+            adapter.Fill(ds);
+            adapter.Dispose();
+            command.Dispose();
+            conn.Close();
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+                dataCollection.Add(row[0].ToString());
+            }
+
+
+        }
         private void buttonLogin_Click(object sender, EventArgs e)
         {
 
@@ -89,7 +169,7 @@ namespace Accounting
                 {
                     int itemid = Convert.ToInt32(dt.Rows[0]["itemID"].ToString());
 
-                    if (qty.Value <= Convert.ToInt32(dt.Rows[0]["quantity"].ToString()))
+                    if (qty.Value <= Convert.ToInt32(dt.Rows[0]["quantity"].ToString()) + oldqty)
                     {
                         if (!checkStudent())
                         {
@@ -110,7 +190,7 @@ namespace Accounting
 
                             int studentid = Convert.ToInt32(dt3.Rows[0]["studentID"].ToString());
 
-                            String returndate = expectedreturndate +" "+ expectedreturntime;
+                            String returndate = dateTimePicker1.Value.ToString("yyyy-MM-dd") + " " + dateTimePicker2.Value.ToString("HH:mm:ss");
 
                             //updating
                             DateTime dateValue = DateTime.Now;
