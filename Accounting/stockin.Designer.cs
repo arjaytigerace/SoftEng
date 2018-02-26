@@ -193,7 +193,8 @@
             this.comboBox1.Items.AddRange(new object[] {
             "New Arrival",
             "Repaired",
-            "Found"});
+            "Found",
+            "Active"});
             this.comboBox1.Location = new System.Drawing.Point(244, 184);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";

@@ -28,6 +28,8 @@ namespace Accounting
         public String yearcourse;
         public String status;
         public String borrowdate;
+        public String ereturndate;
+        public String[] expectedreturn;
 
         public BorrowingChem()
         {
@@ -62,7 +64,9 @@ namespace Accounting
                 yearcourse = dataGridView1.Rows[e.RowIndex].Cells["yearCourse"].Value.ToString();
                 status = dataGridView1.Rows[e.RowIndex].Cells["requestStatus"].Value.ToString();
                 borrowdate= dataGridView1.Rows[e.RowIndex].Cells["borrowedDate"].Value.ToString();
-    
+                ereturndate= dataGridView1.Rows[e.RowIndex].Cells["returnDate"].Value.ToString();
+                expectedreturn = ereturndate.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
 
                 if (status == "Released" || status == "Cancelled")
                 {
@@ -191,7 +195,8 @@ namespace Accounting
             update.yearcourse = this.yearcourse;
             update.status = this.status;
             update.borrowdate = this.borrowdate;
-
+            update.expectedreturndate = expectedreturn[0];
+            update.expectedreturntime = expectedreturn[1];
             update.Show();
         }
 
