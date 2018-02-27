@@ -120,20 +120,20 @@ namespace Accounting
 
         private void BorrowingChem_Load(object sender, EventArgs e)
         {
+            string query = "SELECT borrowRequestId,b.itemName,CONCAT(a.qty,' ',a.measureType) AS qty,CONCAT(studentFName,' ',studentLName) AS student,c.schoolId,c.yearCourse," +
+            "a.borrowedDate,a.returnDate,CONCAT(e.firstname,' ',e.lastname) AS releasedBy,c.studentId, a.requestStatus" +
+             " FROM chem_lab.borrowing a INNER JOIN administrativeassociate e ON a.releasedBy = e.admin_ID, " +
+             "chem_lab.item b, chem_lab.student c WHERE b.itemID = a.itemID" +
+             " AND c.studentID = a.studentId";
 
-            Loadall();
+            Loadall(query);
 
 
         }
 
-        public void Loadall()
+        public void Loadall(String query)
         {
-
-            string query = "SELECT borrowRequestId,b.itemName,CONCAT(a.qty,' ',a.measureType) AS qty,CONCAT(studentFName,' ',studentLName) AS student,c.schoolId,c.yearCourse," +
-                "a.borrowedDate,a.returnDate,CONCAT(e.firstname,' ',e.lastname) AS releasedBy,c.studentId, a.requestStatus" +
-                " FROM chem_lab.borrowing a INNER JOIN administrativeassociate e ON a.releasedBy = e.admin_ID, " +         
-                "chem_lab.item b, chem_lab.student c WHERE b.itemID = a.itemID" +
-                " AND c.studentID = a.studentId";
+            
 
             conn.Open();
             MySqlCommand comm = new MySqlCommand(query, conn);
@@ -209,7 +209,13 @@ namespace Accounting
 
         private void refresh_Click(object sender, EventArgs e)
         {
-            Loadall();
+            string query = "SELECT borrowRequestId,b.itemName,CONCAT(a.qty,' ',a.measureType) AS qty,CONCAT(studentFName,' ',studentLName) AS student,c.schoolId,c.yearCourse," +
+            "a.borrowedDate,a.returnDate,CONCAT(e.firstname,' ',e.lastname) AS releasedBy,c.studentId, a.requestStatus" +
+             " FROM chem_lab.borrowing a INNER JOIN administrativeassociate e ON a.releasedBy = e.admin_ID, " +
+             "chem_lab.item b, chem_lab.student c WHERE b.itemID = a.itemID" +
+             " AND c.studentID = a.studentId";
+
+            Loadall(query);
         }
     }
 }
