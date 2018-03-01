@@ -68,13 +68,23 @@ namespace Accounting
                 expectedreturn = ereturndate.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
 
-                if (status == "Released" || status == "Cancelled")
+                if (status == "Released")
                 {
                     button3.Enabled = false;
+                    button4.Enabled = true;
+                    
+                }
+                else if (status == "Cancelled" || status == "Returned")
+                {
+
+                    button3.Enabled = false;
+                    button4.Enabled = false;
+
                 }
                 else
                 {
                     button3.Enabled = true;
+                    button4.Enabled = true;
                 }
             }
         }
@@ -102,6 +112,13 @@ namespace Accounting
         {
             returnbutton returnform = new returnbutton();
             returnform.main = this;
+
+            returnform.returnitem = itemname;
+            returnform.qty = qty;
+            returnform.mtype = measuretype;
+            returnform.borrowdate = borrowdate;
+            returnform.borrowid = brequestid;
+
             returnform.Show();
         }
 
@@ -214,6 +231,17 @@ namespace Accounting
              " FROM chem_lab.borrowing a INNER JOIN administrativeassociate e ON a.releasedBy = e.admin_ID, " +
              "chem_lab.item b, chem_lab.student c WHERE b.itemID = a.itemID" +
              " AND c.studentID = a.studentId";
+
+            Loadall(query);
+        }
+
+        private void searchborrow_Click(object sender, EventArgs e)
+        {
+            string query = "SELECT borrowRequestId,b.itemName,CONCAT(a.qty,' ',a.measureType) AS qty,CONCAT(studentFName,' ',studentLName) AS student,c.schoolId,c.yearCourse," +
+            "a.borrowedDate,a.returnDate,CONCAT(e.firstname,' ',e.lastname) AS releasedBy,c.studentId, a.requestStatus" +
+            " FROM chem_lab.borrowing a INNER JOIN administrativeassociate e ON a.releasedBy = e.admin_ID " + "JOIN item ON a.itemID=item.itemID AND item.itemName LIKE '" + search.Text + "%'," +
+            "chem_lab.item b, chem_lab.student c WHERE b.itemID = a.itemID"+
+            " AND c.studentID = a.studentId";
 
             Loadall(query);
         }
