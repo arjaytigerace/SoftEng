@@ -72,6 +72,7 @@
             this.eitemname = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.genappa = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -90,6 +91,7 @@
             this.aitemname = new System.Windows.Forms.TextBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.chemreport = new System.Windows.Forms.Button();
             this.chemstock = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
@@ -109,6 +111,8 @@
             this.label20 = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.genequiprep = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -167,8 +171,9 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(9, 54);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1065, 661);
@@ -178,6 +183,7 @@
             // num
             // 
             this.num.BackColor = System.Drawing.SystemColors.Window;
+            this.num.Controls.Add(this.button1);
             this.num.Controls.Add(this.labelnum);
             this.num.Controls.Add(this.label29);
             this.num.Controls.Add(this.itemCode);
@@ -193,9 +199,9 @@
             this.num.Controls.Add(this.label2);
             this.num.Controls.Add(this.itemname);
             this.num.Location = new System.Drawing.Point(4, 22);
-            this.num.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.num.Margin = new System.Windows.Forms.Padding(2);
             this.num.Name = "num";
-            this.num.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.num.Padding = new System.Windows.Forms.Padding(2);
             this.num.Size = new System.Drawing.Size(1057, 635);
             this.num.TabIndex = 0;
             this.num.Text = "General View";
@@ -225,7 +231,7 @@
             // 
             this.itemCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.itemCode.Location = new System.Drawing.Point(166, 351);
-            this.itemCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.itemCode.Margin = new System.Windows.Forms.Padding(2);
             this.itemCode.Name = "itemCode";
             this.itemCode.Size = new System.Drawing.Size(289, 37);
             this.itemCode.TabIndex = 17;
@@ -262,7 +268,7 @@
             "Active",
             "Inactive"});
             this.status.Location = new System.Drawing.Point(166, 493);
-            this.status.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.status.Margin = new System.Windows.Forms.Padding(2);
             this.status.Name = "status";
             this.status.Size = new System.Drawing.Size(289, 38);
             this.status.TabIndex = 14;
@@ -273,8 +279,8 @@
             this.button5.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(662, 493);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Location = new System.Drawing.Point(654, 440);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(124, 48);
             this.button5.TabIndex = 9;
@@ -285,8 +291,8 @@
             // search
             // 
             this.search.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search.Location = new System.Drawing.Point(574, 434);
-            this.search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.search.Location = new System.Drawing.Point(575, 394);
+            this.search.Margin = new System.Windows.Forms.Padding(2);
             this.search.Name = "search";
             this.search.Size = new System.Drawing.Size(301, 37);
             this.search.TabIndex = 8;
@@ -301,7 +307,7 @@
             "Apparatus",
             "Chemical"});
             this.itemtype.Location = new System.Drawing.Point(166, 434);
-            this.itemtype.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.itemtype.Margin = new System.Windows.Forms.Padding(2);
             this.itemtype.Name = "itemtype";
             this.itemtype.Size = new System.Drawing.Size(289, 38);
             this.itemtype.TabIndex = 3;
@@ -324,7 +330,7 @@
             this.updbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.updbutton.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updbutton.Location = new System.Drawing.Point(166, 547);
-            this.updbutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updbutton.Margin = new System.Windows.Forms.Padding(2);
             this.updbutton.Name = "updbutton";
             this.updbutton.Size = new System.Drawing.Size(138, 47);
             this.updbutton.TabIndex = 6;
@@ -347,7 +353,7 @@
             // 
             this.itemname.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.itemname.Location = new System.Drawing.Point(166, 392);
-            this.itemname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.itemname.Margin = new System.Windows.Forms.Padding(2);
             this.itemname.Name = "itemname";
             this.itemname.Size = new System.Drawing.Size(289, 37);
             this.itemname.TabIndex = 2;
@@ -355,6 +361,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPage2.Controls.Add(this.genequiprep);
             this.tabPage2.Controls.Add(this.button6);
             this.tabPage2.Controls.Add(this.button4);
             this.tabPage2.Controls.Add(this.logbutton);
@@ -380,9 +387,9 @@
             this.tabPage2.Controls.Add(this.dataGridView2);
             this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(1057, 635);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Equipment";
@@ -393,7 +400,7 @@
             this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(916, 570);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(121, 33);
             this.button6.TabIndex = 52;
@@ -407,7 +414,7 @@
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(709, 450);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(161, 62);
             this.button4.TabIndex = 51;
@@ -421,7 +428,7 @@
             this.logbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logbutton.Location = new System.Drawing.Point(917, 494);
-            this.logbutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.logbutton.Margin = new System.Windows.Forms.Padding(2);
             this.logbutton.Name = "logbutton";
             this.logbutton.Size = new System.Drawing.Size(121, 36);
             this.logbutton.TabIndex = 50;
@@ -444,7 +451,7 @@
             // 
             this.eItemCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eItemCode.Location = new System.Drawing.Point(241, 329);
-            this.eItemCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.eItemCode.Margin = new System.Windows.Forms.Padding(2);
             this.eItemCode.Name = "eItemCode";
             this.eItemCode.Size = new System.Drawing.Size(196, 26);
             this.eItemCode.TabIndex = 48;
@@ -469,7 +476,7 @@
             "Active",
             "Inactive"});
             this.equipStatus.Location = new System.Drawing.Point(241, 450);
-            this.equipStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.equipStatus.Margin = new System.Windows.Forms.Padding(2);
             this.equipStatus.Name = "equipStatus";
             this.equipStatus.Size = new System.Drawing.Size(196, 28);
             this.equipStatus.TabIndex = 46;
@@ -479,8 +486,8 @@
             this.searchequip.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.searchequip.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchequip.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchequip.Location = new System.Drawing.Point(459, 579);
-            this.searchequip.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchequip.Location = new System.Drawing.Point(194, 566);
+            this.searchequip.Margin = new System.Windows.Forms.Padding(2);
             this.searchequip.Name = "searchequip";
             this.searchequip.Size = new System.Drawing.Size(96, 37);
             this.searchequip.TabIndex = 11;
@@ -491,8 +498,8 @@
             // searche
             // 
             this.searche.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searche.Location = new System.Drawing.Point(367, 536);
-            this.searche.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searche.Location = new System.Drawing.Point(111, 525);
+            this.searche.Margin = new System.Windows.Forms.Padding(2);
             this.searche.Name = "searche";
             this.searche.Size = new System.Drawing.Size(280, 29);
             this.searche.TabIndex = 10;
@@ -502,7 +509,7 @@
             this.deselectequipb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deselectequipb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deselectequipb.Location = new System.Drawing.Point(917, 534);
-            this.deselectequipb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.deselectequipb.Margin = new System.Windows.Forms.Padding(2);
             this.deselectequipb.Name = "deselectequipb";
             this.deselectequipb.Size = new System.Drawing.Size(121, 33);
             this.deselectequipb.TabIndex = 22;
@@ -516,7 +523,7 @@
             this.addequipb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addequipb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addequipb.Location = new System.Drawing.Point(514, 450);
-            this.addequipb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addequipb.Margin = new System.Windows.Forms.Padding(2);
             this.addequipb.Name = "addequipb";
             this.addequipb.Size = new System.Drawing.Size(161, 62);
             this.addequipb.TabIndex = 21;
@@ -528,7 +535,7 @@
             // 
             this.estlife.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.estlife.Location = new System.Drawing.Point(735, 359);
-            this.estlife.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.estlife.Margin = new System.Windows.Forms.Padding(2);
             this.estlife.Name = "estlife";
             this.estlife.Size = new System.Drawing.Size(303, 26);
             this.estlife.TabIndex = 18;
@@ -548,7 +555,7 @@
             // 
             this.purchasedate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.purchasedate.Location = new System.Drawing.Point(734, 329);
-            this.purchasedate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.purchasedate.Margin = new System.Windows.Forms.Padding(2);
             this.purchasedate.Name = "purchasedate";
             this.purchasedate.Size = new System.Drawing.Size(304, 26);
             this.purchasedate.TabIndex = 17;
@@ -580,7 +587,7 @@
             // 
             this.costunit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.costunit.Location = new System.Drawing.Point(241, 420);
-            this.costunit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.costunit.Margin = new System.Windows.Forms.Padding(2);
             this.costunit.Name = "costunit";
             this.costunit.Size = new System.Drawing.Size(196, 26);
             this.costunit.TabIndex = 16;
@@ -589,7 +596,7 @@
             // 
             this.brand.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brand.Location = new System.Drawing.Point(241, 390);
-            this.brand.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.brand.Margin = new System.Windows.Forms.Padding(2);
             this.brand.Name = "brand";
             this.brand.Size = new System.Drawing.Size(196, 26);
             this.brand.TabIndex = 15;
@@ -623,7 +630,7 @@
             this.updequipb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updequipb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updequipb.Location = new System.Drawing.Point(917, 451);
-            this.updequipb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updequipb.Margin = new System.Windows.Forms.Padding(2);
             this.updequipb.Name = "updequipb";
             this.updequipb.Size = new System.Drawing.Size(121, 36);
             this.updequipb.TabIndex = 23;
@@ -635,7 +642,7 @@
             // 
             this.eitemname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eitemname.Location = new System.Drawing.Point(241, 357);
-            this.eitemname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.eitemname.Margin = new System.Windows.Forms.Padding(2);
             this.eitemname.Name = "eitemname";
             this.eitemname.Size = new System.Drawing.Size(196, 26);
             this.eitemname.TabIndex = 12;
@@ -659,6 +666,7 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPage3.Controls.Add(this.genappa);
             this.tabPage3.Controls.Add(this.button9);
             this.tabPage3.Controls.Add(this.button10);
             this.tabPage3.Controls.Add(this.button8);
@@ -678,20 +686,34 @@
             this.tabPage3.Controls.Add(this.dataGridView3);
             this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(1057, 635);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Apparatus";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
+            // genappa
+            // 
+            this.genappa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.genappa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.genappa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genappa.Location = new System.Drawing.Point(576, 498);
+            this.genappa.Margin = new System.Windows.Forms.Padding(2);
+            this.genappa.Name = "genappa";
+            this.genappa.Size = new System.Drawing.Size(161, 62);
+            this.genappa.TabIndex = 75;
+            this.genappa.Text = "Generate Report";
+            this.genappa.UseVisualStyleBackColor = false;
+            this.genappa.Click += new System.EventHandler(this.genappa_Click);
+            // 
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(713, 446);
-            this.button9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button9.Location = new System.Drawing.Point(677, 388);
+            this.button9.Margin = new System.Windows.Forms.Padding(2);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(161, 62);
             this.button9.TabIndex = 74;
@@ -704,8 +726,8 @@
             this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(518, 446);
-            this.button10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button10.Location = new System.Drawing.Point(486, 388);
+            this.button10.Margin = new System.Windows.Forms.Padding(2);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(161, 62);
             this.button10.TabIndex = 73;
@@ -719,7 +741,7 @@
             this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Location = new System.Drawing.Point(900, 566);
-            this.button8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(117, 36);
             this.button8.TabIndex = 72;
@@ -732,7 +754,7 @@
             this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Location = new System.Drawing.Point(900, 529);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(117, 33);
             this.button7.TabIndex = 71;
@@ -742,8 +764,8 @@
             // 
             // aItemCode
             // 
-            this.aItemCode.Location = new System.Drawing.Point(291, 389);
-            this.aItemCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.aItemCode.Location = new System.Drawing.Point(202, 352);
+            this.aItemCode.Margin = new System.Windows.Forms.Padding(2);
             this.aItemCode.Name = "aItemCode";
             this.aItemCode.Size = new System.Drawing.Size(180, 20);
             this.aItemCode.TabIndex = 70;
@@ -751,7 +773,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(133, 389);
+            this.label27.Location = new System.Drawing.Point(44, 352);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(64, 13);
@@ -761,7 +783,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(130, 517);
+            this.label23.Location = new System.Drawing.Point(41, 480);
             this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(43, 13);
@@ -775,8 +797,8 @@
             this.appStatus.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.appStatus.Location = new System.Drawing.Point(291, 510);
-            this.appStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.appStatus.Location = new System.Drawing.Point(202, 473);
+            this.appStatus.Margin = new System.Windows.Forms.Padding(2);
             this.appStatus.Name = "appStatus";
             this.appStatus.Size = new System.Drawing.Size(180, 21);
             this.appStatus.TabIndex = 67;
@@ -786,8 +808,8 @@
             this.searchapp.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.searchapp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchapp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchapp.Location = new System.Drawing.Point(479, 360);
-            this.searchapp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchapp.Location = new System.Drawing.Point(170, 566);
+            this.searchapp.Margin = new System.Windows.Forms.Padding(2);
             this.searchapp.Name = "searchapp";
             this.searchapp.Size = new System.Drawing.Size(89, 35);
             this.searchapp.TabIndex = 26;
@@ -798,8 +820,8 @@
             // searcha
             // 
             this.searcha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searcha.Location = new System.Drawing.Point(401, 327);
-            this.searcha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searcha.Location = new System.Drawing.Point(92, 533);
+            this.searcha.Margin = new System.Windows.Forms.Padding(2);
             this.searcha.Name = "searcha";
             this.searcha.Size = new System.Drawing.Size(249, 29);
             this.searcha.TabIndex = 25;
@@ -809,7 +831,7 @@
             this.deselectappb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deselectappb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deselectappb.Location = new System.Drawing.Point(900, 446);
-            this.deselectappb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.deselectappb.Margin = new System.Windows.Forms.Padding(2);
             this.deselectappb.Name = "deselectappb";
             this.deselectappb.Size = new System.Drawing.Size(117, 38);
             this.deselectappb.TabIndex = 34;
@@ -820,8 +842,8 @@
             // adesc
             // 
             this.adesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adesc.Location = new System.Drawing.Point(292, 473);
-            this.adesc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.adesc.Location = new System.Drawing.Point(203, 436);
+            this.adesc.Margin = new System.Windows.Forms.Padding(2);
             this.adesc.Name = "adesc";
             this.adesc.Size = new System.Drawing.Size(179, 26);
             this.adesc.TabIndex = 30;
@@ -830,7 +852,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(128, 476);
+            this.label17.Location = new System.Drawing.Point(39, 439);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(131, 25);
@@ -841,7 +863,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(128, 425);
+            this.label18.Location = new System.Drawing.Point(39, 388);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(123, 25);
@@ -854,7 +876,7 @@
             this.updappb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updappb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updappb.Location = new System.Drawing.Point(900, 488);
-            this.updappb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updappb.Margin = new System.Windows.Forms.Padding(2);
             this.updappb.Name = "updappb";
             this.updappb.Size = new System.Drawing.Size(117, 38);
             this.updappb.TabIndex = 35;
@@ -865,8 +887,8 @@
             // aitemname
             // 
             this.aitemname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aitemname.Location = new System.Drawing.Point(292, 425);
-            this.aitemname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.aitemname.Location = new System.Drawing.Point(203, 388);
+            this.aitemname.Margin = new System.Windows.Forms.Padding(2);
             this.aitemname.Name = "aitemname";
             this.aitemname.Size = new System.Drawing.Size(179, 26);
             this.aitemname.TabIndex = 27;
@@ -889,6 +911,7 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPage4.Controls.Add(this.chemreport);
             this.tabPage4.Controls.Add(this.chemstock);
             this.tabPage4.Controls.Add(this.button11);
             this.tabPage4.Controls.Add(this.button12);
@@ -908,20 +931,34 @@
             this.tabPage4.Controls.Add(this.label20);
             this.tabPage4.Controls.Add(this.dataGridView4);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(1057, 635);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Chemical";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
+            // chemreport
+            // 
+            this.chemreport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.chemreport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chemreport.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chemreport.Location = new System.Drawing.Point(572, 482);
+            this.chemreport.Margin = new System.Windows.Forms.Padding(2);
+            this.chemreport.Name = "chemreport";
+            this.chemreport.Size = new System.Drawing.Size(161, 62);
+            this.chemreport.TabIndex = 76;
+            this.chemreport.Text = "Generate Report";
+            this.chemreport.UseVisualStyleBackColor = false;
+            this.chemreport.Click += new System.EventHandler(this.chemreport_Click);
+            // 
             // chemstock
             // 
             this.chemstock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.chemstock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chemstock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chemstock.Location = new System.Drawing.Point(332, 548);
-            this.chemstock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chemstock.Location = new System.Drawing.Point(572, 351);
+            this.chemstock.Margin = new System.Windows.Forms.Padding(2);
             this.chemstock.Name = "chemstock";
             this.chemstock.Size = new System.Drawing.Size(161, 62);
             this.chemstock.TabIndex = 75;
@@ -935,7 +972,7 @@
             this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.Location = new System.Drawing.Point(914, 528);
-            this.button11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button11.Margin = new System.Windows.Forms.Padding(2);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(117, 36);
             this.button11.TabIndex = 74;
@@ -948,7 +985,7 @@
             this.button12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.Location = new System.Drawing.Point(914, 492);
-            this.button12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button12.Margin = new System.Windows.Forms.Padding(2);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(117, 33);
             this.button12.TabIndex = 73;
@@ -959,10 +996,10 @@
             // classification
             // 
             this.classification.AutoSize = true;
-            this.classification.Location = new System.Drawing.Point(520, 483);
+            this.classification.Location = new System.Drawing.Point(238, 521);
             this.classification.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.classification.Name = "classification";
-            this.classification.Size = new System.Drawing.Size(41, 13);
+            this.classification.Size = new System.Drawing.Size(48, 13);
             this.classification.TabIndex = 65;
             this.classification.Text = "label30";
             // 
@@ -976,8 +1013,8 @@
             "Gray",
             "White",
             "Yellow"});
-            this.colorCode.Location = new System.Drawing.Point(523, 448);
-            this.colorCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.colorCode.Location = new System.Drawing.Point(241, 486);
+            this.colorCode.Margin = new System.Windows.Forms.Padding(2);
             this.colorCode.Name = "colorCode";
             this.colorCode.Size = new System.Drawing.Size(178, 21);
             this.colorCode.TabIndex = 64;
@@ -986,17 +1023,17 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(329, 386);
+            this.label28.Location = new System.Drawing.Point(47, 424);
             this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(55, 13);
+            this.label28.Size = new System.Drawing.Size(64, 13);
             this.label28.TabIndex = 63;
             this.label28.Text = "Item Code";
             // 
             // cItemCode
             // 
-            this.cItemCode.Location = new System.Drawing.Point(523, 386);
-            this.cItemCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cItemCode.Location = new System.Drawing.Point(241, 424);
+            this.cItemCode.Margin = new System.Windows.Forms.Padding(2);
             this.cItemCode.Name = "cItemCode";
             this.cItemCode.Size = new System.Drawing.Size(178, 20);
             this.cItemCode.TabIndex = 62;
@@ -1004,10 +1041,10 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(329, 511);
+            this.label24.Location = new System.Drawing.Point(47, 549);
             this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(37, 13);
+            this.label24.Size = new System.Drawing.Size(43, 13);
             this.label24.TabIndex = 61;
             this.label24.Text = "Status";
             // 
@@ -1018,8 +1055,8 @@
             this.chemStatus.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.chemStatus.Location = new System.Drawing.Point(525, 506);
-            this.chemStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chemStatus.Location = new System.Drawing.Point(243, 544);
+            this.chemStatus.Margin = new System.Windows.Forms.Padding(2);
             this.chemStatus.Name = "chemStatus";
             this.chemStatus.Size = new System.Drawing.Size(178, 21);
             this.chemStatus.TabIndex = 60;
@@ -1029,8 +1066,8 @@
             this.searchchem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.searchchem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchchem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchchem.Location = new System.Drawing.Point(477, 342);
-            this.searchchem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchchem.Location = new System.Drawing.Point(195, 380);
+            this.searchchem.Margin = new System.Windows.Forms.Padding(2);
             this.searchchem.Name = "searchchem";
             this.searchchem.Size = new System.Drawing.Size(91, 33);
             this.searchchem.TabIndex = 38;
@@ -1041,8 +1078,8 @@
             // searchc
             // 
             this.searchc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchc.Location = new System.Drawing.Point(359, 309);
-            this.searchc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchc.Location = new System.Drawing.Point(77, 347);
+            this.searchc.Margin = new System.Windows.Forms.Padding(2);
             this.searchc.Name = "searchc";
             this.searchc.Size = new System.Drawing.Size(323, 29);
             this.searchc.TabIndex = 37;
@@ -1053,7 +1090,7 @@
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(913, 445);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(118, 37);
             this.button3.TabIndex = 46;
@@ -1066,7 +1103,7 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(913, 404);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(118, 37);
             this.button2.TabIndex = 45;
@@ -1078,7 +1115,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(322, 410);
+            this.label14.Location = new System.Drawing.Point(40, 448);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(176, 25);
@@ -1088,7 +1125,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(523, 410);
+            this.textBox3.Location = new System.Drawing.Point(241, 448);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(178, 26);
             this.textBox3.TabIndex = 39;
@@ -1097,7 +1134,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(322, 474);
+            this.label16.Location = new System.Drawing.Point(40, 512);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(154, 25);
@@ -1108,7 +1145,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(322, 444);
+            this.label20.Location = new System.Drawing.Point(40, 482);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(130, 25);
@@ -1139,6 +1176,34 @@
             this.pictureBox1.Size = new System.Drawing.Size(113, 72);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
+            // 
+            // genequiprep
+            // 
+            this.genequiprep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.genequiprep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.genequiprep.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genequiprep.Location = new System.Drawing.Point(613, 534);
+            this.genequiprep.Margin = new System.Windows.Forms.Padding(2);
+            this.genequiprep.Name = "genequiprep";
+            this.genequiprep.Size = new System.Drawing.Size(161, 62);
+            this.genequiprep.TabIndex = 53;
+            this.genequiprep.Text = "Generate Report";
+            this.genequiprep.UseVisualStyleBackColor = false;
+            this.genequiprep.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(645, 532);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(161, 62);
+            this.button1.TabIndex = 54;
+            this.button1.Text = "Generate Report All";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // Inventory
             // 
@@ -1257,5 +1322,9 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button chemstock;
+        private System.Windows.Forms.Button chemreport;
+        private System.Windows.Forms.Button genappa;
+        private System.Windows.Forms.Button genequiprep;
+        private System.Windows.Forms.Button button1;
     }
 }
