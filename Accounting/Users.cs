@@ -52,6 +52,7 @@ namespace Accounting
             dataGridView1.Columns["user"].HeaderText = "User name";
             dataGridView1.Columns["pass"].HeaderText = "Password";
             dataGridView1.Columns["type"].HeaderText = "Type";
+            dataGridView1.Columns["status"].HeaderText = "Status";
 
             deselect();
 
@@ -70,21 +71,36 @@ namespace Accounting
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox3.Text == "" || textBox1.Text == "" || textBox4.Text == "" || textBox5.Text == "" || comboBox1.Text=="")
+            if (textBox3.Text == "" || textBox1.Text == "" || textBox4.Text == "" || textBox5.Text == "" || comboBox1.Text=="" || comboBox2.Text=="")
             {
                 MessageBox.Show("Please do not leave any of the fields as blank");
             }
 
-
-            string query = "UPDATE administrativeassociate SET firstname='"+textBox3.Text+"',lastname='"+textBox1.Text+"',type='"+comboBox1.Text+"',user='"+textBox4.Text+"',pass='"+textBox5.Text+"' WHERE admin_ID =" + selected_admin_id;
-
+            String query1 = "SELECT * FROM administrativeassociate WHERE user='" + textBox4.Text + "'";
             conn.Open();
-            MySqlCommand comm1 = new MySqlCommand(query, conn);
-            comm1.ExecuteNonQuery();
+            MySqlCommand comm = new MySqlCommand(query1, conn);
+            MySqlDataAdapter adp = new MySqlDataAdapter(comm);
             conn.Close();
-            MessageBox.Show("Successfully updated the user", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            loadall();
+            DataTable dt = new DataTable();
+            adp.Fill(dt);
 
+            if (dt.Rows.Count > 0)
+            {
+
+                MessageBox.Show("Username Taken");
+
+            }
+            else
+            {
+                string query = "UPDATE administrativeassociate SET firstname='" + textBox3.Text + "',lastname='" + textBox1.Text + "',type='" + comboBox1.Text + "',user='" + textBox4.Text + "',pass='" + textBox5.Text + "', status='" + comboBox2.Text + "' WHERE admin_ID =" + selected_admin_id;
+
+                conn.Open();
+                MySqlCommand comm1 = new MySqlCommand(query, conn);
+                comm1.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Successfully updated the user", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                loadall();
+            }
 
 
 
@@ -114,7 +130,7 @@ namespace Accounting
                 }
                 else
                 {
-                    string query2 = "INSERT INTO administrativeassociate(firstname,lastname,type,user,pass) " + "VALUES('" + textBox3.Text + "', '" + textBox1.Text + "', '" + comboBox1.Text + "', '" + textBox4.Text + "', '" + textBox5.Text + "')";
+                    string query2 = "INSERT INTO administrativeassociate(firstname,lastname,type,user,pass,status) " + "VALUES('" + textBox3.Text + "', '" + textBox1.Text + "', '" + comboBox1.Text + "', '" + textBox4.Text + "', '" + textBox5.Text + "', '"+comboBox2.Text+"')";
 
                     conn.Open();
                     MySqlCommand comm1 = new MySqlCommand(query2, conn);
@@ -148,9 +164,9 @@ namespace Accounting
                 comboBox1.Text = dataGridView1.Rows[e.RowIndex].Cells["type"].Value.ToString();
                 textBox4.Text = dataGridView1.Rows[e.RowIndex].Cells["user"].Value.ToString();
                 textBox5.Text = dataGridView1.Rows[e.RowIndex].Cells["pass"].Value.ToString();
+                comboBox2.Text= dataGridView1.Rows[e.RowIndex].Cells["status"].Value.ToString();
 
-                button2.Enabled = false;
-                button3.Enabled = true;
+                button2.Enabled = false;                
                 button1.Enabled = true;
                 button4.Enabled = true;
             }
@@ -184,7 +200,7 @@ namespace Accounting
             textBox4.Text = "";
             textBox5.Text = "";
             button2.Enabled = true;
-            button3.Enabled = false;
+           
             button1.Enabled = false;
             button4.Enabled = false;
         }
@@ -195,21 +211,7 @@ namespace Accounting
 
         private void button3_Click(object sender, EventArgs e)
         {
-            /*DialogResult dialogResult = MessageBox.Show("Delete this user?", "Confirmation", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
 
-                string query = "DELETE FROM administrativeassociate WHERE admin_ID =" + selected_admin_id;
-
-                conn.Open();
-                MySqlCommand comm1 = new MySqlCommand(query, conn);
-                comm1.ExecuteNonQuery();
-                conn.Close();
-                MessageBox.Show("Successfully deleted the user", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                deselect();
-                loadall();
-
-            }*/
 
 
         }
