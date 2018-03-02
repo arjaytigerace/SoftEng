@@ -81,10 +81,10 @@ namespace Accounting
                     button4.Enabled = false;
 
                 }
-                else
+                else if(status == "Unreleased")
                 {
                     button3.Enabled = true;
-                    button4.Enabled = true;
+                    button4.Enabled = false;
                 }
             }
         }
@@ -141,7 +141,7 @@ namespace Accounting
             "a.borrowedDate,a.returnDate,CONCAT(e.firstname,' ',e.lastname) AS releasedBy,c.studentId, a.requestStatus" +
              " FROM chem_lab.borrowing a INNER JOIN administrativeassociate e ON a.releasedBy = e.admin_ID, " +
              "chem_lab.item b, chem_lab.student c WHERE b.itemID = a.itemID" +
-             " AND c.studentID = a.studentId";
+             " AND c.studentID = a.studentId AND a.isReturned=0";
 
             Loadall(query);
 
@@ -244,6 +244,13 @@ namespace Accounting
             " AND c.studentID = a.studentId";
 
             Loadall(query);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ReturnedItems ritems = new ReturnedItems();
+            ritems.main = this;
+            ritems.Show();
         }
     }
 }

@@ -236,3 +236,4 @@ C:\Users\rjacornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.pdb
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Notification.resources
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.returnbutton.resources
 C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.returnbutton.resources
+C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.ReturnedItems.resources

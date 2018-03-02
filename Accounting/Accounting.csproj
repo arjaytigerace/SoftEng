@@ -159,6 +159,12 @@
     <Compile Include="BRWReturn.Designer.cs">
       <DependentUpon>BRWReturn.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReturnedItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReturnedItems.Designer.cs">
+      <DependentUpon>ReturnedItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="Search.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +263,9 @@
     </Compile>
     <EmbeddedResource Include="BRWReturn.resx">
       <DependentUpon>BRWReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReturnedItems.resx">
+      <DependentUpon>ReturnedItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Search.resx">
       <DependentUpon>Search.cs</DependentUpon>
