@@ -38,7 +38,7 @@ namespace Accounting
         private void Search_Load(object sender, EventArgs e)
         {
 
-
+            /*
             if (getTab == 1)
             {
                 string query = "SELECT itemID,itemName,itemType,quantity,measurementType,addedon,modon,itemstatus FROM chem_lab.item a, chem_lab.itemtype b WHERE b.itemTypeID = a.itemTypeID AND a.itemName LIKE '" + getItemName + "%'";
@@ -97,7 +97,7 @@ namespace Accounting
             {
 
 
-                string queryapp = "SELECT a.itemID,itemName,quantity,measurementType,description,numdmg,numlost,addedon,modon,itemstatus " +
+                string queryapp = "SELECT a.itemID,itemName,quantity,measurementType,description,addedon,modon,itemstatus " +
                    "FROM chem_lab.item a,chem_lab.itemapparatus b WHERE b.itemID = a.itemID AND a.itemName LIKE '" + getItemName + "%'";
 
                 conn.Open();
@@ -114,8 +114,7 @@ namespace Accounting
                 dataGridView1.Columns["quantity"].HeaderText = "Quantity";
                 dataGridView1.Columns["measurementType"].HeaderText = "Unit of Measurement";
                 dataGridView1.Columns["description"].HeaderText = "Description";
-                dataGridView1.Columns["numdmg"].HeaderText = "# Damaged";
-                dataGridView1.Columns["numlost"].HeaderText = "# Lost";
+
                 dataGridView1.Columns["addedon"].HeaderText = "Date Added";
                 dataGridView1.Columns["modon"].HeaderText = "Last Modified";
                 dataGridView1.Columns["itemstatus"].HeaderText = "Status";
@@ -150,7 +149,7 @@ namespace Accounting
 
             }
 
-
+            */
         }
     }
 }

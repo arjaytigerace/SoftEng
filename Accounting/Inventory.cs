@@ -21,6 +21,8 @@ namespace Accounting
         public int Adminid { get; set; }
         public String equipitemname;
         private int selecteditemid;
+        public String appitemname;
+        public String chemitemname;
 
         public Inventory()
         {
@@ -96,69 +98,23 @@ namespace Accounting
 
         private void Inventory_Load(object sender, EventArgs e)
         {
-            string query = "SELECT itemID,itemCode,itemName,itemType,quantity,measurementType,addedon,modon,itemstatus FROM chem_lab.item a, chem_lab.itemtype b WHERE b.itemTypeID = a.itemTypeID";
-            string queryequip = "SELECT a.itemID,itemCode,itemName,quantity,measurementType,brandAndModel,costPerUnit,dateOfPurchase,estimatedLife,addedon,modon,itemstatus " +
+            string query = "SELECT itemID,itemCode,itemName,itemType,trim(round(quantity,4))+0 AS quantity,measurementType,addedon,modon,itemstatus FROM chem_lab.item a, chem_lab.itemtype b WHERE b.itemTypeID = a.itemTypeID";
+            string queryequip = "SELECT a.itemID,itemCode,itemName,trim(round(quantity,4))+0 AS quantity,measurementType,brandAndModel,costPerUnit,dateOfPurchase,estimatedLife,addedon,modon,itemstatus " +
                 "FROM chem_lab.item a,chem_lab.itemequipment b WHERE b.itemID = a.itemID";
+            string queryapp = "SELECT a.itemID,itemCode,itemName,trim(round(quantity,4))+0 AS quantity,measurementType,description,addedon,modon,itemstatus " +
+            "FROM chem_lab.item a,chem_lab.itemapparatus b WHERE b.itemID = a.itemID";
+            string querychem = "SELECT a.itemID,itemCode,itemName,colorCode,classification,quantity,measurementType,addedon,modon,itemstatus " +
+            "FROM chem_lab.item a,chem_lab.itemchemical b WHERE b.itemID = a.itemID";
+
             loadallgeneral(query);
             loadalle(queryequip);
-            loadall();
+            loadalla(queryapp);
+            loadallc(querychem);
+            comboBox1.SelectedIndex = 0;
+            comboBox2.SelectedIndex = 0;
+            comboBox3.SelectedIndex = 0;
+            comboBox4.SelectedIndex = 0;
         }
-
-
-        private void loadall()
-        { 
-
-
-            string queryapp = "SELECT a.itemID,itemCode,itemName,quantity,measurementType,description,addedon,modon,itemstatus " +
-               "FROM chem_lab.item a,chem_lab.itemapparatus b WHERE b.itemID = a.itemID";
-
-            conn.Open();
-            MySqlCommand comm2 = new MySqlCommand(queryapp, conn);
-            MySqlDataAdapter adp2 = new MySqlDataAdapter(comm2);
-            conn.Close();
-            DataTable dt2 = new DataTable();
-            adp2.Fill(dt2);
-
-            dataGridView3.RowHeadersVisible = false;
-            dataGridView3.DataSource = dt2;
-            dataGridView3.Columns["itemID"].Visible = false;
-            dataGridView3.Columns["itemCode"].HeaderText = "Item Code";
-            dataGridView3.Columns["itemName"].HeaderText = "Item Name";
-            dataGridView3.Columns["quantity"].HeaderText = "Quantity";
-            dataGridView3.Columns["measurementType"].HeaderText = "Unit of Measurement";
-            dataGridView3.Columns["description"].HeaderText = "Description";
-      
-            dataGridView3.Columns["modon"].HeaderText = "Last Modified";
-            dataGridView3.Columns["itemstatus"].HeaderText = "Status";
-
-            string querychem = "SELECT a.itemID,itemCode,itemName,colorCode,classification,quantity,measurementType,addedon,modon,itemstatus " +
-               "FROM chem_lab.item a,chem_lab.itemchemical b WHERE b.itemID = a.itemID";
-
-            conn.Open();
-            MySqlCommand comm3 = new MySqlCommand(querychem, conn);
-            MySqlDataAdapter adp3 = new MySqlDataAdapter(comm3);
-            conn.Close();
-            DataTable dt3 = new DataTable();
-            adp3.Fill(dt3);
-
-            dataGridView4.RowHeadersVisible = false;
-            dataGridView4.DataSource = dt3;
-            dataGridView4.Columns["itemID"].Visible = false;
-            dataGridView4.Columns["itemCode"].HeaderText = "Item Code";
-            dataGridView4.Columns["itemName"].HeaderText = "Item Name";
-            dataGridView4.Columns["colorCode"].HeaderText = "Color Code";
-            dataGridView4.Columns["classification"].HeaderText = "Classification";
-            dataGridView4.Columns["quantity"].HeaderText = "Quantity";
-            dataGridView4.Columns["measurementType"].HeaderText = "Unit of Measurement";
-            dataGridView4.Columns["addedon"].HeaderText = "Date Added";
-            dataGridView4.Columns["modon"].HeaderText = "Last Modified";
-            dataGridView4.Columns["itemstatus"].HeaderText = "Status";
-
-
-            deselect();
-
-        }
-
 
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -220,7 +176,7 @@ namespace Accounting
             conn.Close();
             MessageBox.Show("Successfully updated the item", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            string query1 = "SELECT itemID,itemCode,itemName,itemType,quantity,measurementType,addedon,modon,itemstatus FROM chem_lab.item a, chem_lab.itemtype b WHERE b.itemTypeID = a.itemTypeID";
+            string query1 = "SELECT itemID,itemCode,itemName,itemType,trim(round(quantity,4))+0 AS quantity,measurementType,addedon,modon,itemstatus FROM chem_lab.item a, chem_lab.itemtype b WHERE b.itemTypeID = a.itemTypeID";
             loadallgeneral(query1);
         }
 
@@ -251,6 +207,7 @@ namespace Accounting
         private void deselectequipb_Click(object sender, EventArgs e)
         {
             deselect();
+            equipitemname = "";
         }
 
         
@@ -273,7 +230,7 @@ namespace Accounting
                 equipStatus.Text= dataGridView2.Rows[e.RowIndex].Cells["itemstatus"].Value.ToString();
                 deselectequipb.Enabled = true;
                 updequipb.Enabled = true;
-               
+
 
             }
 
@@ -323,7 +280,7 @@ namespace Accounting
 
                 conn.Close();
                 MessageBox.Show("Successfully updated the item", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                string queryequip = "SELECT a.itemID,itemCode,itemName,quantity,measurementType,brandAndModel,costPerUnit,dateOfPurchase,estimatedLife,addedon,modon,itemstatus " +
+                string queryequip = "SELECT a.itemID,itemCode,itemName,trim(round(quantity,4))+0 AS quantity,measurementType,brandAndModel,costPerUnit,dateOfPurchase,estimatedLife,addedon,modon,itemstatus " +
                     "FROM chem_lab.item a,chem_lab.itemequipment b WHERE b.itemID = a.itemID";
                 loadalle(queryequip);
             }
@@ -340,15 +297,15 @@ namespace Accounting
                 aitemname.Text = dataGridView3.Rows[e.RowIndex].Cells["itemname"].Value.ToString();
                 
                 adesc.Text = dataGridView3.Rows[e.RowIndex].Cells["description"].Value.ToString();
-               
+                appitemname= dataGridView3.Rows[e.RowIndex].Cells["itemname"].Value.ToString();
 
-           
+
                 appStatus.Text = dataGridView3.Rows[e.RowIndex].Cells["itemstatus"].Value.ToString();
       
               
                 deselectappb.Enabled = true;
                 updappb.Enabled = true;
-               
+
             }
         }
 
@@ -368,31 +325,35 @@ namespace Accounting
             DateTime dateValue = DateTime.Now;
             string date = dateValue.ToString("yyyy-MM-dd HH:mm:ss");
 
-            if (aitemname.Text == "" || adesc.Text == "" || aItemCode.Text=="")
+            if (aitemname.Text == "" || adesc.Text == "" || aItemCode.Text == "")
             {
                 MessageBox.Show("Please do not leave any of the fields as blank");
             }
+            else
+            {
+                string query;
 
-            string query;
-                
-            query = "UPDATE item SET itemCode='" + aItemCode.Text + "',itemName='" + aitemname.Text + "',modon='" + date + "',itemstatus='" + appStatus.Text + "' WHERE itemID =" + selecteditemid;
-
-            
-
-            conn.Open();
-            MySqlCommand comm1 = new MySqlCommand(query, conn);
-            comm1.ExecuteNonQuery();
+                query = "UPDATE item SET itemCode='" + aItemCode.Text + "',itemName='" + aitemname.Text + "',modon='" + date + "',itemstatus='" + appStatus.Text + "' WHERE itemID =" + selecteditemid;
 
 
-            string query1 = "UPDATE itemapparatus SET description='" + adesc.Text +  "' WHERE itemID =" + selecteditemid;
 
-            MySqlCommand comm2 = new MySqlCommand(query1, conn);
-            comm2.ExecuteNonQuery();
+                conn.Open();
+                MySqlCommand comm1 = new MySqlCommand(query, conn);
+                comm1.ExecuteNonQuery();
 
 
-            conn.Close();
-            MessageBox.Show("Successfully updated the item", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            loadall();
+                string query1 = "UPDATE itemapparatus SET description='" + adesc.Text + "' WHERE itemID =" + selecteditemid;
+
+                MySqlCommand comm2 = new MySqlCommand(query1, conn);
+                comm2.ExecuteNonQuery();
+
+
+                conn.Close();
+                MessageBox.Show("Successfully updated the item", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string queryapp = "SELECT a.itemID,itemCode,itemName,trim(round(quantity,4))+0 AS quantity,measurementType,description,addedon,modon,itemstatus " +
+                 "FROM chem_lab.item a,chem_lab.itemapparatus b WHERE b.itemID = a.itemID";
+                loadalla(queryapp);
+            }
         }
 
 
@@ -400,6 +361,7 @@ namespace Accounting
         private void deselectappb_Click(object sender, EventArgs e)
         {
             deselect();
+            appitemname = "";
         }
 
         private void dataGridView4_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -411,7 +373,7 @@ namespace Accounting
                 textBox3.Text = dataGridView4.Rows[e.RowIndex].Cells["itemname"].Value.ToString();
                 colorCode.Text = dataGridView4.Rows[e.RowIndex].Cells["colorCode"].Value.ToString();
                 classification.Text = dataGridView4.Rows[e.RowIndex].Cells["classification"].Value.ToString();
-               
+                chemitemname = dataGridView4.Rows[e.RowIndex].Cells["itemname"].Value.ToString();
                 chemStatus.Text= dataGridView4.Rows[e.RowIndex].Cells["itemstatus"].Value.ToString();
                 
                 button2.Enabled = true;
@@ -428,6 +390,7 @@ namespace Accounting
         private void button2_Click(object sender, EventArgs e)
         {
             deselect();
+            chemitemname = "";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -435,28 +398,32 @@ namespace Accounting
             DateTime dateValue = DateTime.Now;
             string date = dateValue.ToString("yyyy-MM-dd HH:mm:ss");
 
-            if (textBox3.Text == "" || cItemCode.Text=="")
+            if (textBox3.Text == "" || cItemCode.Text == "" || colorCode.SelectedIndex==-1 || chemStatus.SelectedIndex==-1)
             {
                 MessageBox.Show("Please do not leave any of the fields as blank");
             }
+            else
+            {
+
+                string query = "UPDATE item SET itemCode='" + cItemCode.Text + "',itemName='" + textBox3.Text + "',modon='" + date + "',itemstatus='" + chemStatus.Text + "' WHERE itemID =" + selecteditemid;
+
+                conn.Open();
+                MySqlCommand comm1 = new MySqlCommand(query, conn);
+                comm1.ExecuteNonQuery();
 
 
-            string query = "UPDATE item SET itemCode='"+cItemCode.Text+"',itemName='" + textBox3.Text + "',modon='" + date + "',itemstatus='"+ chemStatus.Text +"' WHERE itemID =" + selecteditemid;
+                string query1 = "UPDATE itemchemical SET colorCode='" + colorCode.Text + "',classification ='" + classification.Text + "' WHERE itemID =" + selecteditemid;
 
-            conn.Open();
-            MySqlCommand comm1 = new MySqlCommand(query, conn);
-            comm1.ExecuteNonQuery();
-
-
-            string query1 = "UPDATE itemchemical SET colorCode='" + colorCode.Text + "',classification ='" + classification.Text + "' WHERE itemID =" + selecteditemid;
-
-            MySqlCommand comm2 = new MySqlCommand(query1, conn);
-            comm2.ExecuteNonQuery();
+                MySqlCommand comm2 = new MySqlCommand(query1, conn);
+                comm2.ExecuteNonQuery();
 
 
-            conn.Close();
-            MessageBox.Show("Successfully updated the item", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            loadall();
+                conn.Close();
+                MessageBox.Show("Successfully updated the item", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string querychem = "SELECT a.itemID,itemCode,itemName,colorCode,classification,quantity,measurementType,addedon,modon,itemstatus " +
+                "FROM chem_lab.item a,chem_lab.itemchemical b WHERE b.itemID = a.itemID";
+                loadallc(querychem);
+            }
         }
 
         public void loadallgeneral(String query)
@@ -498,7 +465,7 @@ namespace Accounting
             itemname.Text = "";
             itemtype.SelectedIndex=-1;
             status.SelectedIndex = -1;
-            comboBox1.SelectedIndex = 0;
+          
             updbutton.Enabled = false;
             search.Text = "";
         }
@@ -536,9 +503,81 @@ namespace Accounting
             estlife.Text = "";
             updequipb.Enabled = false;
             deselectequipb.Enabled = false;
-            comboBox2.SelectedIndex = 0;
+         
             equipitemname = "";
             searche.Text = "";
+        }
+
+        public void loadalla(String queryapp)
+        {
+
+            conn.Open();
+            MySqlCommand comm2 = new MySqlCommand(queryapp, conn);
+            MySqlDataAdapter adp2 = new MySqlDataAdapter(comm2);
+            conn.Close();
+            DataTable dt2 = new DataTable();
+            adp2.Fill(dt2);
+
+            dataGridView3.RowHeadersVisible = false;
+            dataGridView3.DataSource = dt2;
+            dataGridView3.Columns["itemID"].Visible = false;
+            dataGridView3.Columns["itemCode"].HeaderText = "Item Code";
+            dataGridView3.Columns["itemName"].HeaderText = "Item Name";
+            dataGridView3.Columns["quantity"].HeaderText = "Quantity";
+            dataGridView3.Columns["measurementType"].HeaderText = "Unit of Measurement";
+            dataGridView3.Columns["description"].HeaderText = "Description";
+
+            dataGridView3.Columns["modon"].HeaderText = "Last Modified";
+            dataGridView3.Columns["itemstatus"].HeaderText = "Status";
+            dataGridView3.ClearSelection();
+
+            aItemCode.Text = "";
+            aitemname.Text = "";
+            adesc.Text = "";
+            appStatus.SelectedIndex = -1;
+
+            updappb.Enabled = false;
+            deselectappb.Enabled = false;
+
+            appitemname = "";
+            searcha.Text = "";
+        }
+
+
+        public void loadallc(String querychem)
+        {
+
+            conn.Open();
+            MySqlCommand comm3 = new MySqlCommand(querychem, conn);
+            MySqlDataAdapter adp3 = new MySqlDataAdapter(comm3);
+            conn.Close();
+            DataTable dt3 = new DataTable();
+            adp3.Fill(dt3);
+
+            dataGridView4.RowHeadersVisible = false;
+            dataGridView4.DataSource = dt3;
+            dataGridView4.Columns["itemID"].Visible = false;
+            dataGridView4.Columns["itemCode"].HeaderText = "Item Code";
+            dataGridView4.Columns["itemName"].HeaderText = "Item Name";
+            dataGridView4.Columns["colorCode"].HeaderText = "Color Code";
+            dataGridView4.Columns["classification"].HeaderText = "Classification";
+            dataGridView4.Columns["quantity"].HeaderText = "Quantity";
+            dataGridView4.Columns["measurementType"].HeaderText = "Unit of Measurement";
+            dataGridView4.Columns["addedon"].HeaderText = "Date Added";
+            dataGridView4.Columns["modon"].HeaderText = "Last Modified";
+            dataGridView4.Columns["itemstatus"].HeaderText = "Status";
+            dataGridView4.ClearSelection();
+
+            cItemCode.Text = "";
+            textBox3.Text = "";
+            colorCode.SelectedIndex = -1;
+            chemStatus.SelectedIndex = -1;
+            classification.Text = "--";
+
+            button3.Enabled = false;
+            button2.Enabled = false;
+            chemitemname = "";
+            searchc.Text = "";
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -554,7 +593,7 @@ namespace Accounting
                 x = "itemCode";
             }
 
-            string query = "SELECT itemID,itemCode,itemName,itemType,quantity,measurementType,addedon,modon,itemstatus FROM chem_lab.item a, chem_lab.itemtype b WHERE b.itemTypeID = " +
+            string query = "SELECT itemID,itemCode,itemName,itemType,trim(round(quantity,4))+0 AS quantity,measurementType,addedon,modon,itemstatus FROM chem_lab.item a, chem_lab.itemtype b WHERE b.itemTypeID = " +
                 "a.itemTypeID AND "+x+" LIKE '"+ search.Text+"%'";
 
             loadallgeneral(query);
@@ -573,7 +612,7 @@ namespace Accounting
                 x = "a.itemCode";
             }
 
-            string query = "SELECT a.itemID,itemName,itemCode,quantity,measurementType,brandAndModel,costPerUnit,dateOfPurchase,estimatedLife,addedon,modon,itemstatus " +
+            string query = "SELECT a.itemID,itemName,itemCode,trim(round(quantity,4))+0 AS quantity,measurementType,brandAndModel,costPerUnit,dateOfPurchase,estimatedLife,addedon,modon,itemstatus " +
             "FROM chem_lab.item a,chem_lab.itemequipment b WHERE b.itemID = a.itemID AND " + x + " LIKE '" + searche.Text + "%'";
 
 
@@ -584,24 +623,39 @@ namespace Accounting
 
         private void searchapp_Click(object sender, EventArgs e)
         {
-            string itemsearch = searcha.Text;
-            Search searchform = new Search();
-            searchform.getItemName = itemsearch;
-            searchform.getTab = 3;
-            searchform.main = this;
-            searchform.Show();
+            String x;
+            if (comboBox3.SelectedIndex == 0)
+            {
+                x = "a.itemName";
+
+            }
+            else
+            {
+                x = "a.itemCode";
+            }
+
+            string queryapp = "SELECT a.itemID,itemName,itemCode,trim(round(quantity,4))+0 AS quantity,measurementType,description,addedon,modon,itemstatus " +
+                   "FROM chem_lab.item a,chem_lab.itemapparatus b WHERE b.itemID = a.itemID AND " + x + " LIKE '" + searcha.Text + "%'";
+            loadalla(queryapp);
         }
 
         private void searchchem_Click(object sender, EventArgs e)
         {
-            string itemsearch = searchc.Text;
-            Search searchform = new Search();
-            searchform.getItemName = itemsearch;
-            searchform.getTab = 4;
-            searchform.main = this;
-            searchform.Show();
-        }
+            String x;
+            if (comboBox4.SelectedIndex == 0)
+            {
+                x = "a.itemName";
 
+            }
+            else
+            {
+                x = "a.itemCode";
+            }
+
+            string querychem = "SELECT a.itemID,itemName,itemCode,colorCode,classification,quantity,measurementType,addedon,modon,itemstatus " +
+            "FROM chem_lab.item a,chem_lab.itemchemical b WHERE b.itemID = a.itemID AND " + x + " LIKE '" + searchc.Text + "%'";
+            loadallc(querychem);
+        }
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -677,7 +731,7 @@ namespace Accounting
 
         private void button6_Click(object sender, EventArgs e)
         {
-            string queryequip = "SELECT a.itemID,itemCode,itemName,quantity,measurementType,brandAndModel,costPerUnit,dateOfPurchase,estimatedLife,addedon,modon,itemstatus " +
+            string queryequip = "SELECT a.itemID,itemCode,itemName,trim(round(quantity,4))+0 AS quantity,measurementType,brandAndModel,costPerUnit,dateOfPurchase,estimatedLife,addedon,modon,itemstatus " +
                 "FROM chem_lab.item a,chem_lab.itemequipment b WHERE b.itemID = a.itemID";
             loadalle(queryequip);
         }
@@ -701,7 +755,9 @@ namespace Accounting
 
         private void button7_Click(object sender, EventArgs e)
         {
-            loadall();
+            string queryapp = "SELECT a.itemID,itemCode,itemName,trim(round(quantity,4))+0 AS quantity,measurementType,description,addedon,modon,itemstatus " +
+             "FROM chem_lab.item a,chem_lab.itemapparatus b WHERE b.itemID = a.itemID";
+            loadalla(queryapp);
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -709,14 +765,14 @@ namespace Accounting
             stockin stockIn = new stockin();
             stockIn.main = this;
             stockIn.Adminid = this.Adminid;
-            if (aitemname.Text == "" || adesc.Text == "" || aItemCode.Text == "")
+            if (appitemname == "")
             {
                 stockIn.Tabindex = 2;
             }
             else
             {
                 stockIn.Tabindex = 0;
-                stockIn.Itemname = aitemname.Text;
+                stockIn.Itemname = appitemname;
             }
             stockIn.Show();
         }
@@ -726,14 +782,14 @@ namespace Accounting
             Stockout stockout = new Stockout();
             stockout.main = this;
             stockout.Adminid = this.Adminid;
-            if (aitemname.Text == "" || adesc.Text == "" || aItemCode.Text == "")
+            if (appitemname=="")
             {
                 stockout.Itemname = "";
             }
             else
             {
 
-                stockout.Itemname = aitemname.Text;
+                stockout.Itemname = appitemname;
             }
             stockout.Show();
         }
@@ -754,10 +810,12 @@ namespace Accounting
 
             itemlog.Show();
         }
-
+        
         private void button12_Click(object sender, EventArgs e)
         {
-            loadall();
+            string querychem = "SELECT a.itemID,itemCode,itemName,colorCode,classification,quantity,measurementType,addedon,modon,itemstatus " +
+            "FROM chem_lab.item a,chem_lab.itemchemical b WHERE b.itemID = a.itemID";
+            loadallc(querychem);
         }
 
         private void chemstock_Click(object sender, EventArgs e)
@@ -765,22 +823,39 @@ namespace Accounting
             stockin stockIn = new stockin();
             stockIn.main = this;
             stockIn.Adminid = this.Adminid;
-            if (textBox3.Text == "" || classification.Text == "--" || cItemCode.Text == "")
+            if (chemitemname=="")
             {
                 stockIn.Tabindex = 3;
             }
             else
             {
                 stockIn.Tabindex = 0;
-                stockIn.Itemname = textBox3.Text;
+                stockIn.Itemname = chemitemname;
             }
             stockIn.Show();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            string query = "SELECT itemID,itemCode,itemName,itemType,quantity,measurementType,addedon,modon,itemstatus FROM chem_lab.item a, chem_lab.itemtype b WHERE b.itemTypeID = a.itemTypeID";
+            string query = "SELECT itemID,itemCode,itemName,itemType,trim(round(quantity,4))+0 AS quantity,measurementType,addedon,modon,itemstatus FROM chem_lab.item a, chem_lab.itemtype b WHERE b.itemTypeID = a.itemTypeID";
             loadallgeneral(query);
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            Stockout stockout = new Stockout();
+            stockout.main = this;
+            stockout.Adminid = this.Adminid;
+            if (chemitemname == "")
+            {
+                stockout.Itemname = "";
+            }
+            else
+            {
+
+                stockout.Itemname = chemitemname;
+            }
+            stockout.Show();
         }
     }
 }
