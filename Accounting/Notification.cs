@@ -24,7 +24,7 @@ namespace Accounting
 
         private void Notification_Load(object sender, EventArgs e)
         {
-            string query = "SELECT itemName,quantity,measurementType from item where quantity=0";
+            string query = "SELECT itemName,quantity,measurementType,criticalLevel from item where quantity<=criticalLevel";
 
             conn.Open();
             MySqlCommand comm = new MySqlCommand(query, conn);
@@ -39,6 +39,7 @@ namespace Accounting
             dataGridView1.Columns["quantity"].HeaderText = "Quantity";
             dataGridView1.Columns["quantity"].Width = 70;
             dataGridView1.Columns["measurementType"].HeaderText = "Unit of Measurement";
+            dataGridView1.Columns["criticalLevel"].HeaderText = "Critical Level";
         }
     }
 }

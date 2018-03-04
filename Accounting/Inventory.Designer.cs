@@ -75,6 +75,7 @@
             this.eitemname = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -93,6 +94,8 @@
             this.aitemname = new System.Windows.Forms.TextBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button13 = new System.Windows.Forms.Button();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.chemstock = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
@@ -112,9 +115,18 @@
             this.label20 = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.button13 = new System.Windows.Forms.Button();
+            this.equipnum = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.appnum = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.chemnum = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.ecritlevel = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.acritlevel = new System.Windows.Forms.NumericUpDown();
+            this.label13 = new System.Windows.Forms.Label();
+            this.ccritlevel = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -127,6 +139,9 @@
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ecritlevel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.acritlevel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ccritlevel)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox4
@@ -391,6 +406,10 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.ecritlevel);
+            this.tabPage2.Controls.Add(this.equipnum);
+            this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.comboBox2);
             this.tabPage2.Controls.Add(this.button6);
             this.tabPage2.Controls.Add(this.button4);
@@ -702,6 +721,10 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPage3.Controls.Add(this.label12);
+            this.tabPage3.Controls.Add(this.acritlevel);
+            this.tabPage3.Controls.Add(this.appnum);
+            this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Controls.Add(this.comboBox3);
             this.tabPage3.Controls.Add(this.button9);
             this.tabPage3.Controls.Add(this.button10);
@@ -728,6 +751,18 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Apparatus";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Item Name",
+            "Item Code"});
+            this.comboBox3.Location = new System.Drawing.Point(359, 410);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 25);
+            this.comboBox3.TabIndex = 75;
             // 
             // button9
             // 
@@ -931,6 +966,10 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPage4.Controls.Add(this.label13);
+            this.tabPage4.Controls.Add(this.ccritlevel);
+            this.tabPage4.Controls.Add(this.chemnum);
+            this.tabPage4.Controls.Add(this.label11);
             this.tabPage4.Controls.Add(this.button13);
             this.tabPage4.Controls.Add(this.comboBox4);
             this.tabPage4.Controls.Add(this.chemstock);
@@ -959,12 +998,38 @@
             this.tabPage4.Text = "Chemical";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.button13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.Location = new System.Drawing.Point(700, 707);
+            this.button13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(215, 76);
+            this.button13.TabIndex = 75;
+            this.button13.Text = "Stock Out";
+            this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "Item Name",
+            "Item Code"});
+            this.comboBox4.Location = new System.Drawing.Point(336, 390);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(121, 24);
+            this.comboBox4.TabIndex = 76;
+            // 
             // chemstock
             // 
             this.chemstock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.chemstock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chemstock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chemstock.Location = new System.Drawing.Point(443, 674);
+            this.chemstock.Location = new System.Drawing.Point(443, 707);
             this.chemstock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chemstock.Name = "chemstock";
             this.chemstock.Size = new System.Drawing.Size(215, 76);
@@ -1181,43 +1246,122 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // comboBox3
+            // equipnum
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Item Name",
-            "Item Code"});
-            this.comboBox3.Location = new System.Drawing.Point(359, 410);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 25);
-            this.comboBox3.TabIndex = 75;
+            this.equipnum.AutoSize = true;
+            this.equipnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equipnum.Location = new System.Drawing.Point(1013, 660);
+            this.equipnum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.equipnum.Name = "equipnum";
+            this.equipnum.Size = new System.Drawing.Size(112, 36);
+            this.equipnum.TabIndex = 55;
+            this.equipnum.Text = "label30";
             // 
-            // comboBox4
+            // label5
             // 
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "Item Name",
-            "Item Code"});
-            this.comboBox4.Location = new System.Drawing.Point(336, 390);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 24);
-            this.comboBox4.TabIndex = 76;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(903, 660);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 36);
+            this.label5.TabIndex = 54;
+            this.label5.Text = "Total:";
             // 
-            // button13
+            // appnum
             // 
-            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.button13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.Location = new System.Drawing.Point(700, 674);
-            this.button13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(215, 76);
-            this.button13.TabIndex = 75;
-            this.button13.Text = "Stock Out";
-            this.button13.UseVisualStyleBackColor = false;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
+            this.appnum.AutoSize = true;
+            this.appnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.appnum.Location = new System.Drawing.Point(320, 723);
+            this.appnum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.appnum.Name = "appnum";
+            this.appnum.Size = new System.Drawing.Size(112, 36);
+            this.appnum.TabIndex = 77;
+            this.appnum.Text = "label30";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(171, 723);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(89, 36);
+            this.label6.TabIndex = 76;
+            this.label6.Text = "Total:";
+            // 
+            // chemnum
+            // 
+            this.chemnum.AutoSize = true;
+            this.chemnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chemnum.Location = new System.Drawing.Point(1190, 426);
+            this.chemnum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.chemnum.Name = "chemnum";
+            this.chemnum.Size = new System.Drawing.Size(112, 36);
+            this.chemnum.TabIndex = 79;
+            this.chemnum.Text = "label30";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(1066, 426);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(89, 36);
+            this.label11.TabIndex = 78;
+            this.label11.Text = "Total:";
+            // 
+            // ecritlevel
+            // 
+            this.ecritlevel.Location = new System.Drawing.Point(980, 496);
+            this.ecritlevel.Name = "ecritlevel";
+            this.ecritlevel.Size = new System.Drawing.Size(120, 23);
+            this.ecritlevel.TabIndex = 56;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(679, 496);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(184, 31);
+            this.label3.TabIndex = 57;
+            this.label3.Text = "Critical Level";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(174, 666);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(184, 31);
+            this.label12.TabIndex = 79;
+            this.label12.Text = "Critical Level";
+            // 
+            // acritlevel
+            // 
+            this.acritlevel.Location = new System.Drawing.Point(389, 669);
+            this.acritlevel.Name = "acritlevel";
+            this.acritlevel.Size = new System.Drawing.Size(120, 23);
+            this.acritlevel.TabIndex = 78;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(436, 669);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(184, 31);
+            this.label13.TabIndex = 81;
+            this.label13.Text = "Critical Level";
+            // 
+            // ccritlevel
+            // 
+            this.ccritlevel.Location = new System.Drawing.Point(696, 672);
+            this.ccritlevel.Name = "ccritlevel";
+            this.ccritlevel.Size = new System.Drawing.Size(120, 22);
+            this.ccritlevel.TabIndex = 80;
             // 
             // Inventory
             // 
@@ -1252,6 +1396,9 @@
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ecritlevel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.acritlevel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ccritlevel)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1343,5 +1490,17 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Label equipnum;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label appnum;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label chemnum;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown ecritlevel;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.NumericUpDown acritlevel;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.NumericUpDown ccritlevel;
     }
 }

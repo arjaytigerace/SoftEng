@@ -99,6 +99,12 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.ecritlevel = new System.Windows.Forms.NumericUpDown();
+            this.label32 = new System.Windows.Forms.Label();
+            this.acritlevel = new System.Windows.Forms.NumericUpDown();
+            this.label33 = new System.Windows.Forms.Label();
+            this.ccritlevel = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sqty)).BeginInit();
@@ -108,6 +114,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.aqty)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cqty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ecritlevel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.acritlevel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ccritlevel)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -117,10 +126,10 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(3, 15);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(889, 638);
+            this.tabControl1.Size = new System.Drawing.Size(889, 660);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -136,9 +145,9 @@
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.sItemName);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(881, 609);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Existing Item";
@@ -255,6 +264,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label31);
+            this.tabPage2.Controls.Add(this.ecritlevel);
             this.tabPage2.Controls.Add(this.label12);
             this.tabPage2.Controls.Add(this.stocknew);
             this.tabPage2.Controls.Add(this.textBox1);
@@ -278,10 +289,10 @@
             this.tabPage2.Controls.Add(this.emeasuretype);
             this.tabPage2.Controls.Add(this.eqty);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage2.Size = new System.Drawing.Size(881, 609);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Size = new System.Drawing.Size(881, 631);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "New Equipment";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -291,7 +302,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(131, 401);
+            this.label12.Location = new System.Drawing.Point(131, 437);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(130, 31);
             this.label12.TabIndex = 71;
@@ -302,7 +313,7 @@
             this.stocknew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.stocknew.Cursor = System.Windows.Forms.Cursors.Hand;
             this.stocknew.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stocknew.Location = new System.Drawing.Point(413, 519);
+            this.stocknew.Location = new System.Drawing.Point(413, 555);
             this.stocknew.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.stocknew.Name = "stocknew";
             this.stocknew.Size = new System.Drawing.Size(164, 63);
@@ -315,7 +326,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.Control;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(413, 377);
+            this.textBox1.Location = new System.Drawing.Point(413, 413);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -524,6 +535,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label32);
+            this.tabPage3.Controls.Add(this.acritlevel);
             this.tabPage3.Controls.Add(this.label15);
             this.tabPage3.Controls.Add(this.amtype);
             this.tabPage3.Controls.Add(this.aqty);
@@ -543,7 +556,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(881, 609);
+            this.tabPage3.Size = new System.Drawing.Size(881, 631);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "New Apparatus";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -588,7 +601,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(113, 374);
+            this.label13.Location = new System.Drawing.Point(109, 431);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(130, 31);
             this.label13.TabIndex = 83;
@@ -599,7 +612,7 @@
             this.stockInApp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.stockInApp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.stockInApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stockInApp.Location = new System.Drawing.Point(328, 487);
+            this.stockInApp.Location = new System.Drawing.Point(324, 544);
             this.stockInApp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.stockInApp.Name = "stockInApp";
             this.stockInApp.Size = new System.Drawing.Size(164, 63);
@@ -612,7 +625,7 @@
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.Control;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(328, 352);
+            this.textBox2.Location = new System.Drawing.Point(324, 409);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
@@ -723,6 +736,8 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.label33);
+            this.tabPage4.Controls.Add(this.ccritlevel);
             this.tabPage4.Controls.Add(this.label30);
             this.tabPage4.Controls.Add(this.cmtype);
             this.tabPage4.Controls.Add(this.cqty);
@@ -744,7 +759,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(881, 609);
+            this.tabPage4.Size = new System.Drawing.Size(881, 631);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "New Chemical";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -789,7 +804,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(165, 389);
+            this.label25.Location = new System.Drawing.Point(163, 440);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(130, 31);
             this.label25.TabIndex = 88;
@@ -800,7 +815,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(380, 502);
+            this.button1.Location = new System.Drawing.Point(378, 553);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(164, 63);
@@ -813,7 +828,7 @@
             // 
             this.textBox4.BackColor = System.Drawing.SystemColors.Control;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(380, 367);
+            this.textBox4.Location = new System.Drawing.Point(378, 418);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
@@ -824,7 +839,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(165, 318);
+            this.label29.Location = new System.Drawing.Point(163, 369);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(114, 31);
             this.label29.TabIndex = 86;
@@ -839,7 +854,7 @@
             "Repaired",
             "Found",
             "Wrong Input"});
-            this.comboBox4.Location = new System.Drawing.Point(379, 316);
+            this.comboBox4.Location = new System.Drawing.Point(377, 367);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(260, 33);
@@ -924,7 +939,7 @@
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(429, 71);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(236, 30);
             this.textBox3.TabIndex = 66;
@@ -949,14 +964,65 @@
             this.label21.TabIndex = 67;
             this.label21.Text = "Color Code";
             // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(112, 376);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(184, 31);
+            this.label31.TabIndex = 73;
+            this.label31.Text = "Critical Level";
+            // 
+            // ecritlevel
+            // 
+            this.ecritlevel.Location = new System.Drawing.Point(413, 376);
+            this.ecritlevel.Name = "ecritlevel";
+            this.ecritlevel.Size = new System.Drawing.Size(120, 22);
+            this.ecritlevel.TabIndex = 72;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(118, 355);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(184, 31);
+            this.label32.TabIndex = 88;
+            this.label32.Text = "Critical Level";
+            // 
+            // acritlevel
+            // 
+            this.acritlevel.Location = new System.Drawing.Point(328, 355);
+            this.acritlevel.Name = "acritlevel";
+            this.acritlevel.Size = new System.Drawing.Size(120, 22);
+            this.acritlevel.TabIndex = 87;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(171, 313);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(184, 31);
+            this.label33.TabIndex = 93;
+            this.label33.Text = "Critical Level";
+            // 
+            // ccritlevel
+            // 
+            this.ccritlevel.Location = new System.Drawing.Point(432, 323);
+            this.ccritlevel.Name = "ccritlevel";
+            this.ccritlevel.Size = new System.Drawing.Size(120, 22);
+            this.ccritlevel.TabIndex = 92;
+            // 
             // stockin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.ClientSize = new System.Drawing.Size(892, 655);
+            this.ClientSize = new System.Drawing.Size(892, 688);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "stockin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "stockin";
@@ -974,6 +1040,9 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cqty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ecritlevel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.acritlevel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ccritlevel)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1051,5 +1120,11 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.ComboBox cmtype;
         private System.Windows.Forms.NumericUpDown cqty;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.NumericUpDown ecritlevel;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.NumericUpDown acritlevel;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.NumericUpDown ccritlevel;
     }
 }

@@ -75,7 +75,7 @@ namespace Accounting
 
 
             string query3 = "SELECT itemName,trim(round(item_log.quantity,4))+0 AS quantity,item_log.mtype,item_log.date,stockStatus,item_log.status,CONCAT(firstname,' ',lastname) AS User,remarks from item,item_log LEFT OUTER JOIN administrativeassociate ON admin_ID = item_log.userID" +
-" WHERE itemName = (SELECT itemName from item WHERE item_log.itemID = item.itemID) ORDER BY date DESC";
+            " WHERE itemName = (SELECT itemName from item WHERE item_log.itemID = item.itemID) ORDER BY date DESC";
 
             conn.Open();
             MySqlCommand comm2 = new MySqlCommand(query3, conn);

@@ -71,7 +71,16 @@ namespace Accounting
             cqty.Maximum = 9999;
             cqty.DecimalPlaces = 3;
             cqty.Increment = 0.010m;
+            ecritlevel.Maximum = 9999;
+            ecritlevel.Minimum = 0;
+            acritlevel.Maximum = 9999;
+            acritlevel.Minimum = 0;
+            ccritlevel.Maximum = 9999;
+            ccritlevel.Minimum = 0;
+            ccritlevel.DecimalPlaces = 3;
+            ccritlevel.Increment = 0.010m;
         }
+
 
         private void getData(AutoCompleteStringCollection dataCollection)
         {
@@ -198,6 +207,7 @@ namespace Accounting
                     comm1.Parameters.Add("?reason", MySqlDbType.VarChar, 255).Value = comboBox2.Text;
                     comm1.Parameters.Add("?userID", MySqlDbType.Int32).Value = Adminid;
                     comm1.Parameters.Add("?remarks", MySqlDbType.VarChar, 255).Value = textBox1.Text;
+                    comm1.Parameters.Add("?criticalLevel", MySqlDbType.Int32).Value = ecritlevel.Value;
                     comm1.ExecuteNonQuery();
 
                     conn.Close();
@@ -257,6 +267,7 @@ namespace Accounting
                     comm1.Parameters.Add("?reason", MySqlDbType.VarChar, 255).Value = comboBox3.Text;
                     comm1.Parameters.Add("?userID", MySqlDbType.Int32).Value = Adminid;
                     comm1.Parameters.Add("?remarks", MySqlDbType.VarChar, 255).Value = textBox2.Text;
+                    comm1.Parameters.Add("?criticalLevel", MySqlDbType.Int32).Value = acritlevel.Value;
                     comm1.ExecuteNonQuery();
 
                     conn.Close();
@@ -370,6 +381,7 @@ namespace Accounting
                     comm1.Parameters.Add("?reason", MySqlDbType.VarChar, 255).Value = comboBox4.Text;
                     comm1.Parameters.Add("?userID", MySqlDbType.Int32).Value = Adminid;
                     comm1.Parameters.Add("?remarks", MySqlDbType.VarChar, 255).Value = textBox4.Text;
+                    comm1.Parameters.Add("?criticalLevel", MySqlDbType.Decimal).Value = ccritlevel.Value;
                     comm1.ExecuteNonQuery();
 
                     conn.Close();

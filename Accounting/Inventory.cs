@@ -47,7 +47,7 @@ namespace Accounting
             itemtype.SelectedIndex = -1;
             
             eitemname.Text = "";
-     
+            ecritlevel.Value = 0;
             brand.Text = "";
             costunit.Text = "";
             estlife.Text = "";
@@ -72,7 +72,8 @@ namespace Accounting
 
             button2.Enabled = false;
             button3.Enabled = false;
-
+            acritlevel.Value = 0;
+            ccritlevel.Value = 0;
 
             equipitemname = "";
         }
@@ -99,11 +100,11 @@ namespace Accounting
         private void Inventory_Load(object sender, EventArgs e)
         {
             string query = "SELECT itemID,itemCode,itemName,itemType,trim(round(quantity,4))+0 AS quantity,measurementType,addedon,modon,itemstatus FROM chem_lab.item a, chem_lab.itemtype b WHERE b.itemTypeID = a.itemTypeID";
-            string queryequip = "SELECT a.itemID,itemCode,itemName,trim(round(quantity,4))+0 AS quantity,measurementType,brandAndModel,costPerUnit,dateOfPurchase,estimatedLife,addedon,modon,itemstatus " +
+            string queryequip = "SELECT a.itemID,itemCode,itemName,trim(round(quantity,4))+0 AS quantity,measurementType,brandAndModel,costPerUnit,dateOfPurchase,estimatedLife,addedon,modon,itemstatus,trim(round(criticalLevel,4))+0 AS criticalLevel " +
                 "FROM chem_lab.item a,chem_lab.itemequipment b WHERE b.itemID = a.itemID";
-            string queryapp = "SELECT a.itemID,itemCode,itemName,trim(round(quantity,4))+0 AS quantity,measurementType,description,addedon,modon,itemstatus " +
+            string queryapp = "SELECT a.itemID,itemCode,itemName,trim(round(quantity,4))+0 AS quantity,measurementType,description,addedon,modon,itemstatus,trim(round(criticalLevel,4))+0 AS criticalLevel " +
             "FROM chem_lab.item a,chem_lab.itemapparatus b WHERE b.itemID = a.itemID";
-            string querychem = "SELECT a.itemID,itemCode,itemName,colorCode,classification,quantity,measurementType,addedon,modon,itemstatus " +
+            string querychem = "SELECT a.itemID,itemCode,itemName,colorCode,classification,quantity,measurementType,addedon,modon,itemstatus,criticalLevel " +
             "FROM chem_lab.item a,chem_lab.itemchemical b WHERE b.itemID = a.itemID";
 
             loadallgeneral(query);
@@ -114,6 +115,14 @@ namespace Accounting
             comboBox2.SelectedIndex = 0;
             comboBox3.SelectedIndex = 0;
             comboBox4.SelectedIndex = 0;
+            ecritlevel.Maximum = 9999;
+            ecritlevel.Minimum = 0;
+            acritlevel.Maximum = 9999;
+            acritlevel.Minimum = 0;
+            ccritlevel.Maximum = 9999;
+            ccritlevel.Minimum = 0;
+            ccritlevel.DecimalPlaces = 3;
+            ccritlevel.Increment = 0.010m;
         }
 
 
@@ -125,7 +134,7 @@ namespace Accounting
                 itemCode.Text = dataGridView1.Rows[e.RowIndex].Cells["itemCode"].Value.ToString();
                 itemname.Text = dataGridView1.Rows[e.RowIndex].Cells["itemname"].Value.ToString();
                 itemtype.Text = dataGridView1.Rows[e.RowIndex].Cells["itemtype"].Value.ToString();
-              
+                
                 status.Text = dataGridView1.Rows[e.RowIndex].Cells["itemstatus"].Value.ToString();
 
                 updbutton.Enabled = true;
@@ -214,7 +223,7 @@ namespace Accounting
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+           
        
             if (e.RowIndex >= 0)
             {
@@ -226,7 +235,7 @@ namespace Accounting
                 costunit.Text = dataGridView2.Rows[e.RowIndex].Cells["costPerUnit"].Value.ToString();
                 purchasedate.Value = (DateTime)dataGridView2.Rows[e.RowIndex].Cells["dateOfPurchase"].Value;
                 estlife.Text = dataGridView2.Rows[e.RowIndex].Cells["estimatedLife"].Value.ToString();
-            
+                ecritlevel.Value = Convert.ToDecimal(dataGridView2.Rows[e.RowIndex].Cells["criticalLevel"].Value.ToString());
                 equipStatus.Text= dataGridView2.Rows[e.RowIndex].Cells["itemstatus"].Value.ToString();
                 deselectequipb.Enabled = true;
                 updequipb.Enabled = true;
@@ -264,7 +273,7 @@ namespace Accounting
             else
             {
                 string query = "UPDATE item SET itemCode ='" + eItemCode.Text + "',itemName='" + eitemname.Text +
-                "',modon='" + date + "',itemstatus='" + equipStatus.Text + "' WHERE itemID =" +
+                "',modon='" + date + "',itemstatus='" + equipStatus.Text + "',criticalLevel='"+ecritlevel.Value+"' WHERE itemID =" +
                         selecteditemid;
 
                 conn.Open();
@@ -280,7 +289,7 @@ namespace Accounting
 
                 conn.Close();
                 MessageBox.Show("Successfully updated the item", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                string queryequip = "SELECT a.itemID,itemCode,itemName,trim(round(quantity,4))+0 AS quantity,measurementType,brandAndModel,costPerUnit,dateOfPurchase,estimatedLife,addedon,modon,itemstatus " +
+                string queryequip = "SELECT a.itemID,itemCode,itemName,trim(round(quantity,4))+0 AS quantity,measurementType,brandAndModel,costPerUnit,dateOfPurchase,estimatedLife,addedon,modon,itemstatus,trim(round(criticalLevel,4))+0 AS criticalLevel " +
                     "FROM chem_lab.item a,chem_lab.itemequipment b WHERE b.itemID = a.itemID";
                 loadalle(queryequip);
             }
@@ -295,7 +304,7 @@ namespace Accounting
                 selecteditemid = int.Parse(dataGridView3.Rows[e.RowIndex].Cells["itemID"].Value.ToString());
                 aItemCode.Text= dataGridView3.Rows[e.RowIndex].Cells["itemCode"].Value.ToString();
                 aitemname.Text = dataGridView3.Rows[e.RowIndex].Cells["itemname"].Value.ToString();
-                
+                acritlevel.Value= Convert.ToDecimal(dataGridView3.Rows[e.RowIndex].Cells["criticalLevel"].Value.ToString());
                 adesc.Text = dataGridView3.Rows[e.RowIndex].Cells["description"].Value.ToString();
                 appitemname= dataGridView3.Rows[e.RowIndex].Cells["itemname"].Value.ToString();
 
@@ -333,7 +342,7 @@ namespace Accounting
             {
                 string query;
 
-                query = "UPDATE item SET itemCode='" + aItemCode.Text + "',itemName='" + aitemname.Text + "',modon='" + date + "',itemstatus='" + appStatus.Text + "' WHERE itemID =" + selecteditemid;
+                query = "UPDATE item SET itemCode='" + aItemCode.Text + "',itemName='" + aitemname.Text + "',modon='" + date + "',itemstatus='" + appStatus.Text + "',criticalLevel='"+acritlevel.Value+"' WHERE itemID =" + selecteditemid;
 
 
 
@@ -350,7 +359,7 @@ namespace Accounting
 
                 conn.Close();
                 MessageBox.Show("Successfully updated the item", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                string queryapp = "SELECT a.itemID,itemCode,itemName,trim(round(quantity,4))+0 AS quantity,measurementType,description,addedon,modon,itemstatus " +
+                string queryapp = "SELECT a.itemID,itemCode,itemName,trim(round(quantity,4))+0 AS quantity,measurementType,description,addedon,modon,itemstatus,trim(round(criticalLevel,4))+0 AS criticalLevel " +
                  "FROM chem_lab.item a,chem_lab.itemapparatus b WHERE b.itemID = a.itemID";
                 loadalla(queryapp);
             }
@@ -375,7 +384,7 @@ namespace Accounting
                 classification.Text = dataGridView4.Rows[e.RowIndex].Cells["classification"].Value.ToString();
                 chemitemname = dataGridView4.Rows[e.RowIndex].Cells["itemname"].Value.ToString();
                 chemStatus.Text= dataGridView4.Rows[e.RowIndex].Cells["itemstatus"].Value.ToString();
-                
+                ccritlevel.Value= Convert.ToDecimal(dataGridView4.Rows[e.RowIndex].Cells["criticalLevel"].Value.ToString());
                 button2.Enabled = true;
                 button3.Enabled = true;
                 
@@ -405,7 +414,7 @@ namespace Accounting
             else
             {
 
-                string query = "UPDATE item SET itemCode='" + cItemCode.Text + "',itemName='" + textBox3.Text + "',modon='" + date + "',itemstatus='" + chemStatus.Text + "' WHERE itemID =" + selecteditemid;
+                string query = "UPDATE item SET itemCode='" + cItemCode.Text + "',itemName='" + textBox3.Text + "',modon='" + date + "',itemstatus='" + chemStatus.Text + "',criticalLevel='"+ccritlevel.Value+"' WHERE itemID =" + selecteditemid;
 
                 conn.Open();
                 MySqlCommand comm1 = new MySqlCommand(query, conn);
@@ -420,7 +429,7 @@ namespace Accounting
 
                 conn.Close();
                 MessageBox.Show("Successfully updated the item", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                string querychem = "SELECT a.itemID,itemCode,itemName,colorCode,classification,quantity,measurementType,addedon,modon,itemstatus " +
+                string querychem = "SELECT a.itemID,itemCode,itemName,colorCode,classification,quantity,measurementType,addedon,modon,itemstatus,criticalLevel " +
                 "FROM chem_lab.item a,chem_lab.itemchemical b WHERE b.itemID = a.itemID";
                 loadallc(querychem);
             }
@@ -459,6 +468,7 @@ namespace Accounting
             dataGridView1.Columns["addedon"].HeaderText = "Date Added";
             dataGridView1.Columns["modon"].HeaderText = "Last Modified";
             dataGridView1.Columns["itemstatus"].HeaderText = "Status";
+            dataGridView1.Columns["itemstatus"].Width = 80;
             dataGridView1.ClearSelection();
 
             itemCode.Text = "";
@@ -472,7 +482,18 @@ namespace Accounting
 
         public void loadalle(String queryequip)
         {
-            
+
+            string numquery = "SELECT COUNT(*) AS num FROM item WHERE itemTypeID=1";
+            conn.Open();
+            MySqlCommand commnum = new MySqlCommand(numquery, conn);
+            MySqlDataAdapter adpnum = new MySqlDataAdapter(commnum);
+            conn.Close();
+            DataTable dtnum = new DataTable();
+            adpnum.Fill(dtnum);
+
+
+            equipnum.Text = dtnum.Rows[0]["num"].ToString();
+
             MySqlCommand comm1 = new MySqlCommand(queryequip, conn);
             MySqlDataAdapter adp1 = new MySqlDataAdapter(comm1);
             conn.Close();
@@ -490,7 +511,7 @@ namespace Accounting
             dataGridView2.Columns["costPerUnit"].HeaderText = "Cost/Unit";
             dataGridView2.Columns["dateOfPurchase"].HeaderText = "Date of Purchase";
             dataGridView2.Columns["estimatedLife"].HeaderText = "Estimated Life";
-
+            dataGridView2.Columns["criticalLevel"].HeaderText = "Critical Level";
             dataGridView2.Columns["addedon"].HeaderText = "Date Added";
             dataGridView2.Columns["modon"].HeaderText = "Last Modified";
             dataGridView2.Columns["itemstatus"].HeaderText = "Status";
@@ -501,15 +522,29 @@ namespace Accounting
             costunit.Text = "";
             equipStatus.SelectedIndex = -1;
             estlife.Text = "";
+            ecritlevel.Value = 0;
+          
             updequipb.Enabled = false;
             deselectequipb.Enabled = false;
-         
+            
             equipitemname = "";
             searche.Text = "";
         }
 
         public void loadalla(String queryapp)
         {
+
+       
+            string numquery = "SELECT COUNT(*) AS num FROM item WHERE itemTypeID=2";
+            conn.Open();
+            MySqlCommand commnum = new MySqlCommand(numquery, conn);
+            MySqlDataAdapter adpnum = new MySqlDataAdapter(commnum);
+            conn.Close();
+            DataTable dtnum = new DataTable();
+            adpnum.Fill(dtnum);
+
+            appnum.Text = dtnum.Rows[0]["num"].ToString();
+
 
             conn.Open();
             MySqlCommand comm2 = new MySqlCommand(queryapp, conn);
@@ -529,6 +564,7 @@ namespace Accounting
 
             dataGridView3.Columns["modon"].HeaderText = "Last Modified";
             dataGridView3.Columns["itemstatus"].HeaderText = "Status";
+            dataGridView3.Columns["criticalLevel"].HeaderText = "Critical Level";
             dataGridView3.ClearSelection();
 
             aItemCode.Text = "";
@@ -541,11 +577,24 @@ namespace Accounting
 
             appitemname = "";
             searcha.Text = "";
+            acritlevel.Value = 0;
         }
 
 
         public void loadallc(String querychem)
         {
+
+            string numquery = "SELECT COUNT(*) AS num FROM item WHERE itemTypeID=3";
+            conn.Open();
+            MySqlCommand commnum = new MySqlCommand(numquery, conn);
+            MySqlDataAdapter adpnum = new MySqlDataAdapter(commnum);
+            conn.Close();
+            DataTable dtnum = new DataTable();
+            adpnum.Fill(dtnum);
+
+            chemnum.Text = dtnum.Rows[0]["num"].ToString();
+
+
 
             conn.Open();
             MySqlCommand comm3 = new MySqlCommand(querychem, conn);
@@ -566,6 +615,7 @@ namespace Accounting
             dataGridView4.Columns["addedon"].HeaderText = "Date Added";
             dataGridView4.Columns["modon"].HeaderText = "Last Modified";
             dataGridView4.Columns["itemstatus"].HeaderText = "Status";
+            dataGridView4.Columns["criticalLevel"].HeaderText = "Critical Level";
             dataGridView4.ClearSelection();
 
             cItemCode.Text = "";
@@ -578,6 +628,7 @@ namespace Accounting
             button2.Enabled = false;
             chemitemname = "";
             searchc.Text = "";
+            ccritlevel.Value = 0;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -612,7 +663,7 @@ namespace Accounting
                 x = "a.itemCode";
             }
 
-            string query = "SELECT a.itemID,itemName,itemCode,trim(round(quantity,4))+0 AS quantity,measurementType,brandAndModel,costPerUnit,dateOfPurchase,estimatedLife,addedon,modon,itemstatus " +
+            string query = "SELECT a.itemID,itemName,itemCode,trim(round(quantity,4))+0 AS quantity,measurementType,brandAndModel,costPerUnit,dateOfPurchase,estimatedLife,addedon,modon,itemstatus,trim(round(criticalLevel,4))+0 AS criticalLevel " +
             "FROM chem_lab.item a,chem_lab.itemequipment b WHERE b.itemID = a.itemID AND " + x + " LIKE '" + searche.Text + "%'";
 
 
@@ -634,7 +685,7 @@ namespace Accounting
                 x = "a.itemCode";
             }
 
-            string queryapp = "SELECT a.itemID,itemName,itemCode,trim(round(quantity,4))+0 AS quantity,measurementType,description,addedon,modon,itemstatus " +
+            string queryapp = "SELECT a.itemID,itemName,itemCode,trim(round(quantity,4))+0 AS quantity,measurementType,description,addedon,modon,itemstatus,trim(round(criticalLevel,4))+0 AS criticalLevel " +
                    "FROM chem_lab.item a,chem_lab.itemapparatus b WHERE b.itemID = a.itemID AND " + x + " LIKE '" + searcha.Text + "%'";
             loadalla(queryapp);
         }
@@ -652,7 +703,7 @@ namespace Accounting
                 x = "a.itemCode";
             }
 
-            string querychem = "SELECT a.itemID,itemName,itemCode,colorCode,classification,quantity,measurementType,addedon,modon,itemstatus " +
+            string querychem = "SELECT a.itemID,itemName,itemCode,colorCode,classification,quantity,measurementType,addedon,modon,itemstatus,criticalLevel " +
             "FROM chem_lab.item a,chem_lab.itemchemical b WHERE b.itemID = a.itemID AND " + x + " LIKE '" + searchc.Text + "%'";
             loadallc(querychem);
         }
@@ -731,7 +782,7 @@ namespace Accounting
 
         private void button6_Click(object sender, EventArgs e)
         {
-            string queryequip = "SELECT a.itemID,itemCode,itemName,trim(round(quantity,4))+0 AS quantity,measurementType,brandAndModel,costPerUnit,dateOfPurchase,estimatedLife,addedon,modon,itemstatus " +
+            string queryequip = "SELECT a.itemID,itemCode,itemName,trim(round(quantity,4))+0 AS quantity,measurementType,brandAndModel,costPerUnit,dateOfPurchase,estimatedLife,addedon,modon,itemstatus,trim(round(criticalLevel,4))+0 AS criticalLevel " +
                 "FROM chem_lab.item a,chem_lab.itemequipment b WHERE b.itemID = a.itemID";
             loadalle(queryequip);
         }
@@ -755,7 +806,7 @@ namespace Accounting
 
         private void button7_Click(object sender, EventArgs e)
         {
-            string queryapp = "SELECT a.itemID,itemCode,itemName,trim(round(quantity,4))+0 AS quantity,measurementType,description,addedon,modon,itemstatus " +
+            string queryapp = "SELECT a.itemID,itemCode,itemName,trim(round(quantity,4))+0 AS quantity,measurementType,description,addedon,modon,itemstatus,trim(round(criticalLevel,4))+0 AS criticalLevel " +
              "FROM chem_lab.item a,chem_lab.itemapparatus b WHERE b.itemID = a.itemID";
             loadalla(queryapp);
         }
@@ -813,7 +864,7 @@ namespace Accounting
         
         private void button12_Click(object sender, EventArgs e)
         {
-            string querychem = "SELECT a.itemID,itemCode,itemName,colorCode,classification,quantity,measurementType,addedon,modon,itemstatus " +
+            string querychem = "SELECT a.itemID,itemCode,itemName,colorCode,classification,quantity,measurementType,addedon,modon,itemstatus,criticalLevel " +
             "FROM chem_lab.item a,chem_lab.itemchemical b WHERE b.itemID = a.itemID";
             loadallc(querychem);
         }
