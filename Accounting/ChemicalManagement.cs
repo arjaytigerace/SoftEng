@@ -16,7 +16,7 @@ namespace Accounting
         public int requestid;
         public String date;
         public String chemname;
-        public int qty;
+        public decimal qty;
         public String tfname;
         public String tlname;
         public String subj;
@@ -40,19 +40,19 @@ namespace Accounting
 
         private void ChemicalManagement_Load(object sender, EventArgs e)
         {
-            
-            Loadall();
+            specificsearch.SelectedIndex = 0;
+            string query = "SELECT chemRequestId,b.itemName,CONCAT(a.cqty,' ',a.measurementType) AS cqty,studentFName,studentLName,c.studentId,d.teacherId,subject,c.yearCourse,teacherFName,teacherLName," +
+             "a.dateRequested,a.dateUpdated,CONCAT(e.firstname,' ',e.lastname) AS PreparedBy, CONCAT(f.firstname, ' ', f.lastname) AS LastUpdatedBy, a.status" +
+             " FROM chem_lab.chemrequest a INNER JOIN administrativeassociate e ON a.userID = e.admin_ID " +
+             "INNER JOIN administrativeassociate f ON a.lastUpdatedUser = f.admin_ID," +
+             "chem_lab.item b, chem_lab.student c, teacher d WHERE b.itemID = a.itemID" +
+             " AND c.studentID = a.studentId AND a.teacherId = d.teacherID";
+            Loadall(query);
         }
 
-        public void Loadall()
+        public void Loadall(String query)
         {
 
-            string query = "SELECT chemRequestId,b.itemName,CONCAT(a.cqty,' ',a.measurementType) AS cqty,studentFName,studentLName,c.studentId,d.teacherId,subject,c.yearCourse,teacherFName,teacherLName," +
-                "a.dateRequested,a.dateUpdated,CONCAT(e.firstname,' ',e.lastname) AS PreparedBy, CONCAT(f.firstname, ' ', f.lastname) AS LastUpdatedBy, a.status" +
-                " FROM chem_lab.chemrequest a INNER JOIN administrativeassociate e ON a.userID = e.admin_ID " +
-                "INNER JOIN administrativeassociate f ON a.lastUpdatedUser = f.admin_ID," +
-                "chem_lab.item b, chem_lab.student c, teacher d WHERE b.itemID = a.itemID" +
-                " AND c.studentID = a.studentId AND a.teacherId = d.teacherID";
 
             conn.Open();
             MySqlCommand comm = new MySqlCommand(query, conn);
@@ -79,13 +79,15 @@ namespace Accounting
             dataGridView1.Columns["subject"].HeaderText = "Subject";
             dataGridView1.Columns["chemRequestId"].Visible = false;
             dataGridView1.Columns["dateRequested"].HeaderText = "Date Requested";
+            dataGridView1.Columns["dateRequested"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridView1.Columns["dateUpdated"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dataGridView1.Columns["dateUpdated"].HeaderText = "Date Updated";
             dataGridView1.Columns["PreparedBy"].HeaderText = "Prepared By";
             dataGridView1.Columns["LastUpdatedBy"].HeaderText = "Last Updated By";
             dataGridView1.Columns["status"].HeaderText = "Status";
 
             dataGridView1.ClearSelection();
-            specificsearch.SelectedIndex = 0;
+            searchc.Text = "";
             button3.Enabled = false;
 
             string query1 = "SELECT COUNT(*) from chemrequest";
@@ -98,7 +100,7 @@ namespace Accounting
             adp1.Fill(dt1);
 
             rnum.Text= dt1.Rows[0]["COUNT(*)"].ToString();
-
+            
 
         }
 
@@ -170,7 +172,14 @@ namespace Accounting
 
         private void ChemicalManagement_Activated(object sender, EventArgs e)
         {
-            Loadall();
+            /*
+            string query = "SELECT chemRequestId,b.itemName,CONCAT(a.cqty,' ',a.measurementType) AS cqty,studentFName,studentLName,c.studentId,d.teacherId,subject,c.yearCourse,teacherFName,teacherLName," +
+            "a.dateRequested,a.dateUpdated,CONCAT(e.firstname,' ',e.lastname) AS PreparedBy, CONCAT(f.firstname, ' ', f.lastname) AS LastUpdatedBy, a.status" +
+            " FROM chem_lab.chemrequest a INNER JOIN administrativeassociate e ON a.userID = e.admin_ID " +
+            "INNER JOIN administrativeassociate f ON a.lastUpdatedUser = f.admin_ID," +
+            "chem_lab.item b, chem_lab.student c, teacher d WHERE b.itemID = a.itemID" +
+            " AND c.studentID = a.studentId AND a.teacherId = d.teacherID";
+            Loadall(query);*/
 
         }
 
@@ -193,7 +202,7 @@ namespace Accounting
                 teacherPK = int.Parse(dataGridView1.Rows[e.RowIndex].Cells["teacherId"].Value.ToString());
                 studentPK = int.Parse(dataGridView1.Rows[e.RowIndex].Cells["studentId"].Value.ToString());
                 chemname = dataGridView1.Rows[e.RowIndex].Cells["itemName"].Value.ToString();
-                qty = Convert.ToInt32(dt.Rows[0]["cqty"].ToString());
+                qty = Convert.ToDecimal(dt.Rows[0]["cqty"].ToString());
                 measuretype = dt.Rows[0]["measurementType"].ToString();
                 tfname = dataGridView1.Rows[e.RowIndex].Cells["teacherFName"].Value.ToString();
                 tlname = dataGridView1.Rows[e.RowIndex].Cells["teacherLName"].Value.ToString();
@@ -217,12 +226,63 @@ namespace Accounting
 
         private void searchchem_Click(object sender, EventArgs e)
         {
-            ChemMgtSearch chemsearch = new ChemMgtSearch();
+            String x;
 
-            chemsearch.main = this;
-            chemsearch.index = specificsearch.SelectedIndex;
-            chemsearch.search = searchc.Text;
-            chemsearch.Show();
+
+            if (specificsearch.SelectedIndex == 0)
+            {
+                x = "item.itemName";
+                string query = "SELECT chemRequestId,b.itemName,CONCAT(a.cqty,' ',a.measurementType) AS cqty,a.studentId,a.teacherId,studentFName,studentLName,subject,c.yearCourse,teacherFName,teacherLName," +
+                "a.dateRequested,a.dateUpdated,a.status, CONCAT(e.firstname,' ',e.lastname) AS PreparedBy, CONCAT(f.firstname, ' ', f.lastname) AS LastUpdatedBy" +
+                " FROM chem_lab.chemrequest a INNER JOIN administrativeassociate e ON a.userID = e.admin_ID " +
+                "INNER JOIN administrativeassociate f ON a.lastUpdatedUser = f.admin_ID " + "JOIN item ON a.itemID=item.itemID AND " + x + " LIKE '" + searchc.Text + "%'," +
+                " chem_lab.item b, chem_lab.student c, teacher d WHERE b.itemID = a.itemID" +
+                " AND c.studentID = a.studentId AND a.teacherId = d.teacherID";
+
+
+                Loadall(query);
+
+            }
+            else if(specificsearch.SelectedIndex == 1)
+            {
+                x = "subject";
+                string query = "SELECT chemRequestId,b.itemName,CONCAT(a.cqty,' ',a.measurementType) AS cqty,a.studentId,a.teacherId,studentFName,studentLName,subject,c.yearCourse,teacherFName,teacherLName," +
+                "a.dateRequested,a.dateUpdated,a.status, CONCAT(e.firstname,' ',e.lastname) AS PreparedBy, CONCAT(f.firstname, ' ', f.lastname) AS LastUpdatedBy" +
+                " FROM chem_lab.chemrequest a INNER JOIN administrativeassociate e ON a.userID = e.admin_ID " +
+                "INNER JOIN administrativeassociate f ON a.lastUpdatedUser = f.admin_ID " + "JOIN item ON a.itemID=item.itemID AND " + x + " LIKE '" + searchc.Text + "%'," +
+                " chem_lab.item b, chem_lab.student c, teacher d WHERE b.itemID = a.itemID" +
+                " AND c.studentID = a.studentId AND a.teacherId = d.teacherID";
+
+
+                Loadall(query);
+            }
+            else if (specificsearch.SelectedIndex == 2)
+            {
+                x = "student.studentFName";
+
+                string query = "SELECT chemRequestId,b.itemName,CONCAT(a.cqty,' ',a.measurementType) AS cqty,a.studentId,a.teacherId,c.studentFName,c.studentLName,subject,c.yearCourse,teacherFName,teacherLName," +
+                "a.dateRequested,a.dateUpdated,a.status, CONCAT(e.firstname,' ',e.lastname) AS PreparedBy, CONCAT(f.firstname, ' ', f.lastname) AS LastUpdatedBy" +
+                " FROM chem_lab.chemrequest a INNER JOIN administrativeassociate e ON a.userID = e.admin_ID " +
+                "INNER JOIN administrativeassociate f ON a.lastUpdatedUser = f.admin_ID " + "JOIN student ON a.studentId = student.studentID AND " + x + " LIKE '" + searchc.Text + "%'," +
+                "chem_lab.item b, chem_lab.student c, teacher d WHERE b.itemID = a.itemID" +
+                " AND c.studentID = a.studentID AND a.teacherId = d.teacherID";
+                Loadall(query);
+            }
+            else
+            {
+                x = "student.studentLName";
+                string query = "SELECT chemRequestId,b.itemName,CONCAT(a.cqty,' ',a.measurementType) AS cqty,a.studentId,a.teacherId,c.studentFName,c.studentLName,subject,c.yearCourse,teacherFName,teacherLName," +
+                "a.dateRequested,a.dateUpdated,a.status, CONCAT(e.firstname,' ',e.lastname) AS PreparedBy, CONCAT(f.firstname, ' ', f.lastname) AS LastUpdatedBy" +
+                " FROM chem_lab.chemrequest a INNER JOIN administrativeassociate e ON a.userID = e.admin_ID " +
+                "INNER JOIN administrativeassociate f ON a.lastUpdatedUser = f.admin_ID " + "JOIN student ON a.studentId = student.studentID AND " + x + " LIKE '" + searchc.Text + "%'," +
+                "chem_lab.item b, chem_lab.student c, teacher d WHERE b.itemID = a.itemID" +
+                " AND c.studentID = a.studentID AND a.teacherId = d.teacherID";
+                Loadall(query);
+
+            }
+
+
+
         }
 
         private void searchc_TextChanged(object sender, EventArgs e)
@@ -233,6 +293,62 @@ namespace Accounting
         private void specificsearch_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string query = "SELECT chemRequestId,b.itemName,CONCAT(a.cqty,' ',a.measurementType) AS cqty,studentFName,studentLName,c.studentId,d.teacherId,subject,c.yearCourse,teacherFName,teacherLName," +
+            "a.dateRequested,a.dateUpdated,CONCAT(e.firstname,' ',e.lastname) AS PreparedBy, CONCAT(f.firstname, ' ', f.lastname) AS LastUpdatedBy, a.status" +
+            " FROM chem_lab.chemrequest a INNER JOIN administrativeassociate e ON a.userID = e.admin_ID " +
+            "INNER JOIN administrativeassociate f ON a.lastUpdatedUser = f.admin_ID," +
+            "chem_lab.item b, chem_lab.student c, teacher d WHERE b.itemID = a.itemID" +
+            " AND c.studentID = a.studentId AND a.teacherId = d.teacherID";
+            Loadall(query);
+            radioButton4.Checked = true;
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            string query = "SELECT chemRequestId,b.itemName,CONCAT(a.cqty,' ',a.measurementType) AS cqty,studentFName,studentLName,c.studentId,d.teacherId,subject,c.yearCourse,teacherFName,teacherLName," +
+            "a.dateRequested,a.dateUpdated,CONCAT(e.firstname,' ',e.lastname) AS PreparedBy, CONCAT(f.firstname, ' ', f.lastname) AS LastUpdatedBy, a.status" +
+             " FROM chem_lab.chemrequest a INNER JOIN administrativeassociate e ON a.userID = e.admin_ID " +
+             "INNER JOIN administrativeassociate f ON a.lastUpdatedUser = f.admin_ID," +
+            "chem_lab.item b, chem_lab.student c, teacher d WHERE b.itemID = a.itemID" +
+            " AND c.studentID = a.studentId AND a.teacherId = d.teacherID AND a.status='Unreleased'";
+            Loadall(query);
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            string query = "SELECT chemRequestId,b.itemName,CONCAT(a.cqty,' ',a.measurementType) AS cqty,studentFName,studentLName,c.studentId,d.teacherId,subject,c.yearCourse,teacherFName,teacherLName," +
+            "a.dateRequested,a.dateUpdated,CONCAT(e.firstname,' ',e.lastname) AS PreparedBy, CONCAT(f.firstname, ' ', f.lastname) AS LastUpdatedBy, a.status" +
+             " FROM chem_lab.chemrequest a INNER JOIN administrativeassociate e ON a.userID = e.admin_ID " +
+             "INNER JOIN administrativeassociate f ON a.lastUpdatedUser = f.admin_ID," +
+            "chem_lab.item b, chem_lab.student c, teacher d WHERE b.itemID = a.itemID" +
+            " AND c.studentID = a.studentId AND a.teacherId = d.teacherID";
+            Loadall(query);
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            string query = "SELECT chemRequestId,b.itemName,CONCAT(a.cqty,' ',a.measurementType) AS cqty,studentFName,studentLName,c.studentId,d.teacherId,subject,c.yearCourse,teacherFName,teacherLName," +
+            "a.dateRequested,a.dateUpdated,CONCAT(e.firstname,' ',e.lastname) AS PreparedBy, CONCAT(f.firstname, ' ', f.lastname) AS LastUpdatedBy, a.status" +
+             " FROM chem_lab.chemrequest a INNER JOIN administrativeassociate e ON a.userID = e.admin_ID " +
+            "INNER JOIN administrativeassociate f ON a.lastUpdatedUser = f.admin_ID," +
+            "chem_lab.item b, chem_lab.student c, teacher d WHERE b.itemID = a.itemID" +
+            " AND c.studentID = a.studentId AND a.teacherId = d.teacherID AND a.status='Released'";
+            Loadall(query);
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            string query = "SELECT chemRequestId,b.itemName,CONCAT(a.cqty,' ',a.measurementType) AS cqty,studentFName,studentLName,c.studentId,d.teacherId,subject,c.yearCourse,teacherFName,teacherLName," +
+            "a.dateRequested,a.dateUpdated,CONCAT(e.firstname,' ',e.lastname) AS PreparedBy, CONCAT(f.firstname, ' ', f.lastname) AS LastUpdatedBy, a.status" +
+            " FROM chem_lab.chemrequest a INNER JOIN administrativeassociate e ON a.userID = e.admin_ID " +
+            "INNER JOIN administrativeassociate f ON a.lastUpdatedUser = f.admin_ID," +
+            "chem_lab.item b, chem_lab.student c, teacher d WHERE b.itemID = a.itemID" +
+            " AND c.studentID = a.studentId AND a.teacherId = d.teacherID AND a.status='Cancelled'";
+            Loadall(query);
         }
     }
 }

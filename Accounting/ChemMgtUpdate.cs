@@ -15,8 +15,8 @@ namespace Accounting
     {
         public Form main { get; set; }
         public int Requestid { get; set; }
-        public int uqty { get; set; }
-        public int oldqty { get; set; }
+        public decimal uqty { get; set; }
+        public decimal oldqty { get; set; }
         public string oldchem { get; set; }
         public String utfname { get; set; }
         public String utlname { get; set; }
@@ -52,6 +52,8 @@ namespace Accounting
 
             cqty.Minimum = 0;
             cqty.Maximum = 9999;
+            cqty.DecimalPlaces = 3;
+            cqty.Increment = 0.010m;
             chemname.Text = this.uchemname;
             cqty.Value = this.uqty;
             oldqty = this.uqty;
@@ -74,6 +76,20 @@ namespace Accounting
             sFName.ReadOnly = true;
             sLName.ReadOnly = true;
             yearcourse.ReadOnly = true;
+
+            string query3 = "SELECT quantity from item WHERE itemName='" + chemname.Text + "'";
+            conn.Open();
+            MySqlCommand comm3 = new MySqlCommand(query3, conn);
+            MySqlDataAdapter adp3 = new MySqlDataAdapter(comm3);
+            conn.Close();
+            DataTable dt3 = new DataTable();
+            adp3.Fill(dt3);
+            if (dt3.Rows.Count > 0)
+            {
+   
+                qtyonhand.Text = dt3.Rows[0]["quantity"].ToString();
+            }
+
 
         }
 
@@ -113,7 +129,7 @@ namespace Accounting
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             DataSet ds = new DataSet();
 
-            string sql = "SELECT itemName FROM item where itemTypeID=3";
+            string sql = "SELECT itemName FROM item where itemTypeID=3 AND itemstatus='Active'";
 
 
             conn.Open();
@@ -164,7 +180,7 @@ namespace Accounting
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             DataSet ds = new DataSet();
 
-            string sql = "SELECT schoolID FROM teacher";
+            string sql = "SELECT schoolID FROM teacher where status!='Inactive'";
 
 
             conn.Open();
@@ -219,7 +235,7 @@ namespace Accounting
             }
             else
             {
-                string query = "SELECT itemID, quantity from item where itemName ='" + chemname.Text + "' AND itemTypeID=3";
+                string query = "SELECT itemID, quantity from item where itemName ='" + chemname.Text + "' AND itemTypeID=3 AND itemstatus='Active'";
                 conn.Open();
                 MySqlCommand comm = new MySqlCommand(query, conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
@@ -232,12 +248,16 @@ namespace Accounting
                 {
                     int itemid = Convert.ToInt32(dt.Rows[0]["itemID"].ToString());
 
-                    if (cqty.Value <= Convert.ToInt32(dt.Rows[0]["quantity"].ToString()) + oldqty)
+                    if (cqty.Value <= Convert.ToDecimal(dt.Rows[0]["quantity"].ToString()) + oldqty)
                     {
-                        if (!checkTeacher() || !checkStudent())
+                        if (!checkStudent())
                         {
-                            MessageBox.Show("Teacher or Student Doesn't Exist!");
+                            MessageBox.Show("Student Doesn't Exist!");
 
+                        }
+                        else if (!checkTeacher())
+                        {
+                            MessageBox.Show("Teacher doesn't exist or is inactive");
                         }
                         else
                         {
@@ -323,7 +343,7 @@ namespace Accounting
                 }
                 else
                 {
-                    MessageBox.Show("The item you entered isn't a chemical");
+                    MessageBox.Show("The item you entered isn't a chemical or is inactive");
                 }
                 
             
@@ -380,7 +400,7 @@ namespace Accounting
         private void chemname_Leave(object sender, EventArgs e)
         {
 
-            string query3 = "SELECT measurementType from item WHERE itemName='" + chemname.Text + "'";
+            string query3 = "SELECT measurementType,quantity from item WHERE itemName='" + chemname.Text + "'";
             conn.Open();
             MySqlCommand comm3 = new MySqlCommand(query3, conn);
             MySqlDataAdapter adp3 = new MySqlDataAdapter(comm3);
@@ -390,10 +410,7 @@ namespace Accounting
             if (dt3.Rows.Count > 0)
             {
                 mtype.Text = dt3.Rows[0]["measurementType"].ToString();
-            }
-            else
-            {
-                MessageBox.Show("Item is not a chemical");
+                qtyonhand.Text= dt3.Rows[0]["quantity"].ToString();
             }
 
         }
@@ -413,6 +430,11 @@ namespace Accounting
                 tLName.Text = dt3.Rows[0]["teacherLName"].ToString();
 
             }
+            else
+            {
+                tFName.Text = "";
+                tLName.Text = "";
+            }
         }
 
         private void sID_Leave(object sender, EventArgs e)
@@ -429,6 +451,13 @@ namespace Accounting
                 sFName.Text = dt3.Rows[0]["studentFName"].ToString();
                 sLName.Text = dt3.Rows[0]["studentLName"].ToString();
                 yearcourse.Text = dt3.Rows[0]["yearCourse"].ToString();
+            }
+            else
+            {
+                sFName.Text = "";
+                sLName.Text = "";
+                yearcourse.Text = "";
+
             }
 
         }

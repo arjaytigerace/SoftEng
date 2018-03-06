@@ -59,6 +59,8 @@
             this.mtype = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.rstatus = new System.Windows.Forms.ComboBox();
+            this.qtyonhand = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cqty)).BeginInit();
@@ -73,7 +75,7 @@
             this.groupBox2.Controls.Add(this.tLName);
             this.groupBox2.Controls.Add(this.tFName);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(0, 81);
+            this.groupBox2.Location = new System.Drawing.Point(9, 130);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -160,7 +162,7 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.sLName);
-            this.groupBox1.Location = new System.Drawing.Point(0, 374);
+            this.groupBox1.Location = new System.Drawing.Point(1, 399);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -257,7 +259,7 @@
             // user
             // 
             this.user.AutoSize = true;
-            this.user.Location = new System.Drawing.Point(217, 713);
+            this.user.Location = new System.Drawing.Point(218, 738);
             this.user.Name = "user";
             this.user.Size = new System.Drawing.Size(91, 17);
             this.user.TabIndex = 61;
@@ -275,7 +277,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 302);
+            this.label5.Location = new System.Drawing.Point(4, 327);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 20);
             this.label5.TabIndex = 58;
@@ -285,7 +287,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(7, 709);
+            this.label6.Location = new System.Drawing.Point(8, 734);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(106, 20);
             this.label6.TabIndex = 57;
@@ -295,7 +297,7 @@
             // 
             this.subj.BackColor = System.Drawing.SystemColors.Control;
             this.subj.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subj.Location = new System.Drawing.Point(216, 294);
+            this.subj.Location = new System.Drawing.Point(217, 319);
             this.subj.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.subj.Name = "subj";
             this.subj.Size = new System.Drawing.Size(319, 34);
@@ -341,8 +343,8 @@
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.Location = new System.Drawing.Point(391, 790);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonCancel.Location = new System.Drawing.Point(392, 815);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(147, 69);
             this.buttonCancel.TabIndex = 52;
@@ -356,8 +358,8 @@
             this.buttonSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSubmit.Location = new System.Drawing.Point(219, 790);
-            this.buttonSubmit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSubmit.Location = new System.Drawing.Point(220, 815);
+            this.buttonSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSubmit.Name = "buttonSubmit";
             this.buttonSubmit.Size = new System.Drawing.Size(164, 69);
             this.buttonSubmit.TabIndex = 51;
@@ -368,17 +370,17 @@
             // mtype
             // 
             this.mtype.AutoSize = true;
-            this.mtype.Location = new System.Drawing.Point(413, 54);
+            this.mtype.Location = new System.Drawing.Point(418, 78);
             this.mtype.Name = "mtype";
-            this.mtype.Size = new System.Drawing.Size(54, 17);
+            this.mtype.Size = new System.Drawing.Size(18, 17);
             this.mtype.TabIndex = 64;
-            this.mtype.Text = "label12";
+            this.mtype.Text = "--";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(15, 644);
+            this.label12.Location = new System.Drawing.Point(16, 669);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(63, 20);
             this.label12.TabIndex = 65;
@@ -392,18 +394,39 @@
             "Unreleased",
             "Released",
             "Cancelled"});
-            this.rstatus.Location = new System.Drawing.Point(217, 644);
-            this.rstatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rstatus.Location = new System.Drawing.Point(218, 669);
+            this.rstatus.Margin = new System.Windows.Forms.Padding(4);
             this.rstatus.Name = "rstatus";
             this.rstatus.Size = new System.Drawing.Size(319, 24);
             this.rstatus.TabIndex = 66;
+            // 
+            // qtyonhand
+            // 
+            this.qtyonhand.AutoSize = true;
+            this.qtyonhand.Location = new System.Drawing.Point(220, 92);
+            this.qtyonhand.Name = "qtyonhand";
+            this.qtyonhand.Size = new System.Drawing.Size(18, 17);
+            this.qtyonhand.TabIndex = 68;
+            this.qtyonhand.Text = "--";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(8, 92);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(160, 20);
+            this.label15.TabIndex = 67;
+            this.label15.Text = "Quantity On-Hand";
             // 
             // ChemMgtUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.ClientSize = new System.Drawing.Size(649, 900);
+            this.ClientSize = new System.Drawing.Size(649, 912);
+            this.Controls.Add(this.qtyonhand);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.rstatus);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.mtype);
@@ -468,5 +491,7 @@
         private System.Windows.Forms.TextBox facID;
         private System.Windows.Forms.TextBox sID;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label qtyonhand;
+        private System.Windows.Forms.Label label15;
     }
 }
