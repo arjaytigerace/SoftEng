@@ -248,7 +248,7 @@ namespace Accounting
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ReturnedItems ritems = new ReturnedItems();
+            BRWReturn ritems = new BRWReturn();
             ritems.main = this;
             ritems.Show();
         }

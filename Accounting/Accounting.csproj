@@ -116,6 +116,12 @@
     <Compile Include="ChemMgtUpdate.Designer.cs">
       <DependentUpon>ChemMgtUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrystalReportAll - Copy.cs">
+      <DependentUpon>CrystalReportAll - Copy.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="CrystalReportAll.cs">
       <DependentUpon>CrystalReportAll.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -273,6 +279,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChemMgtUpdate.resx">
       <DependentUpon>ChemMgtUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportAll - Copy.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportAll - Copy.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="CrystalReportAll.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
