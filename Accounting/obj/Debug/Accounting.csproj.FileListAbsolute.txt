@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\User\Desktop\SoftEng-Finisehd_Borrow_Details\Accounting\obj\Debug\Accounting.csprojResolveAssemblyReference.cache
 C:\Users\User\Desktop\SoftEng-Finisehd_Borrow_Details\Accounting\obj\Debug\Accounting.BRWBorrow.resources
 C:\Users\User\Desktop\SoftEng-Finisehd_Borrow_Details\Accounting\obj\Debug\Accounting.BorrowingChem.resources
@@ -124,10 +125,30 @@ D:\raeni\Documents\SAD\SoftEng\Accounting\obj\Debug\Accounting.ChemMgtSearch.res
 D:\raeni\Documents\SAD\SoftEng\Accounting\obj\Debug\Accounting.ChemMgtInfo.resources
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.ChemMgtInfo.resources
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.ChemMgtSearch.resources
+=======
+>>>>>>> GenerateReports
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\Accounting.exe.config
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\Accounting.exe
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\Accounting.pdb
-C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.csprojResolveAssemblyReference.cache
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\FlashControlV71.dll
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\stdole.dll
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.BRWBorrow.resources
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.BorrowingChem.resources
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.BRWupdate.resources
@@ -136,12 +157,22 @@ C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.ChemMgtInfo.resources
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.ChemMgtSearch.resources
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.ChemMgtUpdate.resources
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.Faculty.resources
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.Form1.resources
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.GenerateApparatusReport.resources
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.GenerateChemicalReport.resources
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.GenerateEquipmentReport.resources
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.Inventory.resources
-C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.GenerateReport.resources
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.ItemLog.resources
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.MainMenu.resources
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.Notification.resources
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.Properties.Resources.resources
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.returnbutton.resources
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.Search.resources
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.stockin.resources
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.Stockout.resources
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.Student.resources
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.StudentsFaculty.resources
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.UserPass.resources
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.Users.resources
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.csproj.GenerateResource.Cache
@@ -155,10 +186,6 @@ C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Stockout.reso
 C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.stockin.resources
 C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Stockout.resources
 C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.ItemLog.resources
-C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.ItemLog.resources
-C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.stockin.resources
-C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.Stockout.resources
-C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.StudentsFaculty.resources
 C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\bin\Debug\Accounting.exe.config
 C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\bin\Debug\Accounting.exe
 C:\Users\Raeniel Cornelio\Source\Repos\SoftEng\Accounting\bin\Debug\Accounting.pdb
@@ -236,8 +263,6 @@ C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Notification.
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.returnbutton.resources
 C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.returnbutton.resources
 C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.ReturnedItems.resources
-C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.Faculty.resources
-C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.Notification.resources
-C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.returnbutton.resources
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.ReturnedItems.resources
-C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.Student.resources
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.csprojResolveAssemblyReference.cache
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.GenerateAllReport.resources
