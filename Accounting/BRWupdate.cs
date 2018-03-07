@@ -21,7 +21,7 @@ namespace Accounting
         public int brequestid { get; set; }
         public int studentid { get; set; }
         public String itemname { get; set; }
-        public int quantity { get; set; }
+        public decimal quantity { get; set; }
         public String measuretype { get; set; }
         public String sfname { get; set; }
         public String slname { get; set; }
@@ -102,7 +102,7 @@ namespace Accounting
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             DataSet ds = new DataSet();
 
-            string sql = "SELECT itemName FROM item where itemTypeID=1 OR itemTypeID=2";
+            string sql = "SELECT itemName FROM item where (itemTypeID=1 OR itemTypeID=2) AND itemstatus='Active'";
 
 
             conn.Open();
@@ -156,7 +156,7 @@ namespace Accounting
             }
             else
             {
-                string query = "SELECT itemID, quantity from item where itemName ='" + itemName.Text + "'";
+                string query = "SELECT itemID, quantity from item where itemName ='" + itemName.Text + "' AND itemstatus='Active'";
                 conn.Open();
                 MySqlCommand comm = new MySqlCommand(query, conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
@@ -169,7 +169,7 @@ namespace Accounting
                 {
                     int itemid = Convert.ToInt32(dt.Rows[0]["itemID"].ToString());
 
-                    if (qty.Value <= Convert.ToInt32(dt.Rows[0]["quantity"].ToString()) + oldqty)
+                    if (qty.Value <= Convert.ToDecimal(dt.Rows[0]["quantity"].ToString()) + oldqty)
                     {
                         if (!checkStudent())
                         {
@@ -179,7 +179,6 @@ namespace Accounting
                         else
                         {
 
-                           
                             string query3 = "SELECT studentID from student WHERE schoolID=" + sID.Text;
                             conn.Open();
                             MySqlCommand comm3 = new MySqlCommand(query3, conn);
@@ -253,14 +252,11 @@ namespace Accounting
                 }
                 else
                 {
-                    MessageBox.Show("The item you entered doesn't exist");
+                    MessageBox.Show("The item you entered doesn't exist or is inactive");
                 }
 
 
             }
-
-
-
 
         }
         private Boolean checkStudent()
@@ -280,5 +276,27 @@ namespace Accounting
 
         }
 
+        private void sID_Leave(object sender, EventArgs e)
+        {
+            string query3 = "SELECT studentFName, studentLName, yearCourse from student WHERE schoolID='" + sID.Text + "'";
+            conn.Open();
+            MySqlCommand comm3 = new MySqlCommand(query3, conn);
+            MySqlDataAdapter adp3 = new MySqlDataAdapter(comm3);
+            conn.Close();
+            DataTable dt3 = new DataTable();
+            adp3.Fill(dt3);
+            if (dt3.Rows.Count > 0)
+            {
+                sFName.Text = dt3.Rows[0]["studentFName"].ToString();
+                sLName.Text = dt3.Rows[0]["studentLName"].ToString();
+                yc.Text = dt3.Rows[0]["yearCourse"].ToString();
+            }
+            else
+            {
+                sFName.Text = "";
+                sLName.Text = "";
+                yc.Text = "";
+            }
+        }
     }
 }

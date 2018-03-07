@@ -21,7 +21,7 @@ namespace Accounting
         public int brequestid;
         public int studentid;
         public String itemname;
-        public int qty;
+        public decimal qty;
         public String measuretype;
         public String sfname;
         public String slname;
@@ -55,7 +55,7 @@ namespace Accounting
                  
                 studentid = int.Parse(dataGridView1.Rows[e.RowIndex].Cells["schoolId"].Value.ToString());
                 itemname = dataGridView1.Rows[e.RowIndex].Cells["itemName"].Value.ToString();
-                qty = Convert.ToInt32(dt.Rows[0]["qty"].ToString());
+                qty = Convert.ToDecimal(dt.Rows[0]["qty"].ToString());
                 measuretype = dt.Rows[0]["measureType"].ToString();
 
                 
@@ -181,7 +181,7 @@ namespace Accounting
 
            
 
-            string query1 = "SELECT COUNT(*) from borrowing";
+            string query1 = "SELECT COUNT(*) from borrowing WHERE isReturned=0";
 
             conn.Open();
             MySqlCommand comm1 = new MySqlCommand(query1, conn);
@@ -230,7 +230,7 @@ namespace Accounting
             "a.borrowedDate,a.returnDate,CONCAT(e.firstname,' ',e.lastname) AS releasedBy,c.studentId, a.requestStatus" +
              " FROM chem_lab.borrowing a INNER JOIN administrativeassociate e ON a.releasedBy = e.admin_ID, " +
              "chem_lab.item b, chem_lab.student c WHERE b.itemID = a.itemID" +
-             " AND c.studentID = a.studentId";
+             " AND c.studentID = a.studentId AND a.isReturned=0";
 
             Loadall(query);
         }
@@ -241,7 +241,7 @@ namespace Accounting
             "a.borrowedDate,a.returnDate,CONCAT(e.firstname,' ',e.lastname) AS releasedBy,c.studentId, a.requestStatus" +
             " FROM chem_lab.borrowing a INNER JOIN administrativeassociate e ON a.releasedBy = e.admin_ID " + "JOIN item ON a.itemID=item.itemID AND item.itemName LIKE '" + search.Text + "%'," +
             "chem_lab.item b, chem_lab.student c WHERE b.itemID = a.itemID"+
-            " AND c.studentID = a.studentId";
+            " AND c.studentID = a.studentId AND a.isReturned=0";
 
             Loadall(query);
         }

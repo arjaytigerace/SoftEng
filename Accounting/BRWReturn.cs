@@ -16,7 +16,7 @@ namespace Accounting
     {
         public Form main { get; set; }
         public String returnitem {get;set;}
-        public int qty { get; set; }
+        public decimal qty { get; set; }
         public String mtype { get; set; }
         public String borrowdate { get; set; }
         public int borrowid { get; set; }
