@@ -1,6 +1,6 @@
 ﻿namespace Accounting
 {
-    partial class returnbutton
+    partial class BRWReturn
     {
         /// <summary>
         /// Required designer variable.
@@ -50,10 +50,9 @@
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.Location = new System.Drawing.Point(432, 449);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonCancel.Location = new System.Drawing.Point(324, 365);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(147, 46);
+            this.buttonCancel.Size = new System.Drawing.Size(110, 37);
             this.buttonCancel.TabIndex = 18;
             this.buttonCancel.Text = "Exit";
             this.buttonCancel.UseVisualStyleBackColor = false;
@@ -63,9 +62,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(45, 55);
+            this.label2.Location = new System.Drawing.Point(34, 45);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 29);
+            this.label2.Size = new System.Drawing.Size(110, 24);
             this.label2.TabIndex = 28;
             this.label2.Text = "Item Name";
             // 
@@ -73,9 +73,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(47, 234);
+            this.label3.Location = new System.Drawing.Point(35, 190);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(188, 29);
+            this.label3.Size = new System.Drawing.Size(148, 24);
             this.label3.TabIndex = 30;
             this.label3.Text = "Date Borrowed";
             // 
@@ -83,9 +84,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(47, 111);
+            this.label5.Location = new System.Drawing.Point(35, 90);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 29);
+            this.label5.Size = new System.Drawing.Size(86, 24);
             this.label5.TabIndex = 34;
             this.label5.Text = "Quantity";
             // 
@@ -93,9 +95,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(47, 284);
+            this.label6.Location = new System.Drawing.Point(35, 231);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(181, 29);
+            this.label6.Size = new System.Drawing.Size(144, 24);
             this.label6.TabIndex = 36;
             this.label6.Text = "Date Returned";
             // 
@@ -103,39 +106,37 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(47, 361);
+            this.label7.Location = new System.Drawing.Point(35, 293);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(142, 29);
+            this.label7.Size = new System.Drawing.Size(111, 24);
             this.label7.TabIndex = 38;
             this.label7.Text = "Item Status";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(264, 242);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(198, 197);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 40;
             this.label1.Text = "label1";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(256, 119);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(192, 97);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
+            this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 41;
             this.label4.Text = "label4";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(264, 297);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(198, 241);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 17);
+            this.label8.Size = new System.Drawing.Size(35, 13);
             this.label8.TabIndex = 42;
             this.label8.Text = "label8";
             // 
@@ -145,10 +146,9 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Good Condition",
             "Damaged"});
-            this.comboBox1.Location = new System.Drawing.Point(259, 363);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Location = new System.Drawing.Point(194, 295);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(319, 24);
+            this.comboBox1.Size = new System.Drawing.Size(240, 21);
             this.comboBox1.TabIndex = 43;
             // 
             // button4
@@ -156,10 +156,10 @@
             this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(260, 449);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Location = new System.Drawing.Point(195, 365);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(164, 46);
+            this.button4.Size = new System.Drawing.Size(123, 37);
             this.button4.TabIndex = 54;
             this.button4.Text = "Return";
             this.button4.UseVisualStyleBackColor = false;
@@ -168,28 +168,28 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(377, 119);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(283, 97);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 17);
+            this.label9.Size = new System.Drawing.Size(35, 13);
             this.label9.TabIndex = 55;
             this.label9.Text = "label9";
             // 
             // itemname
             // 
             this.itemname.AutoSize = true;
-            this.itemname.Location = new System.Drawing.Point(259, 66);
+            this.itemname.Location = new System.Drawing.Point(194, 54);
+            this.itemname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.itemname.Name = "itemname";
-            this.itemname.Size = new System.Drawing.Size(54, 17);
+            this.itemname.Size = new System.Drawing.Size(41, 13);
             this.itemname.TabIndex = 56;
             this.itemname.Text = "label10";
             // 
-            // returnbutton
+            // BRWReturn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.ClientSize = new System.Drawing.Size(612, 546);
+            this.ClientSize = new System.Drawing.Size(459, 444);
             this.Controls.Add(this.itemname);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button4);
@@ -204,8 +204,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonCancel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "returnbutton";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "BRWReturn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Return";
             this.Load += new System.EventHandler(this.BRWReturn_Load);

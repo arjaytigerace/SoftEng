@@ -41,7 +41,7 @@ namespace Accounting
             }
             else
             {
-                string query = "SELECT itemID, quantity from item where itemName ='" + itemName.Text+"'";
+                string query = "SELECT itemID, quantity from item where itemName ='" + itemName.Text+"' AND itemstatus='Active'";
                 conn.Open();
                 MySqlCommand comm = new MySqlCommand(query, conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
@@ -53,18 +53,18 @@ namespace Accounting
                 if (hasRows)
                 {
                     int itemid = Convert.ToInt32(dt.Rows[0]["itemID"].ToString());
-                    if (qty.Value <= Convert.ToInt32(dt.Rows[0]["quantity"].ToString()))
+                    if (qty.Value <= Convert.ToDecimal(dt.Rows[0]["quantity"].ToString()))
                     {
 
                         if (!checkStudent())
                         {
-                            MessageBox.Show("Teacher or Student Doesn't Exist!");
+                            MessageBox.Show("tudent Doesn't Exist!");
 
                         }
                         else
                         {
 
-                            string query3 = "SELECT studentID from student WHERE schoolID = " + sID.Text;
+                            string query3 = "SELECT studentID from student WHERE schoolID = '" + sID.Text +"'";
                             conn.Open();
                             MySqlCommand comm3 = new MySqlCommand(query3, conn);
                             MySqlDataAdapter adp3 = new MySqlDataAdapter(comm3);
@@ -99,7 +99,7 @@ namespace Accounting
                 }
                 else
                 {
-                    MessageBox.Show("The item you entered does not exist");
+                    MessageBox.Show("The item you entered does not exist or is inactive");
                 }
             }
 
@@ -188,7 +188,7 @@ namespace Accounting
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             DataSet ds = new DataSet();
 
-            string sql = "SELECT itemName FROM item where itemTypeID=1 OR itemTypeID=2";
+            string sql = "SELECT itemName FROM item where (itemTypeID=1 OR itemTypeID=2) AND itemstatus='Active'";
 
 
             conn.Open();
@@ -223,7 +223,7 @@ namespace Accounting
 
         private void itemName_Leave(object sender, EventArgs e)
         {
-            string query3 = "SELECT measurementType from item WHERE itemName='" + itemName.Text + "'";
+            string query3 = "SELECT trim(round(quantity,4))+0 AS quantity,measurementType from item WHERE itemName='" + itemName.Text + "'";
             conn.Open();
             MySqlCommand comm3 = new MySqlCommand(query3, conn);
             MySqlDataAdapter adp3 = new MySqlDataAdapter(comm3);
@@ -233,11 +233,9 @@ namespace Accounting
             if (dt3.Rows.Count > 0)
             {
                 label6.Text = dt3.Rows[0]["measurementType"].ToString();
+                label14.Text = dt3.Rows[0]["quantity"].ToString();
             }
-            else
-            {
-                MessageBox.Show("Item does not exist!");
-            }
+
         }
 
         private void sID_Leave(object sender, EventArgs e)
@@ -254,6 +252,14 @@ namespace Accounting
                 sFName.Text = dt3.Rows[0]["studentFName"].ToString();
                 sLName.Text = dt3.Rows[0]["studentLName"].ToString();
                 yc.Text = dt3.Rows[0]["yearCourse"].ToString();
+            }
+            else
+            {
+                sFName.Text = "";
+                sLName.Text = "";
+                yc.Text = "";
+
+
             }
         }
     }

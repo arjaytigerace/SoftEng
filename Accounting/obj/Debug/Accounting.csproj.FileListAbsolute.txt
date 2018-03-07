@@ -76,7 +76,6 @@ C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.pdb
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\bin\Debug\Accounting.exe.config
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\bin\Debug\Accounting.exe
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\bin\Debug\Accounting.pdb
-C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.csprojResolveAssemblyReference.cache
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.BRWBorrow.resources
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.BorrowingChem.resources
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.BRWupdate.resources
@@ -234,6 +233,8 @@ C:\Users\rjacornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.csproj
 C:\Users\rjacornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.exe
 C:\Users\rjacornelio\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.pdb
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Notification.resources
-C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.returnbutton.resources
 C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.returnbutton.resources
 C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.ReturnedItems.resources
+C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.ReturnedItems.resources
+C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.BRWReturn.resources
+C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.csprojResolveAssemblyReference.cache

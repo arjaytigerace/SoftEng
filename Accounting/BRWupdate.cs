@@ -21,7 +21,7 @@ namespace Accounting
         public int brequestid { get; set; }
         public int studentid { get; set; }
         public String itemname { get; set; }
-        public int quantity { get; set; }
+        public decimal quantity { get; set; }
         public String measuretype { get; set; }
         public String sfname { get; set; }
         public String slname { get; set; }
@@ -169,7 +169,7 @@ namespace Accounting
                 {
                     int itemid = Convert.ToInt32(dt.Rows[0]["itemID"].ToString());
 
-                    if (qty.Value <= Convert.ToInt32(dt.Rows[0]["quantity"].ToString()) + oldqty)
+                    if (qty.Value <= Convert.ToDecimal(dt.Rows[0]["quantity"].ToString()) + oldqty)
                     {
                         if (!checkStudent())
                         {

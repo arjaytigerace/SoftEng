@@ -49,10 +49,10 @@
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(21, 490);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(16, 398);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(269, 46);
+            this.button1.Size = new System.Drawing.Size(202, 37);
             this.button1.TabIndex = 51;
             this.button1.Text = "Borrow New Item";
             this.button1.UseVisualStyleBackColor = false;
@@ -64,9 +64,8 @@
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Location = new System.Drawing.Point(-1, 2);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(91, 46);
+            this.pictureBox4.Size = new System.Drawing.Size(68, 37);
             this.pictureBox4.TabIndex = 60;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
@@ -76,10 +75,10 @@
             this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(497, 490);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Location = new System.Drawing.Point(373, 398);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(164, 46);
+            this.button4.Size = new System.Drawing.Size(123, 37);
             this.button4.TabIndex = 53;
             this.button4.Text = "Return";
             this.button4.UseVisualStyleBackColor = false;
@@ -90,10 +89,10 @@
             this.button3.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(309, 490);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Location = new System.Drawing.Point(232, 398);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(165, 46);
+            this.button3.Size = new System.Drawing.Size(124, 37);
             this.button3.TabIndex = 78;
             this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = false;
@@ -103,15 +102,16 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 71);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 58);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1109, 382);
+            this.dataGridView1.Size = new System.Drawing.Size(832, 310);
             this.dataGridView1.TabIndex = 77;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -119,20 +119,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(702, 470);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(526, 382);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 17);
+            this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 79;
             this.label1.Text = "Number Borrowed:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(860, 470);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(645, 382);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
+            this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 80;
             this.label2.Text = "label2";
             // 
@@ -141,10 +139,10 @@
             this.refresh.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.refresh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refresh.Location = new System.Drawing.Point(497, 540);
-            this.refresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.refresh.Location = new System.Drawing.Point(373, 439);
+            this.refresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.refresh.Name = "refresh";
-            this.refresh.Size = new System.Drawing.Size(164, 46);
+            this.refresh.Size = new System.Drawing.Size(123, 37);
             this.refresh.TabIndex = 81;
             this.refresh.Text = "Refresh";
             this.refresh.UseVisualStyleBackColor = false;
@@ -155,10 +153,10 @@
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(164, 540);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(123, 439);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(260, 46);
+            this.button2.Size = new System.Drawing.Size(195, 37);
             this.button2.TabIndex = 82;
             this.button2.Text = "Returned Items";
             this.button2.UseVisualStyleBackColor = false;
@@ -169,10 +167,10 @@
             this.searchborrow.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.searchborrow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchborrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchborrow.Location = new System.Drawing.Point(853, 540);
-            this.searchborrow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.searchborrow.Location = new System.Drawing.Point(640, 439);
+            this.searchborrow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.searchborrow.Name = "searchborrow";
-            this.searchborrow.Size = new System.Drawing.Size(121, 41);
+            this.searchborrow.Size = new System.Drawing.Size(91, 33);
             this.searchborrow.TabIndex = 83;
             this.searchborrow.Text = "Search";
             this.searchborrow.UseVisualStyleBackColor = false;
@@ -182,18 +180,18 @@
             // 
             this.search.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.search.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search.Location = new System.Drawing.Point(701, 502);
-            this.search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.search.Location = new System.Drawing.Point(526, 408);
+            this.search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(429, 34);
+            this.search.Size = new System.Drawing.Size(323, 29);
             this.search.TabIndex = 84;
             // 
             // BorrowingChem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.ClientSize = new System.Drawing.Size(1155, 617);
+            this.ClientSize = new System.Drawing.Size(866, 501);
             this.Controls.Add(this.searchborrow);
             this.Controls.Add(this.search);
             this.Controls.Add(this.button2);
@@ -206,7 +204,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "BorrowingChem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BorrowingChem";

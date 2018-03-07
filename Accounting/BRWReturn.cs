@@ -12,11 +12,11 @@ using MySql.Data.MySqlClient;
 
 namespace Accounting
 {
-    public partial class returnbutton : Form
+    public partial class BRWReturn : Form
     {
         public Form main { get; set; }
         public String returnitem {get;set;}
-        public int qty { get; set; }
+        public decimal qty { get; set; }
         public String mtype { get; set; }
         public String borrowdate { get; set; }
         public int borrowid { get; set; }
@@ -24,7 +24,7 @@ namespace Accounting
 
         MySqlConnection conn;
 
-        public returnbutton()
+        public BRWReturn()
         {
             InitializeComponent();
             conn = new MySqlConnection("Server=localhost;Database=chem_lab;uid=root; Pwd = root;");
