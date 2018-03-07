@@ -141,7 +141,6 @@ C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.GenerateReport.resources
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.MainMenu.resources
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.Properties.Resources.resources
-C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.BRWReturn.resources
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.Search.resources
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.UserPass.resources
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.Users.resources
@@ -237,3 +236,8 @@ C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.Notification.
 C:\Users\jdko\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.returnbutton.resources
 C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.returnbutton.resources
 C:\Users\User\Source\Repos\SoftEng\Accounting\obj\Debug\Accounting.ReturnedItems.resources
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.Faculty.resources
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.Notification.resources
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.returnbutton.resources
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.ReturnedItems.resources
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.Student.resources
