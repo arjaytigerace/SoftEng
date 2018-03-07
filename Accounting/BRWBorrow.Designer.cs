@@ -52,6 +52,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.qty)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +63,7 @@
             this.buttonLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.Location = new System.Drawing.Point(141, 564);
+            this.buttonLogin.Location = new System.Drawing.Point(221, 784);
             this.buttonLogin.Margin = new System.Windows.Forms.Padding(4);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(147, 69);
@@ -77,7 +79,7 @@
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.Location = new System.Drawing.Point(326, 564);
+            this.buttonCancel.Location = new System.Drawing.Point(416, 784);
             this.buttonCancel.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(147, 69);
@@ -301,12 +303,35 @@
             this.label14.TabIndex = 41;
             this.label14.Text = "--";
             // 
+            // textBox9
+            // 
+            this.textBox9.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Location = new System.Drawing.Point(303, 577);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox9.Multiline = true;
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(260, 168);
+            this.textBox9.TabIndex = 67;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(34, 580);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(116, 29);
+            this.label15.TabIndex = 68;
+            this.label15.Text = "Remarks";
+            // 
             // BRWBorrow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.ClientSize = new System.Drawing.Size(768, 632);
+            this.ClientSize = new System.Drawing.Size(768, 893);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.textBox9);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.yc);
@@ -371,5 +396,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label label15;
     }
 }

@@ -50,6 +50,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.rstatus = new System.Windows.Forms.ComboBox();
             this.labell = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.qty)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,8 +62,8 @@
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.Location = new System.Drawing.Point(435, 521);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonCancel.Location = new System.Drawing.Point(443, 696);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(147, 69);
             this.buttonCancel.TabIndex = 26;
@@ -75,8 +77,8 @@
             this.buttonLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.Location = new System.Drawing.Point(280, 521);
-            this.buttonLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonLogin.Location = new System.Drawing.Point(288, 696);
+            this.buttonLogin.Margin = new System.Windows.Forms.Padding(4);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(147, 69);
             this.buttonLogin.TabIndex = 25;
@@ -272,7 +274,7 @@
             "Released",
             "Cancelled"});
             this.rstatus.Location = new System.Drawing.Point(275, 412);
-            this.rstatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rstatus.Margin = new System.Windows.Forms.Padding(4);
             this.rstatus.Name = "rstatus";
             this.rstatus.Size = new System.Drawing.Size(320, 24);
             this.rstatus.TabIndex = 58;
@@ -287,12 +289,35 @@
             this.labell.TabIndex = 59;
             this.labell.Text = "Status";
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(9, 459);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(116, 29);
+            this.label15.TabIndex = 70;
+            this.label15.Text = "Remarks";
+            // 
+            // textBox9
+            // 
+            this.textBox9.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Location = new System.Drawing.Point(278, 456);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox9.Multiline = true;
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(260, 168);
+            this.textBox9.TabIndex = 69;
+            // 
             // BRWupdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.ClientSize = new System.Drawing.Size(729, 604);
+            this.ClientSize = new System.Drawing.Size(729, 803);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.textBox9);
             this.Controls.Add(this.labell);
             this.Controls.Add(this.rstatus);
             this.Controls.Add(this.yc);
@@ -350,5 +375,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox rstatus;
         private System.Windows.Forms.Label labell;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textBox9;
     }
 }

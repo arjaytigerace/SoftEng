@@ -75,8 +75,8 @@ namespace Accounting
                             DateTime dateValue = DateTime.Now;
                             string date = dateValue.ToString("yyyy-MM-dd HH:mm:ss");
 
-                            string queryrequest = "INSERT INTO borrowing(itemID,qty,measureType,borrowedDate,returnDate,studentId,requestStatus,releasedBy,isReturned) " + "VALUES('" + itemid + "', '" + qty.Value + "', '" + label6.Text+"','"+
-                                date + "', '" + myDate + "', '" + studentid + "', 'Unreleased', '" + this.Adminid + "',0)";
+                            string queryrequest = "INSERT INTO borrowing(itemID,qty,measureType,borrowedDate,returnDate,studentId,requestStatus,releasedBy,remarks) " + "VALUES('" + itemid + "', '" + qty.Value + "', '" + label6.Text+"','"+
+                                date + "', '" + myDate + "', '" + studentid + "', 'Unreleased', '" + this.Adminid + "', '"+ textBox9.Text+"')";
                             conn.Open();
                             MySqlCommand commrequest = new MySqlCommand(queryrequest, conn);
                             commrequest.ExecuteNonQuery();
@@ -127,7 +127,7 @@ namespace Accounting
             qty.Maximum = 9999;
             qty.Minimum = 0;
             label1.Text = DateTime.Now.ToString();
-            
+            dateTimePicker2.ShowUpDown = true;
 
             sFName.ReadOnly = true;
             sLName.ReadOnly = true;

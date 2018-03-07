@@ -118,7 +118,7 @@ namespace Accounting
             returnform.mtype = measuretype;
             returnform.borrowdate = borrowdate;
             returnform.borrowid = brequestid;
-
+            returnform.Adminid = this.Adminid;
             returnform.Show();
         }
 
@@ -138,10 +138,10 @@ namespace Accounting
         private void BorrowingChem_Load(object sender, EventArgs e)
         {
             string query = "SELECT borrowRequestId,b.itemName,CONCAT(a.qty,' ',a.measureType) AS qty,CONCAT(studentFName,' ',studentLName) AS student,c.schoolId,c.yearCourse," +
-            "a.borrowedDate,a.returnDate,CONCAT(e.firstname,' ',e.lastname) AS releasedBy,c.studentId, a.requestStatus" +
+            "a.borrowedDate,a.returnDate,CONCAT(e.firstname,' ',e.lastname) AS releasedBy,c.studentId, a.requestStatus, a.remarks" +
              " FROM chem_lab.borrowing a INNER JOIN administrativeassociate e ON a.releasedBy = e.admin_ID, " +
              "chem_lab.item b, chem_lab.student c WHERE b.itemID = a.itemID" +
-             " AND c.studentID = a.studentId AND a.isReturned=0";
+             " AND c.studentID = a.studentId AND a.requestStatus!='Returned'";
 
             Loadall(query);
 
@@ -176,12 +176,12 @@ namespace Accounting
             dataGridView1.Columns["returnDate"].HeaderText = "Expected Return Date";
             dataGridView1.Columns["releasedBy"].HeaderText = "Released By";
             dataGridView1.Columns["requestStatus"].HeaderText = "Status";
-
+            dataGridView1.Columns["remarks"].HeaderText = "Remarks";
             dataGridView1.ClearSelection();
 
            
 
-            string query1 = "SELECT COUNT(*) from borrowing WHERE isReturned=0";
+            string query1 = "SELECT COUNT(*) from borrowing WHERE requestStatus='Returned'";
 
             conn.Open();
             MySqlCommand comm1 = new MySqlCommand(query1, conn);
@@ -192,6 +192,7 @@ namespace Accounting
             label2.Text = dt1.Rows[0]["COUNT(*)"].ToString();
 
             button3.Enabled = false;
+            button4.Enabled = false;
 
         }
 
@@ -227,10 +228,10 @@ namespace Accounting
         private void refresh_Click(object sender, EventArgs e)
         {
             string query = "SELECT borrowRequestId,b.itemName,CONCAT(a.qty,' ',a.measureType) AS qty,CONCAT(studentFName,' ',studentLName) AS student,c.schoolId,c.yearCourse," +
-            "a.borrowedDate,a.returnDate,CONCAT(e.firstname,' ',e.lastname) AS releasedBy,c.studentId, a.requestStatus" +
+            "a.borrowedDate,a.returnDate,CONCAT(e.firstname,' ',e.lastname) AS releasedBy,c.studentId, a.requestStatus, a.remarks" +
              " FROM chem_lab.borrowing a INNER JOIN administrativeassociate e ON a.releasedBy = e.admin_ID, " +
              "chem_lab.item b, chem_lab.student c WHERE b.itemID = a.itemID" +
-             " AND c.studentID = a.studentId AND a.isReturned=0";
+             " AND c.studentID = a.studentId AND requestStatus!='Returned'";
 
             Loadall(query);
         }
@@ -238,10 +239,10 @@ namespace Accounting
         private void searchborrow_Click(object sender, EventArgs e)
         {
             string query = "SELECT borrowRequestId,b.itemName,CONCAT(a.qty,' ',a.measureType) AS qty,CONCAT(studentFName,' ',studentLName) AS student,c.schoolId,c.yearCourse," +
-            "a.borrowedDate,a.returnDate,CONCAT(e.firstname,' ',e.lastname) AS releasedBy,c.studentId, a.requestStatus" +
+            "a.borrowedDate,a.returnDate,CONCAT(e.firstname,' ',e.lastname) AS releasedBy,c.studentId, a.requestStatus, a.remarks" +
             " FROM chem_lab.borrowing a INNER JOIN administrativeassociate e ON a.releasedBy = e.admin_ID " + "JOIN item ON a.itemID=item.itemID AND item.itemName LIKE '" + search.Text + "%'," +
             "chem_lab.item b, chem_lab.student c WHERE b.itemID = a.itemID"+
-            " AND c.studentID = a.studentId AND a.isReturned=0";
+            " AND c.studentID = a.studentId AND requestStatus!='Returned'";
 
             Loadall(query);
         }

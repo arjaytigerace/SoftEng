@@ -197,7 +197,7 @@ namespace Accounting
                             conn.Open();
 
                             string queryrequest = "UPDATE borrowing SET itemID = '" + itemid + "', qty = '" + qty.Value + "', measureType='" + label6.Text + "',returnDate = '" + returndate +
-                            "', studentId='" + studentid + "', releasedBy='" + this.Adminid + "',requestStatus='" + rstatus.Text + "' WHERE borrowRequestId = '" + brequestid + "'";
+                            "', studentId='" + studentid + "', releasedBy='" + this.Adminid + "',requestStatus='" + rstatus.Text + "',remarks='"+ textBox9.Text+"' WHERE borrowRequestId = '" + brequestid + "'";
 
 
                             MySqlCommand commrequest = new MySqlCommand(queryrequest, conn);
