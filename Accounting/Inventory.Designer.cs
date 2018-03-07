@@ -1,6 +1,4 @@
-﻿using System.Windows.Forms;
-
-namespace Accounting
+﻿namespace Accounting
 {
     partial class Inventory
     {
@@ -77,11 +75,7 @@ namespace Accounting
             this.eitemname = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-////<<<<<<< HEAD
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-////=======
-            this.genappa = new System.Windows.Forms.Button();
-//GenerateReports
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -100,11 +94,8 @@ namespace Accounting
             this.aitemname = new System.Windows.Forms.TextBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-////<<<<<<< HEAD
             this.button13 = new System.Windows.Forms.Button();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
-
-
             this.chemstock = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
@@ -124,7 +115,6 @@ namespace Accounting
             this.label20 = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-////<<<<<<< HEAD
             this.equipnum = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.appnum = new System.Windows.Forms.Label();
@@ -137,9 +127,6 @@ namespace Accounting
             this.acritlevel = new System.Windows.Forms.NumericUpDown();
             this.label13 = new System.Windows.Forms.Label();
             this.ccritlevel = new System.Windows.Forms.NumericUpDown();
-
-            this.genequiprep = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -204,14 +191,8 @@ namespace Accounting
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-////<<<<<<< HEAD
             this.tabControl1.Location = new System.Drawing.Point(12, 66);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-////=======
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(9, 54);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
-////>>>>>>> GenerateReports
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1420, 814);
@@ -221,10 +202,7 @@ namespace Accounting
             // num
             // 
             this.num.BackColor = System.Drawing.SystemColors.Window;
-////<<<<<<< HEAD
             this.num.Controls.Add(this.comboBox1);
-////=======
-////>>>>>>> GenerateReports
             this.num.Controls.Add(this.button1);
             this.num.Controls.Add(this.labelnum);
             this.num.Controls.Add(this.label29);
@@ -240,19 +218,11 @@ namespace Accounting
             this.num.Controls.Add(this.updbutton);
             this.num.Controls.Add(this.label2);
             this.num.Controls.Add(this.itemname);
-////<<<<<<< HEAD
             this.num.Location = new System.Drawing.Point(4, 25);
             this.num.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.num.Name = "num";
             this.num.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.num.Size = new System.Drawing.Size(1412, 785);
-////=======
-            this.num.Location = new System.Drawing.Point(4, 22);
-            this.num.Margin = new System.Windows.Forms.Padding(2);
-            this.num.Name = "num";
-            this.num.Padding = new System.Windows.Forms.Padding(2);
-            this.num.Size = new System.Drawing.Size(1057, 635);
-////>>>>>>> GenerateReports
             this.num.TabIndex = 0;
             this.num.Text = "General View";
             this.num.Click += new System.EventHandler(this.tabPage1_Click);
@@ -309,13 +279,8 @@ namespace Accounting
             // itemCode
             // 
             this.itemCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-////<<<<<<< HEAD
             this.itemCode.Location = new System.Drawing.Point(221, 432);
             this.itemCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-////=======
-            this.itemCode.Location = new System.Drawing.Point(166, 351);
-            this.itemCode.Margin = new System.Windows.Forms.Padding(2);
-////>>>>>>> GenerateReports
             this.itemCode.Name = "itemCode";
             this.itemCode.Size = new System.Drawing.Size(384, 45);
             this.itemCode.TabIndex = 17;
@@ -349,13 +314,8 @@ namespace Accounting
             this.status.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-//<<<<<<< HEAD
             this.status.Location = new System.Drawing.Point(221, 607);
             this.status.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.status.Location = new System.Drawing.Point(166, 493);
-            this.status.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.status.Name = "status";
             this.status.Size = new System.Drawing.Size(384, 46);
             this.status.TabIndex = 14;
@@ -366,13 +326,8 @@ namespace Accounting
             this.button5.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.button5.Location = new System.Drawing.Point(883, 607);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.button5.Location = new System.Drawing.Point(654, 440);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(165, 59);
             this.button5.TabIndex = 9;
@@ -383,13 +338,8 @@ namespace Accounting
             // search
             // 
             this.search.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.search.Location = new System.Drawing.Point(852, 535);
             this.search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.search.Location = new System.Drawing.Point(575, 394);
-            this.search.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.search.Name = "search";
             this.search.Size = new System.Drawing.Size(400, 45);
             this.search.TabIndex = 8;
@@ -403,13 +353,8 @@ namespace Accounting
             "Equipment",
             "Apparatus",
             "Chemical"});
-//<<<<<<< HEAD
             this.itemtype.Location = new System.Drawing.Point(221, 534);
             this.itemtype.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.itemtype.Location = new System.Drawing.Point(166, 434);
-            this.itemtype.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.itemtype.Name = "itemtype";
             this.itemtype.Size = new System.Drawing.Size(384, 46);
             this.itemtype.TabIndex = 3;
@@ -430,13 +375,8 @@ namespace Accounting
             this.updbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.updbutton.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.updbutton.Location = new System.Drawing.Point(221, 673);
             this.updbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.updbutton.Location = new System.Drawing.Point(166, 547);
-            this.updbutton.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.updbutton.Name = "updbutton";
             this.updbutton.Size = new System.Drawing.Size(184, 58);
             this.updbutton.TabIndex = 6;
@@ -457,13 +397,8 @@ namespace Accounting
             // itemname
             // 
             this.itemname.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.itemname.Location = new System.Drawing.Point(221, 482);
             this.itemname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.itemname.Location = new System.Drawing.Point(166, 392);
-            this.itemname.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.itemname.Name = "itemname";
             this.itemname.Size = new System.Drawing.Size(384, 45);
             this.itemname.TabIndex = 2;
@@ -471,15 +406,11 @@ namespace Accounting
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.Window;
-//<<<<<<< HEAD
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.ecritlevel);
             this.tabPage2.Controls.Add(this.equipnum);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.comboBox2);
-//=======
-            this.tabPage2.Controls.Add(this.genequiprep);
-//>>>>>>> GenerateReports
             this.tabPage2.Controls.Add(this.button6);
             this.tabPage2.Controls.Add(this.button4);
             this.tabPage2.Controls.Add(this.logbutton);
@@ -504,19 +435,11 @@ namespace Accounting
             this.tabPage2.Controls.Add(this.eitemname);
             this.tabPage2.Controls.Add(this.dataGridView2);
             this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Size = new System.Drawing.Size(1412, 785);
-//=======
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(1057, 635);
-//>>>>>>> GenerateReports
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Equipment";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
@@ -537,13 +460,8 @@ namespace Accounting
             // 
             this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.button6.Location = new System.Drawing.Point(1221, 702);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.button6.Location = new System.Drawing.Point(916, 570);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(161, 41);
             this.button6.TabIndex = 52;
@@ -556,13 +474,8 @@ namespace Accounting
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.button4.Location = new System.Drawing.Point(945, 554);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.button4.Location = new System.Drawing.Point(709, 450);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(215, 76);
             this.button4.TabIndex = 51;
@@ -575,13 +488,8 @@ namespace Accounting
             this.logbutton.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.logbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.logbutton.Location = new System.Drawing.Point(1223, 608);
             this.logbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.logbutton.Location = new System.Drawing.Point(917, 494);
-            this.logbutton.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.logbutton.Name = "logbutton";
             this.logbutton.Size = new System.Drawing.Size(161, 44);
             this.logbutton.TabIndex = 50;
@@ -602,13 +510,8 @@ namespace Accounting
             // eItemCode
             // 
             this.eItemCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.eItemCode.Location = new System.Drawing.Point(321, 405);
             this.eItemCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.eItemCode.Location = new System.Drawing.Point(241, 329);
-            this.eItemCode.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.eItemCode.Name = "eItemCode";
             this.eItemCode.Size = new System.Drawing.Size(260, 30);
             this.eItemCode.TabIndex = 48;
@@ -631,13 +534,8 @@ namespace Accounting
             this.equipStatus.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-//<<<<<<< HEAD
             this.equipStatus.Location = new System.Drawing.Point(321, 554);
             this.equipStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.equipStatus.Location = new System.Drawing.Point(241, 450);
-            this.equipStatus.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.equipStatus.Name = "equipStatus";
             this.equipStatus.Size = new System.Drawing.Size(260, 33);
             this.equipStatus.TabIndex = 46;
@@ -647,13 +545,8 @@ namespace Accounting
             this.searchequip.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.searchequip.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchequip.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.searchequip.Location = new System.Drawing.Point(612, 713);
             this.searchequip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.searchequip.Location = new System.Drawing.Point(194, 566);
-            this.searchequip.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.searchequip.Name = "searchequip";
             this.searchequip.Size = new System.Drawing.Size(128, 46);
             this.searchequip.TabIndex = 11;
@@ -664,13 +557,8 @@ namespace Accounting
             // searche
             // 
             this.searche.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.searche.Location = new System.Drawing.Point(489, 660);
             this.searche.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.searche.Location = new System.Drawing.Point(111, 525);
-            this.searche.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.searche.Name = "searche";
             this.searche.Size = new System.Drawing.Size(372, 34);
             this.searche.TabIndex = 10;
@@ -679,13 +567,8 @@ namespace Accounting
             // 
             this.deselectequipb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deselectequipb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.deselectequipb.Location = new System.Drawing.Point(1223, 657);
             this.deselectequipb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.deselectequipb.Location = new System.Drawing.Point(917, 534);
-            this.deselectequipb.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.deselectequipb.Name = "deselectequipb";
             this.deselectequipb.Size = new System.Drawing.Size(161, 41);
             this.deselectequipb.TabIndex = 22;
@@ -698,13 +581,8 @@ namespace Accounting
             this.addequipb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.addequipb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addequipb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.addequipb.Location = new System.Drawing.Point(685, 554);
             this.addequipb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.addequipb.Location = new System.Drawing.Point(514, 450);
-            this.addequipb.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.addequipb.Name = "addequipb";
             this.addequipb.Size = new System.Drawing.Size(215, 76);
             this.addequipb.TabIndex = 21;
@@ -715,13 +593,8 @@ namespace Accounting
             // estlife
             // 
             this.estlife.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.estlife.Location = new System.Drawing.Point(980, 442);
             this.estlife.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.estlife.Location = new System.Drawing.Point(735, 359);
-            this.estlife.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.estlife.Name = "estlife";
             this.estlife.Size = new System.Drawing.Size(403, 30);
             this.estlife.TabIndex = 18;
@@ -739,13 +612,8 @@ namespace Accounting
             // purchasedate
             // 
             this.purchasedate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.purchasedate.Location = new System.Drawing.Point(979, 405);
             this.purchasedate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.purchasedate.Location = new System.Drawing.Point(734, 329);
-            this.purchasedate.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.purchasedate.Name = "purchasedate";
             this.purchasedate.Size = new System.Drawing.Size(404, 30);
             this.purchasedate.TabIndex = 17;
@@ -774,13 +642,8 @@ namespace Accounting
             // costunit
             // 
             this.costunit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.costunit.Location = new System.Drawing.Point(321, 517);
             this.costunit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.costunit.Location = new System.Drawing.Point(241, 420);
-            this.costunit.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.costunit.Name = "costunit";
             this.costunit.Size = new System.Drawing.Size(260, 30);
             this.costunit.TabIndex = 16;
@@ -788,13 +651,8 @@ namespace Accounting
             // brand
             // 
             this.brand.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.brand.Location = new System.Drawing.Point(321, 480);
             this.brand.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.brand.Location = new System.Drawing.Point(241, 390);
-            this.brand.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.brand.Name = "brand";
             this.brand.Size = new System.Drawing.Size(260, 30);
             this.brand.TabIndex = 15;
@@ -825,13 +683,8 @@ namespace Accounting
             this.updequipb.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.updequipb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updequipb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.updequipb.Location = new System.Drawing.Point(1223, 555);
             this.updequipb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.updequipb.Location = new System.Drawing.Point(917, 451);
-            this.updequipb.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.updequipb.Name = "updequipb";
             this.updequipb.Size = new System.Drawing.Size(161, 44);
             this.updequipb.TabIndex = 23;
@@ -842,13 +695,8 @@ namespace Accounting
             // eitemname
             // 
             this.eitemname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.eitemname.Location = new System.Drawing.Point(321, 439);
             this.eitemname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.eitemname.Location = new System.Drawing.Point(241, 357);
-            this.eitemname.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.eitemname.Name = "eitemname";
             this.eitemname.Size = new System.Drawing.Size(260, 30);
             this.eitemname.TabIndex = 12;
@@ -873,15 +721,11 @@ namespace Accounting
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.Window;
-//<<<<<<< HEAD
             this.tabPage3.Controls.Add(this.label12);
             this.tabPage3.Controls.Add(this.acritlevel);
             this.tabPage3.Controls.Add(this.appnum);
             this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Controls.Add(this.comboBox3);
-//=======
-            this.tabPage3.Controls.Add(this.genappa);
-//>>>>>>> GenerateReports
             this.tabPage3.Controls.Add(this.button9);
             this.tabPage3.Controls.Add(this.button10);
             this.tabPage3.Controls.Add(this.button8);
@@ -900,20 +744,14 @@ namespace Accounting
             this.tabPage3.Controls.Add(this.aitemname);
             this.tabPage3.Controls.Add(this.dataGridView3);
             this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(1412, 785);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Apparatus";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
-//<<<<<<< HEAD
             // comboBox3
             // 
             this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -925,34 +763,14 @@ namespace Accounting
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 25);
             this.comboBox3.TabIndex = 75;
-//=======
-            // genappa
-            // 
-            this.genappa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.genappa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.genappa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genappa.Location = new System.Drawing.Point(576, 498);
-            this.genappa.Margin = new System.Windows.Forms.Padding(2);
-            this.genappa.Name = "genappa";
-            this.genappa.Size = new System.Drawing.Size(161, 62);
-            this.genappa.TabIndex = 75;
-            this.genappa.Text = "Generate Report";
-            this.genappa.UseVisualStyleBackColor = false;
-            this.genappa.Click += new System.EventHandler(this.genappa_Click);
-//>>>>>>> GenerateReports
             // 
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.button9.Location = new System.Drawing.Point(951, 549);
             this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.button9.Location = new System.Drawing.Point(677, 388);
-            this.button9.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(215, 76);
             this.button9.TabIndex = 74;
@@ -965,13 +783,8 @@ namespace Accounting
             this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.button10.Location = new System.Drawing.Point(691, 549);
             this.button10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.button10.Location = new System.Drawing.Point(486, 388);
-            this.button10.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(215, 76);
             this.button10.TabIndex = 73;
@@ -984,13 +797,8 @@ namespace Accounting
             this.button8.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.button8.Location = new System.Drawing.Point(1200, 697);
             this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.button8.Location = new System.Drawing.Point(900, 566);
-            this.button8.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(156, 44);
             this.button8.TabIndex = 72;
@@ -1002,13 +810,8 @@ namespace Accounting
             // 
             this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.button7.Location = new System.Drawing.Point(1200, 651);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.button7.Location = new System.Drawing.Point(900, 529);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(156, 41);
             this.button7.TabIndex = 71;
@@ -1018,13 +821,8 @@ namespace Accounting
             // 
             // aItemCode
             // 
-//<<<<<<< HEAD
             this.aItemCode.Location = new System.Drawing.Point(388, 479);
             this.aItemCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.aItemCode.Location = new System.Drawing.Point(202, 352);
-            this.aItemCode.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.aItemCode.Name = "aItemCode";
             this.aItemCode.Size = new System.Drawing.Size(239, 23);
             this.aItemCode.TabIndex = 70;
@@ -1032,12 +830,7 @@ namespace Accounting
             // label27
             // 
             this.label27.AutoSize = true;
-//<<<<<<< HEAD
             this.label27.Location = new System.Drawing.Point(177, 479);
-//=======
-            this.label27.Location = new System.Drawing.Point(44, 352);
-            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-//>>>>>>> GenerateReports
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(80, 17);
             this.label27.TabIndex = 69;
@@ -1046,12 +839,7 @@ namespace Accounting
             // label23
             // 
             this.label23.AutoSize = true;
-//<<<<<<< HEAD
             this.label23.Location = new System.Drawing.Point(173, 636);
-//=======
-            this.label23.Location = new System.Drawing.Point(41, 480);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-//>>>>>>> GenerateReports
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(54, 17);
             this.label23.TabIndex = 68;
@@ -1064,13 +852,8 @@ namespace Accounting
             this.appStatus.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-//<<<<<<< HEAD
             this.appStatus.Location = new System.Drawing.Point(388, 628);
             this.appStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.appStatus.Location = new System.Drawing.Point(202, 473);
-            this.appStatus.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.appStatus.Name = "appStatus";
             this.appStatus.Size = new System.Drawing.Size(239, 25);
             this.appStatus.TabIndex = 67;
@@ -1080,13 +863,8 @@ namespace Accounting
             this.searchapp.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.searchapp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchapp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.searchapp.Location = new System.Drawing.Point(639, 443);
             this.searchapp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.searchapp.Location = new System.Drawing.Point(170, 566);
-            this.searchapp.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.searchapp.Name = "searchapp";
             this.searchapp.Size = new System.Drawing.Size(119, 43);
             this.searchapp.TabIndex = 26;
@@ -1097,13 +875,8 @@ namespace Accounting
             // searcha
             // 
             this.searcha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.searcha.Location = new System.Drawing.Point(535, 402);
             this.searcha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.searcha.Location = new System.Drawing.Point(92, 533);
-            this.searcha.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.searcha.Name = "searcha";
             this.searcha.Size = new System.Drawing.Size(331, 34);
             this.searcha.TabIndex = 25;
@@ -1112,13 +885,8 @@ namespace Accounting
             // 
             this.deselectappb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deselectappb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.deselectappb.Location = new System.Drawing.Point(1200, 549);
             this.deselectappb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.deselectappb.Location = new System.Drawing.Point(900, 446);
-            this.deselectappb.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.deselectappb.Name = "deselectappb";
             this.deselectappb.Size = new System.Drawing.Size(156, 47);
             this.deselectappb.TabIndex = 34;
@@ -1129,13 +897,8 @@ namespace Accounting
             // adesc
             // 
             this.adesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.adesc.Location = new System.Drawing.Point(389, 582);
             this.adesc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.adesc.Location = new System.Drawing.Point(203, 436);
-            this.adesc.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.adesc.Name = "adesc";
             this.adesc.Size = new System.Drawing.Size(237, 30);
             this.adesc.TabIndex = 30;
@@ -1144,12 +907,7 @@ namespace Accounting
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.label17.Location = new System.Drawing.Point(171, 586);
-//=======
-            this.label17.Location = new System.Drawing.Point(39, 439);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-//>>>>>>> GenerateReports
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(162, 31);
             this.label17.TabIndex = 53;
@@ -1159,12 +917,7 @@ namespace Accounting
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.label18.Location = new System.Drawing.Point(171, 523);
-//=======
-            this.label18.Location = new System.Drawing.Point(39, 388);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-//>>>>>>> GenerateReports
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(155, 31);
             this.label18.TabIndex = 48;
@@ -1175,13 +928,8 @@ namespace Accounting
             this.updappb.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.updappb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updappb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.updappb.Location = new System.Drawing.Point(1200, 601);
             this.updappb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.updappb.Location = new System.Drawing.Point(900, 488);
-            this.updappb.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.updappb.Name = "updappb";
             this.updappb.Size = new System.Drawing.Size(156, 47);
             this.updappb.TabIndex = 35;
@@ -1192,13 +940,8 @@ namespace Accounting
             // aitemname
             // 
             this.aitemname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.aitemname.Location = new System.Drawing.Point(389, 523);
             this.aitemname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.aitemname.Location = new System.Drawing.Point(203, 388);
-            this.aitemname.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.aitemname.Name = "aitemname";
             this.aitemname.Size = new System.Drawing.Size(237, 30);
             this.aitemname.TabIndex = 27;
@@ -1223,16 +966,12 @@ namespace Accounting
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.SystemColors.Window;
-//<<<<<<< HEAD
             this.tabPage4.Controls.Add(this.label13);
             this.tabPage4.Controls.Add(this.ccritlevel);
             this.tabPage4.Controls.Add(this.chemnum);
             this.tabPage4.Controls.Add(this.label11);
             this.tabPage4.Controls.Add(this.button13);
             this.tabPage4.Controls.Add(this.comboBox4);
-//=======
-            this.tabPage4.Controls.Add(this.chemreport);
-//>>>>>>> GenerateReports
             this.tabPage4.Controls.Add(this.chemstock);
             this.tabPage4.Controls.Add(this.button11);
             this.tabPage4.Controls.Add(this.button12);
@@ -1251,20 +990,14 @@ namespace Accounting
             this.tabPage4.Controls.Add(this.label16);
             this.tabPage4.Controls.Add(this.label20);
             this.tabPage4.Controls.Add(this.dataGridView4);
-//<<<<<<< HEAD
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(1412, 785);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Chemical";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
-//<<<<<<< HEAD
             // button13
             // 
             this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
@@ -1290,34 +1023,14 @@ namespace Accounting
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(121, 24);
             this.comboBox4.TabIndex = 76;
-//=======
-            // chemreport
-            // 
-            this.chemreport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.chemreport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chemreport.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chemreport.Location = new System.Drawing.Point(572, 482);
-            this.chemreport.Margin = new System.Windows.Forms.Padding(2);
-            this.chemreport.Name = "chemreport";
-            this.chemreport.Size = new System.Drawing.Size(161, 62);
-            this.chemreport.TabIndex = 76;
-            this.chemreport.Text = "Generate Report";
-            this.chemreport.UseVisualStyleBackColor = false;
-            this.chemreport.Click += new System.EventHandler(this.chemreport_Click);
-//>>>>>>> GenerateReports
             // 
             // chemstock
             // 
             this.chemstock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.chemstock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chemstock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.chemstock.Location = new System.Drawing.Point(443, 707);
             this.chemstock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.chemstock.Location = new System.Drawing.Point(572, 351);
-            this.chemstock.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.chemstock.Name = "chemstock";
             this.chemstock.Size = new System.Drawing.Size(215, 76);
             this.chemstock.TabIndex = 75;
@@ -1330,13 +1043,8 @@ namespace Accounting
             this.button11.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.button11.Location = new System.Drawing.Point(1219, 650);
             this.button11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.button11.Location = new System.Drawing.Point(914, 528);
-            this.button11.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(156, 44);
             this.button11.TabIndex = 74;
@@ -1348,13 +1056,8 @@ namespace Accounting
             // 
             this.button12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.button12.Location = new System.Drawing.Point(1219, 606);
             this.button12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.button12.Location = new System.Drawing.Point(914, 492);
-            this.button12.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(156, 41);
             this.button12.TabIndex = 73;
@@ -1365,16 +1068,9 @@ namespace Accounting
             // classification
             // 
             this.classification.AutoSize = true;
-//<<<<<<< HEAD
             this.classification.Location = new System.Drawing.Point(693, 594);
             this.classification.Name = "classification";
             this.classification.Size = new System.Drawing.Size(54, 17);
-//=======
-            this.classification.Location = new System.Drawing.Point(238, 521);
-            this.classification.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.classification.Name = "classification";
-            this.classification.Size = new System.Drawing.Size(48, 13);
-//>>>>>>> GenerateReports
             this.classification.TabIndex = 65;
             this.classification.Text = "label30";
             // 
@@ -1388,13 +1084,8 @@ namespace Accounting
             "Gray",
             "White",
             "Yellow"});
-//<<<<<<< HEAD
             this.colorCode.Location = new System.Drawing.Point(697, 551);
             this.colorCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.colorCode.Location = new System.Drawing.Point(241, 486);
-            this.colorCode.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.colorCode.Name = "colorCode";
             this.colorCode.Size = new System.Drawing.Size(236, 24);
             this.colorCode.TabIndex = 64;
@@ -1403,28 +1094,16 @@ namespace Accounting
             // label28
             // 
             this.label28.AutoSize = true;
-//<<<<<<< HEAD
             this.label28.Location = new System.Drawing.Point(439, 475);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(71, 17);
-//=======
-            this.label28.Location = new System.Drawing.Point(47, 424);
-            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(64, 13);
-//>>>>>>> GenerateReports
             this.label28.TabIndex = 63;
             this.label28.Text = "Item Code";
             // 
             // cItemCode
             // 
-//<<<<<<< HEAD
             this.cItemCode.Location = new System.Drawing.Point(697, 475);
             this.cItemCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.cItemCode.Location = new System.Drawing.Point(241, 424);
-            this.cItemCode.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.cItemCode.Name = "cItemCode";
             this.cItemCode.Size = new System.Drawing.Size(236, 22);
             this.cItemCode.TabIndex = 62;
@@ -1432,16 +1111,9 @@ namespace Accounting
             // label24
             // 
             this.label24.AutoSize = true;
-//<<<<<<< HEAD
             this.label24.Location = new System.Drawing.Point(439, 629);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(48, 17);
-//=======
-            this.label24.Location = new System.Drawing.Point(47, 549);
-            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(43, 13);
-//>>>>>>> GenerateReports
             this.label24.TabIndex = 61;
             this.label24.Text = "Status";
             // 
@@ -1452,13 +1124,8 @@ namespace Accounting
             this.chemStatus.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-//<<<<<<< HEAD
             this.chemStatus.Location = new System.Drawing.Point(700, 623);
             this.chemStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.chemStatus.Location = new System.Drawing.Point(243, 544);
-            this.chemStatus.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.chemStatus.Name = "chemStatus";
             this.chemStatus.Size = new System.Drawing.Size(236, 24);
             this.chemStatus.TabIndex = 60;
@@ -1468,13 +1135,8 @@ namespace Accounting
             this.searchchem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.searchchem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchchem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.searchchem.Location = new System.Drawing.Point(636, 421);
             this.searchchem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.searchchem.Location = new System.Drawing.Point(195, 380);
-            this.searchchem.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.searchchem.Name = "searchchem";
             this.searchchem.Size = new System.Drawing.Size(121, 41);
             this.searchchem.TabIndex = 38;
@@ -1485,13 +1147,8 @@ namespace Accounting
             // searchc
             // 
             this.searchc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.searchc.Location = new System.Drawing.Point(479, 380);
             this.searchc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.searchc.Location = new System.Drawing.Point(77, 347);
-            this.searchc.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.searchc.Name = "searchc";
             this.searchc.Size = new System.Drawing.Size(429, 34);
             this.searchc.TabIndex = 37;
@@ -1501,13 +1158,8 @@ namespace Accounting
             this.button3.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.button3.Location = new System.Drawing.Point(1217, 548);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.button3.Location = new System.Drawing.Point(913, 445);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(157, 46);
             this.button3.TabIndex = 46;
@@ -1519,13 +1171,8 @@ namespace Accounting
             // 
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.button2.Location = new System.Drawing.Point(1217, 497);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-//=======
-            this.button2.Location = new System.Drawing.Point(913, 404);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-//>>>>>>> GenerateReports
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(157, 46);
             this.button2.TabIndex = 45;
@@ -1537,12 +1184,7 @@ namespace Accounting
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.label14.Location = new System.Drawing.Point(429, 505);
-//=======
-            this.label14.Location = new System.Drawing.Point(40, 448);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-//>>>>>>> GenerateReports
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(219, 31);
             this.label14.TabIndex = 52;
@@ -1551,12 +1193,8 @@ namespace Accounting
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.textBox3.Location = new System.Drawing.Point(697, 505);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-//=======
-            this.textBox3.Location = new System.Drawing.Point(241, 448);
-//>>>>>>> GenerateReports
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(236, 30);
             this.textBox3.TabIndex = 39;
@@ -1565,12 +1203,7 @@ namespace Accounting
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.label16.Location = new System.Drawing.Point(429, 583);
-//=======
-            this.label16.Location = new System.Drawing.Point(40, 512);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-//>>>>>>> GenerateReports
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(190, 31);
             this.label16.TabIndex = 50;
@@ -1580,12 +1213,7 @@ namespace Accounting
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-//<<<<<<< HEAD
             this.label20.Location = new System.Drawing.Point(429, 546);
-//=======
-            this.label20.Location = new System.Drawing.Point(40, 482);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-//>>>>>>> GenerateReports
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(161, 31);
             this.label20.TabIndex = 49;
@@ -1618,7 +1246,6 @@ namespace Accounting
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-//<<<<<<< HEAD
             // equipnum
             // 
             this.equipnum.AutoSize = true;
@@ -1735,35 +1362,6 @@ namespace Accounting
             this.ccritlevel.Name = "ccritlevel";
             this.ccritlevel.Size = new System.Drawing.Size(120, 22);
             this.ccritlevel.TabIndex = 80;
-//=======
-            // genequiprep
-            // 
-            this.genequiprep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.genequiprep.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.genequiprep.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genequiprep.Location = new System.Drawing.Point(613, 534);
-            this.genequiprep.Margin = new System.Windows.Forms.Padding(2);
-            this.genequiprep.Name = "genequiprep";
-            this.genequiprep.Size = new System.Drawing.Size(161, 62);
-            this.genequiprep.TabIndex = 53;
-            this.genequiprep.Text = "Generate Report";
-            this.genequiprep.UseVisualStyleBackColor = false;
-            this.genequiprep.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(645, 532);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(161, 62);
-            this.button1.TabIndex = 54;
-            this.button1.Text = "Generate Report All";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
-//>>>>>>> GenerateReports
             // 
             // Inventory
             // 
@@ -1886,12 +1484,10 @@ namespace Accounting
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button chemstock;
-//<<<<<<< HEAD
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;
-        private Button genappa;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Label equipnum;
@@ -1906,12 +1502,5 @@ namespace Accounting
         private System.Windows.Forms.NumericUpDown acritlevel;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.NumericUpDown ccritlevel;
-        private Button genequiprep;
-//=======
-        private System.Windows.Forms.Button chemreport;
-        private System.Windows.Forms.Button genappa;
-        private System.Windows.Forms.Button genequiprep;
-        private System.Windows.Forms.Button button1;
-//>>>>>>> GenerateReports
     }
 }
