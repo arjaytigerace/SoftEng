@@ -66,7 +66,7 @@ namespace Accounting
                 borrowdate= dataGridView1.Rows[e.RowIndex].Cells["borrowedDate"].Value.ToString();
                 ereturndate= dataGridView1.Rows[e.RowIndex].Cells["returnDate"].Value.ToString();
                 expectedreturn = ereturndate.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-
+                
 
                 if (status == "Released")
                 {
@@ -181,7 +181,7 @@ namespace Accounting
 
            
 
-            string query1 = "SELECT COUNT(*) from borrowing WHERE requestStatus='Returned'";
+            string query1 = "SELECT COUNT(*) from borrowing WHERE requestStatus!='Returned'";
 
             conn.Open();
             MySqlCommand comm1 = new MySqlCommand(query1, conn);

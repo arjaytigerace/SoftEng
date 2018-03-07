@@ -24,11 +24,11 @@ namespace Accounting
         private void ReturnedItems_Load(object sender, EventArgs e)
         {
 
-            string query = "SELECT borrowRequestId,b.itemName,CONCAT(a.qty,' ',a.measureType) AS qty,CONCAT(studentFName,' ',studentLName) AS student,c.schoolId,c.yearCourse," +
-            "a.borrowedDate,a.returnDate,a.actualReturnDate,CONCAT(e.firstname,' ',e.lastname) AS releasedBy,c.studentId" +
-            " FROM chem_lab.borrowing a INNER JOIN administrativeassociate e ON a.releasedBy = e.admin_ID, " +
-            "chem_lab.item b, chem_lab.student c WHERE b.itemID = a.itemID" +
-            " AND c.studentID = a.studentId AND a.isReturned=1";
+            string query = "SELECT returnrequests.borrowRequestId,b.itemName,CONCAT(a.qty,' ',a.measureType) AS qty,returnrequests.numdmg,CONCAT(studentFName,' ',studentLName) AS student,c.schoolId,c.yearCourse,"+
+            "a.borrowedDate,returnrequests.returnDate, CONCAT(e.firstname, ' ', e.lastname) AS releasedBy, returnrequests.remarks,c.studentId"+
+          " FROM chem_lab.borrowing a, returnrequests INNER JOIN administrativeassociate e ON returnrequests.userId = e.admin_ID,"+
+            "chem_lab.item b, chem_lab.student c WHERE b.itemID = a.itemID"+
+            " AND c.studentID = a.studentId AND a.requestStatus = 'Returned' AND a.borrowRequestId = returnrequests.borrowRequestId";
 
             Loadall(query);
 
@@ -54,11 +54,12 @@ namespace Accounting
             dataGridView1.Columns["itemName"].Width = 150;
             dataGridView1.Columns["qty"].HeaderText = "QTY Requested";
             dataGridView1.Columns["qty"].Width = 90;
+            dataGridView1.Columns["numdmg"].HeaderText = "# Damaged";
             dataGridView1.Columns["student"].HeaderText = "Borrowed By";
             dataGridView1.Columns["yearCourse"].HeaderText = "Course";
             dataGridView1.Columns["borrowedDate"].HeaderText = "Date Borrowed";
-            dataGridView1.Columns["returnDate"].HeaderText = "Expected Return Date";
-            dataGridView1.Columns["actualReturnDate"].HeaderText = "Actual Return Date";
+            dataGridView1.Columns["returnDate"].HeaderText = "Date Returned";
+            
             dataGridView1.Columns["releasedBy"].HeaderText = "Released By";
             
 

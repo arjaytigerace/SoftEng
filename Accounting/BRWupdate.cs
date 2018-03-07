@@ -54,8 +54,8 @@ namespace Accounting
             sFName.Text = sfname;
             sLName.Text = slname;
             yc.Text = yearcourse;
-            dateTimePicker1.Text = expectedreturndate;
-            dateTimePicker2.Text = expectedreturntime;
+            dateTimePicker1.Value = DateTime.Parse(expectedreturndate);
+            dateTimePicker2.Value = DateTime.ParseExact(expectedreturntime,"HH:mm:ss",null);
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             dateTimePicker2.Format = DateTimePickerFormat.Custom;
