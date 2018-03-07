@@ -128,6 +128,12 @@
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="CrystalReportAppa - Copy.cs">
+      <DependentUpon>CrystalReportAppa - Copy.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="CrystalReportAppa.cs">
       <DependentUpon>CrystalReportAppa.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -287,6 +293,10 @@
     <EmbeddedResource Include="CrystalReportAll.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportAll.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportAppa - Copy.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportAppa - Copy.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="CrystalReportAppa.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
