@@ -886,7 +886,6 @@ namespace Accounting
             stockIn.Show();
         }
 
-//<<<<<<< HEAD
         private void button1_Click_1(object sender, EventArgs e)
         {
             string query = "SELECT itemID,itemCode,itemName,itemType,trim(round(quantity,4))+0 AS quantity,measurementType,addedon,modon,itemstatus FROM chem_lab.item a, chem_lab.itemtype b WHERE b.itemTypeID = a.itemTypeID";
@@ -908,38 +907,6 @@ namespace Accounting
                 stockout.Itemname = chemitemname;
             }
             stockout.Show();
-//=======
-        private void chemreport_Click(object sender, EventArgs e)
-        {
-            GenerateChemicalReport genchemrep = new GenerateChemicalReport();
-            genchemrep.main = this;
-            genchemrep.Adminid = this.Adminid;
-            genchemrep.Show();
-        }
-
-        private void genappa_Click(object sender, EventArgs e)
-        {
-            GenerateApparatusReport genapparep = new GenerateApparatusReport();
-            genapparep.main = this;
-            genapparep.Adminid = this.Adminid;
-            genapparep.Show();
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            GenerateEquipmentReport genequiprep = new GenerateEquipmentReport();
-            genequiprep.main = this;
-            genequiprep.Adminid = this.Adminid;
-            genequiprep.Show();
-        }
-
-        private void button1_Click_2(object sender, EventArgs e)
-        {
-            GenerateAllReport genallrep = new GenerateAllReport();
-            genallrep.main = this;
-            genallrep.Adminid = this.Adminid;
-            genallrep.Show();
-//>>>>>>> GenerateReports
         }
     }
 }
