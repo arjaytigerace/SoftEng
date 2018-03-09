@@ -286,6 +286,15 @@
     <EmbeddedResource Include="ChemMgtUpdate.resx">
       <DependentUpon>ChemMgtUpdate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CRPAll.resx">
+      <DependentUpon>CRPAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRPAppa.resx">
+      <DependentUpon>CRPAppa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRPChem.resx">
+      <DependentUpon>CRPChem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CRPE.resx">
       <DependentUpon>CRPE.cs</DependentUpon>
     </EmbeddedResource>
