@@ -908,5 +908,15 @@ namespace Accounting
             }
             stockout.Show();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
