@@ -918,5 +918,37 @@ namespace Accounting
         {
 
         }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            CRPAll genallrep = new CRPAll();
+            genallrep.main = this;
+            genallrep.Adminid = this.Adminid;
+            genallrep.Show();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            CRPE genallrep = new CRPE();
+            genallrep.main = this;
+            genallrep.Adminid = this.Adminid;
+            genallrep.Show();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            CRPAppa genallrep = new CRPAppa();
+            genallrep.main = this;
+            genallrep.Adminid = this.Adminid;
+            genallrep.Show();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            CRPChem genallrep = new CRPChem();
+            genallrep.main = this;
+            genallrep.Adminid = this.Adminid;
+            genallrep.Show();
+        }
     }
 }

@@ -290,3 +290,10 @@ C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\CrystalDec
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\stdole.dll
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.CRPAll.resources
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.CRPAppa.resources
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.CRPChem.resources
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\obj\Debug\Accounting.CRPE.resources
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\FlashControlV71.dll
+C:\Users\raeni\OneDrive\Documents\GitHub\SoftEng\Accounting\bin\Debug\ShockwaveFlashObjects.dll

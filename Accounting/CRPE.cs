@@ -12,9 +12,18 @@ namespace Accounting
 {
     public partial class CRPE : Form
     {
+        public int Adminid { get; set; }
+        public Form main { get; set; }
+
         public CRPE()
         {
             InitializeComponent();
+        }
+
+        private void crystalReportViewer1_Load(object sender, EventArgs e)
+        {
+            CrystalReport4 rpt = new CrystalReport4();
+            crystalReportViewer1.ReportSource = rpt;
         }
     }
 }

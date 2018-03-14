@@ -12,9 +12,18 @@ namespace Accounting
 {
     public partial class CRPAppa : Form
     {
+        public int Adminid { get; set; }
+        public Form main { get; set; }
+
         public CRPAppa()
         {
             InitializeComponent();
+        }
+
+        private void crystalReportViewer1_Load(object sender, EventArgs e)
+        {
+            CrystalReport2 rpt = new CrystalReport2();
+            crystalReportViewer1.ReportSource = rpt;
         }
     }
 }
