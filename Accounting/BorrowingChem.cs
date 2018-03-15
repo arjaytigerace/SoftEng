@@ -253,5 +253,12 @@ namespace Accounting
             ritems.main = this;
             ritems.Show();
         }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            CRPBorrowingManagment genallrep = new CRPBorrowingManagment();
+            genallrep.main = this;
+            genallrep.Show();
+        }
     }
 }

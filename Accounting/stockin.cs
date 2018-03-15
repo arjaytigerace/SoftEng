@@ -397,5 +397,10 @@ namespace Accounting
         {
 
         }
+
+        private void ccritlevel_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

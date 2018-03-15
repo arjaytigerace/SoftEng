@@ -31,6 +31,7 @@ namespace Accounting
         public string Getfname { get; set; }
         public string Getlname { get; set; }
         public int Adminid { get; set; }
+        
         MySqlConnection conn;
         public ChemicalManagement()
         {
@@ -349,6 +350,13 @@ namespace Accounting
             "chem_lab.item b, chem_lab.student c, teacher d WHERE b.itemID = a.itemID" +
             " AND c.studentID = a.studentId AND a.teacherId = d.teacherID AND a.status='Cancelled'";
             Loadall(query);
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            CRPChemManagement genallrep = new CRPChemManagement();
+            genallrep.main = this;
+            genallrep.Show();
         }
     }
 }

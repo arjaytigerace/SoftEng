@@ -543,7 +543,7 @@ namespace Accounting
             DataTable dtnum = new DataTable();
             adpnum.Fill(dtnum);
 
-            appnum.Text = dtnum.Rows[0]["num"].ToString();
+            applist.Text = dtnum.Rows[0]["num"].ToString();
 
 
             conn.Open();
@@ -923,7 +923,7 @@ namespace Accounting
         {
             CRPAll genallrep = new CRPAll();
             genallrep.main = this;
-            genallrep.Adminid = this.Adminid;
+            
             genallrep.Show();
         }
 
@@ -931,7 +931,7 @@ namespace Accounting
         {
             CRPE genallrep = new CRPE();
             genallrep.main = this;
-            genallrep.Adminid = this.Adminid;
+        
             genallrep.Show();
         }
 
@@ -939,7 +939,7 @@ namespace Accounting
         {
             CRPAppa genallrep = new CRPAppa();
             genallrep.main = this;
-            genallrep.Adminid = this.Adminid;
+    
             genallrep.Show();
         }
 
@@ -947,8 +947,48 @@ namespace Accounting
         {
             CRPChem genallrep = new CRPChem();
             genallrep.main = this;
-            genallrep.Adminid = this.Adminid;
+          
             genallrep.Show();
+        }
+
+        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label29_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chemnum_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelnum_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

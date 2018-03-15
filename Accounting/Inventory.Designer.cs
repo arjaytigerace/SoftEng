@@ -131,6 +131,8 @@
             this.label20 = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.applist = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -234,10 +236,10 @@
             this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.button17.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.Location = new System.Drawing.Point(679, 532);
+            this.button17.Location = new System.Drawing.Point(564, 443);
             this.button17.Margin = new System.Windows.Forms.Padding(2);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(161, 62);
+            this.button17.Size = new System.Drawing.Size(224, 37);
             this.button17.TabIndex = 81;
             this.button17.Text = "Generate Report";
             this.button17.UseVisualStyleBackColor = false;
@@ -246,23 +248,24 @@
             // comboBox1
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Item Name",
             "Item Code"});
-            this.comboBox1.Location = new System.Drawing.Point(533, 419);
+            this.comboBox1.Location = new System.Drawing.Point(446, 349);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(92, 21);
+            this.comboBox1.Size = new System.Drawing.Size(92, 24);
             this.comboBox1.TabIndex = 21;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(316, 547);
+            this.button1.Location = new System.Drawing.Point(884, 443);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(138, 47);
@@ -275,50 +278,52 @@
             // 
             this.labelnum.AutoSize = true;
             this.labelnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelnum.Location = new System.Drawing.Point(828, 359);
+            this.labelnum.Location = new System.Drawing.Point(959, 347);
             this.labelnum.Name = "labelnum";
             this.labelnum.Size = new System.Drawing.Size(92, 29);
             this.labelnum.TabIndex = 19;
             this.labelnum.Text = "label30";
+            this.labelnum.Click += new System.EventHandler(this.labelnum_Click);
             // 
             // label29
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(570, 359);
+            this.label29.Location = new System.Drawing.Point(879, 347);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(252, 29);
+            this.label29.Size = new System.Drawing.Size(74, 29);
             this.label29.TabIndex = 18;
-            this.label29.Text = "Total number of items:";
+            this.label29.Text = "Total:";
+            this.label29.Click += new System.EventHandler(this.label29_Click);
             // 
             // itemCode
             // 
-            this.itemCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemCode.Location = new System.Drawing.Point(166, 351);
+            this.itemCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itemCode.Location = new System.Drawing.Point(107, 353);
             this.itemCode.Margin = new System.Windows.Forms.Padding(2);
             this.itemCode.Name = "itemCode";
-            this.itemCode.Size = new System.Drawing.Size(289, 37);
+            this.itemCode.Size = new System.Drawing.Size(289, 26);
             this.itemCode.TabIndex = 17;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.Location = new System.Drawing.Point(5, 356);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(139, 31);
+            this.label25.Size = new System.Drawing.Size(83, 20);
             this.label25.TabIndex = 16;
             this.label25.Text = "Item Code";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(5, 493);
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(5, 456);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(92, 31);
+            this.label21.Size = new System.Drawing.Size(56, 20);
             this.label21.TabIndex = 15;
             this.label21.Text = "Status";
             this.label21.Click += new System.EventHandler(this.label21_Click);
@@ -326,27 +331,27 @@
             // status
             // 
             this.status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.status.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.status.FormattingEnabled = true;
             this.status.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.status.Location = new System.Drawing.Point(166, 493);
+            this.status.Location = new System.Drawing.Point(107, 453);
             this.status.Margin = new System.Windows.Forms.Padding(2);
             this.status.Name = "status";
-            this.status.Size = new System.Drawing.Size(289, 38);
+            this.status.Size = new System.Drawing.Size(289, 28);
             this.status.TabIndex = 14;
             this.status.SelectedIndexChanged += new System.EventHandler(this.status_SelectedIndexChanged);
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button5.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(698, 459);
+            this.button5.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(624, 379);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(124, 48);
+            this.button5.Size = new System.Drawing.Size(96, 37);
             this.button5.TabIndex = 9;
             this.button5.Text = "Search";
             this.button5.UseVisualStyleBackColor = false;
@@ -354,46 +359,46 @@
             // 
             // search
             // 
-            this.search.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search.Location = new System.Drawing.Point(639, 406);
+            this.search.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.search.Location = new System.Drawing.Point(542, 349);
             this.search.Margin = new System.Windows.Forms.Padding(2);
             this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(301, 37);
+            this.search.Size = new System.Drawing.Size(301, 26);
             this.search.TabIndex = 8;
             // 
             // itemtype
             // 
             this.itemtype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.itemtype.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itemtype.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.itemtype.FormattingEnabled = true;
             this.itemtype.Items.AddRange(new object[] {
             "Equipment",
             "Apparatus",
             "Chemical"});
-            this.itemtype.Location = new System.Drawing.Point(166, 434);
+            this.itemtype.Location = new System.Drawing.Point(107, 418);
             this.itemtype.Margin = new System.Windows.Forms.Padding(2);
             this.itemtype.Name = "itemtype";
-            this.itemtype.Size = new System.Drawing.Size(289, 38);
+            this.itemtype.Size = new System.Drawing.Size(289, 26);
             this.itemtype.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 396);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(5, 390);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 31);
+            this.label1.Size = new System.Drawing.Size(87, 20);
             this.label1.TabIndex = 11;
             this.label1.Text = "Item Name";
             // 
             // updbutton
             // 
-            this.updbutton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.updbutton.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.updbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.updbutton.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updbutton.Location = new System.Drawing.Point(166, 547);
+            this.updbutton.Location = new System.Drawing.Point(884, 390);
             this.updbutton.Margin = new System.Windows.Forms.Padding(2);
             this.updbutton.Name = "updbutton";
             this.updbutton.Size = new System.Drawing.Size(138, 47);
@@ -405,21 +410,21 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(4, 440);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(5, 424);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 31);
+            this.label2.Size = new System.Drawing.Size(79, 20);
             this.label2.TabIndex = 12;
             this.label2.Text = "Item Type";
             // 
             // itemname
             // 
-            this.itemname.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemname.Location = new System.Drawing.Point(166, 392);
+            this.itemname.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itemname.Location = new System.Drawing.Point(107, 386);
             this.itemname.Margin = new System.Windows.Forms.Padding(2);
             this.itemname.Name = "itemname";
-            this.itemname.Size = new System.Drawing.Size(289, 37);
+            this.itemname.Size = new System.Drawing.Size(289, 26);
             this.itemname.TabIndex = 2;
             // 
             // tabPage2
@@ -469,10 +474,10 @@
             this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.button16.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.Location = new System.Drawing.Point(644, 505);
+            this.button16.Location = new System.Drawing.Point(585, 464);
             this.button16.Margin = new System.Windows.Forms.Padding(2);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(161, 62);
+            this.button16.Size = new System.Drawing.Size(233, 42);
             this.button16.TabIndex = 81;
             this.button16.Text = "Generate Report";
             this.button16.UseVisualStyleBackColor = false;
@@ -481,28 +486,29 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 522);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(7, 502);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 25);
+            this.label3.Size = new System.Drawing.Size(97, 20);
             this.label3.TabIndex = 57;
             this.label3.Text = "Critical Level";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // ecritlevel
             // 
-            this.ecritlevel.Location = new System.Drawing.Point(235, 522);
+            this.ecritlevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ecritlevel.Location = new System.Drawing.Point(235, 498);
             this.ecritlevel.Margin = new System.Windows.Forms.Padding(2);
             this.ecritlevel.Name = "ecritlevel";
-            this.ecritlevel.Size = new System.Drawing.Size(90, 20);
+            this.ecritlevel.Size = new System.Drawing.Size(90, 26);
             this.ecritlevel.TabIndex = 56;
             // 
             // equipnum
             // 
             this.equipnum.AutoSize = true;
             this.equipnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.equipnum.Location = new System.Drawing.Point(94, 324);
+            this.equipnum.Location = new System.Drawing.Point(962, 321);
             this.equipnum.Name = "equipnum";
             this.equipnum.Size = new System.Drawing.Size(92, 29);
             this.equipnum.TabIndex = 55;
@@ -512,7 +518,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(11, 324);
+            this.label5.Location = new System.Drawing.Point(879, 321);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 29);
             this.label5.TabIndex = 54;
@@ -521,27 +527,29 @@
             // comboBox2
             // 
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "Item Name",
             "Item Code"});
-            this.comboBox2.Location = new System.Drawing.Point(675, 325);
+            this.comboBox2.Location = new System.Drawing.Point(464, 324);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(92, 21);
+            this.comboBox2.Size = new System.Drawing.Size(92, 28);
             this.comboBox2.TabIndex = 53;
             // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(916, 570);
+            this.button6.Location = new System.Drawing.Point(908, 489);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(121, 33);
             this.button6.TabIndex = 52;
             this.button6.Text = "Refresh";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button4
@@ -549,10 +557,10 @@
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(731, 424);
+            this.button4.Location = new System.Drawing.Point(695, 425);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(161, 62);
+            this.button4.Size = new System.Drawing.Size(123, 38);
             this.button4.TabIndex = 51;
             this.button4.Text = "Stock Out";
             this.button4.UseVisualStyleBackColor = false;
@@ -563,7 +571,7 @@
             this.logbutton.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.logbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logbutton.Location = new System.Drawing.Point(917, 494);
+            this.logbutton.Location = new System.Drawing.Point(909, 413);
             this.logbutton.Margin = new System.Windows.Forms.Padding(2);
             this.logbutton.Name = "logbutton";
             this.logbutton.Size = new System.Drawing.Size(121, 36);
@@ -575,18 +583,18 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(6, 369);
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(7, 330);
             this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(118, 25);
+            this.label26.Size = new System.Drawing.Size(83, 20);
             this.label26.TabIndex = 49;
             this.label26.Text = "Item Code";
             // 
             // eItemCode
             // 
-            this.eItemCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eItemCode.Location = new System.Drawing.Point(235, 369);
+            this.eItemCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eItemCode.Location = new System.Drawing.Point(235, 327);
             this.eItemCode.Margin = new System.Windows.Forms.Padding(2);
             this.eItemCode.Name = "eItemCode";
             this.eItemCode.Size = new System.Drawing.Size(196, 26);
@@ -595,13 +603,14 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(6, 491);
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(7, 441);
             this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(79, 25);
+            this.label22.Size = new System.Drawing.Size(56, 20);
             this.label22.TabIndex = 47;
             this.label22.Text = "Status";
+            this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
             // equipStatus
             // 
@@ -611,7 +620,7 @@
             this.equipStatus.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.equipStatus.Location = new System.Drawing.Point(235, 490);
+            this.equipStatus.Location = new System.Drawing.Point(235, 438);
             this.equipStatus.Margin = new System.Windows.Forms.Padding(2);
             this.equipStatus.Name = "equipStatus";
             this.equipStatus.Size = new System.Drawing.Size(196, 28);
@@ -622,7 +631,7 @@
             this.searchequip.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.searchequip.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchequip.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchequip.Location = new System.Drawing.Point(869, 358);
+            this.searchequip.Location = new System.Drawing.Point(651, 357);
             this.searchequip.Margin = new System.Windows.Forms.Padding(2);
             this.searchequip.Name = "searchequip";
             this.searchequip.Size = new System.Drawing.Size(96, 37);
@@ -634,7 +643,7 @@
             // searche
             // 
             this.searche.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searche.Location = new System.Drawing.Point(771, 325);
+            this.searche.Location = new System.Drawing.Point(560, 324);
             this.searche.Margin = new System.Windows.Forms.Padding(2);
             this.searche.Name = "searche";
             this.searche.Size = new System.Drawing.Size(280, 29);
@@ -642,15 +651,16 @@
             // 
             // deselectequipb
             // 
+            this.deselectequipb.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.deselectequipb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deselectequipb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deselectequipb.Location = new System.Drawing.Point(917, 534);
+            this.deselectequipb.Location = new System.Drawing.Point(909, 453);
             this.deselectequipb.Margin = new System.Windows.Forms.Padding(2);
             this.deselectequipb.Name = "deselectequipb";
             this.deselectequipb.Size = new System.Drawing.Size(121, 33);
             this.deselectequipb.TabIndex = 22;
             this.deselectequipb.Text = "Deselect";
-            this.deselectequipb.UseVisualStyleBackColor = true;
+            this.deselectequipb.UseVisualStyleBackColor = false;
             this.deselectequipb.Click += new System.EventHandler(this.deselectequipb_Click);
             // 
             // addequipb
@@ -658,10 +668,10 @@
             this.addequipb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.addequipb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addequipb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addequipb.Location = new System.Drawing.Point(535, 424);
+            this.addequipb.Location = new System.Drawing.Point(585, 425);
             this.addequipb.Margin = new System.Windows.Forms.Padding(2);
             this.addequipb.Name = "addequipb";
-            this.addequipb.Size = new System.Drawing.Size(161, 62);
+            this.addequipb.Size = new System.Drawing.Size(112, 38);
             this.addequipb.TabIndex = 21;
             this.addequipb.Text = "Stock In";
             this.addequipb.UseVisualStyleBackColor = false;
@@ -670,7 +680,7 @@
             // estlife
             // 
             this.estlife.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.estlife.Location = new System.Drawing.Point(235, 593);
+            this.estlife.Location = new System.Drawing.Point(235, 541);
             this.estlife.Margin = new System.Windows.Forms.Padding(2);
             this.estlife.Name = "estlife";
             this.estlife.Size = new System.Drawing.Size(303, 26);
@@ -680,7 +690,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(6, 593);
+            this.label10.Location = new System.Drawing.Point(6, 541);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(162, 25);
@@ -690,40 +700,41 @@
             // 
             // purchasedate
             // 
-            this.purchasedate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.purchasedate.Location = new System.Drawing.Point(235, 556);
+            this.purchasedate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.purchasedate.Location = new System.Drawing.Point(235, 470);
             this.purchasedate.Margin = new System.Windows.Forms.Padding(2);
             this.purchasedate.Name = "purchasedate";
-            this.purchasedate.Size = new System.Drawing.Size(304, 26);
+            this.purchasedate.Size = new System.Drawing.Size(197, 24);
             this.purchasedate.TabIndex = 17;
             this.purchasedate.Value = new System.DateTime(2017, 10, 2, 0, 0, 0, 0);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(6, 556);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(7, 474);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(194, 25);
+            this.label9.Size = new System.Drawing.Size(133, 20);
             this.label9.TabIndex = 33;
             this.label9.Text = "Date of Purchase";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(6, 461);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(7, 411);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(109, 25);
+            this.label8.Size = new System.Drawing.Size(75, 20);
             this.label8.TabIndex = 32;
             this.label8.Text = "Cost/Unit";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // costunit
             // 
-            this.costunit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.costunit.Location = new System.Drawing.Point(235, 460);
+            this.costunit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.costunit.Location = new System.Drawing.Point(235, 408);
             this.costunit.Margin = new System.Windows.Forms.Padding(2);
             this.costunit.Name = "costunit";
             this.costunit.Size = new System.Drawing.Size(196, 26);
@@ -731,8 +742,8 @@
             // 
             // brand
             // 
-            this.brand.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brand.Location = new System.Drawing.Point(235, 430);
+            this.brand.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brand.Location = new System.Drawing.Point(235, 381);
             this.brand.Margin = new System.Windows.Forms.Padding(2);
             this.brand.Name = "brand";
             this.brand.Size = new System.Drawing.Size(196, 26);
@@ -741,11 +752,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 431);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(6, 384);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(191, 25);
+            this.label7.Size = new System.Drawing.Size(130, 20);
             this.label7.TabIndex = 29;
             this.label7.Text = "Brand and Model";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -753,11 +764,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 398);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(7, 357);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 25);
+            this.label4.Size = new System.Drawing.Size(87, 20);
             this.label4.TabIndex = 23;
             this.label4.Text = "Item Name";
             // 
@@ -766,7 +777,7 @@
             this.updequipb.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.updequipb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updequipb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updequipb.Location = new System.Drawing.Point(917, 451);
+            this.updequipb.Location = new System.Drawing.Point(909, 370);
             this.updequipb.Margin = new System.Windows.Forms.Padding(2);
             this.updequipb.Name = "updequipb";
             this.updequipb.Size = new System.Drawing.Size(121, 36);
@@ -777,8 +788,8 @@
             // 
             // eitemname
             // 
-            this.eitemname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eitemname.Location = new System.Drawing.Point(235, 397);
+            this.eitemname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eitemname.Location = new System.Drawing.Point(235, 354);
             this.eitemname.Margin = new System.Windows.Forms.Padding(2);
             this.eitemname.Name = "eitemname";
             this.eitemname.Size = new System.Drawing.Size(196, 26);
@@ -803,6 +814,8 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPage3.Controls.Add(this.applist);
+            this.tabPage3.Controls.Add(this.label19);
             this.tabPage3.Controls.Add(this.button14);
             this.tabPage3.Controls.Add(this.label12);
             this.tabPage3.Controls.Add(this.acritlevel);
@@ -840,10 +853,10 @@
             this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.button14.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.Location = new System.Drawing.Point(520, 483);
+            this.button14.Location = new System.Drawing.Point(585, 464);
             this.button14.Margin = new System.Windows.Forms.Padding(2);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(161, 62);
+            this.button14.Size = new System.Drawing.Size(222, 42);
             this.button14.TabIndex = 80;
             this.button14.Text = "Generate Report";
             this.button14.UseVisualStyleBackColor = false;
@@ -852,20 +865,21 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(9, 548);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(12, 456);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(150, 25);
+            this.label12.Size = new System.Drawing.Size(111, 20);
             this.label12.TabIndex = 79;
             this.label12.Text = "Critical Level";
             // 
             // acritlevel
             // 
-            this.acritlevel.Location = new System.Drawing.Point(171, 551);
+            this.acritlevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.acritlevel.Location = new System.Drawing.Point(171, 454);
             this.acritlevel.Margin = new System.Windows.Forms.Padding(2);
             this.acritlevel.Name = "acritlevel";
-            this.acritlevel.Size = new System.Drawing.Size(90, 20);
+            this.acritlevel.Size = new System.Drawing.Size(90, 26);
             this.acritlevel.TabIndex = 78;
             // 
             // appnum
@@ -891,14 +905,15 @@
             // comboBox3
             // 
             this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             "Item Name",
             "Item Code"});
-            this.comboBox3.Location = new System.Drawing.Point(706, 327);
+            this.comboBox3.Location = new System.Drawing.Point(433, 326);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(92, 21);
+            this.comboBox3.Size = new System.Drawing.Size(92, 28);
             this.comboBox3.TabIndex = 75;
             // 
             // button9
@@ -906,10 +921,10 @@
             this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(618, 396);
+            this.button9.Location = new System.Drawing.Point(695, 425);
             this.button9.Margin = new System.Windows.Forms.Padding(2);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(161, 62);
+            this.button9.Size = new System.Drawing.Size(112, 38);
             this.button9.TabIndex = 74;
             this.button9.Text = "Stock Out";
             this.button9.UseVisualStyleBackColor = false;
@@ -920,10 +935,10 @@
             this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(423, 396);
+            this.button10.Location = new System.Drawing.Point(585, 425);
             this.button10.Margin = new System.Windows.Forms.Padding(2);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(161, 62);
+            this.button10.Size = new System.Drawing.Size(112, 38);
             this.button10.TabIndex = 73;
             this.button10.Text = "Stock In";
             this.button10.UseVisualStyleBackColor = false;
@@ -934,7 +949,7 @@
             this.button8.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(900, 566);
+            this.button8.Location = new System.Drawing.Point(888, 491);
             this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(117, 36);
@@ -945,56 +960,61 @@
             // 
             // button7
             // 
+            this.button7.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(900, 529);
+            this.button7.Location = new System.Drawing.Point(888, 454);
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(117, 33);
             this.button7.TabIndex = 71;
             this.button7.Text = "Refresh";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // aItemCode
             // 
-            this.aItemCode.Location = new System.Drawing.Point(170, 396);
+            this.aItemCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aItemCode.Location = new System.Drawing.Point(170, 334);
             this.aItemCode.Margin = new System.Windows.Forms.Padding(2);
             this.aItemCode.Name = "aItemCode";
-            this.aItemCode.Size = new System.Drawing.Size(180, 20);
+            this.aItemCode.Size = new System.Drawing.Size(180, 26);
             this.aItemCode.TabIndex = 70;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(12, 396);
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(12, 336);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(64, 13);
+            this.label27.Size = new System.Drawing.Size(92, 20);
             this.label27.TabIndex = 69;
             this.label27.Text = "Item Code";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(9, 524);
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(12, 426);
             this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(43, 13);
+            this.label23.Size = new System.Drawing.Size(62, 20);
             this.label23.TabIndex = 68;
             this.label23.Text = "Status";
             // 
             // appStatus
             // 
             this.appStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.appStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.appStatus.FormattingEnabled = true;
             this.appStatus.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.appStatus.Location = new System.Drawing.Point(170, 517);
+            this.appStatus.Location = new System.Drawing.Point(171, 421);
             this.appStatus.Margin = new System.Windows.Forms.Padding(2);
             this.appStatus.Name = "appStatus";
-            this.appStatus.Size = new System.Drawing.Size(180, 21);
+            this.appStatus.Size = new System.Drawing.Size(180, 28);
             this.appStatus.TabIndex = 67;
             // 
             // searchapp
@@ -1002,7 +1022,7 @@
             this.searchapp.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.searchapp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchapp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchapp.Location = new System.Drawing.Point(880, 360);
+            this.searchapp.Location = new System.Drawing.Point(600, 362);
             this.searchapp.Margin = new System.Windows.Forms.Padding(2);
             this.searchapp.Name = "searchapp";
             this.searchapp.Size = new System.Drawing.Size(89, 35);
@@ -1014,7 +1034,7 @@
             // searcha
             // 
             this.searcha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searcha.Location = new System.Drawing.Point(802, 327);
+            this.searcha.Location = new System.Drawing.Point(529, 326);
             this.searcha.Margin = new System.Windows.Forms.Padding(2);
             this.searcha.Name = "searcha";
             this.searcha.Size = new System.Drawing.Size(249, 29);
@@ -1022,21 +1042,22 @@
             // 
             // deselectappb
             // 
+            this.deselectappb.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.deselectappb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deselectappb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deselectappb.Location = new System.Drawing.Point(900, 446);
+            this.deselectappb.Location = new System.Drawing.Point(888, 371);
             this.deselectappb.Margin = new System.Windows.Forms.Padding(2);
             this.deselectappb.Name = "deselectappb";
             this.deselectappb.Size = new System.Drawing.Size(117, 38);
             this.deselectappb.TabIndex = 34;
             this.deselectappb.Text = "Deselect";
-            this.deselectappb.UseVisualStyleBackColor = true;
+            this.deselectappb.UseVisualStyleBackColor = false;
             this.deselectappb.Click += new System.EventHandler(this.deselectappb_Click);
             // 
             // adesc
             // 
             this.adesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adesc.Location = new System.Drawing.Point(171, 480);
+            this.adesc.Location = new System.Drawing.Point(171, 392);
             this.adesc.Margin = new System.Windows.Forms.Padding(2);
             this.adesc.Name = "adesc";
             this.adesc.Size = new System.Drawing.Size(179, 26);
@@ -1045,31 +1066,32 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(7, 483);
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(12, 395);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(131, 25);
+            this.label17.Size = new System.Drawing.Size(100, 20);
             this.label17.TabIndex = 53;
             this.label17.Text = "Description";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(7, 432);
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(12, 365);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(123, 25);
+            this.label18.Size = new System.Drawing.Size(96, 20);
             this.label18.TabIndex = 48;
             this.label18.Text = "Item Name";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // updappb
             // 
             this.updappb.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.updappb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updappb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updappb.Location = new System.Drawing.Point(900, 488);
+            this.updappb.Location = new System.Drawing.Point(888, 413);
             this.updappb.Margin = new System.Windows.Forms.Padding(2);
             this.updappb.Name = "updappb";
             this.updappb.Size = new System.Drawing.Size(117, 38);
@@ -1081,7 +1103,7 @@
             // aitemname
             // 
             this.aitemname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aitemname.Location = new System.Drawing.Point(171, 432);
+            this.aitemname.Location = new System.Drawing.Point(171, 362);
             this.aitemname.Margin = new System.Windows.Forms.Padding(2);
             this.aitemname.Name = "aitemname";
             this.aitemname.Size = new System.Drawing.Size(179, 26);
@@ -1144,10 +1166,10 @@
             this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.button15.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.Location = new System.Drawing.Point(555, 471);
+            this.button15.Location = new System.Drawing.Point(585, 464);
             this.button15.Margin = new System.Windows.Forms.Padding(2);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(161, 62);
+            this.button15.Size = new System.Drawing.Size(222, 42);
             this.button15.TabIndex = 82;
             this.button15.Text = "Generate Report";
             this.button15.UseVisualStyleBackColor = false;
@@ -1156,37 +1178,39 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(14, 541);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(11, 458);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(150, 25);
+            this.label13.Size = new System.Drawing.Size(97, 20);
             this.label13.TabIndex = 81;
             this.label13.Text = "Critical Level";
             // 
             // ccritlevel
             // 
-            this.ccritlevel.Location = new System.Drawing.Point(209, 543);
+            this.ccritlevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ccritlevel.Location = new System.Drawing.Point(205, 456);
             this.ccritlevel.Margin = new System.Windows.Forms.Padding(2);
             this.ccritlevel.Name = "ccritlevel";
-            this.ccritlevel.Size = new System.Drawing.Size(90, 20);
+            this.ccritlevel.Size = new System.Drawing.Size(90, 26);
             this.ccritlevel.TabIndex = 80;
             // 
             // chemnum
             // 
             this.chemnum.AutoSize = true;
             this.chemnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chemnum.Location = new System.Drawing.Point(103, 317);
+            this.chemnum.Location = new System.Drawing.Point(969, 309);
             this.chemnum.Name = "chemnum";
             this.chemnum.Size = new System.Drawing.Size(92, 29);
             this.chemnum.TabIndex = 79;
             this.chemnum.Text = "label30";
+            this.chemnum.Click += new System.EventHandler(this.chemnum_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(11, 317);
+            this.label11.Location = new System.Drawing.Point(891, 307);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(74, 29);
             this.label11.TabIndex = 78;
@@ -1197,10 +1221,10 @@
             this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.button13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.Location = new System.Drawing.Point(645, 383);
+            this.button13.Location = new System.Drawing.Point(695, 425);
             this.button13.Margin = new System.Windows.Forms.Padding(2);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(161, 62);
+            this.button13.Size = new System.Drawing.Size(112, 38);
             this.button13.TabIndex = 75;
             this.button13.Text = "Stock Out";
             this.button13.UseVisualStyleBackColor = false;
@@ -1213,7 +1237,7 @@
             this.comboBox4.Items.AddRange(new object[] {
             "Item Name",
             "Item Code"});
-            this.comboBox4.Location = new System.Drawing.Point(615, 320);
+            this.comboBox4.Location = new System.Drawing.Point(414, 317);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(92, 21);
@@ -1224,10 +1248,10 @@
             this.chemstock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.chemstock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chemstock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chemstock.Location = new System.Drawing.Point(452, 383);
+            this.chemstock.Location = new System.Drawing.Point(585, 425);
             this.chemstock.Margin = new System.Windows.Forms.Padding(2);
             this.chemstock.Name = "chemstock";
-            this.chemstock.Size = new System.Drawing.Size(161, 62);
+            this.chemstock.Size = new System.Drawing.Size(112, 38);
             this.chemstock.TabIndex = 75;
             this.chemstock.Text = "Stock In";
             this.chemstock.UseVisualStyleBackColor = false;
@@ -1238,7 +1262,7 @@
             this.button11.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(934, 584);
+            this.button11.Location = new System.Drawing.Point(908, 486);
             this.button11.Margin = new System.Windows.Forms.Padding(2);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(117, 36);
@@ -1249,30 +1273,33 @@
             // 
             // button12
             // 
+            this.button12.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(934, 548);
+            this.button12.Location = new System.Drawing.Point(908, 450);
             this.button12.Margin = new System.Windows.Forms.Padding(2);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(117, 33);
             this.button12.TabIndex = 73;
             this.button12.Text = "Refresh";
-            this.button12.UseVisualStyleBackColor = true;
+            this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // classification
             // 
             this.classification.AutoSize = true;
-            this.classification.Location = new System.Drawing.Point(207, 480);
+            this.classification.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classification.Location = new System.Drawing.Point(201, 397);
             this.classification.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.classification.Name = "classification";
-            this.classification.Size = new System.Drawing.Size(41, 13);
+            this.classification.Size = new System.Drawing.Size(60, 20);
             this.classification.TabIndex = 65;
             this.classification.Text = "label30";
             // 
             // colorCode
             // 
             this.colorCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.colorCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colorCode.FormattingEnabled = true;
             this.colorCode.Items.AddRange(new object[] {
             "Blue",
@@ -1280,38 +1307,41 @@
             "Gray",
             "White",
             "Yellow"});
-            this.colorCode.Location = new System.Drawing.Point(210, 445);
+            this.colorCode.Location = new System.Drawing.Point(203, 371);
             this.colorCode.Margin = new System.Windows.Forms.Padding(2);
             this.colorCode.Name = "colorCode";
-            this.colorCode.Size = new System.Drawing.Size(178, 21);
+            this.colorCode.Size = new System.Drawing.Size(178, 24);
             this.colorCode.TabIndex = 64;
             this.colorCode.SelectedIndexChanged += new System.EventHandler(this.colorCode_SelectedIndexChanged);
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(16, 383);
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(11, 314);
             this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(55, 13);
+            this.label28.Size = new System.Drawing.Size(83, 20);
             this.label28.TabIndex = 63;
             this.label28.Text = "Item Code";
             // 
             // cItemCode
             // 
-            this.cItemCode.Location = new System.Drawing.Point(210, 383);
+            this.cItemCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cItemCode.Location = new System.Drawing.Point(203, 309);
             this.cItemCode.Margin = new System.Windows.Forms.Padding(2);
             this.cItemCode.Name = "cItemCode";
-            this.cItemCode.Size = new System.Drawing.Size(178, 20);
+            this.cItemCode.Size = new System.Drawing.Size(178, 26);
             this.cItemCode.TabIndex = 62;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(16, 508);
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(11, 425);
             this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(37, 13);
+            this.label24.Size = new System.Drawing.Size(56, 20);
             this.label24.TabIndex = 61;
             this.label24.Text = "Status";
             // 
@@ -1322,7 +1352,7 @@
             this.chemStatus.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.chemStatus.Location = new System.Drawing.Point(212, 503);
+            this.chemStatus.Location = new System.Drawing.Point(203, 427);
             this.chemStatus.Margin = new System.Windows.Forms.Padding(2);
             this.chemStatus.Name = "chemStatus";
             this.chemStatus.Size = new System.Drawing.Size(178, 21);
@@ -1333,7 +1363,7 @@
             this.searchchem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.searchchem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchchem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchchem.Location = new System.Drawing.Point(852, 345);
+            this.searchchem.Location = new System.Drawing.Point(651, 342);
             this.searchchem.Margin = new System.Windows.Forms.Padding(2);
             this.searchchem.Name = "searchchem";
             this.searchchem.Size = new System.Drawing.Size(91, 33);
@@ -1345,7 +1375,7 @@
             // searchc
             // 
             this.searchc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchc.Location = new System.Drawing.Point(722, 312);
+            this.searchc.Location = new System.Drawing.Point(521, 309);
             this.searchc.Margin = new System.Windows.Forms.Padding(2);
             this.searchc.Name = "searchc";
             this.searchc.Size = new System.Drawing.Size(323, 29);
@@ -1356,7 +1386,7 @@
             this.button3.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(933, 501);
+            this.button3.Location = new System.Drawing.Point(907, 403);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(118, 37);
@@ -1367,32 +1397,33 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(933, 460);
+            this.button2.Location = new System.Drawing.Point(907, 362);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(118, 37);
             this.button2.TabIndex = 45;
             this.button2.Text = "Deselect";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(9, 407);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(11, 342);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(176, 25);
+            this.label14.Size = new System.Drawing.Size(120, 20);
             this.label14.TabIndex = 52;
             this.label14.Text = "Chemical Name";
             // 
             // textBox3
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(210, 407);
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(203, 340);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(178, 26);
             this.textBox3.TabIndex = 39;
@@ -1400,22 +1431,23 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(9, 471);
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(11, 397);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(154, 25);
+            this.label16.Size = new System.Drawing.Size(102, 20);
             this.label16.TabIndex = 50;
             this.label16.Text = "Classification";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(9, 441);
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(11, 367);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(130, 25);
+            this.label20.Size = new System.Drawing.Size(88, 20);
             this.label20.TabIndex = 49;
             this.label20.Text = "Color Code";
             // 
@@ -1433,6 +1465,7 @@
             this.dataGridView4.Size = new System.Drawing.Size(1063, 288);
             this.dataGridView4.TabIndex = 46;
             this.dataGridView4.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellClick);
+            this.dataGridView4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
             // 
             // pictureBox1
             // 
@@ -1444,12 +1477,32 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
+            // applist
+            // 
+            this.applist.AutoSize = true;
+            this.applist.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applist.Location = new System.Drawing.Point(945, 327);
+            this.applist.Name = "applist";
+            this.applist.Size = new System.Drawing.Size(92, 29);
+            this.applist.TabIndex = 82;
+            this.applist.Text = "label30";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(867, 325);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(74, 29);
+            this.label19.TabIndex = 81;
+            this.label19.Text = "Total:";
+            // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.ClientSize = new System.Drawing.Size(1089, 740);
+            this.ClientSize = new System.Drawing.Size(1089, 615);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControl1);
@@ -1586,5 +1639,7 @@
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Label applist;
+        private System.Windows.Forms.Label label19;
     }
 }

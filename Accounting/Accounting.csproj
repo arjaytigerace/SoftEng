@@ -92,6 +92,12 @@
     <Compile Include="ChemicalManagement.Designer.cs">
       <DependentUpon>ChemicalManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChemicalManagementRPT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChemicalManagementRPT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ChemMgtCreate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,11 +134,23 @@
     <Compile Include="CRPAppa.Designer.cs">
       <DependentUpon>CRPAppa.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRPBorrowingManagment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRPBorrowingManagment.Designer.cs">
+      <DependentUpon>CRPBorrowingManagment.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRPChem.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CRPChem.Designer.cs">
       <DependentUpon>CRPChem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRPChemManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRPChemManagement.Designer.cs">
+      <DependentUpon>CRPChemManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="CRPE.cs">
       <SubType>Form</SubType>
@@ -162,6 +180,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReport4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BorrowingManagementRPT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BorrowingManagementRPT.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Faculty.cs">
@@ -274,6 +298,10 @@
     <EmbeddedResource Include="ChemicalManagement.resx">
       <DependentUpon>ChemicalManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChemicalManagementRPT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ChemicalManagementRPT.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChemMgtCreate.resx">
       <DependentUpon>ChemMgtCreate.cs</DependentUpon>
     </EmbeddedResource>
@@ -292,8 +320,14 @@
     <EmbeddedResource Include="CRPAppa.resx">
       <DependentUpon>CRPAppa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CRPBorrowingManagment.resx">
+      <DependentUpon>CRPBorrowingManagment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CRPChem.resx">
       <DependentUpon>CRPChem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRPChemManagement.resx">
+      <DependentUpon>CRPChemManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRPE.resx">
       <DependentUpon>CRPE.cs</DependentUpon>
@@ -313,6 +347,10 @@
     <EmbeddedResource Include="CrystalReport4.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport4.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BorrowingManagementRPT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BorrowingManagementRPT.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Faculty.resx">
       <DependentUpon>Faculty.cs</DependentUpon>

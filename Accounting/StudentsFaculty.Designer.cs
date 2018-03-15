@@ -177,7 +177,7 @@
             // 
             this.sdeselect.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sdeselect.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.sdeselect.Location = new System.Drawing.Point(763, 406);
+            this.sdeselect.Location = new System.Drawing.Point(641, 460);
             this.sdeselect.Margin = new System.Windows.Forms.Padding(2);
             this.sdeselect.Name = "sdeselect";
             this.sdeselect.Size = new System.Drawing.Size(134, 43);
@@ -204,7 +204,7 @@
             this.supdate.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.supdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.supdate.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.supdate.Location = new System.Drawing.Point(902, 406);
+            this.supdate.Location = new System.Drawing.Point(641, 508);
             this.supdate.Name = "supdate";
             this.supdate.Size = new System.Drawing.Size(122, 43);
             this.supdate.TabIndex = 45;
